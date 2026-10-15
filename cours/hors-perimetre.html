@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hors périmètre et orientation · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Identification des profils hors périmètre et orientation.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Accompagner une personne</span>
+        <h1 style="--hl:var(--bad-s)">Hors périmètre et <em>orientation</em></h1>
+        <p class="sub">Le professionnel de la nutrition n’est pas un soignant : repérer, alerter, orienter.</p>
+      </div>
+      <div class="legend"><span class="good-f">Dans le périmètre</span><span class="bad-f">Hors périmètre</span><span class="ink">Orientation</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="perimetre" data-name="Le périmètre">
+  <p class="lead">Un cadre de santé dit <b>ordinaire</b> : des personnes sans pathologie diagnostiquée ni situation médicale. Cette frontière est <b>juridique</b>.</p>
+  <div class="note"><span>Dès qu’un faisceau d’indices fait naître une forte présomption : <b>partager</b> avec la personne, puis <b>orienter sans délai</b> vers le professionnel le mieux placé pour confirmer ou infirmer le doute. Posture claire et ferme, mais toujours sécurisante : nommer les signaux, expliquer pourquoi la situation dépasse le conseil, orienter sans attendre.</span></div>
+  <div class="g2">
+    <div class="card good"><h3>Ce que je peux faire</h3><ul><li>Établir le profil alimentaire</li><li>Proposer des recommandations personnalisées</li><li>Co-construire plan alimentaire et menus</li><li>Accompagner un changement (croissance, ménopause, nouveau rythme de travail)</li><li>Éduquer : repères, étiquettes, autonomie</li><li><b>Repérer, alerter, orienter</b></li></ul></div>
+    <div class="card bad"><h3>Ce que je ne peux pas faire</h3><ul><li>Poser un <b>diagnostic</b> médical</li><li>Proposer une prise en charge à visée <b>thérapeutique</b></li><li>Modifier, commenter ou interférer avec un <b>traitement</b> (médicament, régime prescrit, suivi)</li><li>Poursuivre un suivi inadapté : ce serait une faute professionnelle</li></ul></div>
+  </div>
+  <div class="g2">
+    <div class="card"><h3>Ce que suppose le repérage</h3><p>Connaître les manifestations des principales problématiques de santé liées à l’alimentation et leurs conséquences ; relier ce que la personne dit, ce qu’elle mange et ce qui pourrait relever d’un trouble, d’autant que beaucoup consultent sans diagnostic ou minimisent leurs symptômes.</p></div>
+    <div class="card"><h3>Le but de la personne</h3><p>Trouver son équilibre alimentaire : bien-être, hygiène de vie, prévention des carences et des excès. Ex. manger plus équilibré, s’adapter à des horaires décalés, retrouver de l’énergie, comprendre des troubles digestifs récurrents, stabiliser ou perdre du poids après une grossesse.</p></div>
+  </div>
+  <div class="note"><span>Une <b>situation à risque</b> : un problème médical déclaré, ou des signes qui laissent présumer qu’un trouble s’installe. On juge la <b>durée</b>, l’<b>intensité</b> et l’<b>impact</b>. Une fatigue passagère liée aux repas : conseil. Une fatigue chronique avec troubles digestifs ou perte de poids involontaire : orientation. Un conseil mal dirigé peut masquer un problème, retarder une prise en charge ou renforcer un comportement ; un repérage précoce protège.</span></div>
+  <div class="note"><span>Inconforts légers, ponctuels, non spécifiques : conseil nutritionnel. Symptômes <b>persistants, marqués, évolutifs</b> ou évocateurs d’un problème médical : orientation.</span></div>
+
+  <h2 class="sec">Dans mon périmètre ? <small>Classez chaque situation</small></h2>
+  <div class="grid" id="scen"></div>
+  <p id="scen-score" style="color:var(--muted)"></p>
+</section>
+
+<section id="signaux" data-name="Signaux d’alerte" hidden>
+  <p class="lead">Pris isolément, un signe ne prouve rien. Leur <b>répétition</b>, leur <b>accumulation</b> ou leur <b>incohérence</b> doivent alerter.</p>
+  <div id="sig-chips"></div>
+  <div class="panel empty" id="sig-panel">Choisissez un type de signal.</div>
+  <h2 class="sec">La bonne posture</h2>
+  <div class="g2">
+    <div class="card good"><h3>Faire</h3><ul><li>Informer sans alarmer</li><li>Énoncer des faits observables, sans interprétation médicale</li><li>Respecter le rythme et les résistances de la personne</li><li>Justifier l’orientation</li></ul></div>
+    <div class="card bad"><h3>Ne pas faire</h3><ul><li>Ignorer des signaux clairs</li><li>Laisser la personne les ignorer</li><li>Poursuivre un accompagnement inadapté</li></ul></div>
+  </div>
+</section>
+
+<section id="orienter" data-name="Orienter" hidden>
+  <p class="lead">Une orientation <b>claire, concrète et rassurante</b> : nommer des options, donner des contacts, expliquer pourquoi. Jamais un jugement ni un abandon.</p>
+  <div class="card">
+    <div class="calc">
+      <div class="form"><div class="inp"><label for="sit">Situation repérée</label><select id="sit"></select></div></div>
+      <div class="result ink" id="sit-out"></div>
+    </div>
+  </div>
+  <div class="note"><span>Le <b>médecin traitant</b> reste le pivot du parcours de soins. Associations et structures reconnues : TCA, allergies.</span></div>
+</section>
+
+<section id="profils" data-name="Profils spécifiques" hidden>
+  <p class="lead">Grossesse, surpoids et obésité, diabète, TCA, allergies : <b>reconnaître</b>, ne pas engager de suivi, <b>orienter</b>.</p>
+  <h2 class="sec" style="margin-top:0">La femme enceinte</h2>
+  <div class="g2">
+    <div class="card bad"><h3>Risques pour la mère</h3><p>Fausse couche, diabète gestationnel, hypertension gravidique, prééclampsie, accouchement prématuré.</p></div>
+    <div class="card bad"><h3>Risques pour le bébé</h3><p>Macrosomie, détresse respiratoire, prédisposition à l’obésité.</p></div>
+  </div>
+  <p>Dès les premiers jours, le corps se réorganise pour une double mission : ses propres besoins et le développement du fœtus. Hormones, métabolisme et corps changent l’appétit, la tolérance digestive, l’utilisation des nutriments : il faut <b>réorienter</b> les apports, pas seulement les augmenter. Surpoids, obésité, diabète gestationnel, troubles digestifs pèsent sur la mère et le fœtus. Orienter vers un médecin, une sage-femme ou un diététicien-nutritionniste.</p>
+
+  <h2 class="sec">Surpoids et obésité : l’IMC</h2>
+  <div class="card">
+    <div class="calc">
+      <div class="form" id="imc-form">
+        <div class="inp"><label for="ip">Poids (kg)</label><input type="number" id="ip" min="20" max="300" value="70"></div>
+        <div class="inp"><label for="it">Taille (m)</label><input type="number" id="it" min="1" max="2.3" step="0.01" value="1.70"></div>
+      </div>
+      <div class="result ink" id="imc-out"></div>
+    </div>
+  </div>
+  <div class="card"><div id="imc-bars"></div></div>
+  <div class="pills"><span>Maigreur &lt; 18,5</span><span>Normal 18,5 à 25</span><span>Surpoids 25 à 30</span><span>Obésité modérée 30 à 40</span><span>Obésité sévère &gt; 40</span></div>
+  <p>Le surpoids résulte d’un déséquilibre progressif entre apports et dépenses, influencé par les habitudes, les maladies, le rythme de vie, l’environnement, la sédentarité, les émotions. Définition : « une accumulation anormale ou excessive de graisse qui a des conséquences néfastes pour la santé ». L’alimentation est un levier, sans interdits : un cadre rassurant, une relation plus apaisée. Des mécanismes complexes et multifactoriels (métaboliques, hormonaux, comportementaux, environnementaux). Le coach reconnaît les enjeux ; le suivi relève du médecin ou du diététicien, surtout en cas de comorbidités.</p>
+  <div class="note"><span>Un adulte sur deux est concerné en France. L’IMC (poids ÷ taille²) est le seul indice validé par l’OMS, mais il <b>ne tient pas compte de l’activité physique</b>. Chirurgie de l’obésité : seulement au-delà de 40.</span></div>
+
+  <h2 class="sec">Le diabète</h2>
+  <div class="g2">
+    <div class="card"><h3>Type 1 ou type 2</h3><p>Hyperglycémie par manque d’insuline (type 1) ou résistance des cellules à l’insuline (type 2). Un enjeu de santé publique, en forte progression. L’insuline est la « clé » qui fait entrer le glucose dans les cellules.</p><p>Complications : cœur, reins, nerfs, vision.</p></div>
+    <div class="card bad"><h3>Signes évocateurs</h3><p>Soif excessive, faim augmentée, envies fréquentes d’uriner, fatigue persistante, vision floue, peau sèche, infections répétées, cicatrisation difficile, fourmillements.</p><p><b>Interrompre</b> l’accompagnement et orienter.</p></div>
+  </div>
+
+  <p>L’alimentation joue un rôle central dans la prise en charge du diabète : nature, quantité et répartition des aliments agissent directement sur la glycémie. Le diabète peut rester silencieux des années : c’est pourquoi le repérage compte. Orienter vers le médecin traitant, un endocrinologue ou un diététicien-nutritionniste, sans interpréter les signes ni faire d’hypothèse.</p>
+
+  <h2 class="sec">Les troubles du comportement alimentaire <small>Touchez un trouble</small></h2>
+  <p>Des perturbations profondes de la relation à la nourriture, au corps et à l’image de soi : une <b>souffrance psychologique</b> qui s’exprime par l’alimentation (émotions, besoin de contrôle), sur les plans physique, émotionnel et social. Tout accompagnement, même éducatif, risque de <b>renforcer</b> le trouble : ne pas engager de suivi, orienter (médecin, psychologue, diététicien).</p>
+  <div id="tca-chips"></div>
+  <div class="panel empty" id="tca-panel">Choisissez un TCA.</div>
+
+  <h2 class="sec">Allergie ou intolérance ?</h2>
+  <div class="g2">
+    <div class="card bad"><h3>Allergie alimentaire</h3><p>Réaction <b>immunitaire</b> excessive à un aliment inoffensif : une perte de tolérance. Même des traces peuvent provoquer un <b>choc anaphylactique</b>, en quelques minutes à une heure.</p></div>
+    <div class="card tint glu"><h3>Intolérance alimentaire</h3><p>Incapacité à digérer ou métaboliser : déficit enzymatique (lactase), réaction pharmacologique (histamine, caféine), sensibilité chimique (sulfites, glutamate). <b>Dose-dépendante</b>, inconfortable mais rarement dangereuse.</p></div>
+  </div>
+  <div class="note"><span>Sous-estimer une allergie expose à un <b>risque vital</b>. La surdiagnostiquer entraîne des restrictions inutiles et des carences, surtout chez l’enfant. L’anaphylaxie, forme la plus grave, touche plusieurs organes (peau, respiration) quelques minutes à une heure après l’exposition. L’intolérance se diagnostique souvent par éviction puis réintroduction progressive. Orienter vers un médecin ou un allergologue.</span></div>
+
+  <h2 class="sec">La posture professionnelle</h2>
+  <p>Grossesse, diabète, TCA, allergies et intolérances demandent une prise en charge médicale ou thérapeutique : ne pas engager d’accompagnement nutritionnel et orienter <b>systématiquement</b>. Ces repères sécurisent la pratique, respectent le cadre de compétences et inscrivent le coach en <b>complémentarité</b> avec le monde médical.</p>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="hors-perimetre.js"></script>
+</body>
+</html>

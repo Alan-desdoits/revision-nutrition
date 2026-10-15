@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Déterminants et besoins · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Déterminants de santé et besoins nutritionnels.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Accompagner une personne</span>
+        <h1 style="--hl:var(--ink-m)">Déterminants et <em>besoins</em></h1>
+        <p class="sub">Besoins nutritionnels, déterminants de santé, repères du PNNS, puis le calcul des besoins et de la ration.</p>
+      </div>
+      <div class="legend"><span class="pro">Protéines</span><span class="lip">Lipides</span><span class="glu">Glucides</span><span class="ink">Repères</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="demarche" data-name="La démarche">
+  <p class="lead">Le conseil nutritionnel croise trois choses : des <b>besoins</b> théoriques, des <b>déterminants</b> propres à chacun, et des <b>recommandations personnalisées</b>.</p>
+  <div class="g3">
+    <div class="card tint ink"><span class="tag">Repère théorique</span><h3>Besoins nutritionnels</h3><p>Comment la personne se situe-t-elle par rapport à ses besoins ?</p></div>
+    <div class="card tint ink"><span class="tag">Variable individuelle</span><h3>Déterminants de santé</h3><p>Par quels facteurs est-elle influencée ?</p></div>
+    <div class="card tint ink"><span class="tag">Ajustement</span><h3>Recommandation personnalisée</h3><p>Comment l’aider à trouver le point d’équilibre ?</p></div>
+  </div>
+  <div class="note"><span>L’équilibre alimentaire n’est pas une science exacte qui s’applique de manière mathématique.</span></div>
+
+  <h2 class="sec">Trois sigles</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">DEJ</span><h3>Dépense énergétique journalière</h3><p>L’énergie dépensée sur une journée.</p></div>
+    <div class="card"><span class="tag">MB</span><h3>Métabolisme de base</h3><p>La dépense minimale au repos complet : organes vitaux, température.</p></div>
+    <div class="card"><span class="tag">NAP</span><h3>Niveau d’activité physique</h3><div class="big">1,4–2 <small>moyenne 1,63</small></div><p>De sédentaire (comptable) à très actif (peintre en bâtiment).</p></div>
+  </div>
+</section>
+
+<section id="energie" data-name="Énergie" hidden>
+  <p class="lead">Le besoin énergétique, c’est la quantité d’énergie pour <b>vivre</b>, être <b>opérationnel</b> et rester en <b>bonne santé</b>.</p>
+  <h2 class="sec" style="margin-top:0">Où part l’énergie ?</h2>
+  <div class="card"><div id="dej-bars"></div></div>
+  <div class="note"><span>Les <b>protéines</b> demandent plus d’énergie pour être métabolisées que les lipides et les glucides.</span></div>
+
+  <h2 class="sec">Apports et besoins <small>Choisissez une situation</small></h2>
+  <div id="bal-seg"></div>
+  <div class="card" id="bal-out"></div>
+
+  <h2 class="sec">Les nutriments</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">PGL</span><h3>Macronutriments</h3><p>Protéines, glucides, lipides : l’énergie et les matériaux de construction.</p></div>
+    <div class="card"><span class="tag">VMO</span><h3>Micronutriments</h3><p>Vitamines, minéraux, oligo-éléments : petites quantités, rôles essentiels. Carences les plus fréquentes au monde : <b>fer, vitamine A, iode</b> (OMS).</p></div>
+    <div class="card eau"><span class="tag">Eau</span><div class="big">≈ 60 <small>% du poids</small></div><p>1,5 à 2 L par jour. Une perte de 2 % du poids : maux de tête, fatigue, baisse de concentration.</p></div>
+  </div>
+  <div class="grid">
+    <div class="card glu"><span class="tag">Glucides</span><div class="big">40–55 <small>% AET</small></div></div>
+    <div class="card lip"><span class="tag">Lipides</span><div class="big">35–40 <small>% AET</small></div></div>
+    <div class="card pro"><span class="tag">Protéines</span><div class="big">10–20 <small>% AET</small></div><p>0,8 à 1,2 g/kg/j, plus pour les sportifs ou en cas de maladie.</p></div>
+  </div>
+  <div class="note"><span>Ce cours retient <b>35 à 40 %</b> de lipides (ANSES, PNNS). Le cours Macronutriments indique 30 à 35 %.</span></div>
+  <div class="acc">
+    <details><summary>Les macronutriments, en bref</summary><div><p><b>Protéines</b> : les briques (muscles, organes, peau, cheveux, ongles, enzymes, hormones, anticorps) ; sources animales (viandes, poissons, œufs, laitages) et végétales (légumineuses, oléagineux). <b>Lipides</b> : énergie concentrée (plus du double), membranes, vitamines A, D, E, K, hormones, inflammation ; saturés à limiter (beurre, crème, fromages, charcuteries, viandes grasses, saindoux, palme, coco), insaturés à privilégier (oméga-3, oméga-6). <b>Glucides</b> : énergie principale du cerveau et des muscles ; simples (fruits, miel, confiseries) ou complexes (céréales complètes, légumineuses) qui, avec les fibres, évitent les pics de glycémie.</p></div></details>
+    <details><summary>Les micronutriments, en bref</summary><div><p>Selon l’OMS, leur impact sur la santé est crucial : enzymes, hormones, croissance. <b>Vitamines</b> : C (fer, immunité), D (os, immunité) ; un manque de fer, d’acide folique, de B12 et de vitamine A provoque une anémie. <b>Minéraux</b> : calcium et phosphore (os, dents), fer (oxygène), magnésium (contraction, gestion du stress). <b>Oligo-éléments</b> (sélénium, zinc, cuivre, fer, fluor, manganèse) : infections, radicaux libres, vieillissement cellulaire, cicatrisation, hormones (thyroïde, insuline), défenses immunitaires. Seule l’alimentation peut les fournir.</p></div></details>
+    <details><summary>L’eau et les fibres</summary><div><p>L’eau : transport des nutriments, élimination des déchets, température, lubrification des articulations. Son manque peut être fatal en quelques jours. Fibres et eau sont souvent associées : non digérées, elles règlent le transit, la glycémie et la satiété.</p></div></details>
+  </div>
+  <div class="note"><span>Savoir identifier et quantifier les besoins est le <b>prérequis</b> pour corriger les déséquilibres, prévenir les carences et construire des menus équilibrés.</span></div>
+</section>
+
+<section id="determinants" data-name="Déterminants" hidden>
+  <p class="lead">Selon l’OMS, ce sont les facteurs <b>personnels, sociaux, économiques et environnementaux</b> qui influencent la santé. Deux profils identiques en apparence n’ont pas les mêmes besoins.</p>
+  <div class="pills"><span>Psychosociaux</span><span>Culturels</span><span>Environnementaux</span><span>Économiques</span><span>Professionnels</span><span>Biologiques</span><span>Psychologiques</span></div>
+  <p>Ils forment le contexte de vie de la personne : les connaître permet de comprendre, voire d’anticiper, ses choix, ses comportements et ses réactions. C’est le second prérequis, après les besoins.</p>
+  <div id="det-chips"></div>
+  <div class="panel empty" id="det-panel">Choisissez un déterminant pour voir son influence.</div>
+</section>
+
+<section id="pnns" data-name="PNNS" hidden>
+  <p class="lead">Le <b>Programme national nutrition santé</b>, lancé en 2001, traduit les besoins en messages simples. Aujourd’hui PNNS 5 (2026–2030).</p>
+  <div class="tbl ink"><table><thead><tr><th>Catégorie</th><th>Message</th></tr></thead><tbody>
+    <tr><th>Fruits et légumes</th><td>Au moins <b>5 portions par jour</b>, sous toutes leurs formes</td></tr>
+    <tr><th>Produits céréaliers</th><td>Complets ou semi-complets</td></tr>
+    <tr><th>Protéines</th><td>Poisson 2 fois par semaine dont un gras, légumineuses au moins 2 fois par semaine, limiter viande rouge et charcuterie</td></tr>
+    <tr><th>Produits laitiers</th><td>2 par jour chez l’adulte, 3 à 4 chez l’enfant et l’adolescent</td></tr>
+    <tr><th>Matières grasses</th><td>Huiles riches en oméga-3 (colza, noix), limiter beurre et crème</td></tr>
+    <tr><th>Sucres</th><td>Réduire boissons sucrées, pâtisseries, confiseries</td></tr>
+    <tr><th>Sel</th><td>Limiter, goûter avant de resaler</td></tr>
+    <tr><th>Boisson</th><td>L’eau</td></tr>
+    <tr><th>Activité physique</th><td>Au moins 30 min par jour chez l’adulte, 60 min chez l’enfant</td></tr>
+  </tbody></table></div>
+  <h2 class="sec">Ses objectifs</h2>
+  <div class="grid">
+    <div class="card"><p>Améliorer la santé par l’alimentation et l’activité physique.</p></div>
+    <div class="card"><p>Réduire l’obésité et les maladies chroniques liées à la nutrition.</p></div>
+    <div class="card"><p>Diffuser des repères simples pour tous.</p></div>
+    <div class="card"><p>Intégrer la <b>durabilité</b> : local, de saison, plus de végétal, moins de gaspillage.</p></div>
+  </div>
+  <div class="note"><span>Les repères du PNNS s’appuient sur les travaux de l’<b>Anses</b>, qui évalue les effets de l’alimentation sur la santé : réduire le risque de maladies chroniques tout en couvrant les nutriments essentiels. Ils servent aux professionnels, aux politiques de prévention et au grand public. Le PNNS est né en 2001 face à la progression de l’obésité, des maladies cardiovasculaires et du diabète de type 2.</span></div>
+  <div class="note"><span>Un cadre <b>général</b> à adapter : senior qui mange peu (fractionner, enrichir), sportif (timing des glucides et protéines), insuffisance rénale (limiter certaines protéines et minéraux).</span></div>
+</section>
+
+<section id="calcul" data-name="Calculer les besoins" hidden>
+  <p class="lead">Cinq étapes : <b>informations</b>, métabolisme de base, NAP, dépense journalière, puis <b>répartition</b> des macronutriments.</p>
+  <div class="chain ink" data-nohide><span>1. Âge, sexe, poids, taille, activité</span><i>→</i><span>2. MB (Black et al.)</span><i>→</i><span>3. NAP (travail, sport, fréquence)</span><i>→</i><span>4. DEJ = MB × NAP</span><i>→</i><span>5. Protéines (poids × coefficient), lipides (% ou coefficient), glucides par différence</span></div>
+  <div class="eq" data-nohide>Femme : MB = 0,963 × poids^0,48 × taille^0,50 × âge^−0,13 · Homme : MB = 1,083 × poids^0,48 × taille^0,50 × âge^−0,13 (MJ)</div>
+  <div class="card">
+    <div class="calc">
+      <div class="form" id="bes-form">
+        <div class="inp"><span class="tag">Sexe</span><div id="sexe"></div></div>
+        <div class="row2">
+          <div class="inp"><label for="age">Âge (ans)</label><input type="number" id="age" min="18" max="100" value="40"></div>
+          <div class="inp"><label for="poids">Poids (kg)</label><input type="number" id="poids" min="35" max="200" value="70"></div>
+        </div>
+        <div class="row2">
+          <div class="inp"><label for="taille">Taille (m)</label><input type="number" id="taille" min="1.3" max="2.2" step="0.01" value="1.65"></div>
+          <div class="inp"><label for="coef">Protéines (g/kg)</label><select id="coef"><option>0.8</option><option>1</option><option selected>1.2</option><option>1.5</option><option>2</option></select></div>
+        </div>
+        <div class="inp"><label for="nap">NAP</label><span class="val" id="nap-o" data-nohide></span><input type="range" id="nap" min="1.4" max="2" step="0.05" value="1.5"></div>
+        <div class="inp"><label for="lipp">Lipides (% de la DEJ)</label><span class="val" id="lipp-o" data-nohide></span><input type="range" id="lipp" min="30" max="40" step="1" value="35"></div>
+        <button type="button" class="chip" id="exemple" style="justify-self:start">Reprendre l’exemple du cours</button>
+      </div>
+      <div class="result ink" id="bes-out"></div>
+    </div>
+  </div>
+  <div class="card"><span class="tag">Exemple du cours</span><p>Femme, 40 ans, 70 kg, 1,65 m, sédentaire, marche 2 à 3 fois par semaine : NAP <b>1,5</b>. MB ≈ 5,8 MJ ≈ 1 385 kcal ; DEJ ≈ 2 080 kcal. Protéines 70 × 1,2 = 84 g (336 kcal) ; lipides 35 % = 728 kcal, soit 81 g ; glucides : 2 080 − 1 064 = 1 016 kcal, soit 254 g. Bouton « Reprendre l’exemple du cours » ci-dessus.</p></div>
+  <div class="note"><span>Le résultat est un <b>repère</b> autour duquel construire l’accompagnement, pas un objectif strict. Le professionnel le traduit en choix alimentaires adaptés au profil, aux habitudes et aux objectifs. Formule de Black et al., taille en mètres, résultat en MJ (1 MJ ≈ 239 kcal). Dans l’exemple, le cours arrondit le MB à <b>5,8 MJ</b> (1 385 kcal), d’où une DEJ de 2 080 kcal ; le calcul exact donne 5,89 MJ.</span></div>
+</section>
+
+<section id="ration" data-name="La ration" hidden>
+  <p class="lead">La ration traduit les grammes de nutriments en <b>grammes d’aliments</b>. On couvre d’abord les protéines, puis les lipides, et on complète avec les glucides.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div id="ref-seg"></div>
+    <span class="tag" style="color:var(--muted)">Modifiez les quantités : tout se recalcule</span>
+  </div>
+  <div class="tbl" id="ration-tbl"></div>
+  <div class="card" id="ration-out"></div>
+  <div class="eq" data-nohide>kJ = protéines × 17 + lipides × 38 + glucides × 17 (+ fibres × 8) · kcal = kJ ÷ 4,18 · 1 kcal = 4,184 kJ = 0,00418 MJ</div>
+  <h2 class="sec">La démarche</h2>
+  <div class="chain ink" data-nohide><span>1. Besoins en P, L, G (g)</span><i>→</i><span>2. Aliments représentatifs de chaque groupe</span><i>→</i><span>3. Grammes de nutriments → grammes d’aliments (tables de composition)</span><i>→</i><span>4. Vérifier la couverture</span><i>→</i><span>5. Ajuster les quantités</span></div>
+  <div class="note"><span>La ration = les aliments d’une journée, en quantités précises, qui couvrent besoins énergétiques, macronutriments et besoins globaux : le lien entre le calcul et l’assiette. Les lignes de totaux contrôlent les grammes, l’énergie (kJ puis kcal) et la répartition en % de l’AET. Ensuite vient la <b>répartition alimentaire</b> : distribuer la ration entre petit-déjeuner, déjeuner, dîner et collations, pour une énergie régulière, la faim et la satiété, le rythme de vie.</span></div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="determinants-besoins.js"></script>
+</body>
+</html>

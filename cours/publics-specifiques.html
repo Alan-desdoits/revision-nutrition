@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Publics spécifiques · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Accompagner les publics aux besoins spécifiques.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Accompagner une personne</span>
+        <h1 style="--hl:var(--eau-m)">Publics aux besoins <em>spécifiques</em></h1>
+        <p class="sub">Nourrisson, enfant, adolescent, personne âgée, sportif : croissance, vieillissement, effort.</p>
+      </div>
+      <div class="legend"><span class="eau">Nourrisson</span><span class="fl">Enfant, ado</span><span class="lai">Personne âgée</span><span class="glu">Sportif</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="nourrisson" data-name="Nourrisson">
+  <p class="lead">Des besoins <b>proportionnellement bien plus élevés</b> que ceux de l’adulte : toute inadéquation a vite des conséquences.</p>
+  <p>L’alimentation du nourrisson, de l’enfant et de l’adolescent est une période <b>fondatrice</b> : elle conditionne la croissance staturo-pondérale, le développement cérébral, la maturation immunitaire, et peut réduire le risque de pathologies à l’âge adulte. Le professionnel informe, prévient et accompagne les familles, strictement dans le cadre du conseil nutritionnel. Le corps du bébé contient plus d’eau et se déshydrate beaucoup plus vite ; les premiers mois, le lait maternel ou infantile couvre ces besoins.</p>
+
+  <h2 class="sec eau" style="margin-top:0">Combien d’eau par jour ?</h2>
+  <div class="card eau">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><span class="tag">Âge</span><div id="h-seg"></div></div>
+        <div class="inp"><label for="h-poids">Poids</label><span class="val" id="h-poids-o" data-nohide></span><input type="range" id="h-poids" min="2.5" max="40" step="0.5" value="6"></div>
+      </div>
+      <div class="result eau" id="h-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec eau">Énergie selon l’âge <small>kcal par jour</small></h2>
+  <div class="card"><div id="kcal-bars"></div></div>
+  <div class="grid">
+    <div class="card pro"><span class="tag">Protéines</span><div class="big">≈ 10 <small>g/jour jusqu’à 2 ans</small></div></div>
+    <div class="card lip"><span class="tag">Lipides</span><div class="big">≈ 50 <small>% de l’AET jusqu’à 6 mois</small></div><p>Développement cérébral et nerveux, réserves.</p></div>
+    <div class="card glu"><span class="tag">Glucides</span><h3>Le lactose</h3><p>Glucose + galactose : croissance et tolérance digestive.</p></div>
+  </div>
+
+  <h2 class="sec eau">Le lait <small>Touchez un lait</small></h2>
+  <div id="lait-chips"></div>
+  <div class="panel empty" id="lait-panel">Choisissez un lait.</div>
+  <div class="note"><span>Pas de <b>lait de vache</b> non modifié avant 1 an : trop de protéines et de sels minéraux. Après 1 an, sans lait de croissance, préférer le lait entier.</span></div>
+
+  <h2 class="sec eau">Le biberon</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Eau</span><p>Robinet <b>froide</b> (laisser couler), ou eau faiblement minéralisée « convient pour les nourrissons ». Pas d’eau filtrée ou adoucie. Bouteille ouverte : 24 h au réfrigérateur.</p></div>
+    <div class="card"><span class="tag">Préparé</span><div class="big">1 <small>heure</small></div><p>À boire dans l’heure. Préparé à l’avance : au réfrigérateur, 4 °C maximum.</p></div>
+    <div class="card"><span class="tag">Réchauffé</span><div class="big">30 <small>minutes</small></div><p>À boire dans la demi-heure. Un biberon entamé n’est <b>jamais</b> réutilisé.</p></div>
+  </div>
+
+  <h2 class="sec eau">La diversification <small>Entre 4 et 6 mois</small></h2>
+  <p>Essentielle au développement nutritionnel, sensoriel et psychomoteur. <b>Avant 4 mois</b>, le système digestif n’est pas assez mature ; <b>après 6 mois</b>, un retard expose aux carences et aux troubles de l’acceptation. Pas d’ordre strict : varier chaque jour goûts et textures, les repas diversifiés remplacent peu à peu les biberons.</p>
+  <div class="card"><div id="div-bars"></div></div>
+  <div class="grid">
+    <div class="card"><p>Le lait reste la base jusqu’à 1 an : encore <b>500 mL</b> par jour.</p></div>
+    <div class="card"><p>Vers 8 mois : <b>4 repas</b>, dont 2 diversifiés.</p></div>
+    <div class="card"><p>Un peu d’huile de colza ou d’olive dans les préparations.</p></div>
+    <div class="card"><p>Refus ? Ne pas insister, reproposer quelques jours plus tard. Eau comme seule boisson : pas de jus ni de boissons sucrées.</p></div>
+    <div class="card"><p>Un moment d’échange et de plaisir, des <b>horaires réguliers</b>, des quantités ajustées à l’appétit et au développement.</p></div>
+  </div>
+  <div class="note"><span>Mère allaitante : alimentation variée avec toutes les catégories, <b>+500 kcal</b> par jour en moyenne (aliments riches en nutriments), collations nutritives (fruits frais ou secs, pain complet, laitages nature, oléagineux, barres de céréales maison), 1,5 à 2 L par jour (eau, tisanes non sucrées ; peu de boissons sucrées ou caféinées). Le lait maternel est insuffisant en <b>vitamines D et K</b> : supplémentation selon le pédiatre.</span></div>
+</section>
+
+<section id="enfant" data-name="Enfant et ado" hidden>
+  <p class="lead">Besoin énergétique = métabolisme de base + activité physique + <b>≈ 1 %</b> pour la croissance.</p>
+  <div class="g2">
+    <div class="card bad"><h3>Risque d’obésité</h3><p>Produits industriels sucrés et gras, sédentarité, temps d’écran.</p></div>
+    <div class="card bad"><h3>Risque de dénutrition</h3><p>Apports insuffisants, maladie chronique, troubles du comportement alimentaire (restriction, grignotage incontrôlé, boulimie) : à prendre en charge sans attendre.</p></div>
+  </div>
+
+  <h2 class="sec fl">Macronutriments et hydratation</h2>
+  <div class="tbl fl"><table><thead><tr><th>Nutriment</th><th>Rôle</th><th>Recommandation</th><th>Vigilance</th></tr></thead><tbody>
+    <tr><th>Fibres</th><td>Digestion, rassasiement, glycémie</td><td>Chaque jour (repères EFSA)</td><td>Souvent trop faibles : fruits, légumes, complets, légumineuses, textures adaptées</td></tr>
+    <tr><th>Protéines</th><td>Croissance, muscles, renouvellement</td><td>Nécessaires à tout âge, augmentent avec l’âge</td><td>Sans excès, surtout si régime restrictif ou transformé</td></tr>
+    <tr><th>Lipides</th><td>Vitamines liposolubles, cerveau, énergie</td><td>Essentiels, la qualité avant la quantité</td><td>Acides gras essentiels (poissons gras, colza, noix), limiter les saturés</td></tr>
+    <tr><th>Glucides</th><td>Énergie principale</td><td>Limiter les sucres libres (voir ci-dessous)</td><td>Peu de sucreries et de boissons sucrées, glucides complexes</td></tr>
+    <tr><th>Eau</th><td>Hydratation</td><td>Essentielle, selon âge, activité, climat</td><td>Eau à tous les repas, peu de boissons sucrées</td></tr>
+  </tbody></table></div>
+
+  <h2 class="sec sug">Sucres libres maximum <small>hors lactose et galactose</small></h2>
+  <div class="card"><div id="sl-bars"></div></div>
+
+  <h2 class="sec fl">Micronutriments à surveiller <small>Touchez un nutriment</small></h2>
+  <div id="mic-chips"></div>
+  <div class="panel empty" id="mic-panel">Choisissez un micronutriment.</div>
+
+  <h2 class="sec fl">Journées types</h2>
+  <div id="jt-seg"></div>
+  <div class="grid" id="jt-out" data-nohide></div>
+  <div class="note"><span>Des repères, pas des modèles : apprendre aux familles à <b>structurer</b>, varier, éviter l’excès de sucré et de salé.</span></div>
+</section>
+
+<section id="agee" data-name="Personne âgée" hidden>
+  <p class="lead">Adapter sans contraindre, anticiper sans médicaliser : bien manger reste un <b>plaisir</b> autant qu’une question de santé.</p>
+  <div class="grid">
+    <div class="card"><h3>Pourquoi plus vulnérable</h3><p>Des changements progressifs, souvent silencieux, variables : pas d’emblée une maladie, mais un vieillissement qui rend l’équilibre plus délicat. Risques accrus de carences (vitamines, minéraux, protéines), de dénutrition et de déshydratation. Le professionnel repère ces changements, adapte sans infantiliser et travaille avec l’entourage (famille, aidants).</p></div>
+    <div class="card"><h3>Fonte musculaire</h3><p>Moins de force et d’endurance, même chez les actifs.</p></div>
+    <div class="card"><h3>Fragilité osseuse</h3><p>Ostéoporose, fractures.</p></div>
+    <div class="card"><h3>Mastication, déglutition</h3><p>Troubles bucco-dentaires.</p></div>
+    <div class="card"><h3>Digestion ralentie</h3><p>Moins d’acide gastrique et d’enzymes.</p></div>
+    <div class="card"><h3>Moins d’appétit</h3><p>Médicaments, santé, solitude.</p></div>
+    <div class="card"><h3>Goût et odorat</h3><p>L’alimentation perd de son attrait.</p></div>
+    <div class="card"><h3>Moins de soif</h3><p>Risque de déshydratation.</p></div>
+  </div>
+
+  <h2 class="sec lai">Les besoins en pratique</h2>
+  <div class="tbl lai"><table><thead><tr><th>Objectif</th><th>Sources</th><th>En pratique</th></tr></thead><tbody>
+    <tr><th>Masse musculaire et immunité</th><td>Poisson, œufs, volaille, laitages, légumineuses + céréales</td><td>Une source de protéines à chaque repas principal, animal et végétal</td></tr>
+    <tr><th>Solidité osseuse</th><td>Laitages, eaux calciques ; poissons gras, produits enrichis, soleil</td><td>2 à 3 laitiers par jour, poisson régulier</td></tr>
+    <tr><th>Digestion et défenses</th><td>Fruits et légumes variés</td><td>À chaque repas et en collation ; légumes cuits et tendres</td></tr>
+    <tr><th>Énergie</th><td>Pâtes, semoule, pommes de terre, riz, pain</td><td>Une portion de féculents à chaque repas principal</td></tr>
+    <tr><th>Cœur et cerveau</th><td>Poisson gras, oléagineux, huiles de colza, noix, olive</td><td>Un filet d’huile dans purées, soupes, salades</td></tr>
+    <tr><th>Hydratation</th><td>Eau, boissons non sucrées, fruits, bouillons, compotes</td><td>Près de <b>1,5 L</b> par jour, toutes sources</td></tr>
+  </tbody></table></div>
+
+  <h2 class="sec">Des apports à encadrer</h2>
+  <div class="grid">
+    <div class="card"><h3>Matières grasses</h3><p>Modérées, plutôt végétales.</p></div>
+    <div class="card"><h3>Produits sucrés</h3><p>Raisonnables mais pas supprimés : préférer fruits et laitages.</p></div>
+    <div class="card"><h3>Sel</h3><p>Rétention d’eau, hypertension : herbes et épices.</p></div>
+    <div class="card"><h3>Alcool</h3><p>Occasionnel et modéré.</p></div>
+  </div>
+
+  <h2 class="sec lai">Conseils pratiques</h2>
+  <div class="acc">
+    <details><summary>Adapter les textures</summary><div><p>Viandes hachées ou mijotées, poisson effiloché ou en rillettes, légumes moulinés, fruits en compote ou sorbet.</p></div></details>
+    <details><summary>Fractionner</summary><div><p>Dessert en décalé, une ou deux collations : yaourt, compote, petite tartine de fromage.</p></div></details>
+    <details><summary>Enrichir</summary><div><p>Lait en poudre dans la soupe, fromage râpé dans la purée, filet d’huile dans le potage.</p></div></details>
+    <details><summary>Réveiller les sens</summary><div><p>Assiettes colorées, herbes fraîches parfumées.</p></div></details>
+    <details><summary>Soigner le cadre</summary><div><p>Repas partagé, à table, vraie assiette, vrais couverts, servir depuis le plat, découvrir le menu.</p></div></details>
+  </div>
+
+  <h2 class="sec lai">Un menu type</h2>
+  <div class="grid" data-nohide>
+    <div class="card meal"><span class="when">Petit-déjeuner</span><span class="what" style="font-size:1rem">Thé léger ou tisane, pain moelleux beurré et un peu de confiture, fromage frais ou yaourt nature, compote de pommes</span></div>
+    <div class="card meal"><span class="when">Déjeuner</span><span class="what" style="font-size:1rem">Velouté de potiron, cabillaud au four et citron, purée pomme de terre-carottes, yaourt nature + lait en poudre, banane écrasée</span></div>
+    <div class="card meal"><span class="when">Collation</span><span class="what" style="font-size:1rem">Flan maison ou crème dessert au lait, quartiers d’orange</span></div>
+    <div class="card meal"><span class="when">Dîner</span><span class="what" style="font-size:1rem">Soupe de légumes, œufs brouillés aux fines herbes, semoule légèrement beurrée, fromage blanc à la vanille</span></div>
+  </div>
+</section>
+
+<section id="sportif" data-name="Sportif" hidden>
+  <p class="lead">Pas un profil pathologique, mais des exigences : <b>soutenir l’effort</b>, récupérer, préserver l’organisme. Toujours hors cadre thérapeutique.</p>
+  <h2 class="sec bad-f" style="margin-top:0">Les risques à rappeler dès le premier rendez-vous</h2>
+  <div class="grid">
+    <div class="card"><h3>Qui est sportif ?</h3><p>Occasionnel, amateur régulier, compétiteur, endurance ou force. Point commun : plus de dépense énergétique, des muscles, du métabolisme et de l’hydratation plus sollicités, donc plus de glucides et de protéines, et une attention à l’hydratation et à la récupération. Mal adaptée, l’alimentation se traduit vite par baisse de performance, fatigue chronique, blessures, troubles digestifs.</p></div>
+    <div class="card bad"><h3>Déficit énergétique chronique</h3><p>Fatigue, baisse de performance, troubles hormonaux ou immunitaires.</p></div>
+    <div class="card bad"><h3>Trop peu de glucides</h3><p>Réserves de glycogène vides : coup de pompe, récupération incomplète.</p></div>
+    <div class="card bad"><h3>Protéines mal réparties</h3><p>Fonte musculaire, récupération incomplète.</p></div>
+    <div class="card bad"><h3>Déshydratation</h3><p>Performance, thermorégulation, blessures.</p></div>
+    <div class="card bad"><h3>Restrictions excessives</h3><p>Poids, image du corps : TCA, dénutrition relative.</p></div>
+  </div>
+
+  <h2 class="sec glu">Recommandations <small>Touchez une catégorie</small></h2>
+  <div id="sp-chips"></div>
+  <div class="panel empty" id="sp-panel">Choisissez une catégorie.</div>
+  <div class="note"><span>L’organisation compte autant que le contenu : une alimentation <b>efficace et durable</b>, compatible avec la santé, pas un modèle au seul service de la performance.</span></div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="publics-specifiques.js"></script>
+</body>
+</html>

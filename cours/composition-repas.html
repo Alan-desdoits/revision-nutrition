@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Composition des repas · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Composition et répartition des repas.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Accompagner une personne</span>
+        <h1 style="--hl:var(--fl-m)">Composition des <em>repas</em></h1>
+        <p class="sub">Les repères du PNNS, l’étiquetage, puis la fonction et la composition de chaque repas.</p>
+      </div>
+      <div class="legend"><span class="eau">Eau</span><span class="glu">Féculents</span><span class="fl">Fruits et légumes</span><span class="lai">Laitiers</span><span class="pro">VPO</span><span class="lip">Matières grasses</span><span class="sug">Sucrés</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="equilibre" data-name="L’équilibre">
+  <p class="lead">L’équilibre alimentaire se joue autant sur la <b>composition</b> que sur la <b>répartition</b> des prises dans la journée.</p>
+  <div class="g3">
+    <div class="card tint ink"><h3>L’individu</h3><p>Son profil alimentaire est le point de départ : besoins, carences ou déséquilibres à corriger.</p></div>
+    <div class="card tint fl"><h3>Les apports</h3><p>Dans les bonnes proportions, ils couvrent les besoins ; en excès ou insuffisants, ils déséquilibrent.</p></div>
+    <div class="card tint glu"><h3>Le rythme</h3><p>Traditionnellement <b>4 repas</b>, chacun avec une fonction et des besoins précis.</p></div>
+  </div>
+
+  <p>À savoir : les 7 catégories d’aliments indispensables, les recommandations de base, les logiques d’interaction et d’équilibre, puis comment séquencer et structurer un plan alimentaire.</p>
+
+  <h2 class="sec">Les repères de santé publique</h2>
+  <div class="g2">
+    <div class="card"><h3>Santé publique France, Anses</h3><p>Les instances publiques pensent un cadre collectif pour la santé de tous : guider les comportements et les choix de consommation, servir de référence aux professionnels (diététiciens, nutritionnistes, cuisiniers en restauration collective, encadrants médico-sociaux).</p></div>
+    <div class="card"><h3>Le PNNS</h3><p>Programme National Nutrition Santé : un cadre de référence commun pour améliorer la santé de toute la population par la <b>nutrition</b>, qui englobe l’alimentation, l’activité physique et la sédentarité. Le cours écrit « lancé en 2021 » (le PNNS date de 2001, voir le suivi).</p></div>
+  </div>
+
+  <h2 class="sec">Les 7 catégories du PNNS <small>Touchez une catégorie</small></h2>
+  <div id="cat-chips"></div>
+  <div class="panel empty" id="cat-panel">Choisissez une catégorie d’aliments.</div>
+  <div class="note"><span>Aucune catégorie n’est mauvaise en soi (sauf les produits sucrés, sans rôle indispensable) : tout est question de <b>proportions</b>, dont dépendent leur complémentarité ou, au contraire, carences et excès.</span></div>
+  <p>Les recommandations du PNNS sont le <b>socle scientifique</b> : des points de repère pour construire des recommandations personnalisées, adaptées au profil, aux besoins et aux contraintes de chaque personne.</p>
+
+  <h2 class="sec">Un enjeu de santé publique</h2>
+  <p>Les déséquilibres individuels sont la partie émergée d’un enjeu collectif : une part importante des adultes est en surpoids, et de plus en plus d’enfants et d’adolescents. Le rôle de l’alimentation dans les maladies cardiovasculaires, le diabète de type 2 et certains cancers étant avéré, l’équilibre alimentaire devient une question de <b>prévention collective</b>, plus qu’un choix laissé à chacun.</p>
+</section>
+
+<section id="pyramide" data-name="La pyramide" hidden>
+  <p class="lead">De la base au sommet : du plus <b>indispensable</b> au moins indispensable. Version actuelle (2020, PNNS 4). <small>Touchez un étage.</small></p>
+  <div class="card">
+    <div class="calc">
+      <div class="pyr" id="pyr"></div>
+      <div class="result" id="pyr-out"></div>
+    </div>
+  </div>
+  <div class="note"><span>Nouveauté : les <b>fruits à coque</b> ont leur propre place, et les quantités de fruits et de légumes sont séparées (« 5 par jour » était trop vague).</span></div>
+
+  <p>Elle hiérarchise de façon <b>semi-quantitative</b>. Les repères traduisent des recommandations scientifiques complexes en messages simples, visuels, faciles à retenir et à appliquer. Ce sont encore ceux du <b>PNNS 2019-2023</b>, prolongé en 2024 dans l’attente du PNNS 2025-2030, lié à la Stratégie nationale pour l’alimentation, la nutrition et le climat (<b>SNANC</b>).</p>
+
+  <h2 class="sec">La pyramide en portions <small>Second schéma du cours</small></h2>
+  <div class="pyr" style="margin-bottom:6px">
+    <div class="pyr-row" style="--w:40"><span class="sug" style="flex:1">Produits sucrés, transformés · pas tous les jours</span></div>
+    <div class="pyr-row" style="--w:52"><span class="lip" style="flex:1">Matières grasses · petites quantités</span></div>
+    <div class="pyr-row" style="--w:64"><span class="pro" style="flex:1">Viandes, poissons, œufs · 2 portions</span></div>
+    <div class="pyr-row" style="--w:76"><span class="lai" style="flex:1">Produits laitiers · 3 portions</span></div>
+    <div class="pyr-row" style="--w:88"><span class="glu" style="flex:1">Féculents, légumineuses, céréales · 3 à 5 portions</span></div>
+    <div class="pyr-row" style="--w:100"><span class="fl" style="flex:1">Fruits et légumes · 5 à 7 portions</span></div>
+  </div>
+  <div class="acc">
+    <details><summary>Ce que dit chaque étage</summary><div><ul>
+      <li><b>Sucrés, transformés</b> : calories vides, prise de poids, risques cardiaques et diabète : à limiter.</li>
+      <li><b>Matières grasses</b> : essentielles à l’absorption des vitamines ; huile d’olive et noix, éviter l’excès de saturés.</li>
+      <li><b>VPO</b> : acides aminés essentiels pour le muscle ; oméga-3 du poisson pour le cœur et le cerveau.</li>
+      <li><b>Laitiers</b> : calcium, acides gras essentiels, vitamines A, D, E, K : os, cerveau, santé globale.</li>
+      <li><b>Féculents</b> : fibres, vitamines B, glucides complexes : digestion, cœur, énergie durable.</li>
+      <li><b>Fruits et légumes</b> : vitamines et antioxydants : digestion, immunité, moins d’inflammation.</li>
+    </ul></div></details>
+  </div>
+
+  <h2 class="sec">« Chaque petit pas compte »</h2>
+  <div class="g3">
+    <div class="card good"><h3>Augmenter</h3><ul><li>Fruits et légumes</li><li>Légumes secs</li><li>Fruits à coque non salés</li><li>Le fait maison</li><li>L’activité physique</li></ul></div>
+    <div class="card tint eau"><h3>Aller vers</h3><ul><li>Pain, pâtes, riz complets</li><li>Poissons gras et maigres en alternance</li><li>Huiles de colza, noix, olive</li><li>Laitiers suffisants mais limités</li><li>Saison, local, bio</li></ul></div>
+    <div class="card bad"><h3>Réduire</h3><ul><li>Produits et boissons sucrés</li><li>Produits salés, charcuterie</li><li>Viande (porc, bœuf, veau, mouton, agneau, abats)</li><li>Nutri-Score D et E</li><li>Temps assis ; alcool (zéro pour femme enceinte, enfant, ado)</li></ul></div>
+  </div>
+</section>
+
+<section id="etiquette" data-name="Étiquette et Nutri-Score" hidden>
+  <p class="lead">Le <b>Nutri-Score</b> situe un produit de A (meilleure qualité) à E, pour 100 g. L’<b>étiquette</b> dit le reste.</p>
+  <div class="card">
+    <div class="nutri" id="nutri"></div>
+    <div id="nutri-out"></div>
+  </div>
+
+  <h2 class="sec">Lire une étiquette <small>Touchez un numéro</small></h2>
+  <p>L’étiquetage fournit des informations fiables sur la composition : un outil de santé publique pour des choix éclairés et l’<b>autonomie</b> du consommateur face à une offre immense. Le professionnel s’en sert comme support pédagogique : quelques clés de lecture liées à l’objectif de la personne, et la prise de conscience de la valeur réelle des produits choisis.</p>
+  <div class="label-wrap">
+    <div class="card" id="lbl" style="gap:10px"></div>
+    <div class="result ink" id="lbl-out"></div>
+  </div>
+</section>
+
+<section id="repas" data-name="Les repas" hidden>
+  <p class="lead">Chaque repas a une <b>fonction</b>, couvre des besoins précis et pèse une part de l’énergie du jour.</p>
+  <h2 class="sec" style="margin-top:0">Part de l’énergie quotidienne</h2>
+  <div class="card"><div id="share-bars"></div></div>
+  <div id="meal-seg"></div>
+  <div class="card" id="meal-out"></div>
+
+  <p>Une bonne répartition maintient un appétit régulier, assure la satiété, évite fringales et grignotages et aide à diversifier. Chaque repas couvre aussi l’attention, la concentration, l’humeur et le comportement alimentaire.</p>
+
+  <h2 class="sec">Pourquoi la régularité compte</h2>
+  <p>Des repas irréguliers ou sautés réduisent l’efficacité des apports, perturbent le métabolisme et rendent les recommandations, même personnalisées, difficiles à appliquer. Un rythme régulier et prévisible permet d’en tirer tout le bénéfice. C’est une prise de conscience à déclencher chez la personne suivie.</p>
+  <div class="g3">
+    <div class="card"><h3>Métabolisme</h3><p>Glycémie, hormones de la faim et de la satiété régulées, nutriments mieux intégrés.</p></div>
+    <div class="card"><h3>Confort digestif</h3><p>Enzymes sécrétées au bon moment, moins de ballonnements, de reflux, de fringales.</p></div>
+    <div class="card"><h3>Fil conducteur</h3><p>Des repères dans la journée, moins de grignotage compulsif.</p></div>
+  </div>
+  <div class="note"><span>Un repas sauté ou déséquilibré : fatigue, baisse de concentration, faim intense. À long terme, des déséquilibres et des troubles métaboliques.</span></div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="composition-repas.js"></script>
+</body>
+</html>

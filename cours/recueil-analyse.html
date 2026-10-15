@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recueil et analyse · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Recueil et analyse de données alimentaires.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Accompagner une personne</span>
+        <h1 style="--hl:var(--ink-m)">Recueil et <em>analyse</em></h1>
+        <p class="sub">Comprendre ce qu’une personne mange vraiment, l’objectiver, puis le lui restituer.</p>
+      </div>
+      <div class="legend"><span class="ink">Méthode</span><span class="good-f">Points forts</span><span class="bad-f">Limites</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="principes" data-name="Principes">
+  <p class="lead">« Je mange plutôt équilibré. » La mémoire est sélective : le recueil sert à <b>objectiver</b>, pas à vérifier la personne.</p>
+  <div class="g3">
+    <div class="card"><span class="tag">Individuelles</span><h3>Le contexte physiologique</h3><p>Âge, sexe, taille, poids, activité physique, santé, rythme de vie.</p></div>
+    <div class="card"><span class="tag">Socio-économiques</span><h3>L’environnement</h3><p>Budget, organisation familiale, traditions, religion, accès aux produits.</p></div>
+    <div class="card"><span class="tag">Psychologiques</span><h3>Le comportement</h3><p>Vision de l’alimentation, manière de manger, rapport émotionnel.</p></div>
+  </div>
+  <div class="note"><span>Un exercice <b>intime</b> : instaurer un cadre sécurisant, sans jugement, entre proximité et rigueur. On cherche la cohérence globale, pas la perfection.</span></div>
+
+  <h2 class="sec">Ce que révèle le journal alimentaire</h2>
+  <div class="g3">
+    <div class="card"><h3>Habitudes</h3><p>Équilibres et irrégularités (repas équilibrés mais souvent sautés).</p></div>
+    <div class="card"><h3>Liberté de choix</h3><p>Choix voulus ou subis (goûts ou budget limité).</p></div>
+    <div class="card"><h3>Facteurs influents</h3><p>Émotions, manque de temps.</p></div>
+  </div>
+</section>
+
+<section id="comportement" data-name="Comportement alimentaire" hidden>
+  <p class="lead">Le chef d’orchestre, c’est le <b>cerveau</b>, plus précisément l’hypothalamus. On ne mange pas seulement quand on a faim.</p>
+  <p>Le <b>comportement alimentaire</b> regroupe toutes les actions et réactions liées à la prise alimentaire : apporter l’énergie et les nutriments, mais sous l’influence des émotions, de l’environnement, des expériences passées et de l’état psychologique. L’hypothalamus, petite structure au rôle immense, relie systèmes nerveux et hormonal (faim, soif, température, rythme cardiaque, hormones) et reçoit en permanence les signaux des hormones et des neurotransmetteurs.</p>
+  <div class="grid">
+    <div class="card"><span class="tag">Avant</span><h3>Faim</h3><p>Besoin physiologique quand l’énergie manque. Irritabilité, nervosité.</p></div>
+    <div class="card"><span class="tag">Envie</span><h3>Appétit</h3><p>Envie d’un aliment précis, associée au plaisir.</p></div>
+    <div class="card"><span class="tag">Fin du repas</span><h3>Rassasiement</h3><p>L’estomac est plein, la faim disparaît.</p></div>
+    <div class="card"><span class="tag">Entre les repas</span><h3>Satiété</h3><p>Absence de faim, qui espace naturellement les prises.</p></div>
+  </div>
+
+  <h2 class="sec">Hormones et messagers <small>Touchez un messager</small></h2>
+  <div id="horm-chips"></div>
+  <div class="panel empty" id="horm-panel">Choisissez une hormone ou un neurotransmetteur.</div>
+
+  <div class="g3">
+    <div class="card"><h3>L’émotion</h3><p>Le stress, la tristesse.</p></div>
+    <div class="card"><h3>L’habitude</h3><p>Le carré de chocolat avec le café, l’en-cas avant le dîner.</p></div>
+    <div class="card"><h3>Le contexte social</h3><p>Les viennoiseries d’un collègue, le buffet d’un vernissage.</p></div>
+  </div>
+
+  <h2 class="sec">Les questions à se poser</h2>
+  <div class="g3">
+    <div class="card"><h3>Sa vision</h3><p>Obligation, contrainte, ou refuge avec de la culpabilité ?</p></div>
+    <div class="card"><h3>Sa manière de manger</h3><p>Seul ou en groupe, à table ou devant un écran, plats préparés, repas sautés ?</p></div>
+    <div class="card"><h3>Son rapport émotionnel</h3><p>Stress, ennui, tristesse déclenchent-ils l’envie de manger ?</p></div>
+  </div>
+</section>
+
+<section id="collecte" data-name="Collecte" hidden>
+  <p class="lead">Choisir la méthode selon la personne : le <b>temps</b> qu’elle peut y consacrer et sa <b>capacité</b> à bien la réaliser.</p>
+  <p>Le détail de ce qu’elle mange chaque jour, seule la personne peut le fournir : c’est le seul moyen de savoir ce qu’elle mange <b>réellement</b>, en qualité et en quantité, à quel moment, dans quelles conditions et dans quel état d’esprit.</p>
+  <div id="met-chips"></div>
+  <div class="panel empty" id="met-panel">Choisissez une méthode pour voir ses avantages et ses limites.</div>
+
+  <h2 class="sec bad-f">Les biais à connaître</h2>
+  <div class="grid">
+    <div class="card"><h3>Motivation</h3><p>Un carnet rempli à la hâte est moins complet et moins fiable.</p></div>
+    <div class="card"><h3>Mémoire et oublis</h3><p>Le sucre du café, le grignotage en cuisinant, les condiments.</p></div>
+    <div class="card"><h3>Désirabilité sociale</h3><p>On minimise l’alcool et les sucreries, on exagère fruits et légumes.</p></div>
+    <div class="card"><h3>Pression de l’observation</h3><p>Savoir qu’on sera lu pousse à « bien faire ».</p></div>
+    <div class="card"><h3>Expression</h3><p>« Un peu », « une assiette » : des termes vagues difficiles à évaluer.</p></div>
+  </div>
+</section>
+
+<section id="exploiter" data-name="Quantifier" hidden>
+  <p class="lead">Des données brutes aux chiffres : <b>retranscrire</b>, <b>standardiser</b>, <b>classer</b>, puis <b>quantifier</b>.</p>
+  <p>Les données brutes donnent une première impression mais ne sont <b>pas exploitables en l’état</b>.</p>
+  <div class="chain ink"><span>Retranscrire par repas</span><i>→</i><span>Standardiser les unités</span><i>→</i><span>Classer en 7 groupes</span><i>→</i><span>Quantifier (CIQUAL)</span></div>
+
+  <div class="acc">
+    <details><summary>Retranscrire</summary><div><p>Découper chaque journée en repas, collations, grignotages, boissons. Pour chaque prise : l’aliment, la quantité, la préparation (cru, cuit, frit…), les ajouts (sucre, sel, beurre, sauce). Recontextualiser : devant la télévision, cuisiné en famille. On repère tout de suite répétitions et variations.</p></div></details>
+    <details><summary>Standardiser</summary><div><p>Convertir « une assiette », « une poignée », « un verre » en grammes ou millilitres ; uniformiser tasses, bols, cuillères ; fournir en amont des tables de correspondance ou des photos d’aliments. Cette étape fait la fiabilité du calcul.</p></div></details>
+    <details><summary>Classer en 7 groupes</summary><div><p>Fruits et légumes · boissons non sucrées · féculents, légumineuses, produits céréaliers · viandes, poissons, œufs · produits laitiers · matières grasses · produits sucrés. Pour comparer la diversité et repérer les déséquilibres.</p></div></details>
+    <details><summary>Quantifier sur plusieurs jours</summary><div><p>Calculer la <b>moyenne</b> journalière, la <b>répartition</b> des prises, la <b>variabilité</b> entre les jours (semaine et week-end). Outils : tables de composition (<b>CIQUAL</b>, ANSES, des milliers d’aliments pour 100 g) et logiciels qui donnent un premier bilan (calories, macro, micronutriments).</p></div></details>
+  </div>
+
+  <h2 class="sec">Tables de correspondance <small>Les mesures domestiques en grammes</small></h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Verre de jus</span><div class="big">200 <small>mL</small></div></div>
+    <div class="card"><span class="tag">Cuillère à soupe d’huile</span><div class="big">10 <small>g</small></div></div>
+    <div class="card"><span class="tag">Pomme moyenne</span><div class="big">≈ 150 <small>g</small></div></div>
+    <div class="card"><span class="tag">C. à soupe de riz cuit</span><div class="big">≈ 30 <small>g</small></div></div>
+  </div>
+
+  <h2 class="sec">Calculer un repas <small>Exemples du cours, base CIQUAL</small></h2>
+  <div class="card">
+    <div class="calc">
+      <div class="calc-in" id="meal-in"></div>
+      <div class="result ink" id="meal-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec">La répartition des macronutriments <small>Saisissez des grammes</small></h2>
+  <div class="card">
+    <div class="calc">
+      <div class="form" id="mac-form">
+        <div class="inp"><label for="g-glu">Glucides (g)</label><input type="number" id="g-glu" min="0" max="800" value="250"></div>
+        <div class="inp"><label for="g-lip">Lipides (g)</label><input type="number" id="g-lip" min="0" max="400" value="80"></div>
+        <div class="inp"><label for="g-pro">Protéines (g)</label><input type="number" id="g-pro" min="0" max="400" value="75"></div>
+      </div>
+      <div class="result ink" id="mac-out"></div>
+    </div>
+  </div>
+  <div class="g3">
+    <div class="card"><h3>Micronutriments</h3><p>Vitamines (A, C, D, E, B1, B9…) et minéraux (calcium, fer, magnésium, potassium, sodium, zinc…) comparés aux apports nutritionnels de référence (ANR).</p></div>
+    <div class="card"><h3>Fibres et eau</h3><p>Fibres : contributions des fruits, légumes, céréales complètes, légumineuses. Eau : boissons et eau des aliments.</p></div>
+    <div class="card"><h3>Autres composés</h3><p>Selon le contexte : acides gras (saturés, mono-, polyinsaturés), cholestérol, sucres ajoutés, sel.</p></div>
+  </div>
+  <div class="note"><span>Sur plusieurs jours (3 à 7), on calcule une <b>moyenne</b> : un week-end plus riche lisse moins la réalité qu’il n’y paraît. Repères d’énergie : 1 800 à 2 200 kcal pour une femme, 2 200 à 2 700 kcal pour un homme.</span></div>
+</section>
+
+<section id="analyse" data-name="Analyse qualitative" hidden>
+  <p class="lead">À calories égales, deux personnes peuvent avoir des profils <b>très différents</b>. L’analyse qualitative regarde ce qu’il y a derrière les chiffres.</p>
+  <div class="acc">
+    <details open><summary data-nohide>1. Diversité alimentaire</summary><div><p>Fruits et légumes, céréales complètes, protéines variées, laitages, bonnes matières grasses, eau. Une alimentation monotone expose aux carences.</p></div></details>
+    <details><summary data-nohide>2. Niveau de transformation</summary><div><p>Produits frais ou ultra-transformés (plats préparés, snacks, sodas, biscuits) : sucres ajoutés, graisses saturées, sel, additifs.</p></div></details>
+    <details><summary data-nohide>3. Qualité des lipides</summary><div><p>Insaturés (oméga-3, oméga-6, mono-insaturés) à favoriser, saturés à limiter, trans à éviter. La source compte autant que la quantité.</p></div></details>
+    <details><summary data-nohide>4. Qualité des glucides</summary><div><p>Complexes (céréales complètes, légumineuses, légumes), sucres naturels des fruits et du lait, et part des <b>sucres ajoutés</b>.</p></div></details>
+    <details><summary data-nohide>5. Fibres et eau</summary><div><p>Fibres souvent insuffisantes. L’eau comparée aux boissons sucrées ou alcoolisées.</p></div></details>
+    <details><summary data-nohide>6. Facteurs de risque</summary><div><p>Sel des produits transformés, alcool fréquent, grignotage pauvre en nutriments, repas sautés compensés le soir.</p></div></details>
+  </div>
+
+  <h2 class="sec">Confronter aux recommandations</h2>
+  <div class="g2">
+    <div class="card bad"><h3>Déficits fréquents</h3><ul><li><b>Calcium</b> : peu de laitages</li><li><b>Fer</b> : femmes en âge de procréer, peu de viande ou de légumineuses</li><li><b>Vitamine D</b> : même en mangeant équilibré</li><li><b>Fibres</b></li></ul></div>
+    <div class="card bad"><h3>Excès fréquents</h3><ul><li>Calories au-delà des besoins</li><li>Graisses saturées et trans</li><li>Sucres ajoutés</li><li>Sodium</li><li>Alcool</li></ul></div>
+    <div class="card"><h3>Déséquilibres structurels</h3><ul><li>Petit-déjeuner sauté, soirée très riche</li><li>Beaucoup de sucres simples, peu de protéines</li><li>Alimentation répétitive</li><li>Un seul groupe en excès (féculents blancs)</li></ul></div>
+    <div class="card"><h3>Incohérences</h3><ul><li>Apports très bas, poids stable : sous-déclaration</li><li>Alcool ou confiseries jamais mentionnés : omission</li><li>Grandes variations entre les jours</li></ul></div>
+  </div>
+</section>
+
+<section id="restitution" data-name="Restitution" hidden>
+  <p class="lead">Pour la personne, la restitution est souvent le <b>premier pas concret</b> : confiance, adhésion, engagement.</p>
+  <p>Le recueil a été partagé, l’organisation, la quantification et la qualification faites par le professionnel. Il faut maintenant transformer des chiffres, des pourcentages, des observations en une <b>synthèse parlante</b>, immédiatement compréhensible et utile, destinée à la personne. Elle attend un état des lieux et une orientation.</p>
+  <div class="g3">
+    <div class="card tint good-f"><h3>Mettre en évidence le positif</h3><p>« Votre consommation de fruits est régulière, ce qui vous apporte de bonnes quantités de vitamine C et de fibres. »</p></div>
+    <div class="card tint ink"><h3>Souligner les points à améliorer</h3><p>« Vos apports en fibres sont un peu bas, ce qui peut expliquer certaines difficultés digestives » plutôt que « vous ne mangez pas assez de légumes ».</p></div>
+    <div class="card tint eau"><h3>Rendre les résultats concrets</h3><p>« Votre calcium représente la moitié de ce qui est recommandé, l’équivalent d’un grand verre de lait qui manque chaque jour. »</p></div>
+  </div>
+  <h2 class="sec">Adapter et impliquer</h2>
+  <div class="grid">
+    <div class="card"><h3>Adapter le discours</h3><p>Simple et imagé pour un non-initié, plus technique pour une personne sensibilisée.</p></div>
+    <div class="card"><h3>Montrer</h3><p>Graphiques, tableaux, schémas comparatifs.</p></div>
+    <div class="card"><h3>Bannir le jugement</h3><p>La culpabilisation crée de la résistance.</p></div>
+    <div class="card"><h3>Co-construire</h3><p>« Quel résultat vous surprend le plus ? Qu’est-ce qui vous paraît facile à changer ? À quoi n’êtes-vous pas prêt à renoncer ? »</p></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="recueil-analyse.js"></script>
+</body>
+</html>

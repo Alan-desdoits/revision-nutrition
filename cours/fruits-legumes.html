@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fruits et légumes · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Les fruits et les légumes.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Les groupes d’aliments</span>
+        <h1 style="--hl:var(--fl-m)">Les fruits et les <em>légumes</em></h1>
+        <p class="sub">Beaucoup d’eau, peu de calories, énormément de vitamines, minéraux, fibres et antioxydants.</p>
+      </div>
+      <div class="legend"><span class="fl">Légumes</span><span class="sug">Fruits</span><span class="vit">Micronutriments</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="bases" data-name="Bases">
+  <p class="lead">La tomate est un <b>fruit</b> pour le botaniste (elle contient les graines) mais un <b>légume</b> pour le cuisinier (on la mange salée).</p>
+  <div class="grid">
+    <div class="card fl"><span class="tag">Groupe</span><div class="big">2</div><p>Fruits et légumes forment le groupe 2 de la classification du <b>GEMRCN</b>.</p></div>
+    <div class="card fl"><span class="tag">Eau</span><div class="big">80–95 <small>%</small></div><p>D’où leur texture juteuse et leur faible apport énergétique.</p></div>
+    <div class="card fl"><span class="tag">Densité nutritionnelle</span><h3>Élevée</h3><p>Beaucoup de vitamines, minéraux et fibres pour peu d’énergie.</p></div>
+  </div>
+  <div class="note"><span>Une consommation élevée est liée à la <b>prévention</b> du diabète de type 2, du surpoids et de l’obésité. Pourtant, ils ne servent souvent qu’à accompagner les plats protéiques.</span></div>
+
+  <h2 class="sec fl">Quelle partie mange-t-on ? <small>Touchez une famille</small></h2>
+  <div id="cls-chips"></div>
+  <div class="panel empty" id="cls-panel">Choisissez une famille de légumes ou de fruits.</div>
+</section>
+
+<section id="composition" data-name="Composition" hidden>
+  <p class="lead">Une composition qui varie selon l’espèce, la maturité, la saison et la préparation, mais des <b>points communs</b> partout.</p>
+  <div class="grid">
+    <div class="card fl"><span class="tag">Glucides des légumes</span><div class="big">2–5 <small>g/100 g</small></div><p>Surtout des fibres et de l’amidon (racines, tubercules).</p></div>
+    <div class="card sug"><span class="tag">Glucides des fruits</span><div class="big">6–20 <small>g/100 g</small></div><p>Fructose, glucose, saccharose. Accompagnés de fibres et d’eau.</p></div>
+    <div class="card fl"><span class="tag">Fibres</span><div class="big">1–5 <small>g/100 g</small></div><p>Jusqu’à 10 g pour l’artichaut, les pruneaux, les choux.</p></div>
+    <div class="card pro"><span class="tag">Protéines</span><div class="big">&lt; 2 <small>g/100 g</small></div><p>Un peu plus pour petits pois, fèves, haricots verts.</p></div>
+    <div class="card lip"><span class="tag">Lipides</span><div class="big">&lt; 1 <small>g/100 g</small></div><p>Sauf l’<b>avocat</b> (≈ 15 g), les olives, les fruits à coque.</p></div>
+  </div>
+
+  <h2 class="sec eau">Combien d’eau ?</h2>
+  <div class="card"><div id="water-bars"></div></div>
+
+  <h2 class="sec fl">Deux sortes de fibres</h2>
+  <div class="g2">
+    <div class="card tint fl"><h3>Solubles</h3><p>Forment un <b>gel</b> dans l’intestin : ralentissent l’absorption du sucre et du cholestérol, satiété. Pectines, gommes.</p><p>Pommes, poires, agrumes, carottes, courgettes.</p></div>
+    <div class="card tint fl"><h3>Insolubles</h3><p>Augmentent le <b>volume des selles</b>, stimulent le transit. Cellulose, lignine.</p><p>Légumes verts, choux, haricots verts, poireaux, céréales complètes.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card"><p>Elles <b>augmentent le volume</b> du bol alimentaire et facilitent la progression des selles : moins de constipation.</p></div>
+    <div class="card"><p>Elles <b>nourrissent les bonnes bactéries</b> (effet prébiotique) : un microbiote équilibré.</p></div>
+    <div class="card"><p>Elles <b>ralentissent la digestion</b> : meilleure tolérance des repas et satiété. Elles aident aussi à réguler glycémie et cholestérol.</p></div>
+  </div>
+  <div class="note"><span>Les fibres sont plus abondantes quand on mange la <b>peau</b> ou des produits peu transformés. Les sucres des fruits, accompagnés de fibres, d’eau et de micronutriments, limitent l’impact sur la glycémie : une énergie rapide utile aux enfants, ados et sportifs.</span></div>
+
+  <h2 class="sec vit">Vitamines et minéraux</h2>
+  <div class="tbl vit"><table><thead><tr><th>Nutriment</th><th>Où le trouver</th></tr></thead><tbody>
+    <tr><th>Vitamine C</th><td>Agrumes, kiwi, fraise, poivron cru, brocoli, chou</td></tr>
+    <tr><th>Vitamine A (bêta-carotène)</th><td>Carotte, potiron, patate douce, mangue, tomate, épinards, brocoli</td></tr>
+    <tr><th>Vitamine B9</th><td>Légumes verts à feuilles, agrumes, melon</td></tr>
+    <tr><th>Vitamine K</th><td>Chou, épinards, laitue, brocoli</td></tr>
+    <tr><th>Potassium</th><td>Banane, tomate, melon, pomme de terre, légumes verts</td></tr>
+    <tr><th>Magnésium</th><td>Légumes verts, banane, fruits à coque</td></tr>
+    <tr><th>Calcium</th><td>Choux, brocoli, amandes, figues sèches</td></tr>
+    <tr><th>Fer</th><td>Légumes verts, lentilles, haricots, abricots et pruneaux secs</td></tr>
+  </tbody></table></div>
+  <div class="note"><span>Ces vitamines sont <b>fragiles</b> : chaleur, lumière et stockage long les détruisent.</span></div>
+
+  <h2 class="sec">Plus l’assiette est colorée… <small>Touchez une couleur</small></h2>
+  <div id="color-seg"></div>
+  <div class="card" id="color-out"></div>
+</section>
+
+<section id="sucre" data-name="Fruits et sucre" hidden>
+  <p class="lead">Tous les fruits ne se valent pas sur le plan énergétique : de <b>moins de 1 %</b> de glucides pour le citron à <b>20 %</b> pour la banane.</p>
+  <div id="sug-seg"></div>
+  <div class="card"><div id="sug-bars"></div></div>
+
+  <h2 class="sec sug">Combien de glucides dans ma portion ?</h2>
+  <div class="card sug">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="fruit">Fruit</label><select id="fruit"></select></div>
+        <div class="inp"><label for="grams">Portion</label><span class="val" id="grams-o" data-nohide></span><input type="range" id="grams" min="50" max="400" step="10" value="150"></div>
+      </div>
+      <div class="result sug" id="sug-out"></div>
+    </div>
+  </div>
+</section>
+
+<section id="sante" data-name="Santé et âges" hidden>
+  <p class="lead">En consommer chaque jour réduit <b>significativement</b> le risque de plusieurs maladies chroniques.</p>
+  <div class="grid">
+    <div class="card"><h3>Cœur et vaisseaux</h3><p>Peu de graisses saturées et de sel, <b>potassium</b> (tension), fibres (cholestérol), antioxydants.</p></div>
+    <div class="card"><h3>Diabète et poids</h3><p>Les fibres ralentissent l’absorption des sucres et rassasient : moins de grignotage.</p></div>
+    <div class="card"><h3>Cancers digestifs</h3><p>Les fibres limitent le contact des substances cancérigènes avec le côlon. Crucifères, ail, oignon : composés soufrés protecteurs.</p></div>
+    <div class="card"><h3>Vieillissement</h3><p>Les antioxydants neutralisent les radicaux libres (pollution, stress, tabac, soleil).</p></div>
+    <div class="card"><h3>Digestion</h3><p>Pectine (pomme, poire, prune, agrumes) : régule le transit. Crudités et légumes verts : fibres insolubles.</p></div>
+    <div class="card"><h3>Immunité</h3><p>Vitamines C, A, B9, zinc, polyphénols. Un fruit au petit-déjeuner couvre déjà une partie de la vitamine C.</p></div>
+    <div class="card"><h3>Os et muscles</h3><p>Choux, brocolis, épinards : calcium, magnésium, vitamine K. Effet alcalinisant.</p></div>
+    <div class="card"><h3>Moral</h3><p>Vitamines B, magnésium, antioxydants : moins de fatigue et de stress.</p></div>
+  </div>
+
+  <h2 class="sec">Selon l’âge et la situation</h2>
+  <div id="age-seg"></div>
+  <div class="card fl" id="age-out"></div>
+</section>
+
+<section id="quotidien" data-name="Au quotidien" hidden>
+  <p class="lead">Le PNNS recommande <b>au moins 5 portions</b> par jour, soit 400 à 500 g. Une portion ≈ la taille de la main ou un bol de crudités.</p>
+  <div class="card fl">
+    <div class="calc">
+      <div class="calc-in" id="por-in"></div>
+      <div class="result fl" id="por-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec">À chaque repas</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Petit-déjeuner</span><p>Un fruit frais ou une compote sans sucre ajouté. Légumes possibles : omelette tomate-épinards, toast à l’avocat.</p></div>
+    <div class="card"><span class="tag">Déjeuner</span><p>Au moins <b>deux portions</b> : une entrée de crudités et un légume cuit. Un fruit en dessert.</p></div>
+    <div class="card"><span class="tag">Goûter</span><p>Un fruit ou un fruit sec plutôt que biscuits et viennoiseries.</p></div>
+    <div class="card"><span class="tag">Dîner</span><p>Légumes en bonne place : potage, purée, vapeur, tian. Fruit léger en dessert.</p></div>
+  </div>
+
+  <h2 class="sec">Des associations équilibrées</h2>
+  <p>Leurs fibres et leur eau complètent les plats riches en protéines ou en féculents : satiété, transit, légèreté, couleur. En dessert, un fruit vaut souvent mieux qu’un dessert industriel.</p>
+  <div class="grid">
+    <div class="card"><p>Filet de poisson, poêlée de légumes, salade de fruits.</p></div>
+    <div class="card"><p>Omelette aux légumes, compote.</p></div>
+    <div class="card"><p>Lentilles ou riz avec carottes et épinards.</p></div>
+  </div>
+  <div class="note"><span>Tenir compte des goûts et de la tolérance digestive : croquants pour les uns, soupes ou purées pour les autres. L’essentiel, c’est la <b>régularité</b> et des formes variées et plaisantes. Vitamine E : surtout dans les fruits secs et l’avocat ; cuivre, zinc, manganèse, sélénium en petites quantités, surtout dans les produits colorés ou à peau épaisse.</span></div>
+
+  <h2 class="sec fl">De saison <small>Plus savoureux, plus riches, moins chers</small></h2>
+  <div id="season-seg"></div>
+  <div class="g2" id="season-out"></div>
+  <div class="note"><span>L’été : crudités, salades, tomates, courgettes, fruits juteux. L’hiver : potages, choux, carottes, courges, agrumes riches en vitamine C. Suivre les saisons, c’est renouer avec le rythme naturel et encourager le local.</span></div>
+</section>
+
+<section id="cuisine" data-name="Cuisine et hygiène" hidden>
+  <p class="lead">Bien les choisir, les conserver et les cuire, c’est garder leurs <b>vitamines</b>.</p>
+  <h2 class="sec fl" style="margin-top:0">Bien choisir</h2>
+  <div class="grid">
+    <div class="card"><h3>Aspect</h3><p>Couleur vive, peau lisse, sans taches ni moisissures.</p></div>
+    <div class="card"><h3>Odeur</h3><p>Agréable et naturelle, sans fermentation.</p></div>
+    <div class="card"><h3>Texture</h3><p>Ferme mais pas dure : signe de fraîcheur.</p></div>
+    <div class="card"><h3>Saison</h3><p>Plus de saveur et de vitamines.</p></div>
+    <div class="card"><h3>Origine</h3><p>Circuits courts, local ou bio : moins de résidus de pesticides.</p></div>
+  </div>
+  <div class="g2">
+    <div class="card"><h3>Maturité</h3><p>Cueillis mûrs : plus de vitamines, de sucres naturels, d’antioxydants. Cueillis trop tôt pour le transport : moins savoureux et moins riches.</p></div>
+    <div class="card"><h3>Mode de culture</h3><p><b>Conventionnel</b> : résidus phytosanitaires possibles. <b>Biologique</b> : sans pesticides chimiques de synthèse. <b>Local et de saison</b> : plus écologique, souvent plus frais.</p></div>
+  </div>
+
+  <h2 class="sec fl">Après la récolte, ils vivent encore</h2>
+  <p>Fragiles et vivants, ils respirent et se transforment : sensibles à la chaleur, à l’humidité, aux chocs. Endroit frais, sec, à l’abri de la lumière ; pas trop sec (flétrissement), pas trop humide (moisissure) ; <b>ne pas laver avant de ranger</b>.</p>
+  <div class="grid">
+    <div class="card"><p><b>Catabolisme des glucides</b> : décomposés pour produire de l’énergie, perte de saveur.</p></div>
+    <div class="card"><p><b>Moins d’oxygène</b>, plus de dioxyde de carbone.</p></div>
+    <div class="card"><p><b>Fermentation</b> en éthanol : noircissement, goût désagréable.</p></div>
+    <div class="card"><p><b>Teneur en eau</b> modifiée : micro-organismes puis déshydratation.</p></div>
+    <div class="card"><p><b>Dégagement de chaleur</b>.</p></div>
+  </div>
+  <div class="note"><span>Fraises, tomates mûres : à manger vite. Carottes, pommes de terre, pommes : plusieurs jours, voire semaines. Pour durer plus longtemps : <b>surgélation, conserve, déshydratation, fermentation</b>.</span></div>
+
+  <h2 class="sec fl">Modes de cuisson</h2>
+  <div class="g2">
+    <div class="card good"><h3>À privilégier</h3><ul><li><b>Vapeur</b> : la meilleure, sans matière grasse</li><li><b>Étouffée</b> (cocotte) : dans leur propre eau</li><li><b>Wok</b> rapide, à feu vif</li><li><b>Papillote</b> : douce et protectrice</li><li>Micro-ondes court, à faible puissance</li></ul></div>
+    <div class="card bad"><h3>À limiter</h3><ul><li><b>Grande eau</b> : vitamine C et folates passent dans l’eau (la garder pour une soupe)</li><li><b>Friture</b> et poêle très chaude</li><li>Four très chaud qui assèche</li><li>Réchauffages successifs</li></ul></div>
+  </div>
+  <div class="note"><span>Plus la cuisson est <b>courte</b>, plus les vitamines sont préservées. Un légume légèrement croquant est un légume réussi.</span></div>
+  <div class="acc">
+    <details><summary>Ce que fait la chaleur</summary><div><p>Elle ramollit les fibres (mastication et digestion plus faciles : enfants, personnes âgées, intestin sensible) et détruit des micro-organismes. Elle modifie les pigments (le vert ternit, l’orange s’intensifie), développe les arômes, mais détruit une partie des vitamines <b>C</b> et <b>B9</b>. Elle facilite l’assimilation du <b>bêta-carotène</b> (carotte) et du <b>lycopène</b> (tomate).</p></div></details>
+    <details><summary>Ordre et durée</summary><div><p>Les légumes durs (carottes, pommes de terre, navets) cuisent plus longtemps ; les tendres (courgettes, épinards, brocolis) rapidement. En cuisson combinée, les ajouter selon leur fermeté. Trop cuits, ternes et pâteux : pertes importantes.</p></div></details>
+    <details><summary>Digestibilité et saveur</summary><div><p>Cuits, ils ballonnent moins (chou, poivron), deviennent plus doux, parfois caramélisés. Fruits cuits (compote de pommes, poires) : plus tendres et digestes pour enfants et personnes âgées. Crus, ils gardent toutes leurs vitamines mais sont moins bien tolérés par les digestions sensibles.</p></div></details>
+    <details><summary>Conseils pratiques</summary><div><p>Couper juste avant la cuisson, peu d’eau et couvercle, un filet d’huile végétale <b>à la fin</b> pour les vitamines A, D, E, K, consommer rapidement après préparation.</p></div></details>
+  </div>
+
+  <h2 class="sec">Conservation</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">Réfrigérateur</span><div class="big">4–8 <small>°C</small></div><p>Bac à légumes : légumes verts, racines en sac perforé, fruits rouges à manger vite. Sortir 30 min avant.</p></div>
+    <div class="card"><span class="tag">Température ambiante</span><h3>Ils n’aiment pas le froid</h3><p>Banane, mangue, ananas, avocat, tomate, courgette, aubergine. Oignon, ail, échalote au sec.</p></div>
+    <div class="card"><span class="tag">Éthylène</span><h3>Pomme et poire à part</h3><p>Ce gaz accélère la maturation des autres fruits et légumes.</p></div>
+  </div>
+
+  <h2 class="sec">Préparation</h2>
+  <div class="acc">
+    <details><summary>Laver</summary><div><p>À l’eau claire, juste avant l’utilisation, <b>sans faire tremper</b> (vitamines C et B9 hydrosolubles). Salades : plusieurs eaux. Ne pas relaver les produits déjà lavés en sachet.</p></div></details>
+    <details><summary>Éplucher</summary><div><p>Finement, à l’économe, juste avant cuisson : vitamines, fibres et pigments sont dans la peau ou juste dessous. Éplucher ce qui a une peau dure ou vient de cultures conventionnelles.</p></div></details>
+    <details><summary>Couper</summary><div><p>Juste avant de cuire ou servir. Morceaux moyens : trop petits, ils perdent leurs vitamines. Un filet de citron limite le brunissement.</p></div></details>
+    <details><summary>Assaisonner</summary><div><p>Un filet d’huile d’olive, de colza ou de noix aide à absorber les vitamines A, D, E, K. Limiter sel et sucre, préférer herbes, épices, citron.</p></div></details>
+  </div>
+
+  <h2 class="sec bad-f">Risques sanitaires</h2>
+  <div class="g3">
+    <div class="card bad"><h3>Microbiologiques</h3><p><i>Salmonella</i>, <i>Listeria</i>, <i>E. coli</i>, toxoplasme. Graves chez la femme enceinte, le nourrisson, la personne âgée ou immunodéprimée.</p></div>
+    <div class="card bad"><h3>Chimiques</h3><p>Résidus de pesticides. Laver (même bio), éplucher ou brosser, varier les provenances.</p></div>
+    <div class="card bad"><h3>Physiques</h3><p>Corps étrangers : verre, plastique, cailloux. Contrôle visuel avant préparation.</p></div>
+  </div>
+  <div class="note"><span>Lavés et coupés, les fruits et légumes crus se gardent <b>au réfrigérateur</b> et se mangent dans les <b>24 heures</b>. Grossesse : bien laver et cuire pour éviter toxoplasmose et listériose.</span></div>
+  <div class="acc">
+    <details><summary>Réduire les résidus de pesticides</summary><div><p>Laver à l’eau claire tous les fruits et légumes, <b>même bio</b> (terre, bactéries) ; éplucher ou brosser, surtout en culture conventionnelle ; varier provenances et types de produits. En excès, ces résidus peuvent avoir des effets à long terme (troubles hormonaux, allergies, foie, système nerveux). Le bio en contient généralement moins mais demande la même hygiène.</p></div></details>
+    <details><summary>Bonnes pratiques d’hygiène</summary><div><p>Mains, plan de travail, ustensiles propres ; pas la même planche que pour la viande, le poisson ou les œufs crus (contamination croisée) ; laver juste avant consommation sans faire tremper (vinaigre ou bicarbonate pas nécessaires) ; jeter ce qui est moisi (<b>mycotoxines</b> invisibles) ; ne pas stocker près des viandes et poissons crus ; ne jamais recongeler un produit décongelé.</p></div></details>
+    <details><summary>Publics fragiles</summary><div><p>Femmes enceintes, nourrissons, personnes âgées, immunodéprimés : légumes crus lavés et séchés ; herbes et salades en sachet rincées à nouveau ; fruits rouges lavés à l’eau courante ou cuits (compote, coulis) ; légumes racines bien brossés.</p></div></details>
+    <details><summary>Traçabilité et réglementation</summary><div><p>Normes d’hygiène européennes (<b>Paquet Hygiène</b>), traçabilité du champ à l’assiette. Contrôles des résidus chimiques, des métaux lourds, des micro-organismes et de l’étiquetage. Le consommateur doit connaître l’origine, le mode de production et la date de conditionnement.</p></div></details>
+  </div>
+</section>
+
+<section id="cas" data-name="Cas pratique" hidden>
+  <div class="card who-card">
+    <div class="avatar" aria-hidden="true">B</div>
+    <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:200px">
+      <h3>La famille Bernard</h3>
+      <div class="stats" data-nohide><span>Mme Bernard, 38 ans</span><span>2 enfants de 8 et 12 ans</span><span>Deux parents à temps plein</span></div>
+      <p>Peu de temps pour cuisiner, des enfants qui boudent les légumes.</p>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <p class="lead" style="font-size:1.2rem">Leur journée, avant et après.</p>
+    <div id="ab-seg"></div>
+  </div>
+  <div class="grid" id="meals" data-nohide></div>
+  <h2 class="sec">Les questions du cas</h2>
+  <div class="grid">
+    <div class="card reveal-card"><h3 data-nohide>1. Les erreurs de la famille ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Fruits et légumes quasi absents du dîner, peu présents ailleurs ; apports limités à des compotes et des jus du commerce, sucrés et sans fibres ; légumes rares ; repas centrés sur féculents, gras et sucré ; enfants peu exposés à la variété ; les jus donnent une <b>fausse impression</b> de manger des fruits.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>2. La recommandation du PNNS ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Au moins <b>5 portions</b> par jour, 400 à 500 g. Une portion = un fruit moyen, un petit bol de crudités ou une assiette de légumes cuits. Intérêt : vitamines et minéraux (C, bêta-carotène, potassium, magnésium, fer végétal, B9), fibres, antioxydants, prévention des maladies.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>3. Leurs apports ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>85 à 95 % d’eau ; fibres ; vitamines C, A (bêta-carotène), B9, K ; potassium, magnésium, calcium, fer, zinc, cuivre ; polyphénols, flavonoïdes, anthocyanes, caroténoïdes. Pauvres en calories, graisses et sucres ajoutés.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>4. Les conséquences à long terme ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Carences (C, B9, potassium, fibres) : fatigue, immunité fragile, constipation. Surpoids et diabète (moins de satiété, plus de grignotage). Maladies cardiovasculaires, diabète de type 2, cancers digestifs. Vieillissement cellulaire accéléré (stress oxydatif).</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>5. Des solutions sans plus de temps ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Fruit ou jus 100 % pressé maison le matin ; crudités prêtes (carottes râpées, tomates cerises, salade lavée) ; légumes surgelés nature ; légumes dans les plats préférés (courgette dans les pâtes, maïs dans le riz, sauce tomate maison) ; soupes, purées, gratins le soir ; fruits ludiques (brochettes, smoothies) ; enfants en cuisine.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>6. Une journée de menus ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Voir la version « Après » ci-dessus : 5 portions atteintes facilement, au rythme de la famille.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>7. Les précautions d’hygiène ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Mains et plan de travail propres ; rincer sans faire tremper ; peau fine lavée délicatement, feuilles dans plusieurs eaux ; pas d’ustensiles communs avec la viande ou le poisson crus ; au réfrigérateur et dans les 24 h ; jeter l’abîmé ; femme enceinte et jeunes enfants : cuire les légumes fragiles, compotes et soupes.</p></div></div>
+  </div>
+
+  <h2 class="sec">Ce qu’il faut retenir</h2>
+  <div class="g2">
+    <div class="card bad"><h3>Les erreurs</h3><ul><li>Fruits et légumes quasi absents du dîner</li><li>Beaucoup de <b>jus industriels</b> : sucres, pas de fibres, fausse impression de manger des fruits</li><li>Repas centrés sur féculents, gras et sucré</li><li>Enfants peu exposés à la variété : rejet renforcé</li></ul></div>
+    <div class="card good"><h3>Solutions sans plus de temps</h3><ul><li>Un fruit au petit-déjeuner</li><li>Crudités prêtes, légumes <b>surgelés nature</b></li><li>Légumes cachés dans les plats préférés (pâtes, sauce tomate maison)</li><li>Soupes, purées, gratins le soir</li><li>Fruits ludiques, enfants en cuisine</li></ul></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="fruits-legumes.js"></script>
+</body>
+</html>

@@ -1,25 +1,28 @@
 /* ==========================================================================
    Liste des cours affichés sur la page d'accueil.
    Ajouter un cours = ajouter une entrée ici (voir CLAUDE.md, « Passe d'intégration »).
+   theme : "bases" | "aliments" | "accompagnement" (ordre d'affichage des groupes : THEMES)
    statut : "disponible" (page en ligne) ou "en-attente" (document reçu, pas encore intégré)
    ========================================================================== */
+window.THEMES = [
+  { id: "bases", titre: "Bases scientifiques", sous: "Les nutriments et leur rôle dans l’organisme" },
+  { id: "aliments", titre: "Les groupes d’aliments", sous: "Composition, fabrication, place dans l’assiette" },
+  { id: "accompagnement", titre: "Accompagner une personne", sous: "Des besoins au plan alimentaire, et les limites du conseil" }
+];
+
 window.COURS = [
-  {
-    slug: "macronutriments",
-    titre: "Les macronutriments",
-    resume: "Glucides, protéines, lipides et eau : structure, digestion, besoins, sources, excès et carences.",
-    familles: ["glu", "pro", "lip", "eau"],
-    fiches: ["Bases", "Explorer", "Digestion", "Besoins", "Sources", "Excès et carences", "Cas pratique"],
-    statut: "disponible",
-    page: "cours/macronutriments.html"
-  },
-  {
-    slug: "micronutriments",
-    titre: "Les micronutriments",
-    resume: "Vitamines et minéraux : rôles, absorption, besoins, sources et évaluation des carences.",
-    familles: ["vit", "min"],
-    fiches: [],
-    statut: "en-attente",
-    page: null
-  }
+  { slug: "macronutriments", theme: "bases", titre: "Les macronutriments", resume: "Glucides, protéines, lipides et eau : structure, digestion, besoins, sources, excès et carences.", familles: ["glu", "pro", "lip", "eau"], fiches: ["Bases", "Explorer", "Glucides", "Protéines", "Lipides", "Eau", "Digestion", "Besoins", "Sources", "Excès et carences", "Cas pratique"], statut: "disponible", page: "cours/macronutriments.html" },
+  { slug: "micronutriments", theme: "bases", titre: "Les micronutriments", resume: "Vitamines et minéraux : rôles, absorption, besoins, sources et évaluation des carences.", familles: ["vit", "min"], fiches: ["Bases", "Explorer", "Absorption", "Besoins", "Sources", "Évaluer", "Cas pratique"], statut: "disponible", page: "cours/micronutriments.html" },
+
+  { slug: "fruits-legumes", theme: "aliments", titre: "Les fruits et les légumes", resume: "Classification, composition, sucre des fruits, santé, portions, saisons, cuisine et hygiène.", familles: ["fl", "sug", "vit"], fiches: ["Bases", "Composition", "Fruits et sucre", "Santé et âges", "Au quotidien", "Cuisine et hygiène", "Cas pratique"], statut: "disponible", page: "cours/fruits-legumes.html" },
+  { slug: "produits-laitiers", theme: "aliments", titre: "Les produits laitiers", resume: "Laits, laits fermentés, fromages, crème et beurre, repères de consommation, intolérance et allergie.", familles: ["lai", "glu", "lip"], fiches: ["Le lait", "Autres laits", "Laits fermentés", "Fromages", "Crème et beurre", "Repères", "Cas pratique"], statut: "disponible", page: "cours/produits-laitiers.html" },
+  { slug: "matieres-grasses", theme: "aliments", titre: "Les matières grasses", resume: "Acides gras, huiles et leur composition, fabrication, crème et beurre, graisses végétales, sauces, margarine.", familles: ["lip", "eau"], fiches: ["Bases", "Huiles", "Fabrication", "Crème et beurre", "Végétales et sauces"], statut: "disponible", page: "cours/matieres-grasses.html" },
+  { slug: "produits-sucres", theme: "aliments", titre: "Les produits sucrés", resume: "Glycémie, sucres et sirops, pouvoir sucrant, rôles techniques, sucres libres, familles de produits.", familles: ["sug", "glu"], fiches: ["Le sucre", "Les sucres", "Rôles techniques", "Santé et repères", "Familles de produits", "Cas pratique"], statut: "disponible", page: "cours/produits-sucres.html" },
+
+  { slug: "determinants-besoins", theme: "accompagnement", titre: "Déterminants de santé et besoins", resume: "Besoins énergétiques, déterminants, PNNS, calcul du métabolisme de base et de la ration.", familles: ["ink", "pro", "lip", "glu"], fiches: ["La démarche", "Énergie", "Déterminants", "PNNS", "Calculer les besoins", "La ration"], statut: "disponible", page: "cours/determinants-besoins.html" },
+  { slug: "recueil-analyse", theme: "accompagnement", titre: "Recueil et analyse des données", resume: "Comportement alimentaire, méthodes de collecte, quantification, analyse qualitative, restitution.", familles: ["ink"], fiches: ["Principes", "Comportement alimentaire", "Collecte", "Quantifier", "Analyse qualitative", "Restitution"], statut: "disponible", page: "cours/recueil-analyse.html" },
+  { slug: "composition-repas", theme: "accompagnement", titre: "Composition et répartition des repas", resume: "Les 7 catégories du PNNS, la pyramide, Nutri-Score et étiquette, fonction de chaque repas.", familles: ["fl", "glu", "lai", "pro"], fiches: ["L’équilibre", "La pyramide", "Étiquette et Nutri-Score", "Les repas"], statut: "disponible", page: "cours/composition-repas.html" },
+  { slug: "plans-menus", theme: "accompagnement", titre: "Plans alimentaires et menus", resume: "Du cadre au contenu : répartir l’énergie, composer l’assiette, construire des menus.", familles: ["glu", "fl", "pro"], fiches: ["Plan ou menu ?", "Répartir les repas", "Composer un repas", "Construire un menu"], statut: "disponible", page: "cours/plans-menus.html" },
+  { slug: "publics-specifiques", theme: "accompagnement", titre: "Publics aux besoins spécifiques", resume: "Nourrisson, enfant et adolescent, personne âgée, sportif.", familles: ["eau", "fl", "lai", "glu"], fiches: ["Nourrisson", "Enfant et ado", "Personne âgée", "Sportif"], statut: "disponible", page: "cours/publics-specifiques.html" },
+  { slug: "hors-perimetre", theme: "accompagnement", titre: "Hors périmètre et orientation", resume: "Limites du conseil nutritionnel, signaux d’alerte, vers qui orienter, profils spécifiques.", familles: ["good-f", "bad-f", "ink"], fiches: ["Le périmètre", "Signaux d’alerte", "Orienter", "Profils spécifiques"], statut: "disponible", page: "cours/hors-perimetre.html" }
 ];

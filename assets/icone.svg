@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Révisions nutrition : une assiette en quatre parts (glucides, protéines, lipides, eau) autour d'une feuille -->
+  <rect width="512" height="512" rx="116" fill="#233a66"/>
+  <g fill="none" stroke-width="54" stroke-linecap="round" transform="rotate(-90 256 256)">
+    <circle cx="256" cy="256" r="152" stroke="#f4c76a" stroke-dasharray="152 803" stroke-dashoffset="-14"/>
+    <circle cx="256" cy="256" r="152" stroke="#f0a093" stroke-dasharray="152 803" stroke-dashoffset="-252.7"/>
+    <circle cx="256" cy="256" r="152" stroke="#c3d27a" stroke-dasharray="152 803" stroke-dashoffset="-491.5"/>
+    <circle cx="256" cy="256" r="152" stroke="#8cc3e6" stroke-dasharray="152 803" stroke-dashoffset="-730.2"/>
+  </g>
+  <path d="M256 176c52 18 70 78 0 158c-70-80-52-140 0-158z" fill="#ffffff"/>
+  <path d="M256 206v112" stroke="#233a66" stroke-width="10" stroke-linecap="round"/>
+  <path d="M256 250l-24-18M256 278l26-20" stroke="#233a66" stroke-width="9" stroke-linecap="round"/>
+</svg>

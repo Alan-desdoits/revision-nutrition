@@ -64,6 +64,62 @@
     pic(panel.querySelector("svg"), p);
   });
 
+  /* ---------------- Fiches détaillées ---------------- */
+  const { hbars, explorer } = window.Fiches;
+  hbars($("#amidon-bars"), [
+    { label: "Blé", sub: "céréale", v: [65, 70], cls: "glu" }, { label: "Maïs", sub: "céréale", v: [65, 80], cls: "glu" }, { label: "Riz", sub: "céréale", v: [75, 90], cls: "glu" },
+    { label: "Pomme de terre", sub: "tubercule", v: [60, 65], cls: "glu" }, { label: "Manioc", sub: "tubercule", v: [80, 85], cls: "glu" },
+    { label: "Haricot", sub: "légumineuse", v: [30, 35], cls: "glu" }, { label: "Pois", sub: "légumineuse", v: [40, 50], cls: "glu" },
+    { label: "Banane", sub: "fruit", v: [15, 25], cls: "glu" }
+  ], { max: 100, unit: "%" });
+
+  // 20 acides aminés : [nom, code 3 lettres, code 1 lettre, famille, essentiel]
+  const AA = [
+    ["Phénylalanine", "phe", "F", "Aromatique", 1], ["Tryptophane", "trp", "W", "Aromatique", 1], ["Tyrosine", "tyr", "Y", "Aromatique", 0],
+    ["Asparagine", "asn", "N", "Amide", 0], ["Glutamine", "gln", "Q", "Amide", 0],
+    ["Arginine", "arg", "R", "Basique", 0], ["Lysine", "lys", "K", "Basique", 1], ["Histidine", "his", "H", "Basique", 1],
+    ["Méthionine", "met", "M", "Soufré", 1], ["Cystéine", "cys", "C", "Soufré", 0],
+    ["Alanine", "ala", "A", "Aliphatique", 0], ["Glycine", "gly", "G", "Aliphatique", 0], ["Isoleucine", "ile", "I", "Aliphatique", 1],
+    ["Proline", "pro", "P", "Aliphatique", 0], ["Valine", "val", "V", "Aliphatique", 1], ["Leucine", "leu", "L", "Aliphatique", 1],
+    ["Thréonine", "thr", "T", "Hydroxylé", 1], ["Sérine", "ser", "S", "Hydroxylé", 0],
+    ["Acide glutamique", "glu", "E", "Acide", 0], ["Acide aspartique", "asp", "D", "Acide", 0]
+  ];
+  const fams = [...new Set(AA.map(a => a[3]))];
+  explorer($("#aa-chips"), $("#aa-panel"), fams.map(f => ({ cls: "pro", label: f, items: AA.filter(a => a[3] === f).map(a => ({
+    name: a[0] + (a[4] ? " *" : ""), rows: [["Codes", `<span data-nohide>${a[1]} · ${a[2]}</span>`], ["Famille", a[3]], ["Essentiel ?", a[4] ? "<b>Oui</b> : à apporter par l’alimentation" : (a[0] === "Arginine" || a[0] === "Glutamine" ? "Non, mais <b>semi-essentiel</b> en cas de croissance, stress, maladie" : "Non : le corps sait le fabriquer")]]
+  })) })));
+
+  hbars($("#pro-ex-bars"), [
+    { label: "Adulte de 60 kg", v: [48, 72], cls: "pro" }, { label: "Adulte de 70 kg", v: [56, 84], cls: "pro" }, { label: "Adulte de 80 kg", v: [64, 96], cls: "pro" },
+    { label: "Ado de 50 kg", sub: "1 à 1,5 g/kg", v: [60, 75], cls: "pro" }, { label: "Personne âgée de 65 kg", sub: "au moins", v: [65, 80], cls: "pro" }
+  ], { unit: "g/j" });
+
+  const T = (name, rows) => ({ name, rows });
+  explorer($("#terp-chips"), $("#terp-panel"), [{ cls: "lip", label: "Terpénoïdes", items: [
+    T("Cholestérol", [["Structure", "Dans toutes les membranes : « régulateur de fluidité », ni trop rigide ni trop fluide."], ["Précurseur", "Sels biliaires (digestion des graisses), vitamine D (peau, soleil), hormones stéroïdes : cortisol, testostérone, œstrogènes, progestérone, aldostérone."], ["Origine", "Alimentation (viandes, œufs, laitages, abats), mais surtout <b>synthèse par le foie</b>."], ["Transport", "LDL vers les tissus, HDL retour au foie. Excès de LDL et manque de HDL : athérosclérose."]]),
+    T("Hormones sexuelles", [["Ce que c’est", "Stéroïdes (quatre anneaux) dérivés du cholestérol."], ["Exemples", "Œstrogènes et progestérone (cycle, grossesse, caractères sexuels) ; testostérone (muscle, masse osseuse, fertilité)."]]),
+    T("Glucocorticoïdes", [["Exemple", "<b>Cortisol</b>, sécrété par les surrénales."], ["Rôle", "Règle le métabolisme (glycémie, protéines, lipides), module l’inflammation, réaction au stress. En médecine : corticoïdes anti-inflammatoires."]]),
+    T("Minéralocorticoïdes", [["Exemple", "<b>Aldostérone</b>, sécrétée par les surrénales."], ["Rôle", "Équilibre hydrique et pression artérielle via les reins (retient le sodium, élimine le potassium)."]]),
+    T("Vitamine D, acides biliaires", [["Vitamine D", "Dérive du cholestérol et agit comme une hormone : calcium et santé osseuse."], ["Acides biliaires", "Certains stéroïdes servent à les fabriquer, indispensables à la digestion des graisses."]]),
+    T("Caroténoïdes", [["Ce que c’est", "Pigments orange, rouges, jaunes (carottes, tomates, patates douces, abricots)."], ["À retenir", "Le <b>bêta-carotène</b> est précurseur de la vitamine A (vision, croissance, immunité, renouvellement cellulaire). Antioxydants : neutralisent les radicaux libres."]]),
+    T("Terpènes aromatiques", [["Exemples", "Menthol (menthe), limonène (zeste d’agrumes), molécules des huiles essentielles."], ["Intérêt", "Pas essentiels, mais arômes naturels, phytothérapie, couleur et attrait des aliments."]]),
+    T("Rétinoïdes", [["Rétinol", "Forme de stockage et de transport de la vitamine A : foie, lait entier, beurre, fromages, poissons gras, œufs."], ["Rétinal", "Forme active de la vision : constitue la <b>rhodopsine</b> de la rétine (vision dans la pénombre)."], ["Acide rétinoïque", "Agit comme une hormone sur l’expression des gènes : croissance, différenciation, renouvellement des tissus."], ["Provitamine A", "Caroténoïdes : carottes, patates douces, abricots, mangues, épinards, brocolis."]])
+  ] }]);
+
+  // Glycérides : glycérol + n acides gras (schéma)
+  document.querySelectorAll("svg.glyc").forEach(svg => {
+    const n = +svg.dataset.n;
+    let s = `<rect x="6" y="4" width="16" height="52" rx="5" fill="var(--lip-s)" stroke="var(--lip)" stroke-width="2.5"/>`;
+    [12, 30, 48].forEach((y, i) => {
+      if (i < n) { let pts = [], x = 22; for (let k = 0; k < 9; k++) { pts.push(x + "," + (y + (k % 2 ? 4 : -4))); x += 10; } s += `<polyline points="${pts.join(" ")}" fill="none" stroke="var(--lip)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`; }
+      else s += `<text x="26" y="${y + 4}" font-size="11" fill="var(--muted)" font-family="IBM Plex Mono, monospace">OH</text>`;
+    });
+    svg.setAttribute("aria-hidden", "true"); svg.innerHTML = s;
+  });
+
+  hbars($("#eau-in"), [{ label: "Boissons", sub: "60 %", v: 1500, cls: "eau" }, { label: "Aliments", sub: "30 %", v: 700, cls: "eau" }, { label: "Métabolisme", sub: "10 %", v: 250, cls: "eau" }], { max: 1500, unit: "mL" });
+  hbars($("#eau-out"), [{ label: "Urines", sub: "60 %", v: 1500, cls: "eau" }, { label: "Peau et poumons", sub: "28 %", v: 700, cls: "eau" }, { label: "Sueur", sub: "8 %", v: 250, cls: "eau" }, { label: "Matières fécales", sub: "4 %", v: 100, cls: "eau" }], { max: 1500, unit: "mL" });
+
   /* ---------------- Digestion ---------------- */
   const DIG = {
     glu: {

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Produits sucrés · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Les produits sucrés.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Les groupes d’aliments</span>
+        <h1 style="--hl:var(--sug-m)">Les produits <em>sucrés</em></h1>
+        <p class="sub">Comprendre le sucre pour l’expliquer sans culpabiliser : biochimie, produits, effets, repères.</p>
+      </div>
+      <div class="legend"><span class="sug">Sucres</span><span class="glu">Glucides</span><span class="lip">Matières grasses</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="bases" data-name="Le sucre">
+  <p class="lead">« Sucre » a deux sens : un <b>glucide simple</b> pour le scientifique, le <b>saccharose</b> et les produits qui en contiennent pour tout le monde.</p>
+  <div class="g2">
+    <div class="card sug"><div class="schema"><svg data-pic="hex1"></svg></div><h3>Monosaccharides</h3><p>Absorbés <b>sans digestion</b>. Glucose (carburant de toutes les cellules), fructose (fruits, miel, sirops ; métabolisme surtout hépatique), galactose (lait).</p></div>
+    <div class="card sug"><div class="schema"><svg data-pic="hex2"></svg></div><h3>Disaccharides</h3><p>À <b>hydrolyser</b> avant absorption. Saccharose = glucose + fructose · lactose = glucose + galactose · maltose = glucose + glucose.</p></div>
+  </div>
+
+  <h2 class="sec sug">Le pic de glycémie <small>Comparez les deux situations</small></h2>
+  <div id="gly-seg"></div>
+  <div class="card sug">
+    <svg viewBox="0 0 640 230" id="gly-svg" role="img" aria-label="Courbe de glycémie" style="width:100%;height:auto"></svg>
+    <div class="g3" id="gly-steps"></div>
+  </div>
+  <div class="note"><span>L’<b>index glycémique</b> mesure la capacité d’un aliment à augmenter la glycémie, observée sur 3 heures. Fibres, cuisson et matière grasse le modifient au sein d’un repas. Il est très élevé lors des grignotages de bonbons, chocolat, gâteaux industriels : d’où la faim qui revient vite.</span></div>
+  <div class="grid">
+    <div class="card bad"><span class="tag">IG élevé</span><div class="big">&gt; 70</div><p>Hyperglycémie marquée puis hypoglycémie.</p></div>
+    <div class="card"><span class="tag">IG moyen</span><div class="big">55–70</div><p>Pic et creux modérés.</p></div>
+    <div class="card good"><span class="tag">IG bas</span><div class="big">&lt; 55</div><p>Courbe presque plate, proche de la glycémie normale.</p></div>
+  </div>
+
+  <h2 class="sec sug">Le cercle des sucres simples</h2>
+  <div class="chain sug" data-nohide><span>1. Sucres simples</span><i>→</i><span>2. Absorption très rapide</span><i>→</i><span>3. Pic de glycémie, danger pour les organes</span><i>→</i><span>4. Insuline (pancréas)</span><i>→</i><span>5. Glucose dans les muscles et le foie</span><i>→</i><span>6. Hypoglycémie réactionnelle</span><i>→</i><span>7. Fringale</span><i>→</i><span>8. Nouvelle prise de sucre</span><i>↺</i></div>
+  <div class="note"><span>Le cerveau et les globules rouges n’utilisent que le glucose, en permanence ; les muscles aussi en effort intense. Dans ce cours, « glucose » désigne le glucose sanguin. L’<b>hydrolyse</b> est la rupture d’une liaison par une molécule d’eau, catalysée par des enzymes (amylases, disaccharidases).</span></div>
+</section>
+
+<section id="sucres" data-name="Les sucres" hidden>
+  <p class="lead">Betterave ou canne, la molécule est la même. La différence vient de la <b>mélasse</b> et du raffinage.</p>
+  <div id="sug-chips"></div>
+  <div class="panel empty" id="sug-panel">Choisissez un sucre.</div>
+  <div class="note"><span>Blanc, blond ou roux : près de <b>100 % de saccharose</b>, mêmes effets sur la glycémie. Les minéraux de la mélasse (potassium, calcium, magnésium) sont insignifiants : il faudrait en manger énormément. Autres sucres : sirop de coco, muscovado (Philippines) et rapadura (Amérique du Sud), non raffinés.</span></div>
+  <div class="acc">
+    <details><summary>Raffiner la canne</summary><div><p>Broyage des tiges : le jus (<b>vesou</b>), clarifié par chauffage et filtration, évaporé en sirop où se forment les cristaux. La centrifugation sépare les cristaux de la <b>mélasse</b> de canne. Selon le raffinage : lavage, recristallisation, décoloration (charbon actif, résines). Une trace de mélasse donne la couleur dorée et l’arôme.</p></div></details>
+    <details><summary>Raffiner la betterave</summary><div><p>Betteraves lavées, coupées en lamelles, dans l’eau chaude. Jus purifié à la <b>chaux</b> et au CO₂, filtré, évaporé, cristallisé, centrifugé. La mélasse de betterave (forte, amère, terreuse) n’est pas réincorporée : alimentation animale, alcools, levures. Le sucre est très blanc et neutre.</p></div></details>
+    <details><summary>La mélasse</summary><div><p>Sirop sombre, épais, aromatique, obtenu après séparation des cristaux : sucres non cristallisés, minéraux, pigments, arômes, acides organiques. C’est elle qui colore et parfume les sucres peu raffinés. Le raffinage retire pigments, vitamines et minéraux.</p></div></details>
+    <details><summary>Sucre roux : deux réalités</summary><div><p><b>Sucre roux industriel</b> : sucre blanc enrichi en caramel ou en mélasse purifiée : coloré, pas moins raffiné. <b>Cassonade véritable</b> : sucre de canne partiellement raffiné, mélasse naturelle, goût caramel, grains irréguliers et humides.</p></div></details>
+    <details><summary>Semoule ou cristallisé : l’usage</summary><div><p><b>Semoule</b> : grains fins, dissolution rapide : pâtisserie, mélanges. <b>Cristallisé</b> : gros grains, dissolution lente : confitures (évite la recristallisation), structure des meringues et des sirops.</p></div></details>
+  </div>
+
+  <h2 class="sec sug">Le pouvoir sucrant <small>Saccharose = 1</small></h2>
+  <p>La référence est le <b>saccharose</b>, le plus utilisé, au goût stable. À quantité égale et dans les mêmes conditions : plus de 1, il paraît plus sucré ; moins de 1, moins sucré. Cela ne dit rien des calories. Le lactose (0,2 à 0,4) explique le goût à peine sucré du lait.</p>
+  <div class="card"><div id="ps-bars"></div></div>
+  <div class="grid">
+    <div class="card"><h3>Le type de sucre</h3><p>Le fructose active plus fortement les récepteurs <b>T1R2 et T1R3</b>.</p></div>
+    <div class="card"><h3>La température</h3><p>Le <b>froid</b> atténue le sucré : glaces et boissons glacées sont plus sucrées.</p></div>
+    <div class="card"><h3>Les arômes</h3><p>La vanille augmente la sensation de douceur sans sucre ajouté.</p></div>
+    <div class="card"><h3>La texture</h3><p>Liquide : perception rapide et intense. Solide : libération progressive.</p></div>
+  </div>
+
+  <h2 class="sec">Les édulcorants</h2>
+  <div class="g2">
+    <div class="card"><span class="tag">Aspartame</span><div class="big">150–200 <small>× le saccharose</small></div><p>Codes <b>E900 à E999</b> (sauf sorbitol E420 et maltitol E421). Intenses (pas ou peu d’énergie) ou de charge (texture).</p></div>
+    <div class="card bad"><h3>Pas si anodins</h3><ul><li>Signal sucré sans sucre : le cerveau en redemande</li><li>Les produits « light » ne font pas maigrir</li><li>Effet laxatif possible</li><li>La stévia n’est pas « meilleure » parce que naturelle</li></ul></div>
+  </div>
+</section>
+
+<section id="techno" data-name="Rôles techniques" hidden>
+  <p class="lead">Le sucre n’apporte pas que du goût : il <b>structure</b>, <b>conserve</b> et <b>colore</b>. C’est pour ça qu’un produit « sans sucre » est une reformulation complète.</p>
+  <div class="grid">
+    <div class="card sug"><span class="tag">Texture</span><ul><li>Retient l’eau : moelleux, gâteaux qui sèchent moins vite</li><li>Abaisse le point de congélation : pas de gros cristaux, glaces souples</li><li>Gélifie avec la pectine : confitures</li><li>Hydrate moins le gluten : pâtes plus faciles à travailler, mie plus aérée (retient le CO₂)</li><li>Stabilise les mousses (blancs d’œufs)</li><li>Fait la confiserie dure, fondante ou dragéifiée</li></ul></div>
+    <div class="card sug"><span class="tag">Conservation</span><p>Il capte l’eau disponible (<b>activité de l’eau</b>) : les micro-organismes ne se développent plus. Confitures, fruits confits. Il ralentit aussi le rancissement.</p></div>
+    <div class="card sug"><span class="tag">Fermentation</span><p>Carburant des levures (pâtes levées). Rhum à partir de la mélasse, <b>chaptalisation</b> du vin.</p></div>
+    <div class="card sug"><span class="tag">Réactions chimiques</span><p><b>Caramélisation</b> à haute température. <b>Réactions de Maillard</b> sucres + protéines : croûte du pain, biscuits, café.</p></div>
+  </div>
+  <div class="note"><span>Un édulcorant reproduit le goût, mais pas la masse, l’humidité, la texture, la conservation ni le brunissement : il faut fibres, gommes, sirops, arômes pour compenser.</span></div>
+</section>
+
+<section id="sante" data-name="Santé et repères" hidden>
+  <p class="lead">Les sucres <b>libres</b> : sucres ajoutés + miel, sirops, jus de fruits, confitures. Les sucres des fruits entiers n’en font pas partie.</p>
+  <div class="card sug">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="aet">Apport énergétique total</label><span class="val" id="aet-o" data-nohide></span><input type="range" id="aet" min="1400" max="3600" step="100" value="2000"></div>
+        <div class="inp"><label for="conso">Sucres libres consommés</label><span class="val" id="conso-o" data-nohide></span><input type="range" id="conso" min="0" max="200" step="5" value="130"></div>
+      </div>
+      <div class="result sug" id="sl-out"></div>
+    </div>
+  </div>
+
+  <div class="note"><span>Les sucres libres comptent : sucres ajoutés ; sucres du miel, des sirops, des jus de fruits ; sucres des confitures, gelées, confiseries. Pas ceux des fruits entiers, entourés de fibres. OMS : moins de <b>10 %</b> de l’AET, idéalement moins de <b>5 %</b>.</span></div>
+
+  <h2 class="sec bad-f">Ce que fait l’excès</h2>
+  <div class="grid">
+    <div class="card bad"><h3>Faim et poids</h3><p>Pic, insuline, chute : <b>fringale</b>. Forte densité énergétique, peu de satiété.</p></div>
+    <div class="card bad"><h3>Caries</h3><p>Les bactéries transforment le sucre en acides. Le <b>grignotage</b> fréquent, surtout liquide, est le pire.</p></div>
+    <div class="card bad"><h3>Diabète de type 2</h3><p>À long terme, <b>résistance à l’insuline</b>. Les boissons sucrées sont particulièrement en cause.</p></div>
+    <div class="card bad"><h3>Cœur et foie</h3><p>Triglycérides en hausse, graisse viscérale, <b>stéatose hépatique</b> (le fructose des sirops favorise la lipogenèse).</p></div>
+  </div>
+  <div class="acc">
+    <details><summary>Appétit et récompense</summary><div><p>Le sucre active les circuits de la <b>récompense</b>, surtout associé à des textures fondantes ou croquantes (chocolat, glaces, biscuits). Chez certains, il est recherché pour le réconfort : pas une « addiction » au sens médical, mais un cercle où émotions, fatigue et stress influencent l’alimentation.</p></div></details>
+    <details><summary>Caries : la fréquence compte</summary><div><p>Les bactéries de la plaque transforment les sucres en acides qui attaquent l’émail. Sucres pris pendant le repas : la salive tamponne l’acidité. Grignotages répétés, surtout liquides : la bouche reste acide plus longtemps.</p></div></details>
+    <details><summary>Poids, insuline, cœur et foie</summary><div><p>Forte densité énergétique et peu de satiété : déséquilibre énergétique, prise de poids. Des apports fréquents sollicitent l’insuline ; à long terme, <b>résistance à l’insuline</b> et diabète de type 2. Excès associé à plus de triglycérides, une glycémie perturbée, une <b>stéatose hépatique</b> (« foie gras métabolique »), de la graisse viscérale. Le fructose des sirops favorise la lipogenèse dans le foie.</p></div></details>
+  </div>
+  <div class="note"><span>Le but n’est pas de bannir, mais de comprendre et d’intégrer raisonnablement, sans culpabiliser. Les produits sucrés ont une forte valeur <b>culturelle et émotionnelle</b>.</span></div>
+</section>
+
+<section id="familles" data-name="Familles de produits" hidden>
+  <p class="lead">Même goût sucré, compositions très différentes : <b>densité énergétique</b> élevée, <b>densité nutritionnelle</b> faible.</p>
+  <div class="card"><div id="kcal-bars"></div></div>
+  <div class="acc">
+    <details><summary>Quels sucres dans quels produits ?</summary><div><p>Sucre de table : plus de 99 % de saccharose. Confitures : saccharose + fructose et glucose des fruits. Miel : fructose et glucose. Chocolats : saccharose, plus lactose s’il y a du lait. Glaces et sorbets : saccharose, sirops de glucose et parfois de fructose. Cette diversité change la vitesse d’absorption, le pouvoir sucrant et la charge glycémique.</p></div></details>
+    <details><summary>Et les matières grasses ?</summary><div><p>Aucune dans le sucre, le miel, les confitures. Beaucoup dans les chocolats (au lait, fourrés) : le <b>beurre de cacao</b>, très stable, fait le fondant et la densité énergétique. Glaces au lait et crèmes glacées : graisses laitières ; sorbets : aucune.</p></div></details>
+    <details><summary>Peu de micronutriments</summary><div><p>Quelques traces de minéraux et d’antioxydants dans le miel, des polyphénols dans le cacao, une partie des vitamines du fruit dans les confitures, réduites par la cuisson et le sucre. Ne pas confondre « saveur fruitée » et apport du fruit entier.</p></div></details>
+    <details><summary>Pour conseiller</summary><div><p>Proposer une alternative à une personne diabétique, expliquer pourquoi un sorbet peut être plus adapté qu’une crème glacée, analyser les crèmes dessert ou barres chocolatées d’un adolescent : lire au-delà du goût sucré (composition, portions, sucres, graisses).</p></div></details>
+  </div>
+
+  <h2 class="sec">Confitures et compagnie</h2>
+  <div class="grid">
+    <div class="card sug"><span class="tag">Confiture</span><div class="big">35 <small>g de fruits/100 g min.</small></div></div>
+    <div class="card sug"><span class="tag">Confiture extra</span><div class="big">45 <small>g de fruits/100 g min.</small></div></div>
+    <div class="card"><span class="tag">Gelée</span><h3>Jus filtré</h3><p>Sans pulpe ni morceaux.</p></div>
+    <div class="card"><span class="tag">Marmelade</span><h3>Agrumes</h3><p>Avec des fragments d’écorce.</p></div>
+  </div>
+
+  <h2 class="sec">Le chocolat</h2>
+  <div class="card"><div id="choco-bars"></div></div>
+  <div class="g2">
+    <div class="card"><h3>Fabrication</h3><div class="chain"><span>Fève</span><i>→</i><span>Fermentation</span><i>→</i><span>Torréfaction</span><i>→</i><span>Pâte de cacao</span><i>→</i><span>Conchage</span><i>→</i><span>Tempérage</span></div></div>
+    <div class="card"><h3>Repères</h3><p><b>1 carré ≈ 55 kcal</b>, noir, lait ou blanc. Plus il est noir, plus il a de cacao et moins de sucre : magnésium, fer, phosphore, vitamines B, polyphénols. Riche en saturés, dont <b>⅔ sont transformés</b> en insaturés.</p></div>
+  </div>
+  <div class="note"><span>Fermentation, torréfaction (arômes), broyage et chauffage, mélange avec sucre, beurre de cacao, parfois lait en poudre, <b>conchage</b> (texture, arômes), <b>tempérage</b> (cristaux stables : brillant, cassant). En consultation : densité énergétique, sucre + gras, portions souvent trop grandes.</span></div>
+
+  <h2 class="sec">Glaces et sorbets</h2>
+  <div class="g2">
+    <div class="card"><h3>Glace, crème glacée</h3><p>Lait, crème, sucre, parfois œufs. Plus de matières grasses.</p></div>
+    <div class="card"><h3>Sorbet</h3><p>Fruits, eau, sucre : <b>ni lait ni crème</b>, mais parfois très sucré pour la texture.</p></div>
+  </div>
+  <div class="note"><span>Le <b>foisonnement</b> (air incorporé) allège les glaces industrielles ; les artisanales, moins foisonnées, sont plus denses. Le sucre abaisse le point de congélation : texture souple. Pour s’appeler « crème glacée », il faut une proportion minimale de matières grasses laitières.</span></div>
+
+  <h2 class="sec">Réglementation et miel</h2>
+  <div class="g2">
+    <div class="card"><h3>Sucres</h3><p>Extraction du jus, purification, cristallisation. La <b>cassonade</b> doit venir de la canne ; le sucre roux de betterave est du sucre blanc recoloré au caramel.</p></div>
+    <div class="card"><h3>Miel</h3><p>Fait par les abeilles à partir du nectar. L’étiquette précise l’<b>origine géographique</b> et le type floral (miel monofloral). Ni additif, ni colorant, ni sucre ajouté.</p></div>
+  </div>
+
+  <h2 class="sec">En un coup d’œil</h2>
+  <div class="tbl sug"><table><thead><tr><th>Famille</th><th>Sucres principaux</th><th>Repère</th></tr></thead><tbody>
+    <tr><th>Sucre et assimilés</th><td>Saccharose (sirops : glucose, fructose)</td><td>Cassonade = canne ; sucre roux de betterave = blanc + caramel</td></tr>
+    <tr><th>Miel</th><td>Fructose et glucose</td><td>Ni additif ni sucre ajouté ; texture selon le rapport glucose / fructose</td></tr>
+    <tr><th>Confitures</th><td>Saccharose (≈ 60 %)</td><td>35 g de fruits/100 g (45 g « extra ») ; modération</td></tr>
+    <tr><th>Chocolat</th><td>Saccharose (+ lactose si lait)</td><td>Noir 43 % · lait 25 % · blanc 20 % de beurre de cacao ; ≈ 55 kcal le carré</td></tr>
+    <tr><th>Glaces et sorbets</th><td>Saccharose, sirops de glucose et de fructose</td><td>Sorbet sans lait ni crème ; surveiller les portions</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="cas" data-name="Cas pratique" hidden>
+  <div class="card who-card">
+    <div class="avatar" aria-hidden="true">L</div>
+    <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:200px">
+      <h3>Madame Lemoine, 42 ans</h3>
+      <div class="stats" data-nohide><span>Infirmière en horaires décalés</span><span>2 adolescents</span><span>+4 kg en un an</span><span>Glycémie à jeun 1,10 g/L</span></div>
+      <p>« J’ai besoin de sucre pour tenir. » Elle est pourtant toujours fatiguée.</p>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <p class="lead" style="font-size:1.2rem">Sa journée, avant et après.</p>
+    <div id="ab-seg"></div>
+  </div>
+  <div class="grid" id="meals" data-nohide></div>
+  <h2 class="sec">Les questions du cas</h2>
+  <div class="grid">
+    <div class="card reveal-card"><h3 data-nohide>1. Les constats ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Du sucre à presque chaque moment : petit-déjeuner, collations, boissons, desserts. Sucres rapides dominants (viennoiseries, biscuits, sodas, desserts industriels), sans fibres, protéines ni nutriments protecteurs. Trop fréquent, trop concentré : surcharge glycémique constante. Peu d’eau, beaucoup de boissons sucrées.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>2. Le rôle de son travail ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Horaires décalés et gardes de nuit dérèglent l’horloge biologique et les repas, pris à des heures inhabituelles, sous stress ou fatigue. Manque de temps, distributeurs et machines à café. La fatigue chronique fait chercher de l’énergie rapide : le sucre comme « stimulant ».</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>3. Pourquoi est-elle fatiguée ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Pics de glycémie puis chutes brutales dues à l’insuline : fatigue, irritabilité, envie de re-sucre. Sans fibres ni protéines, pas de satiété durable.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>4. Les conséquences ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p><b>Court terme</b> : fringales, sommeil perturbé, fatigue diurne, prise de poids abdominale (les sucres en excès deviennent des graisses). <b>Moyen et long terme</b> : résistance à l’insuline, diabète de type 2 ; triglycérides et risque cardiovasculaire ; microbiote altéré ; attachement au goût sucré, plus difficile à réduire.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>5. Sucres naturels ou ajoutés ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p><b>Naturels</b> : dans les aliments bruts (fructose des fruits, lactose du lait), ex. le lactose de son yaourt nature. <b>Ajoutés</b> : par le fabricant ou le consommateur (sucre, sirops, boissons, biscuits, desserts), ex. le sucre du café, du soda, de la crème dessert : la quasi-totalité de ses apports.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>6. Les boissons les plus problématiques ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Sodas, jus industriels, boissons énergisantes : 30 à 40 g de sucre par canette (6 à 8 morceaux), absorbés très vite, sans satiété. La caféine perturbe en plus le sommeil.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>7. Des stratégies simples ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Sucre du café de 2 à 1, ½, puis 0 cuillère ; eau, thé, eau pétillante citronnée au lieu des boissons sucrées ; salades composées ou wraps maison préparés à l’avance ; yaourts nature ou grecs avec un fruit ; desserts industriels le week-end. Le palais se réhabitue progressivement.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>8. Deux collations pour ses gardes ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Fruit frais + poignée d’amandes (fibres, bons lipides, magnésium, satiété). Yaourt nature ou fromage blanc + fruits rouges ou compote sans sucre ajouté (protéines, calcium, sucre naturel).</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>9. Combien de sucres libres ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Environ <b>130 g par jour</b>, plus de 2,5 fois la limite de 50 g pour 2 000 kcal. À tester dans l’onglet « Santé et repères ».</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>10. Trois conseils réalistes ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Réduire <b>progressivement</b> (sucre des boissons, puis desserts industriels) ; <b>structurer</b> ses repas, simples mais complets, sans grignotage ; remplacer le sucré par des aliments riches en <b>fibres et protéines</b> (fruits, yaourts nature, oléagineux). Associer le sucre au plaisir occasionnel, pas à la compensation de la fatigue ; boire assez, mieux dormir.</p></div></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="produits-sucres.js"></script>
+</body>
+</html>

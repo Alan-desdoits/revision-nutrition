@@ -10,7 +10,7 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-  const NAMES = { glu: "Glucides", pro: "Protéines", lip: "Lipides", eau: "Eau", vit: "Vitamines", min: "Minéraux" };
+  const NAMES = { glu: "Glucides", pro: "Protéines", lip: "Lipides", eau: "Eau", vit: "Vitamines", min: "Minéraux", fl: "Fruits et légumes", sug: "Produits sucrés", lai: "Produits laitiers", ink: "Repères" };
   const fmt = (v, d = 1) => Number(v).toLocaleString("fr-FR", { maximumFractionDigits: d });
 
   /* ---------------- Onglets ---------------- */
@@ -165,6 +165,59 @@
   }
   function initPics(root = document) { $$("svg[data-pic]", root).forEach(el => pic(el, el.dataset.pic)); }
 
-  window.Fiches = { $, $$, NAMES, fmt, pic, initPics, wrapNumbers };
+  /* ---------------- Composants réutilisables ---------------- */
+  // Choix segmenté : options = [{id, label, cls}] ; renvoie une fonction pour changer la valeur
+  function seg(el, options, value, onChange) {
+    el.classList.add("seg");
+    el.setAttribute("role", "group");
+    const render = v => {
+      value = v;
+      el.innerHTML = options.map(o => `<button type="button" data-id="${o.id}" class="${o.cls || ""}" aria-pressed="${o.id === v}">${o.label}</button>`).join("");
+      const cur = options.find(o => o.id === v);
+      el.dataset.cls = cur && cur.cls || "";
+    };
+    el.addEventListener("click", e => { const b = e.target.closest("button"); if (b && b.dataset.id !== value) { render(b.dataset.id); onChange(value); } });
+    render(value);
+    onChange(value);
+    return v => { render(v); onChange(v); };
+  }
+
+  // Explorateur : puces groupées + panneau de détail
+  // groups = [{cls, label, items: [{name, pic, sub, rows: [[titre, texte], ...]}]}]
+  function explorer(chipsEl, panelEl, groups) {
+    chipsEl.classList.add("chip-groups");
+    chipsEl.innerHTML = groups.map((g, gi) => `<div class="cg ${g.cls || ""}">${g.label ? `<span class="tag">${g.label}</span>` : ""}${g.items.map((it, i) => `<button type="button" class="chip" data-g="${gi}" data-i="${i}" aria-pressed="false">${it.name}</button>`).join("")}</div>`).join("");
+    chipsEl.addEventListener("click", e => {
+      const b = e.target.closest(".chip"); if (!b) return;
+      $$(".chip", chipsEl).forEach(x => x.setAttribute("aria-pressed", x === b));
+      const g = groups[b.dataset.g], it = g.items[b.dataset.i];
+      panelEl.className = "panel " + (it.cls || g.cls || "");
+      panelEl.innerHTML = `${it.pic ? `<div class="pic"><svg data-pic="${it.pic}"></svg></div>` : ""}<div style="${it.pic ? "" : "grid-column:1/-1"}"><span class="tag">${g.label || ""}</span><h3>${it.name}</h3>${it.sub ? `<p style="color:var(--muted);margin-top:4px">${it.sub}</p>` : ""}
+        <dl>${(it.rows || []).map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl></div>`;
+      initPics(panelEl);
+    });
+  }
+
+  // Barres horizontales à l'échelle. rows = [{label, sub, v: nombre ou [min, max], cls, sel, text}]
+  function hbars(el, rows, o = {}) {
+    const top = v => Array.isArray(v) ? v[1] : v;
+    const max = o.max || Math.max(...rows.map(r => top(r.v)));
+    el.classList.add("hbars");
+    el.innerHTML = rows.map(r => {
+      const [a, b] = Array.isArray(r.v) ? r.v : [r.v, r.v];
+      const txt = r.text != null ? r.text : (a === b ? fmt(a) : fmt(a) + "–" + fmt(b)) + (o.unit ? " " + o.unit : "");
+      return `<div class="hbar ${r.cls || o.cls || ""} ${r.sel ? "sel" : ""}"${r.id ? ` data-id="${r.id}"` : ""}><span class="lab">${r.label}${r.sub ? `<small>${r.sub}</small>` : ""}</span><span class="track hideable"><span class="fill ${a !== b ? "range" : ""}" style="width:${(b / max * 100).toFixed(2)}%;--a:${b ? (a / b * 100).toFixed(1) : 0}%">${txt}</span></span></div>`;
+    }).join("");
+  }
+
+  // Cartes « question / réponse » : un bouton [data-reveal] montre la réponse
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-reveal]"); if (!b) return;
+    const ans = b.closest(".reveal-card").querySelector(".answer");
+    ans.hidden = !ans.hidden;
+    b.textContent = ans.hidden ? (b.dataset.show || "Voir la réponse") : (b.dataset.hide || "Masquer");
+  });
+
+  window.Fiches = { $, $$, NAMES, fmt, pic, initPics, wrapNumbers, seg, explorer, hbars };
   document.addEventListener("DOMContentLoaded", () => { initPics(); initTabs(); initQuiz(); });
 })();
