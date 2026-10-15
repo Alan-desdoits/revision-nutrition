@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles pour réviser les cours de nutrition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/fiches.css">
+</head>
+<body class="home">
+
+<header class="top home-top">
+  <div class="wrap">
+    <span class="eyebrow">Conception et élaboration d’une alimentation saine, durable et adaptée</span>
+    <h1>Révisions <em>nutrition</em></h1>
+    <p class="sub">Chaque cours devient une série de fiches visuelles : on explore, on manipule, on cache les chiffres pour se tester.</p>
+  </div>
+</header>
+
+<main class="wrap home-main">
+  <h2 class="sec" style="margin-top:0">Les cours <small id="count"></small></h2>
+  <div class="courses" id="courses"></div>
+
+  <h2 class="sec">Comment réviser</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">Explorer</span><h3>Une fiche par onglet</h3><p>Bases, digestion, besoins, sources… Les onglets suivent le plan du cours.</p></div>
+    <div class="card"><span class="tag">Manipuler</span><h3>Des schémas qui réagissent</h3><p>Choisir un nutriment, régler un poids ou un profil : les fiches se recalculent.</p></div>
+    <div class="card"><span class="tag">Se tester</span><h3>Cacher les chiffres</h3><p>L’interrupteur en haut de chaque cours masque tous les chiffres. Un clic les révèle un par un.</p></div>
+  </div>
+  <p class="foot">Rien n’est enregistré : chaque visite repart de zéro.</p>
+</main>
+
+<script src="assets/js/cours.js"></script>
+<script>
+(function () {
+  const NAMES = { glu: "Glucides", pro: "Protéines", lip: "Lipides", eau: "Eau", vit: "Vitamines", min: "Minéraux" };
+  const list = window.COURS || [];
+  const dispo = list.filter(c => c.statut === "disponible").length;
+  document.getElementById("count").textContent = `${dispo} disponible${dispo > 1 ? "s" : ""} sur ${list.length}`;
+  document.getElementById("courses").innerHTML = list.map(c => {
+    const ok = c.statut === "disponible";
+    const inner = `
+      <div class="course-head"><span class="status ${ok ? "on" : "wait"}">${ok ? "Disponible" : "En attente d’intégration"}</span>${ok ? `<span class="nfiches">${c.fiches.length} fiches</span>` : ""}</div>
+      <h3>${c.titre}</h3>
+      <p>${c.resume}</p>
+      <div class="legend">${c.familles.map(f => `<span class="${f}">${NAMES[f]}</span>`).join("")}</div>
+      ${ok ? `<ul class="toc">${c.fiches.map(f => `<li>${f}</li>`).join("")}</ul><span class="go">Ouvrir les fiches →</span>` : `<p class="wait-txt">Le document est dans « documents/en-attente ». Il sera intégré à la prochaine passe.</p>`}`;
+    return ok ? `<a class="course card" href="${c.page}">${inner}</a>` : `<div class="course card is-wait">${inner}</div>`;
+  }).join("");
+})();
+</script>
+</body>
+</html>

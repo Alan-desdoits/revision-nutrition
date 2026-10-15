@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Micronutriments – fiches visuelles</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6fbf9;--card:#fff;--tx:#17302b;--mut:#5b7570;--line:#d6e8e3;--teal:#1f7a6b;
+--lip:#e8870e;--lipb:#fdf0dd;--hyd:#2a7de1;--hydb:#e3eefc;--mac:#2e9e5b;--macb:#e1f4e8;--oli:#8a55d6;--olib:#efe6fb;--bad:#d64545;--badb:#fde8e8}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1b18;--card:#172622;--tx:#e6f2ee;--mut:#9bb6af;--line:#264039;--lipb:#3a2a12;--hydb:#16283f;--macb:#142d20;--olib:#2a1f40;--badb:#3a1a1a}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 "Segoe UI",system-ui,Arial,sans-serif}
+header{background:var(--teal);color:#fff;padding:22px 16px 14px;text-align:center}
+header h1{margin:0;font-size:1.6rem}header p{margin:4px 0 0;opacity:.9}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px;background:var(--bg);border-bottom:1px solid var(--line)}
+nav button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--tx);padding:8px 14px;border-radius:99px;font:inherit;font-weight:600;cursor:pointer}
+nav button.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+main{max-width:820px;margin:0 auto;padding:14px}
+section{display:none}section.on{display:block}
+h2{font-size:1.25rem;margin:22px 0 10px;color:var(--teal)}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p,.card li{margin:4px 0;color:var(--mut)}.card ul{padding-left:18px;margin:6px 0}
+.big{font-size:2rem;font-weight:800;line-height:1.1;color:var(--teal)}
+.big small{font-size:.9rem;font-weight:600;color:var(--mut)}
+.key{background:var(--card);border-left:6px solid var(--teal);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:1.05rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chip{border:2px solid transparent;border-radius:12px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;color:var(--tx)}
+.chip.lip{background:var(--lipb);border-color:var(--lip)}.chip.hyd{background:var(--hydb);border-color:var(--hyd)}
+.chip.mac{background:var(--macb);border-color:var(--mac)}.chip.oli{background:var(--olib);border-color:var(--oli)}
+.chip.sel{outline:3px solid var(--tx)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.9rem;color:var(--mut);margin:6px 0}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+#panel{min-height:128px;background:var(--card);border:2px dashed var(--line);border-radius:16px;padding:14px;margin-top:8px}
+#panel h3{margin:0 0 8px;font-size:1.2rem}
+.row{display:flex;gap:8px;margin:5px 0}.row b{min-width:92px;color:var(--teal)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0}
+.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-weight:600}
+.arr{color:var(--teal);font-weight:800}
+.vs{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.vs{grid-template-columns:1fr}}
+.vs .a{background:var(--lipb)}.vs .b{background:var(--hydb)}
+.good{background:var(--macb)}.bad{background:var(--badb)}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+summary{cursor:pointer;font-weight:700}
+.tag{display:inline-block;background:var(--badb);color:var(--bad);border-radius:8px;padding:1px 8px;font-weight:700;font-size:.85rem}
+</style></head><body>
+<header><h1>Les micronutriments</h1><p>Touche, explore, retiens</p></header>
+<nav id="nav"></nav>
+<main>
+
+<section id="s0">
+<div class="key"><b>Micronutriments = vitamines + minéraux.</b> Ce ne sont pas des carburants mais des <b>outils</b>.</div>
+<div class="grid">
+<div class="card"><div class="big">mg <small>ou</small> µg</div><p>Quelques milli ou microgrammes par jour suffisent.</p></div>
+<div class="card"><div class="big">0 <small>énergie</small></div><p>Contrairement aux glucides, lipides et protéines, ils ne donnent pas de calories.</p></div>
+<div class="card"><div class="big">100 % <small>assiette</small></div><p>Le corps ne les fabrique pas (ou très peu) : tout vient de l'alimentation.</p></div>
+</div>
+<h2>Deux grandes familles</h2>
+<div class="vs">
+<div class="card a"><h3>Vitamines</h3><p>Molécules <b>organiques</b> (avec du carbone).</p><p>Aident les enzymes à travailler.</p><p><b>A D E K</b> et <b>C + groupe B</b></p></div>
+<div class="card b"><h3>Minéraux</h3><p>Atomes ou <b>ions</b> simples (Ca²⁺, Na⁺, Fe²⁺…).</p><p>Structure, nerfs, enzymes.</p><p><b>Macro</b> et <b>oligo-éléments</b></p></div>
+</div>
+</section>
+
+<section id="s1">
+<div class="key">Choisis une vitamine ou un minéral : sa fiche s'affiche en bas.</div>
+<div class="legend"><span><i class="dot" style="background:var(--lip)"></i>Vitamines liposolubles</span><span><i class="dot" style="background:var(--hyd)"></i>Vitamines hydrosolubles</span><span><i class="dot" style="background:var(--mac)"></i>Macrominéraux</span><span><i class="dot" style="background:var(--oli)"></i>Oligo-éléments</span></div>
+<div class="chips" id="chips"></div>
+<div id="panel">👆 Touche un élément pour voir son rôle, ses sources et son apport conseillé.</div>
+<h2>Liposolubles ou hydrosolubles ?</h2>
+<div class="vs">
+<div class="card a"><h3>Liposolubles A D E K</h3><ul><li>Dans les graisses</li><li>Besoin de lipides pour être absorbées</li><li>Stockées (foie, graisse)</li><li>Carence lente, <b>excès toxique</b></li></ul></div>
+<div class="card b"><h3>Hydrosolubles C + B</h3><ul><li>Dans l'eau</li><li>Passent direct dans le sang</li><li>Peu stockées</li><li>Carence rapide, excès éliminé (urines)</li></ul></div>
+</div>
+<h2>Macro ou oligo ?</h2>
+<div class="vs">
+<div class="card" style="background:var(--macb)"><h3>Macrominéraux</h3><p>Plus de <b>100 mg</b>/jour</p><p>Ca · P · Mg · Na · K · Cl · S</p></div>
+<div class="card" style="background:var(--olib)"><h3>Oligo-éléments</h3><p>Moins de <b>100 mg</b>/jour<br><small>(<i>oligos</i> = « peu » en grec)</small></p><p>Fe · Zn · Cu · I · Se · F · Mn · Cr · Mo · Co</p></div>
+</div>
+</section>
+
+<section id="s2">
+<h2>Le voyage d'une vitamine liposoluble</h2>
+<div class="flow"><span class="step">Sels biliaires</span><span class="arr">→</span><span class="step">Micelles</span><span class="arr">→</span><span class="step">Intestin</span><span class="arr">→</span><span class="step">Lymphe</span><span class="arr">→</span><span class="step">Sang</span></div>
+<p>Les hydrosolubles, elles, passent <b>directement dans le sang</b>.</p>
+<h2>Le cas de la B12</h2>
+<div class="flow"><span class="step">Estomac : se lie au facteur intrinsèque</span><span class="arr">→</span><span class="step">Iléon</span><span class="arr">→</span><span class="step">Absorbée</span></div>
+<div class="key">Sans facteur intrinsèque (ex. chirurgie gastrique) : <b>carence en B12</b>.</div>
+<h2>Fer : héminique ou non ?</h2>
+<div class="vs">
+<div class="card a"><h3>Héminique</h3><div class="big">20-30 %</div><p>absorbé<br>Viande, poisson, abats</p></div>
+<div class="card b"><h3>Non héminique</h3><div class="big">5-10 %</div><p>absorbé<br>Végétaux, œufs, laitages</p></div>
+</div>
+<div class="key">🍋 La <b>vitamine C</b> booste le fer végétal : lentilles + crudités !</div>
+<h2>Ce qui aide, ce qui gêne</h2>
+<div class="vs">
+<div class="card good"><h3>👍 Aide</h3><ul><li>Vitamine C</li><li>Un filet d'huile (A D E K)</li><li>Cuisson, fermentation</li><li>Besoins accrus (grossesse…)</li></ul></div>
+<div class="card bad"><h3>👎 Gêne</h3><ul><li>Phytates (céréales complètes)</li><li>Oxalates (épinards)</li><li>Tanins (thé, café)</li><li>Trop de zinc ou de calcium</li><li>Antiacides, metformine (B12)</li></ul></div>
+</div>
+</section>
+
+<section id="s3">
+<h2>Les chiffres à retenir (adulte)</h2>
+<div class="grid">
+<div class="card"><div class="big">110 <small>mg</small></div><p>Vitamine C</p></div>
+<div class="card"><div class="big">900 <small>mg</small></div><p>Calcium</p></div>
+<div class="card"><div class="big">5 <small>g max</small></div><p>Sel (= 2 g de sodium)</p></div>
+<div class="card"><div class="big">11 <small>mg</small></div><p>Fer (femme : 11 à 16)</p></div>
+<div class="card"><div class="big">150 <small>µg</small></div><p>Iode</p></div>
+<div class="card"><div class="big">3 500 <small>mg</small></div><p>Potassium</p></div>
+</div>
+<h2>Situations particulières</h2>
+<div class="grid">
+<div class="card"><h3>🤰 Grossesse</h3><p><b>B9 : 400 µg</b> (tube neural)<br><b>Fer : 27 mg</b></p></div>
+<div class="card"><h3>🍼 Allaitement</h3><p>Plus de vitamines <b>A, D, C</b></p></div>
+<div class="card"><h3>👵 Personne âgée</h3><p>Surveiller <b>D et B12</b></p></div>
+</div>
+<h2>Les sigles</h2>
+<div class="grid">
+<div class="card"><h3>ANC / AR</h3><p>Apports conseillés (France / Europe), avec marge de sécurité.</p></div>
+<div class="card"><h3>UL</h3><p>Limite haute de sécurité : à ne pas dépasser.</p></div>
+</div>
+<h2>Les excès <span class="tag">attention</span></h2>
+<div class="grid">
+<div class="card bad"><h3>Vit A</h3><p>Foie, os, malformations</p></div>
+<div class="card bad"><h3>Vit D</h3><p>Trop de calcium dans le sang</p></div>
+<div class="card bad"><h3>Vit E</h3><p>Risque hémorragique</p></div>
+<div class="card bad"><h3>Fer</h3><p>Foie, hémochromatose</p></div>
+<div class="card bad"><h3>Sélénium</h3><p>Cheveux, digestif, nerfs</p></div>
+<div class="card bad"><h3>Fluor</h3><p>Fluorose dents et os</p></div>
+<div class="card bad"><h3>Sodium</h3><p>Hypertension</p></div>
+<div class="card bad"><h3>Calcium</h3><p>Calculs rénaux</p></div>
+</div>
+<div class="key">Les excès viennent surtout des <b>compléments</b> pris sans suivi (sauf le sodium, via l'alimentation).</div>
+</section>
+
+<section id="s4">
+<div class="key">Aucun aliment ne couvre tout : <b>la variété</b> fait la couverture !</div>
+<div class="grid">
+<div class="card"><h3>🥦 Fruits et légumes</h3><p>C, folates, K, bêta-carotène, potassium. Varier les couleurs.</p></div>
+<div class="card"><h3>🥩 Viande, abats</h3><p>Fer héminique, vitamines B dont B12.</p></div>
+<div class="card"><h3>🐟 Poissons</h3><p>Iode, sélénium ; gras : <b>vit D</b> ; coquillages : zinc.</p></div>
+<div class="card"><h3>🥚 Œufs</h3><p>A, folates, B12, sélénium.</p></div>
+<div class="card"><h3>🧀 Laitages</h3><p><b>Calcium</b>, B2, B12, phosphore.</p></div>
+<div class="card"><h3>🌾 Céréales complètes</h3><p>B1, B3, B6, Mg, Zn, Fe.</p></div>
+<div class="card"><h3>🫘 Légumineuses</h3><p>Folates, fer végétal, Mg, K.</p></div>
+<div class="card"><h3>🌰 Oléagineux</h3><p>Vit E, Mg, Ca (sésame), Zn (courge), Se (noix du Brésil).</p></div>
+<div class="card"><h3>🫒 Huiles</h3><p>Vit E + elles aident à absorber A D E K.</p></div>
+<div class="card"><h3>💧 Eaux minérales</h3><p>Ca (Hépar, Contrex), Mg (Rozana). Fluor : limiter chez l'enfant.</p></div>
+</div>
+<div class="key">⚠️ La <b>B12 est absente des végétaux</b> : supplément ou aliments enrichis si régime végétalien.</div>
+<h2>Enrichir ou supplémenter ?</h2>
+<div class="vs">
+<div class="card a"><h3>Enrichissement</h3><p>On ajoute dans les aliments courants.</p><p>🧂 Sel iodé</p></div>
+<div class="card b"><h3>Supplémentation</h3><p>Comprimés, gélules, ampoules, sur indication.</p><p>☀️ Vit D du nourrisson</p></div>
+</div>
+</section>
+
+<section id="s5">
+<h2>3 niveaux d'évaluation</h2>
+<div class="flow"><span class="step">1. Clinique</span><span class="arr">→</span><span class="step">2. Alimentation</span><span class="arr">→</span><span class="step">3. Biologie</span></div>
+<h2>Signes qui doivent alerter</h2>
+<details><summary>Pâleur, fatigue</summary><p>Fer, B9, B12, magnésium, vitamines B.</p></details>
+<details><summary>Vision, peau sèche</summary><p>Vitamine A (peau : aussi zinc).</p></details>
+<details><summary>Os fragiles, douleurs musculaires</summary><p>Vitamine D ou calcium.</p></details>
+<details><summary>Cheveux, ongles cassants</summary><p>Fer, zinc, sélénium.</p></details>
+<details><summary>Lèvres gercées aux commissures</summary><p>Vitamines B2 et B6.</p></details>
+<details><summary>Taches sur les dents · maux de tête</summary><p><b>Excès</b> de fluor · excès de vitamine A.</p></details>
+<div class="key">Beaucoup de signes sont <b>non spécifiques</b> : premier dépistage, jamais un diagnostic.</div>
+<h2>Analyses de sang</h2>
+<div class="grid">
+<div class="card"><h3>Ferritine</h3><p>Réserves de fer. ⚠️ Monte en cas d'inflammation.</p></div>
+<div class="card"><h3>25(OH)D</h3><p>Statut en vitamine D.</p></div>
+<div class="card"><h3>B12 + folates</h3><p>Carences en B.</p></div>
+<div class="card"><h3>Homocystéine ↑</h3><p>Déficit B9, B6 ou B12.</p></div>
+</div>
+<h2>Cas Mathilde, 28 ans</h2>
+<p>Fatigue, pesco-végétarienne, peu de fruits et légumes, 4 cafés par jour.</p>
+<div class="grid">
+<div class="card bad"><h3>Constat</h3><ul><li>Fer végétal seulement</li><li>Pas de vit C</li><li>Peu de calcium et de D</li><li>Peu de magnésium</li><li>Trop de café, peu d'eau</li></ul></div>
+<div class="card good"><h3>Solutions</h3><ul><li>Légumineuses + vit C</li><li>Un fruit chaque matin</li><li>Laitage + poisson gras</li><li>Complet + amandes</li><li>2 cafés max, plus d'eau</li></ul></div>
+</div>
+</section>
+</main>
+
+<script>
+var D={
+A:['lip','👁 Vision','Rhodopsine, peau et muqueuses','Foie, carotte, patate douce','900 µg (H) · 700 µg (F)'],
+D:['lip','🦴 Os et dents','Fixe le calcium. Fabriquée par la peau (UVB)','Poissons gras, œufs, laitages enrichis','5 à 15 µg'],
+E:['lip','🛡️ Antioxydant','Protège les membranes des radicaux libres','Huiles végétales, amandes','12 mg (F) · 15 mg (H)'],
+K:['lip','🩸 Coagulation','Coagulation et os. K2 faite par le microbiote','Légumes verts, chou kale','55 à 70 µg'],
+C:['hyd','🍊 Collagène et fer','Antioxydant, régénère la E, aide à absorber le fer','Agrumes, kiwi, poivron, persil','110 mg'],
+B1:['hyd','⚡ Énergie du glucose','Coenzyme qui dégrade le glucose','Céréales complètes, porc','1,1 à 1,3 mg'],
+B2:['hyd','⚡ Énergie','FAD et FMN, dans les mitochondries','Laitages, œufs, abats','1,5 mg'],
+B3:['hyd','⚡ Respiration cellulaire','NAD et NADP : production d’ATP','Viande, poisson, céréales','14 à 16 mg'],
+B5:['hyd','🔁 Carrefour du métabolisme','Coenzyme A : acides gras et hormones','Presque tous les aliments','5 mg'],
+B6:['hyd','🧠 Acides aminés, humeur','Dopamine, sérotonine, GABA','Poissons, bananes, pommes de terre','1,3 à 1,5 mg'],
+B8:['hyd','🔥 Acides gras et glucides','Coenzyme de carboxylases','Jaune d’œuf, foie, fruits secs','30 à 50 µg'],
+B9:['hyd','🧬 ADN et grossesse','Division cellulaire, tube neural du fœtus','Légumes verts, légumineuses, agrumes','330 µg (400 µg enceinte)'],
+B12:['hyd','🩸 Globules rouges, nerfs','Agit avec la B9. Se lie au facteur intrinsèque','Uniquement produits animaux','4 µg'],
+Ca:['mac','🦴 Os et muscles','Le plus abondant. Os, contraction, coagulation','Laitages, brocoli, eaux riches','≈ 900 mg'],
+P:['mac','⚡ Os et ATP','Avec le Ca dans l’os. ATP, ADN','Viandes, laitages, légumineuses','≈ 700 mg'],
+Mg:['mac','😌 Relaxation','Cofacteur de +300 enzymes. Ca = contraction, Mg = relaxation','Amandes, chocolat noir, légumineuses','300 à 400 mg'],
+Na:['mac','💧 Eau et nerfs','Cation du milieu extracellulaire','Sel, produits transformés','Max 2 g (5 g de sel)'],
+K:['mac','❤️ Tension artérielle','Cation intracellulaire, compense le sodium','Banane, légumes, légumineuses','≈ 3 500 mg'],
+Cl:['mac','🥣 Estomac et eau','Acide chlorhydrique, équilibre acido-basique','Sel, aliments transformés','≈ 2 300 mg'],
+S:['mac','💇 Protéines','Ponts disulfures, peau, cheveux, ongles','Protéines, ail, oignon, chou','–'],
+Fe:['oli','🫁 Transport d’oxygène','Hémoglobine et myoglobine','Viandes, abats, lentilles, légumes verts','11 mg (F : 11 à 16)'],
+Zn:['oli','🛡️ Immunité, cicatrisation','+200 enzymes, goût et odorat','Huîtres, viandes, fromages','7 à 10 mg'],
+Cu:['oli','🔗 Allié du fer','Hémoglobine, collagène, mélanine','Abats, noix, chocolat noir','≈ 1 mg'],
+I:['oli','🦋 Thyroïde','Hormones T3 et T4','Poissons, algues, sel iodé','≈ 150 µg'],
+Se:['oli','🥜 Antioxydant','Glutathion peroxydase, immunité','Noix du Brésil, poissons','≈ 55 µg'],
+F:['oli','🦷 Émail dentaire','Anti-caries, minéralisation osseuse','Thé, eau fluorée, poissons de mer','3 à 4 mg'],
+Mn:['oli','⚙️ Enzymes','Antioxydant, tissus conjonctifs, os','Céréales complètes, noix','≈ 2 mg'],
+Cr:['oli','🍬 Insuline','Aide l’insuline, régule la glycémie','Brocoli, levure de bière, viande','30 à 40 µg'],
+Mo:['oli','🧹 Détox','Acides aminés soufrés','Légumineuses, céréales, noix','50 à 100 µg'],
+Co:['oli','🧪 Dans la B12','Constituant de la vitamine B12','Abats, fruits de mer, œufs','2 à 3 µg']};
+var names=['Bases','Explorer','Absorption','Besoins','Sources','Évaluer'],nav=document.getElementById('nav');
+names.forEach(function(n,i){var b=document.createElement('button');b.textContent=n;b.onclick=function(){go(i)};nav.appendChild(b)});
+function go(i){document.querySelectorAll('section').forEach(function(s,j){s.classList.toggle('on',i===j)});
+nav.querySelectorAll('button').forEach(function(b,j){b.classList.toggle('on',i===j)});window.scrollTo(0,0)}
+var cb=document.getElementById('chips'),pn=document.getElementById('panel');
+Object.keys(D).forEach(function(k){var b=document.createElement('button');b.className='chip '+D[k][0];b.textContent=k;
+b.onclick=function(){cb.querySelectorAll('.chip').forEach(function(c){c.classList.remove('sel')});b.classList.add('sel');var d=D[k];
+pn.innerHTML='<h3>'+k+' · '+d[1]+'</h3><div class="row"><b>Rôle</b><span>'+d[2]+'</span></div><div class="row"><b>Sources</b><span>'+d[3]+'</span></div><div class="row"><b>Apport / jour</b><span>'+d[4]+'</span></div>'};
+cb.appendChild(b)});
+go(0);
+</script></body></html>

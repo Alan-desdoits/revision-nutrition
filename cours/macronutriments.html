@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Macronutriments · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Macronutriments : glucides, protéines, lipides et eau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Bases scientifiques de la nutrition</span>
+        <h1>Les <em>macro</em>nutriments</h1>
+        <p class="sub">Glucides, protéines, lipides et eau : ce qu’ils sont, ce qu’ils deviennent, combien en manger.</p>
+      </div>
+      <div class="legend"><span class="glu">Glucides</span><span class="pro">Protéines</span><span class="lip">Lipides</span><span class="eau">Eau</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<!-- ===================== 1. Bases ===================== -->
+<section id="bases" data-name="Bases">
+  <p class="lead">Les macronutriments sont les nutriments dont le corps a besoin <b>en grande quantité</b> : des dizaines à des centaines de grammes par jour.</p>
+  <div class="grid">
+    <div class="card nut glu"><svg class="pic" data-pic="hex3"></svg><h3>Glucides</h3><div class="big">4 <small>kcal/g</small></div><p>Le carburant préféré des cellules, surtout du <b>cerveau</b>.</p></div>
+    <div class="card nut pro"><svg class="pic" data-pic="beads"></svg><h3>Protéines</h3><div class="big">4 <small>kcal/g</small></div><p>Les <b>briques</b> du corps : muscles, enzymes, hormones, anticorps.</p></div>
+    <div class="card nut lip"><svg class="pic" data-pic="tri"></svg><h3>Lipides</h3><div class="big">9 <small>kcal/g</small></div><p>La réserve d’énergie <b>la plus dense</b>, les membranes, les hormones.</p></div>
+    <div class="card nut eau"><svg class="pic" data-pic="drop"></svg><h3>Eau</h3><div class="big">0 <small>kcal</small></div><p><b>50 à 70 %</b> du poids du corps, milieu de toutes les réactions.</p></div>
+  </div>
+
+  <h2 class="sec" data-nohide>1 gramme, combien d’énergie ?</h2>
+  <div class="card"><div class="bars" id="energy"></div></div>
+
+  <h2 class="sec">Trois missions</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">Énergie</span><h3>Fournir de l’énergie</h3><p>Glucides et lipides en priorité. Les protéines seulement <b>en dernier recours</b>.</p><div class="dots"><i class="glu"></i><i class="lip"></i><i class="pro" style="opacity:.35"></i></div></div>
+    <div class="card"><span class="tag">Structure</span><h3>Construire et réparer</h3><p>Protéines pour les tissus, lipides pour les <b>membranes</b>, glucides pour le stock de glycogène.</p><div class="dots"><i class="pro"></i><i class="lip"></i><i class="glu"></i></div></div>
+    <div class="card"><span class="tag">Régulation</span><h3>Réguler</h3><p>Les <b>fibres</b> règlent le transit, l’<b>eau</b> sert aux réactions et à la thermorégulation.</p><div class="dots"><i class="glu"></i><i class="eau"></i></div></div>
+  </div>
+
+  <h2 class="sec">Macro ou micro ?</h2>
+  <div class="g2">
+    <div class="card tint glu"><h3>Macronutriments</h3><div class="big">g <small>par jour</small></div><p>Apportent de l’énergie (sauf eau et fibres), construisent et régulent.</p></div>
+    <div class="card tint eau"><h3>Micronutriments</h3><div class="big">mg · µg <small>par jour</small></div><p>Aucune énergie. Vitamines et minéraux : réactions enzymatiques, immunité.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 2. Explorer ===================== -->
+<section id="explorer" data-name="Explorer" hidden>
+  <p class="lead">Touchez une molécule : sa fiche s’affiche en dessous.</p>
+  <div class="chip-groups" id="chips"></div>
+  <div class="panel empty" id="panel" aria-live="polite">Choisissez un élément pour voir ce que c’est, son rôle, où le trouver.</div>
+
+  <h2 class="sec glu">Simples ou complexes ? <small>Les glucides se reconnaissent à leur nombre d’oses</small></h2>
+  <div class="g3">
+    <div class="card glu"><div class="schema"><svg data-pic="hex1"></svg></div><h3>Monosaccharides</h3><p>Un seul ose : <b>glucose, fructose, galactose</b>. La seule forme absorbée.</p></div>
+    <div class="card glu"><div class="schema"><svg data-pic="hex2"></svg></div><h3>Disaccharides</h3><p>Deux oses : <b>saccharose, lactose, maltose</b>.</p></div>
+    <div class="card glu"><div class="schema"><svg data-pic="hexN"></svg></div><h3>Polysaccharides</h3><p>Longues chaînes : <b>amidon, glycogène</b>. Non digestibles : les <b>fibres</b>.</p></div>
+  </div>
+
+  <h2 class="sec lip">Saturé ou insaturé ? <small>Une question de forme</small></h2>
+  <div class="g2">
+    <div class="card lip"><div class="schema"><svg data-pic="sat"></svg></div><h3>Saturés : droits</h3><p>Ils s’empilent bien, donc ils sont <b>solides</b> à température ambiante. Beurre, viandes grasses, coco.</p></div>
+    <div class="card lip"><div class="schema"><svg data-pic="insat"></svg></div><h3>Insaturés : coudés</h3><p>Les doubles liaisons les plient, ils restent <b>fluides</b>. Huiles d’olive, de colza, de noix.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 3. Digestion ===================== -->
+<section id="digestion" data-name="Digestion" hidden>
+  <p class="lead">Le corps ne peut absorber que des <b>petites molécules</b>. La digestion découpe, l’intestin absorbe, puis le foie décide.</p>
+  <div class="seg" id="dig-seg" role="group" aria-label="Macronutriment"></div>
+  <div class="pipe" id="pipe"></div>
+  <h2 class="sec" id="after-title"></h2>
+  <div class="grid" id="after"></div>
+  <div class="note" id="dig-note"></div>
+</section>
+
+<!-- ===================== 4. Besoins ===================== -->
+<section id="besoins" data-name="Besoins" hidden>
+  <p class="lead">Les repères pour un adulte en bonne santé, en part de l’<b>apport énergétique total</b> (AET).</p>
+  <div class="grid">
+    <div class="card glu"><span class="tag">Glucides</span><div class="big">40–55 <small>% AET</small></div><p>Soit 200 à 275 g pour 2 000 kcal. Surtout des glucides <b>complexes</b>.</p></div>
+    <div class="card pro"><span class="tag">Protéines</span><div class="big">10–20 <small>% AET</small></div><p>Soit <b>0,8 à 1,2 g</b> par kg de poids et par jour.</p></div>
+    <div class="card lip"><span class="tag">Lipides</span><div class="big">30–35 <small>% AET</small></div><p>Soit 65 à 75 g pour 2 000 kcal. 35 à 40 % chez l’enfant.</p></div>
+    <div class="card eau"><span class="tag">Eau</span><div class="big">2–2,5 <small>L/jour</small></div><p>Soit <b>30 à 35 mL</b> par kg de poids.</p></div>
+    <div class="card glu"><span class="tag">Fibres</span><div class="big">25–30 <small>g/jour</small></div><p>Fruits, légumes, céréales complètes, légumineuses.</p></div>
+    <div class="card bad"><span class="tag">Sucres ajoutés</span><div class="big">&lt; 10 <small>% AET</small></div><p>≈ 50 g par jour, idéalement <b>&lt; 5 %</b> (25 g).</p></div>
+  </div>
+
+  <h2 class="sec">Calculer pour une personne <small>Tout ce qui suit se met à jour</small></h2>
+  <div class="card">
+    <div class="calc">
+      <div class="calc-in">
+        <div class="field"><label class="tag" for="poids">Poids</label><span class="val" data-nohide id="poids-o"></span><input type="range" id="poids" min="35" max="120" value="70"></div>
+        <div class="field"><label class="tag" for="aet">Apport énergétique total</label><span class="val" data-nohide id="aet-o"></span><input type="range" id="aet" min="1400" max="3600" step="100" value="2000"></div>
+        <div class="field"><span class="tag">Profil</span><div class="seg pro" id="profils" role="group" aria-label="Profil"></div></div>
+      </div>
+      <div class="calc-out" id="calc-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec pro">Protéines selon le profil <small>en g par kg et par jour · touchez une ligne pour changer de profil</small></h2>
+  <div class="card pro"><div class="range" id="ranges"></div></div>
+
+  <h2 class="sec pro" id="plate-title">À quoi ressemblent ces protéines ?</h2>
+  <div class="card pro" style="gap:12px">
+    <div class="stack hideable" id="plate"></div>
+    <div class="stack-leg" id="plate-leg"></div>
+    <p id="plate-txt"></p>
+  </div>
+
+  <h2 class="sec lip">La qualité des graisses compte</h2>
+  <div class="grid">
+    <div class="card lip"><span class="tag">Saturés</span><div class="big">&lt; 12 <small>% AET</small></div><p>Un excès fait monter le LDL.</p></div>
+    <div class="card lip"><span class="tag">Polyinsaturés</span><div class="big">7–10 <small>% AET</small></div><p>Oméga-3 souvent insuffisants : poisson gras <b>2 fois par semaine</b>.</p></div>
+    <div class="card bad"><span class="tag">Trans</span><div class="big">0 <small>idéalement</small></div><p>Biscuits, viennoiseries industrielles : à éviter.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 5. Sources ===================== -->
+<section id="sources" data-name="Sources" hidden>
+  <p class="lead">Aucun aliment ne fait tout. Les points de couleur montrent ce que chaque famille apporte <b>surtout</b>.</p>
+  <div class="grid" id="foods"></div>
+
+  <h2 class="sec pro">La complémentarité protéique <small>Deux protéines incomplètes font une protéine complète</small></h2>
+  <div class="plus">
+    <div class="card"><h3>Céréales</h3><div class="aa"><span class="hi">Méthionine <b>riche</b></span><span class="lo">Lysine <b>pauvre</b></span></div></div>
+    <div class="op">+</div>
+    <div class="card"><h3>Légumineuses</h3><div class="aa"><span class="lo">Méthionine <b>pauvre</b></span><span class="hi">Lysine <b>riche</b></span></div></div>
+    <div class="op">=</div>
+    <div class="card good"><h3>Protéine complète</h3><p>Riz + lentilles<br>Semoule + pois chiches<br>Maïs + haricots rouges</p></div>
+  </div>
+
+  <h2 class="sec pro">Digestibilité</h2>
+  <div class="g2">
+    <div class="card pro"><h3>Protéines animales</h3><div class="big">90–95 <small>%</small></div><div class="meter hideable"><div style="--a:90%;--b:95%"></div></div><p>Complètes, avec fer, zinc, B12, calcium.</p></div>
+    <div class="card pro"><h3>Protéines végétales</h3><div class="big">70–85 <small>%</small></div><div class="meter hideable"><div style="--a:70%;--b:85%"></div></div><p>Enfermées dans des fibres. Cuisson, fermentation et germination aident.</p></div>
+  </div>
+</section>
+
+<!-- ===================== 6. Excès et carences ===================== -->
+<section id="exces" data-name="Excès et carences" hidden>
+  <p class="lead">Trop ou pas assez : chaque macronutriment a ses <b>risques</b>.</p>
+  <div class="ec-head" aria-hidden="true"><span></span><span>Trop</span><span>Pas assez</span></div>
+  <div class="ec-list" id="ec"></div>
+
+  <h2 class="sec pro">Kwashiorkor ou marasme ? <small>Malnutrition protéino-énergétique</small></h2>
+  <div class="g2">
+    <div class="card tint pro"><h3>Kwashiorkor</h3><p><b>Œdèmes</b>, fonte musculaire, lésions de la peau, apathie.</p></div>
+    <div class="card tint pro"><h3>Marasme</h3><p><b>Amaigrissement global</b> : fonte musculaire et des graisses.</p></div>
+  </div>
+
+  <h2 class="sec eau">La déshydratation s’installe en trois temps</h2>
+  <div class="flow">
+    <div class="st l1"><span class="tag">Signes précoces</span><p>Soif, bouche sèche, fatigue, maux de tête, baisse de concentration.</p></div>
+    <div class="st l2"><span class="tag">Signes avancés</span><p>Moins d’urines, hypotension, cœur qui accélère, confusion.</p></div>
+    <div class="st l3"><span class="tag">Grave</span><p>Troubles de la conscience, défaillance rénale, pronostic vital engagé.</p></div>
+  </div>
+  <div class="note"><span><b>Nourrissons et personnes âgées</b> sont les plus exposés : les premiers régulent mal, les seconds ressentent moins la soif.</span></div>
+</section>
+
+<!-- ===================== 7. Cas pratique ===================== -->
+<section id="cas" data-name="Cas pratique" hidden>
+  <div class="card who-card">
+    <div class="avatar" aria-hidden="true">M</div>
+    <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:200px">
+      <h3>Marc, 25 ans</h3>
+      <div class="stats" data-nohide><span>72 kg</span><span>1,78 m</span><span>Bureau</span><span>Foot 2×/sem.</span><span>Footing le dimanche</span></div>
+      <p>Il se sent souvent fatigué en fin de journée et veut « mieux manger ».</p>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <p class="lead" style="font-size:1.2rem">Sa journée type, avant et après rééquilibrage.</p>
+    <div class="seg" id="ab" role="group" aria-label="Version"><button class="bad" data-v="0" aria-pressed="true">Avant</button><button class="good" data-v="1" aria-pressed="false">Après</button></div>
+  </div>
+  <div class="grid" id="meals"></div>
+
+  <h2 class="sec">Ses besoins, calculés</h2>
+  <div class="calc-out" id="marc-out"></div>
+
+  <h2 class="sec">Le bilan</h2>
+  <div class="g2">
+    <div class="card bad"><h3>Excès</h3><ul><li>Graisses <b>saturées et trans</b> : viennoiseries, fritures, pizza</li><li><b>Sucres simples</b> : soda, barre chocolatée, croissants</li><li>Calories vides : beaucoup d’énergie, peu de nutriments</li></ul></div>
+    <div class="card good"><h3>Carences</h3><ul><li><b>Fibres</b> : presque pas de fruits, légumes, céréales complètes</li><li><b>Protéines de qualité</b> : trop peu pour un sportif</li><li><b>Oméga-3</b> absents</li><li><b>Eau</b> : environ 1 L, souvent remplacé par du soda</li></ul></div>
+  </div>
+  <div class="note"><span>La fatigue de fin de journée vient des <b>pics de glycémie</b> suivis de coups de pompe, aggravés par le manque d’eau.</span></div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="macronutriments.js"></script>
+</body>
+</html>
