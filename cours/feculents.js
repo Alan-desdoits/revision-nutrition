@@ -70,7 +70,7 @@
       ["Péricarpe", "Endocarpe, mésocarpe, épicarpe. Cellules à membranes épaisses, mal utilisées par la digestion (cellulose, lignine). Protège la graine."],
       ["Tégument séminal", "Contient les colorants : couleur jaune-marron. C’est le « manteau » du grain (testa)."],
       ["Bande hyaline", "Cellules transparentes qui unissent solidement le tégument à l’assise protéique."],
-      ["Assise protéique", "<b>6 à 7 %</b> du poids du grain. Riche en protéines et vitamines : <b><span class="num hideable">⅓</span> des B1 et B2</b>, <b><span class="num hideable">⅔</span> des B6 et B3</b> du grain ; minéraux, lipides, cellulose, lignine. Fait adhérer l’enveloppe à l’amande."]
+      ["Assise protéique", "<b>6 à 7 %</b> du poids du grain. Riche en protéines et vitamines : <b><span class='num hideable'>⅓</span> des B1 et B2</b>, <b><span class='num hideable'>⅔</span> des B6 et B3</b> du grain ; minéraux, lipides, cellulose, lignine. Fait adhérer l’enveloppe à l’amande."]
     ] },
     amande: { name: "Amande (albumen)", pct: 83, gives: "Donne les farines et les semoules", rows: [
       ["Aspect", "Substance blanche, friable, plus ou moins farineuse. Le germe délimite sa partie inférieure."],

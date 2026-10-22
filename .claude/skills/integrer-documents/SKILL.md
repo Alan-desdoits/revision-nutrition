@@ -55,11 +55,18 @@ Pendant la lecture, noter au fur et à mesure :
 
 ## 5. Vérifier
 
-1. `preview_start` avec le serveur `site` (port 8123).
-2. Depuis `http://localhost:8123/index.html`, exécuter le contenu de `scripts/verif_pages.js` avec l'outil JavaScript du navigateur : il charge chaque page à 1440, 820 et 390 px, affiche chaque onglet, relève les débordements horizontaux, les erreurs JS, et (à 1440) les chiffres restés visibles hors `.num` et `[data-nohide]`. Les noms comme B12, oméga-3, E300 sont normaux ; le reste est à corriger.
-3. Exécuter `scripts/verif_interactions.js` sur les nouvelles pages : clique chaque bouton, pousse chaque curseur aux extrêmes, clique les schémas, puis remesure. Lire aussi la console (`read_console_messages`) après un rechargement, en se méfiant des anciennes erreurs.
-4. Regarder chaque outil interactif en capture d'écran au moins une fois.
-5. Contrôle de couverture : chaque paragraphe a un mot-clé sur la page.
+1. **Syntaxe d'abord**, après chaque modification d'un script (une seule erreur de syntaxe vide toute la page) :
+
+   ```bash
+   for f in cours/*.js assets/js/*.js; do node --check "$f" || echo "ERREUR $f"; done
+   ```
+
+   Piège fréquent : des guillemets doubles dans une chaîne `"…"` (ex. `<span class="num">` à l'intérieur de `"…"`). Dans ces chaînes, écrire `class='num hideable'`.
+2. `preview_start` avec le serveur `site` (port 8123).
+3. Depuis `http://localhost:8123/index.html`, exécuter le contenu de `scripts/verif_pages.js` avec l'outil JavaScript du navigateur : il force le rechargement des scripts, charge chaque page à 1440, 820 et 390 px, affiche chaque onglet, relève les débordements horizontaux, les erreurs JS, les **blocs restés vides** (`empty` doit être vide ; seule exception connue : `scen-score` dans Hors périmètre, rempli après une réponse) et (à 1440) les chiffres restés visibles hors `.num` et `[data-nohide]`. Les noms comme B12, oméga-3, E300 sont normaux ; le reste est à corriger.
+4. Exécuter `scripts/verif_interactions.js` sur les nouvelles pages : clique chaque bouton, pousse chaque curseur aux extrêmes, clique les schémas, puis remesure. Lire aussi la console (`read_console_messages`) après un rechargement, en se méfiant des anciennes erreurs.
+5. Regarder chaque outil interactif en capture d'écran au moins une fois. Refaire les étapes 1 et 3 après **toute** retouche de fin de passe, même minime.
+6. Contrôle de couverture : chaque paragraphe a un mot-clé sur la page.
 
    ```bash
    python -I -X utf8 .claude/skills/integrer-documents/scripts/verif_mots_cles.py "<scratchpad>/<slug>/texte.txt" cours/<slug>.html cours/<slug>.js

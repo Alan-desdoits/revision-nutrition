@@ -1,10 +1,15 @@
 // À exécuter depuis http://localhost:8123/index.html (outil JavaScript du navigateur).
 // Charge chaque COURS[i].page dans une iframe hors écran à 1440, 820 et 390 px,
-// affiche chaque onglet et relève : débordement horizontal, erreurs JS,
+// affiche chaque onglet et relève : débordement horizontal, erreurs JS après chargement,
+// blocs restés vides (un script qui plante au chargement laisse ses conteneurs vides),
 // et (à 1440 px) les chiffres visibles hors .num et [data-nohide].
+const pages = COURS.filter(c => c.statut === "disponible").map(c => c.page);
+// Forcer le rechargement des scripts : sinon le navigateur peut servir une ancienne version en cache
+for (const p of pages) await fetch(p.replace(/\.html$/, ".js"), { cache: "reload" }).catch(() => {});
+await fetch("assets/js/fiches.js", { cache: "reload" });
 const out = [];
 for (const w of [1440, 820, 390]) {
-  for (const p of COURS.filter(c => c.statut === "disponible").map(c => c.page)) {
+  for (const p of pages) {
     const f = document.createElement("iframe");
     f.style.cssText = `position:absolute;left:-5000px;top:0;width:${w}px;height:900px;border:0`;
     document.body.appendChild(f);
@@ -16,6 +21,7 @@ for (const w of [1440, 820, 390]) {
     const d = f.contentDocument, win = f.contentWindow;
     const secs = [...d.querySelectorAll("main.fiche > section")];
     const over = [], vis = [];
+    const empty = [...d.querySelectorAll("main [id]")].filter(e => !e.childNodes.length && !/^(INPUT|SELECT|OUTPUT)$/.test(e.tagName)).map(e => e.id);
     for (const s of secs) {
       secs.forEach(x => x.hidden = x !== s);
       await new Promise(r => setTimeout(r, 30));
@@ -29,7 +35,7 @@ for (const w of [1440, 820, 390]) {
         }
       }
     }
-    if (over.length || errs.length || vis.length) out.push({ w, p, over, errs, vis });
+    if (over.length || errs.length || vis.length || empty.length) out.push({ w, p, over, errs, empty, vis });
     f.remove();
   }
 }
