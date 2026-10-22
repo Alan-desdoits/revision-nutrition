@@ -162,6 +162,7 @@ h2.sec small{font-family:var(--f-b);font-weight:400;font-size:.9rem;color:var(--
 
 /* ---------- Parcours en étapes ---------- */
 .pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.pipe.p4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .stn{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;position:relative;min-width:0}
 .stn:not(:last-child)::after{content:"";position:absolute;right:-9px;top:26px;width:8px;height:8px;border-top:2px solid var(--c);border-right:2px solid var(--c);transform:rotate(45deg);z-index:1}
 .stn.key{background:var(--s);border-color:var(--m)}
@@ -201,7 +202,7 @@ h2.sec small{font-family:var(--f-b);font-weight:400;font-size:.9rem;color:var(--
 
 /* ---------- Barre empilée ---------- */
 .stack{position:relative;display:flex;height:46px;border-radius:10px;overflow:hidden;background:repeating-linear-gradient(135deg,var(--bg) 0 6px,var(--line) 6px 7px)}
-.stack > div{background:var(--m);border-right:2px solid var(--card);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--c);overflow:hidden;white-space:nowrap;min-width:0}
+.stack > div{background:var(--m);border-right:2px solid var(--card);display:flex;align-items:center;justify-content:center;column-gap:.3em;font-size:.72rem;font-weight:700;color:var(--c);overflow:hidden;white-space:nowrap;min-width:0}
 .stack > div:nth-child(even){background:var(--m2,var(--m));filter:saturate(.8) brightness(1.06)}
 .stack .target{position:absolute;top:0;bottom:0;width:0;border-left:2px dashed var(--fg);background:none;border-right:0;filter:none}
 .stack-leg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.84rem;color:var(--muted)}
@@ -289,7 +290,7 @@ h2.sec small{font-family:var(--f-b);font-weight:400;font-size:.9rem;color:var(--
 .hbar .fill.range{background:linear-gradient(90deg,var(--m) 0 var(--a),color-mix(in srgb,var(--m) 45%,transparent) var(--a) 100%)}
 .hbar.sel .fill{background:var(--c);color:#fff}
 .stack3{display:flex;height:40px;border-radius:10px;overflow:hidden}
-.stack3 > div{display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:700;color:var(--c);background:var(--m);white-space:nowrap;overflow:hidden;min-width:0;border-right:2px solid var(--card);transition:flex-basis .25s}
+.stack3 > div{display:flex;align-items:center;justify-content:center;column-gap:.3em;font-size:.76rem;font-weight:700;color:var(--c);background:var(--m);white-space:nowrap;overflow:hidden;min-width:0;border-right:2px solid var(--card);transition:flex-basis .25s}
 .stack3 > div:last-child{border-right:0}
 /* Formulaire de calcul */
 .form{display:grid;gap:14px}
@@ -376,7 +377,7 @@ a.course:hover{border-color:var(--fg);transform:translateY(-2px);box-shadow:0 14
    Tablette (iPad portrait et paysage) : 601–1024px
    ========================================================================== */
 @media (max-width:1024px){
-  .pipe{grid-template-columns:1fr}
+  .pipe,.pipe.p4{grid-template-columns:1fr}
   .stn{display:grid;grid-template-columns:150px minmax(0,1fr);column-gap:16px;row-gap:6px}
   .stn > .num-step,.stn > h4,.stn > .badge{grid-column:1}
   .stn > .enz,.stn > p,.stn > .out{grid-column:2}

@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Féculents · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Les féculents.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Les groupes d’aliments</span>
+        <h1 style="--hl:var(--glu-m)">Les <em>féculents</em></h1>
+        <p class="sub">Amidon, céréales, farines et pain, index glycémique, légumineuses et tubercules.</p>
+      </div>
+      <div class="legend"><span class="glu">Féculents, amidon</span><span class="pro">Protéines végétales</span><span class="vit">Vitamines</span><span class="min">Minéraux</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<!-- ======================================================================= -->
+<section id="bases" data-name="Bases">
+  <p class="lead">Un féculent est un aliment végétal riche en <b>amidon</b>. Son rôle ne se limite pas à « fournir des calories ».</p>
+  <p>Les féculents sont au centre de l’alimentation humaine depuis des millénaires : toutes les cultures reposent sur des céréales, des tubercules ou des légumineuses. Ils sont historiquement la base énergétique des populations. Pourtant, ils sont souvent <b>diabolisés</b> (accusés de faire grossir) ou <b>banalisés</b> (vus comme interchangeables, sans intérêt). Ces visions simplistes cachent leur rôle réel.</p>
+  <div class="grid">
+    <div class="card glu tint"><span class="tag">Ils participent à</span><h3>L’équilibre nutritionnel</h3><p>Énergie, fibres, vitamines et minéraux.</p></div>
+    <div class="card glu tint"><span class="tag">Ils participent à</span><h3>La régulation de l’appétit</h3><p>Ils rassasient, surtout peu transformés.</p></div>
+    <div class="card glu tint"><span class="tag">Ils participent à</span><h3>La stabilité de la glycémie</h3><p>Le glucose arrive progressivement s’ils sont bien choisis.</p></div>
+    <div class="card glu tint"><span class="tag">Ils participent à</span><h3>La structure des repas</h3><p>Rythme, satiété, plaisir alimentaire.</p></div>
+  </div>
+  <div class="note"><span><b>Bon à savoir</b> : le PNNS recommande des féculents <b>à chaque repas</b>, en privilégiant les complets ou peu transformés, pour couvrir les besoins énergétiques et favoriser l’équilibre nutritionnel.</span></div>
+
+  <h2 class="sec glu">Trois grandes familles</h2>
+  <p>Ce qui définit un féculent n’est ni sa forme, ni son usage en cuisine, mais la <b>présence majoritaire d’amidon</b> (glucide complexe), réserve énergétique de la plante. Les familles ont des profils parfois très différents.</p>
+  <div class="g3">
+    <div class="card glu"><span class="tag">Céréales</span><h3>Blé, riz, avoine, orge…</h3><p>Et leurs dérivés : pain, pâtes, semoules, farines.</p></div>
+    <div class="card glu"><span class="tag">Tubercules</span><h3>Pomme de terre, patate douce…</h3><p>Manioc, topinambour…</p></div>
+    <div class="card pro"><span class="tag">Légumineuses</span><h3>Lentilles, pois chiches, haricots secs…</h3><p>Une catégorie <b>à part</b>, à la frontière entre féculents et sources de protéines végétales.</p></div>
+  </div>
+
+  <h2 class="sec glu">L’amidon <small>Deux fractions, deux vitesses</small></h2>
+  <p>L’amidon est un <b>polysaccharide</b> : de longues chaînes de molécules de glucose. C’est la principale forme de stockage de l’énergie chez les végétaux.</p>
+  <div class="stack3 hideable"><div class="glu" style="flex:0 0 25%">Amylose ≈ 25 %</div><div class="glu" style="flex:0 0 75%;--m:var(--glu-s)">Amylopectine ≈ 75 %</div></div>
+  <div id="ami-seg"></div>
+  <div class="card" id="ami-card">
+    <svg id="ami-svg" viewBox="0 0 560 150" role="img" aria-label="Structure de l’amidon" style="width:100%;height:auto;max-height:170px"></svg>
+    <div id="ami-txt"></div>
+  </div>
+  <p>La proportion amylose / amylopectine varie selon les végétaux et les variétés. Avec les transformations (mouture, cuisson, extrusion, fermentation), elle règle la <b>vitesse de digestion</b> de l’amidon, la rapidité d’absorption du glucose et la <b>réponse glycémique postprandiale</b> (après le repas). Tous les féculents ne sont donc pas équivalents : structure, transformation et préparation modulent leur effet.</p>
+
+  <h2 class="sec">Pourquoi ils sont importants</h2>
+  <div class="g3">
+    <div class="card glu"><span class="tag">Énergie</span><p>L’amidon est transformé <b>progressivement</b> en glucose, carburant privilégié du cerveau et des muscles. Bien choisis, ils donnent une énergie durable et limitent les variations rapides de glycémie.</p></div>
+    <div class="card fl"><span class="tag">Fibres</span><p>Surtout <b>peu raffinés ou complets</b>. Les fibres aident le transit, la satiété, la régulation de la glycémie et du cholestérol.</p></div>
+    <div class="card vit"><span class="tag">Vitamines et minéraux</span><p>Quantités variables selon l’aliment et sa transformation : <b>vitamines du groupe B</b> (métabolisme énergétique), magnésium, fer, zinc…</p></div>
+  </div>
+  <div class="note"><span>La « qualité » d’un féculent dépend autant de sa <b>nature</b> que de son <b>degré de transformation</b> (raffinage, cuisson, extrusion…), qui influence la satiété, la densité nutritionnelle et l’impact glycémique. Privilégier les féculents peu transformés et riches en fibres.</span></div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="digestion" data-name="Digestion" hidden>
+  <p class="lead">L’amidon devient du <b>glucose</b> pas à pas. La vitesse dépend de l’aliment, de sa cuisson et du repas.</p>
+  <div class="chain glu" data-nohide><span>1. Bouche : mastication, amylase salivaire</span><i>→</i><span>2. Intestin grêle : enzymes pancréatiques et intestinales</span><i>→</i><span>3. Hydrolyse progressive en glucose</span><i>→</i><span>4. Absorption par la muqueuse</span><i>→</i><span>5. Glucose dans le sang</span></div>
+
+  <h2 class="sec glu">Ce qui accélère ou ralentit <small>Réglez les quatre facteurs</small></h2>
+  <div class="card glu">
+    <div class="g2" id="dig-ctrl"></div>
+    <svg id="dig-svg" viewBox="0 0 640 210" role="img" aria-label="Allure de la réponse glycémique" style="width:100%;height:auto"></svg>
+    <p id="dig-out"></p>
+  </div>
+  <div class="grid" id="dig-why"></div>
+  <div class="note"><span>Ces éléments expliquent pourquoi <b>deux portions équivalentes</b> de féculents peuvent donner des réponses glycémiques très différentes. Le schéma est qualitatif : le cours ne donne pas de valeurs.</span></div>
+
+  <h2 class="sec">Leur rôle dans le corps</h2>
+  <div class="grid">
+    <div class="card glu"><span class="tag">Cerveau</span><p>Dépend <b>presque exclusivement</b> du glucose pour fonctionner.</p></div>
+    <div class="card glu"><span class="tag">Muscles</span><p>Stockent le glucose en <b>glycogène musculaire</b>, mobilisé à l’effort.</p></div>
+    <div class="card glu"><span class="tag">Toutes les cellules</span><p>Utilisent le glucose pour leurs fonctions vitales.</p></div>
+    <div class="card fl"><span class="tag">Appétit et glycémie</span><p>Peu transformés et riches en fibres : digestion plus lente, <b>satiété</b>, libération progressive du glucose, moins de variations brutales.</p></div>
+  </div>
+  <div class="card reveal-card">
+    <span class="tag">Exemple</span>
+    <h3>Fatigue en milieu de matinée et grignotage</h3>
+    <p>Une personne juge ses repas « équilibrés ». Pourtant, elle est très fatiguée en milieu de matinée et grignote souvent. Que regarder ?</p>
+    <button class="chip" data-reveal>Voir la réponse</button>
+    <div class="answer" hidden><p>Ses repas contiennent <b>peu ou pas de féculents</b>, ou seulement des féculents très raffinés. Réintroduire ou adapter des féculents de meilleure qualité peut améliorer la satiété, limiter les baisses d’énergie et réduire les prises entre les repas.</p></div>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="techno" data-name="Technologie" hidden>
+  <p class="lead">L’amidon sait <b>épaissir</b>, lier, gélifier et stabiliser. Cuisine et industrie s’en servent pour la texture.</p>
+  <div class="g2">
+    <div class="card glu"><span class="tag">La gélatinisation</span><p>Chauffé avec de l’eau, l’amidon gonfle : on obtient du liquide épaissi jusqu’au gel ferme. En cuisine, elle permet de maîtriser :</p><ul><li>l’onctuosité des sauces et potages</li><li>la cohésion des purées et appareils</li><li>la tenue des crèmes, flans et desserts</li></ul></div>
+    <div class="card"><span class="tag">En industrie</span><p>Texture constante d’un lot à l’autre, stabilité au transport et au stockage, remplacement partiel de matières premières plus coûteuses.</p><p>Les <b>amidons modifiés</b> (physiquement ou chimiquement) résistent mieux à la congélation, au réchauffage ou aux variations de pH.</p></div>
+  </div>
+  <div class="note"><span><b>À noter : la rétrogradation.</b> Après cuisson, les chaînes de glucose se réorganisent peu à peu et la texture raffermit. C’est le <b>rassissement</b> du pain, le durcissement du riz, des pâtes ou des pommes de terre, et les changements de texture au froid.</span></div>
+
+  <h2 class="sec">Les procédés <small>Touchez un procédé</small></h2>
+  <div id="pro-chips"></div>
+  <div class="panel empty" id="pro-panel">Choisissez un procédé.</div>
+  <p>Ces procédés tirent une grande diversité de produits d’une même matière première, selon des contraintes industrielles, économiques et sensorielles.</p>
+  <div class="g2">
+    <div class="card bad"><h3>Attention</h3><p>Une transformation poussée peut entraîner une <b>perte de fibres et de micronutriments</b>, une structure moins protectrice et un amidon plus digestible, donc un glucose absorbé plus vite.</p></div>
+    <div class="card ink tint"><h3>Le rôle du professionnel</h3><p>Mettre en balance les bénéfices technologiques et les enjeux nutritionnels, pour orienter vers des produits adaptés aux besoins et au contexte des personnes.</p></div>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="cereales" data-name="Céréales" hidden>
+  <p class="lead">Les produits céréaliers viennent des <b>grains</b> de plantes de la famille des Poacées (graminées).</p>
+  <div class="g2">
+    <div class="card"><span class="tag">Définition</span><p>Tous les aliments issus des grains de céréales, bruts ou transformés : produits très transformés (pain, pâtes, céréales du petit-déjeuner) ou peu transformés (riz, maïs en grain entier).</p></div>
+    <div class="card glu tint"><span class="tag">C’est quoi, une céréale ?</span><p>Une <b>plante herbacée</b> qui produit des grains comestibles, souvent la principale source d’énergie de l’alimentation humaine et animale.</p></div>
+  </div>
+  <div class="g2">
+    <div class="card good"><h3>Céréales complètes</h3><p>Peu ou pas transformées : le grain garde son <b>enveloppe (son), son germe</b> et l’amidon.</p></div>
+    <div class="card bad"><h3>Céréales raffinées</h3><p>Le son et le germe sont retirés. Il reste surtout l’<b>endosperme</b> riche en amidon : moins de fibres, vitamines et minéraux.</p></div>
+  </div>
+
+  <h2 class="sec glu">Le grain de blé <small>Touchez une partie</small></h2>
+  <div class="stack hideable" id="ble-stack"></div>
+  <div class="label-wrap">
+    <div class="card" style="align-items:center"><svg id="ble-svg" viewBox="0 0 260 300" role="img" aria-label="Coupe d’un grain de blé" style="width:min(260px,100%);height:auto"></svg><div id="ble-seg"></div></div>
+    <div class="panel" id="ble-panel" style="grid-template-columns:minmax(0,1fr)"></div>
+  </div>
+
+  <h2 class="sec glu">Le grain de riz <small>Ce que garde chaque riz</small></h2>
+  <div id="riz-seg"></div>
+  <div class="card"><div class="pills" id="riz-layers"></div><p id="riz-txt"></p></div>
+
+  <h2 class="sec">Classer les céréales</h2>
+  <p>Selon la <b>botanique</b>, le <b>degré de transformation</b>, l’<b>usage</b> et la <b>géographie</b> : chaque région a sa ou ses céréales dominantes, reflet du climat, du sol et des traditions.</p>
+  <div id="cer-chips"></div>
+  <div class="panel empty" id="cer-panel">Choisissez une céréale.</div>
+  <div class="note"><span>Les <b>pseudo-céréales</b> ne sont pas des Poacées mais s’utilisent comme des céréales. Elles sont naturellement <b>sans gluten</b> et souvent plus riches en protéines de bonne qualité et en micronutriments.</span></div>
+
+  <h3>Selon le degré de transformation</h3>
+  <div class="flow">
+    <div class="st"><span class="tag">Entières ou complètes</span><p>Son + albumen + germe. Riz complet, flocons d’avoine entiers, pain complet.</p></div>
+    <div class="st"><span class="tag">Semi-complètes</span><p>Une partie du son retirée pour la digestibilité. Riz et pain semi-complets.</p></div>
+    <div class="st l2"><span class="tag">Raffinées</span><p>Son et germe éliminés : albumen seul. Farine blanche, riz blanc, pâtes blanches.</p></div>
+    <div class="st l3"><span class="tag">Transformées</span><p>Farines ou semoules, parfois + sucres ou matières grasses. Biscuits, viennoiseries, céréales du petit-déjeuner.</p></div>
+  </div>
+  <p>Le degré de transformation influence directement la <b>valeur nutritionnelle</b> et l’<b>index glycémique</b>.</p>
+
+  <h3>Selon l’usage</h3>
+  <div class="tbl glu"><table><thead><tr><th>Usage</th><th>Exemples</th></tr></thead><tbody>
+    <tr><th>Produits de base</th><td>Pain, pâtes, riz, semoule, couscous, flocons d’avoine</td></tr>
+    <tr><th>Petit-déjeuner</th><td>Mueslis, flocons, céréales soufflées, corn flakes</td></tr>
+    <tr><th>Sucrés ou transformés</th><td>Biscuits, gâteaux, barres céréalières, viennoiseries</td></tr>
+    <tr><th>Sans gluten</th><td>Riz, maïs, sarrasin, quinoa, millet, amarante</td></tr>
+    <tr><th>Fermentés</th><td>Bière (orge ou blé), kvas, bouillies traditionnelles</td></tr>
+  </tbody></table></div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="pain" data-name="Farine et pain" hidden>
+  <p class="lead">La <b>mouture</b> réduit le grain en farine ; la farine, l’eau, le sel et un agent de fermentation font le pain.</p>
+  <div class="g2">
+    <div class="card"><span class="tag">Farine</span><p>Poudre obtenue par mouture (broyage) de grains de céréales ou d’autres végétaux riches en amidon (légumineuses, certaines racines).</p></div>
+    <div class="card"><span class="tag">Réglementation</span><p>La <b>farine blanche de blé</b> est le produit total de la mouture du grain de blé, contenant farine, semoule et son, nettoyé et industriellement pur.</p></div>
+  </div>
+
+  <h2 class="sec glu">Extraction et blutage <small>Réglez le taux d’extraction</small></h2>
+  <p>On distingue les farines par trois critères : le <b>taux de cendres</b>, le <b>taux d’extraction</b> et le <b>taux de blutage</b>. Bluter, c’est enlever les écorces.</p>
+  <div class="card glu">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="ext">Taux d’extraction</label><span class="val" id="ext-o" data-nohide></span><input type="range" id="ext" min="50" max="100" step="1" value="75"></div>
+        <p style="color:var(--muted);font-size:.9rem">Extraction : quantité de farine obtenue avec <span data-nohide>100 kg</span> de blé. Blutage : le complément à 100 de l’extraction.</p>
+      </div>
+      <div class="result glu" id="ext-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec glu">La mouture, étape par étape</h2>
+  <div class="tbl glu"><table><thead><tr><th>Étape</th><th>Ce qui se passe</th><th>Ce qui sort</th></tr></thead><tbody>
+    <tr><th>Nettoyage</th><td>Séparateurs, trieur, épointeuses</td><td>Grosses impuretés, particules étrangères, brosse et poussières</td></tr>
+    <tr><th>Humidification</th><td>Grain de blé industriellement pur</td><td>–</td></tr>
+    <tr><th>Broyage puis tamisage</th><td>On obtient les <b>boulanges</b></td><td>Farine de broyage · refus</td></tr>
+    <tr><th>Sassage puis claquage, tamisage</th><td>Travail des <b>semoules</b></td><td>Farine de claquage · souffleurs (devenus finots) · remoulage bis</td></tr>
+    <tr><th>Convertissage puis tamisage</th><td>Travail des <b>gruaux</b> et des finots</td><td>Farine de convertissage · remoulage blanc</td></tr>
+  </tbody></table></div>
+  <div class="stack hideable" id="mout-stack"></div>
+  <div class="stack-leg" id="mout-leg"></div>
+  <div class="note"><span>Le schéma du cours indique « 20 %, 25 % et 35 % <b>de la farine finale</b> », mais leur somme fait <b>80 % du grain de blé brut</b>. Les trois farines sont donc tracées ici en part du grain ; la zone hachurée est le reste du grain, non chiffré dans le cours.</span></div>
+  <div class="g2">
+    <div class="card"><span class="tag">Mouture</span><p>Opération qui réduit les grains de blé en farine.</p></div>
+    <div class="card"><span class="tag">Farine</span><p>Le fruit de cette opération.</p></div>
+  </div>
+
+  <h2 class="sec glu">Le pain <small>Touchez un ingrédient</small></h2>
+  <p>Selon la réglementation, le pain vient de la cuisson d’une pâte pétrie avec <b>farine de blé tendre, eau potable, sel et agents de fermentation</b>.</p>
+  <div id="ing-chips"></div>
+  <div class="panel empty" id="ing-panel">Choisissez un ingrédient.</div>
+
+  <h3>Levure de boulangerie ou levain ?</h3>
+  <div class="tbl glu"><table><thead><tr><th>Critère</th><th>Levure de boulangerie</th><th>Levain</th></tr></thead><tbody>
+    <tr><th>Technologique</th><td>Obtenue industriellement.</td><td>Mélange fermenté de farine et d’eau, reposé plus de 12 heures avec ajout régulier d’eau : des micro-organismes se forment et font gonfler la pâte.</td></tr>
+    <tr><th>Organoleptique</th><td>Fraîche ou déshydratée.</td><td>Pâte acide, réactivée avec de l’eau et de la farine avant la panification.</td></tr>
+    <tr><th>Nutritionnel</th><td>–</td><td>Qualités nutritionnelles <b>meilleures</b>.</td></tr>
+    <tr><th>Microbiologique</th><td>Champignons unicellulaires : <i>Saccharomyces cerevisiae</i>.</td><td>Bactéries acidifiantes (lactiques et acétiques) et levures sauvages.</td></tr>
+    <tr><th>Conservation</th><td>–</td><td>Plus longue : l’acidité ralentit la <b>rétrogradation</b> de l’amidon, principale cause du rassissement.</td></tr>
+  </tbody></table></div>
+
+  <h3>Les additifs autorisés</h3>
+  <div class="acc">
+    <details><summary>Acide ascorbique E300 et ses sels</summary><div><p>Réduit le temps de première fermentation, augmente la tolérance à l’apprêt, raffermit la pâte. Pain plus volumineux, mie plus blanche et plus aérée.</p></div></details>
+    <details><summary>Vinaigre, acide acétique E260, acétate de calcium E263, acide lactique</summary><div><p>Correcteurs d’acidité : pâte plus souple, qui ne devient pas visqueuse. Freinent les moisissures et les bactéries contaminantes.</p></div></details>
+    <details><summary>Lécithines de soja E322, mono- et diglycérides E472</summary><div><p>Pâte plus souple ; leur propriété hygroscopique retarde le rassissement ; oxydation ralentie. Inconvénients : croûte moins croustillante, aspect gras, goût dénaturé.</p></div></details>
+    <details><summary>Gélifiants, stabilisants, épaississants</summary><div><p>Aident à former le réseau de gluten, lissent et assouplissent la pâte. Croûte plus croustillante, meilleure rétention de gaz, rassissement retardé.</p></div></details>
+    <details><summary>Levure désactivée</summary><div><p>Pâtons plus extensibles, moins élastiques, plus faciles à travailler en machine.</p></div></details>
+    <details><summary>Farine de fève</summary><div><p>Apporte la <b>lipoxygénase</b>, qui agit sur les acides gras polyinsaturés du blé en présence d’oxygène. Renforce le gluten (élasticité de la gluténine), blanchit la mie, augmente le pouvoir émulsifiant. <b>2 % maximum</b> de la farine.</p></div></details>
+    <details><summary>Farine de soja</summary><div><p>Mêmes effets que la farine de fève. <b>0,5 % maximum</b> de la farine.</p></div></details>
+    <details><summary>Malt, farines et extrait de malt</summary><div><p>Apportent des amylases qui accélèrent la fermentation : plus de sucres fermentescibles (glucose, maltose). Brunissement de la croûte et arômes.</p></div></details>
+    <details><summary>Gluten</summary><div><p>Pâte plus hydratée, meilleure tenue au pétrissage, au boulage et au façonnage, meilleure rétention gazeuse.</p></div></details>
+  </div>
+
+  <h3>Les produits de panification</h3>
+  <div class="grid">
+    <div class="card"><span class="tag">Pain de mie</span><p>Pâte enrichie en sucres et matières grasses, cuite dans un moule. Base des biscottes.</p></div>
+    <div class="card"><span class="tag">Biscotte</span><p>Tranche de pain de mie cuite deux fois, sèche et croquante. Farine très fine, eau, sel, levure, matières grasses (souvent palme ou saindoux), matières sucrantes. Émulsifiants (gluten) et antioxydants (acide ascorbique) autorisés.</p></div>
+    <div class="card"><span class="tag">Pain grillé en tranches</span><p>Tranche dorée et croustillante, grillée deux fois. Mêmes ingrédients et additifs autorisés que la biscotte.</p></div>
+    <div class="card"><span class="tag">Pain suédois</span><p>« Knäckebröd », croustillant : farines d’orge, de seigle et de blé.</p></div>
+    <div class="card"><span class="tag">Pain azyme</span><p>Pain plat, <b>sans levure ni levain</b> : farine de blé et eau, ni sel ni matière grasse.</p></div>
+  </div>
+
+  <h2 class="sec">Focus sur le gluten</h2>
+  <p>Le gluten réunit deux familles de protéines :</p>
+  <div class="g2">
+    <div class="card pro"><span class="tag">Prolamines</span><p>Riches en acide glutamique (<b>37 à 56 %</b>) et en proline (<b>15 à 30 %</b>), très pauvres en acides aminés basiques (<b>0,1 à 0,7 %</b>).</p><p>C’est la partie <b>toxique</b> pour les intolérants au gluten.</p></div>
+    <div class="card pro"><span class="tag">Gluténines</span><p>Proches des prolamines, très pauvres en <b>lysine</b> (facteur limitant). Insolubles dans l’eau, solubles en milieu acide ou alcalin. Le gluten représente <b>47 %</b> des protéines du blé.</p></div>
+  </div>
+  <div class="card glu tint"><span class="tag">Moyen mnémotechnique</span><h3>SABOTE</h3><p>Seigle, Avoine, Blé, Orge, Triticale, Épeautre : les céréales qui contiennent du gluten.</p></div>
+  <div class="note"><span>La maladie cœliaque touche <b>1 personne sur 100</b>. Le régime sans gluten est aujourd’hui utilisé pour perdre du poids, ce qui n’est pas optimal.</span></div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="nutrition" data-name="Nutrition et IG" hidden>
+  <p class="lead">Les produits céréaliers sont la <b>principale source d’énergie</b> de l’alimentation humaine.</p>
+  <div class="grid">
+    <div class="card glu"><span class="tag">Amidon dans le grain</span><div class="big">70–80 <small>% du poids sec</small></div></div>
+    <div class="card glu"><span class="tag">Énergie de l’amidon</span><div class="big">≈ 4 <small>kcal/g</small></div></div>
+    <div class="card glu"><span class="tag">Glucides des produits céréaliers</span><div class="big">70–80 <small>%</small></div></div>
+  </div>
+  <p>L’amidon (amylose linéaire, amylopectine ramifiée) se digère progressivement : un apport de glucose constant et une énergie durable, contrairement aux sucres simples. Le cerveau en dépend presque exclusivement ; les muscles le stockent en glycogène pour l’effort. D’où la place des céréales chez les <b>sportifs</b>.</p>
+  <div class="card"><span class="tag">Énergie pour 100 g</span><div id="kcal-bars"></div><p>Pain complet : environ <b>70 %</b> de cette énergie vient des glucides.</p></div>
+  <div class="g2">
+    <div class="card glu tint"><span class="tag">PNNS</span><h3>À chaque repas, selon l’appétit</h3><p>De préférence complets ou peu raffinés.</p></div>
+    <div class="card glu tint"><span class="tag">Part de la journée</span><div class="big"><span class="num hideable">≈ ½</span> <small>des apports énergétiques</small></div><p>Soit <b>4 à 6 portions par jour</b> selon l’âge, le sexe et l’activité physique.</p></div>
+  </div>
+
+  <h2 class="sec pro">Les protéines végétales</h2>
+  <div class="card"><span class="tag">Protéines pour 100 g (moyenne 8 à 15 %)</span><div id="prot-bars"></div></div>
+  <p>Elles aident à couvrir les besoins mais ne suffisent pas seules pour les acides aminés essentiels : <b>valeur biologique moyenne</b>. Prolamines et gluténines (blé, orge, seigle) forment le gluten au pétrissage ; albumines et globulines, plus solubles, sont dans le riz ou le maïs.</p>
+  <div id="cpl-seg"></div>
+  <div class="plus" id="cpl"></div>
+  <div class="grid">
+    <div class="card"><h3>Raffinage</h3><p>Réduit la teneur en protéines (une partie est dans le germe et le son), sans changer la qualité technologique du gluten.</p></div>
+    <div class="card"><h3>Cuisson, fermentation</h3><p>Améliorent la digestibilité ; une cuisson excessive diminue la valeur nutritionnelle.</p></div>
+    <div class="card good"><h3>Complets, semi-complets</h3><p>Meilleur équilibre protéique, plus fibres, vitamines et minéraux.</p></div>
+  </div>
+
+  <h2 class="sec fl">Les fibres</h2>
+  <p>Elles viennent surtout des couches externes du grain (<b>son</b>), et un peu du germe.</p>
+  <div class="card"><span class="tag">Fibres pour 100 g</span><div id="fib-bars"></div></div>
+  <div class="g2">
+    <div class="card fl tint"><h3>Fibres solubles</h3><p>Avoine et orge en sont plus riches.</p></div>
+    <div class="card fl tint"><h3>Fibres insolubles</h3><p>Surtout dans le blé et le seigle.</p></div>
+  </div>
+
+  <h2 class="sec vit">Vitamines et minéraux <small>Touchez un micronutriment</small></h2>
+  <p>Les parties les plus riches sont le <b>son et le germe</b>, souvent retirés au raffinage : les produits complets ou semi-complets en apportent bien plus.</p>
+  <div id="mic-chips"></div>
+  <div class="panel empty" id="mic-panel">Choisissez une vitamine ou un minéral.</div>
+  <div class="note"><span><b>Biodisponibilité</b> : les <b>phytates</b> du son se lient au fer, au zinc et au calcium et limitent leur absorption. La <b>fermentation, la germination et le trempage</b> réduisent les phytates.</span></div>
+
+  <h2 class="sec glu">Index et charge glycémique <small>Réglez l’IG et la portion</small></h2>
+  <p>L’<b>index glycémique</b> (IG), de 0 à 100, compare la réponse glycémique d’un aliment à celle d’une référence (glucose pur ou pain blanc, IG = 100). IG élevé : hausse brutale puis chute (fatigue, fringales). IG bas : libération lente, énergie durable, meilleure satiété.</p>
+  <div class="card glu">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="ig">Index glycémique de l’aliment</label><span class="val" id="ig-o" data-nohide></span><input type="range" id="ig" min="0" max="100" step="1" value="70"></div>
+        <div class="inp"><label for="gp">Glucides de la portion</label><span class="val" id="gp-o" data-nohide></span><input type="range" id="gp" min="0" max="100" step="1" value="15"></div>
+      </div>
+      <div class="result glu" id="cg-out"></div>
+    </div>
+    <div id="ig-scale"></div>
+  </div>
+  <p>L’IG ne tient pas compte de la <b>quantité</b> de glucides. La <b>charge glycémique</b> (CG) le complète : un aliment à IG élevé mangé en petite quantité (un peu de pain) a une CG modérée ; un aliment à IG modéré mangé en grande quantité peut avoir une CG importante. Il faut regarder la <b>qualité et la quantité</b>.</p>
+
+  <h3>Ce qui fait varier l’IG des produits céréaliers</h3>
+  <div class="acc">
+    <details><summary>Le degré de transformation</summary><div><p>Plus un produit est raffiné, plus son IG est élevé : sans son ni germe, moins de fibres pour ralentir l’absorption. Pain, riz et pâtes blancs ont un IG nettement plus haut que leurs équivalents complets.</p></div></details>
+    <details><summary>La structure de l’amidon</summary><div><p>Plus d’amylopectine = hydrolyse plus rapide = IG plus élevé. Le <b>riz gluant</b> (riche en amylopectine) a un IG plus haut que le <b>riz basmati</b> (plus riche en amylose).</p></div></details>
+    <details><summary>Les fibres et les protéines</summary><div><p>Elles ralentissent la vidange gastrique et la digestion. Produits complets et repas avec d’autres protéines : hausse de glycémie plus modérée.</p></div></details>
+    <details><summary>Le mode de cuisson</summary><div><p>Cuisson prolongée = gélatinisation, amidon plus accessible. Pâtes <b>al dente</b>, riz un peu ferme : IG plus bas. Le <b>refroidissement</b> (riz ou pâtes en salade) recristallise une partie de l’amidon en <b>amidon résistant</b>, moins digéré : IG encore plus bas.</p></div></details>
+    <details><summary>Les autres nutriments du repas</summary><div><p>Lipides et fibres ralentissent l’absorption. Du riz avec des légumes et du poisson a un IG plus bas que le même riz seul.</p></div></details>
+  </div>
+  <h3>Pourquoi préférer un IG bas ou modéré</h3>
+  <div class="grid">
+    <div class="card good"><p>Plus de <b>satiété</b>, moins de grignotage.</p></div>
+    <div class="card good"><p>Énergie <b>prolongée et stable</b>.</p></div>
+    <div class="card good"><p>Meilleure régulation de la <b>glycémie et de l’insuline</b>.</p></div>
+    <div class="card good"><p>Moins de risque de <b>diabète de type 2</b> et d’obésité abdominale.</p></div>
+    <div class="card good"><p>Prévention <b>cardiovasculaire</b> : moins de triglycérides après le repas.</p></div>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="legumineuses" data-name="Légumineuses et tubercules" hidden>
+  <p class="lead">Des aliments anciens, <b>peu transformés</b>, économiques, faciles à cuisiner et rassasiants.</p>
+  <p>Ils ont nourri des générations, à la base de repas simples et équilibrés, et restent présents dans de nombreuses cuisines du monde. Riches en fibres, glucides complexes ou protéines, ils sont des alliés d’une alimentation plus saine et plus respectueuse de l’environnement.</p>
+
+  <h2 class="sec pro">Les légumineuses</h2>
+  <div class="g2">
+    <div class="card pro"><span class="tag">Famille des Fabaceae</span><p>Une famille très vaste : des milliers d’espèces sur tous les continents (sauvages, fourrage, engrais vert). Seules quelques-unes sont surtout destinées à l’alimentation humaine.</p><p>Plantes à fleurs qui <b>fixent l’azote de l’air</b> grâce à des bactéries de leurs racines : elles poussent sur des sols pauvres et les enrichissent pour les cultures suivantes.</p></div>
+    <div class="card pro"><span class="tag">Protéines</span><div class="big">15–25 <small>%</small></div><p>Soit <b>2 à 3 fois plus</b> que les céréales. Profil en acides aminés proche de celui d’une viande rouge, souvent plus équilibré que celui des grandes céréales.</p></div>
+  </div>
+  <div class="note"><span>Céréales et légumineuses se <b>complètent</b> dans un même repas (riz + lentilles, semoule + pois chiches) : apport protéique équilibré, présent dans de nombreuses cultures.</span></div>
+  <div class="g2">
+    <div class="card"><span class="tag">Les plus courantes</span><div class="pills pro"><span>Lentilles vertes, blondes, corail, noires « beluga »</span><span>Pois chiches</span><span>Haricots blancs, rouges, noirs</span><span>Haricots mungo (« soja vert »)</span><span>Haricots pinto</span><span>Pois cassés</span><span>Fèves sèches</span><span>Soja (tofu, tempeh, lait de soja)</span></div></div>
+    <div class="card"><span class="tag">Selon les régions</span><div class="pills pro"><span>Lupin (farine, graines marinées)</span><span>Azuki (haricot rouge japonais, pâtisserie)</span><span>Niébé ou haricot à œil noir (Afrique, Antilles)</span><span>Pois d’Angole (tropiques)</span><span>Pois bambara (Afrique de l’Ouest)</span><span>Lablab (Asie)</span></div></div>
+  </div>
+
+  <h3>Zoom sur le soja <small style="font-weight:400;color:var(--muted)">Touchez un produit</small></h3>
+  <div id="soja-chips"></div>
+  <div class="panel empty" id="soja-panel">Choisissez un produit du soja.</div>
+  <div class="note"><span><b>Umami</b> : au Japon, la <span class="num hideable">5ᵉ</span> saveur après le salé, le sucré, l’acide et l’amer. Le mot signifie « délicieux, savoureux » ; c’est un goût plaisant proche du sucré.</span></div>
+  <div class="g2">
+    <div class="card"><span class="tag">Un oléagineux qui fait débat</span><p>Consommation en nette hausse. Riche en matières grasses et en protéines ; graines jaunes, vertes ou noires, variétés grimpantes ou rampantes. Les graines crues ne se mangent pas : surtout en produits transformés, notamment fermentés.</p><p>Il interviendrait dans la prévention des maladies cardiovasculaires et de l’ostéoporose ; les <b>isoflavones</b> favoriseraient la densité osseuse et auraient un effet préventif sur les cancers de la prostate et du sein.</p></div>
+    <div class="card bad"><h3>Déconseillé</h3><ul><li>Aux enfants de <b>moins de 3 ans</b></li><li>En cas d’antécédents familiaux de cancer du sein</li><li>En cas d’endométriose ou de SOPK</li></ul><p>Raison : c’est un <b>perturbateur endocrinien</b>.</p></div>
+  </div>
+  <div class="card pro">
+    <div class="calc">
+      <div class="form"><div class="inp"><label for="iso">Poids corporel</label><span class="val" id="iso-o" data-nohide></span><input type="range" id="iso" min="10" max="120" step="1" value="60"></div></div>
+      <div class="result pro" id="iso-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec glu">Les tubercules</h2>
+  <p>Organes de <b>réserve</b> qui stockent l’énergie de la plante pour sa croissance et sa reproduction. Ils l’aident à survivre aux conditions défavorables (saison sèche, froid, manque de lumière) et à repartir pour un nouveau cycle.</p>
+  <div class="g2">
+    <div class="card glu"><span class="tag">Tubercules-racines</span><p>Racine principale ou secondaires épaissies, faites de <b>parenchyme de réserve</b> riche en amidon. Elles absorbent toujours l’eau et les minéraux.</p><p>Patate douce, igname, manioc.</p></div>
+    <div class="card glu"><span class="tag">Tubercules-tiges</span><p>Formés sur des tiges souterraines (<b>rhizomes ou stolons</b>) : bourgeons (yeux), nœuds et entre-nœuds d’où sortent de nouvelles tiges et racines.</p><p>La pomme de terre.</p></div>
+  </div>
+  <p>Faciles à cultiver et à stocker, ils ont permis de lutter contre la faim et ont longtemps fait la base des repas (plats mijotés, purées, galettes).</p>
+  <div class="g2">
+    <div class="card"><span class="tag">Les plus connus</span><div class="pills glu"><span>Pomme de terre (<i>Solanum tuberosum</i>)</span><span>Patate douce (<i>Ipomoea batatas</i>)</span><span>Manioc (<i>Manihot esculenta</i>)</span><span>Igname (<i>Dioscorea spp.</i>)</span><span>Taro (<i>Colocasia esculenta</i>)</span></div></div>
+    <div class="card"><span class="tag">Consommés localement</span><div class="pills glu"><span>Topinambour</span><span>Macabo (taro d’Afrique centrale)</span><span>Oca du Pérou</span><span>Yacon (racine sucrée)</span><span>Souchet comestible (boisson « horchata »)</span></div></div>
+  </div>
+
+  <h2 class="sec">Rôle nutritionnel <small>Comparez</small></h2>
+  <div id="role-seg"></div>
+  <div class="grid" id="role-cards"></div>
+  <div class="note"><span><b>Légumineuses + tubercules</b> dans un même repas : protéines, fibres et minéraux d’un côté, énergie glucidique douce et vitamines de l’autre. La glycémie est plus stable, la satiété plus longue, sans surcharge calorique.</span></div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="assiette" data-name="Dans l’assiette" hidden>
+  <p class="lead">Légumineuses et tubercules trouvent leur place à <b>tous les repas</b>, à condition de bien les préparer.</p>
+  <div class="g2">
+    <div class="card pro"><span class="tag">Légumineuses, déjeuner ou dîner</span><div class="big">100–150 <small>g cuits</small></div><p>Environ <b>60 g secs</b>. Remplacent une portion de poisson, de volaille ou d’œuf. Avec une céréale (riz, semoule, quinoa, blé, maïs) : repas complet, équilibré en acides aminés essentiels.</p></div>
+    <div class="card glu"><span class="tag">Tubercules, déjeuner ou dîner</span><div class="big">150–200 <small>g cuits</small></div><p>Environ <b>3 à 4 pommes de terre moyennes</b>. Base énergétique du repas, avec des légumes et une source de protéines.</p></div>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="tag">En entrée, en accompagnement</span><p>Salades de lentilles ou de pois chiches ; curry de lentilles, chili sin carne, dhal ; galettes, houmous ; soupes, veloutés, tartinades, plats froids en été. IG bas et fibres : utiles pour stabiliser la glycémie ou mieux contrôler l’appétit.</p></div>
+    <div class="card"><span class="tag">Végétariens, flexitariens</span><p>Les légumineuses sont le <b>pilier protéique</b> du repas. Chez l’enfant, introduction progressive en purée ou en soupe.</p></div>
+    <div class="card"><span class="tag">Sportifs</span><p>Légumineuses : protéines végétales et fer pour la récupération, avec de la <b>vitamine C</b> pour mieux absorber le fer. Tubercules : énergie avant ou après l’effort sans alourdir.</p></div>
+    <div class="card"><span class="tag">Enfants, personnes âgées</span><p>Tubercules tendres et digestes, faciles à manger et à assimiler.</p></div>
+  </div>
+  <p>Côté cuisine, les tubercules se font en purée ou gratin, en poêlée aux herbes et épices, en soupe pour épaissir, ou en version sucrée (patate douce rôtie en dessert).</p>
+
+  <h2 class="sec pro">Préparer les légumineuses</h2>
+  <p>Graines dures à l’état sec, avec des substances qui gênent la digestion ou l’absorption. Les traitements assouplissent la texture, améliorent la digestibilité et la <b>biodisponibilité des minéraux</b>, en s’appuyant sur des savoir-faire traditionnels et des procédés modernes.</p>
+  <div class="pipe p4 pro">
+    <div class="stn"><span class="num-step" data-nohide>Étape 1</span><h4>Tri et nettoyage</h4><p>Retirer cailloux, débris, graines abîmées ; rincer à l’eau froide. Évite les contaminations, cuisson homogène.</p></div>
+    <div class="stn key"><span class="num-step" data-nohide>Étape 2</span><h4>Trempage</h4><p>Plusieurs heures dans l’eau froide (souvent une nuit) : réhydrate, raccourcit la cuisson, améliore la digestibilité, élimine une partie des phytates et des oligosaccharides (flatulences).</p><span class="out">Sauf lentilles et pois cassés</span></div>
+    <div class="stn"><span class="num-step" data-nohide>Étape 3</span><h4>Cuisson</h4><p>Ramollit les parois, gélatinise l’amidon, inactive les composés indésirables. Eau froide <b>non salée</b> (le sel durcit l’enveloppe), feu doux, écumer. Autocuiseur possible sans perte majeure.</p></div>
+    <div class="stn"><span class="num-step" data-nohide>En plus</span><h4>Germination, fermentation</h4><p>Germination (lentilles, mungo) : plus de vitamines B et C, moins d’antinutriments. Fermentation (tempeh) : arômes, protéines plus assimilables.</p></div>
+  </div>
+  <div class="card"><span class="tag">Temps de cuisson</span><div id="cuis-bars"></div></div>
+  <div class="g2">
+    <div class="card"><span class="tag">Transformations industrielles</span><ul><li><b>Conserves</b> (lentilles, pois chiches, haricots rouges) : pratiques, un peu plus salées</li><li><b>Farines</b> (pois chiche, lentille, soja, lupin) : galettes, crêpes, sans gluten</li><li><b>Texturés</b> (protéines de soja, steaks végétaux) : alternatives à la viande</li></ul></div>
+    <div class="card"><span class="tag">Usages culinaires</span><ul><li>Soupe ou purée (lentilles, pois cassés)</li><li>Salade (lentilles, pois chiches)</li><li>Plats mijotés (curry, chili, couscous)</li><li>Galettes végétales, houmous</li><li>Desserts (haricots rouges, farine de pois chiche)</li></ul></div>
+  </div>
+
+  <h2 class="sec glu">Préparer les tubercules <small>Choisissez une cuisson</small></h2>
+  <p>Plus simples que les légumineuses, mais la cuisson change beaucoup leur texture, leur IG et leur valeur nutritionnelle.</p>
+  <div class="g2">
+    <div class="card"><span class="tag">On épluche</span><p>Pommes de terre et <b>manioc</b> (sa peau contient parfois des composés toxiques). Toujours bien laver pour retirer la terre.</p></div>
+    <div class="card good"><span class="tag">On peut garder la peau</span><p>Patates douces, ignames, topinambours, bien lavés : fibres et antioxydants.</p></div>
+  </div>
+  <div id="tub-seg"></div>
+  <div class="card" id="tub-out"></div>
+  <div class="note"><span><b>Refroidir</b> des tubercules cuits transforme une partie de l’amidon en <b>amidon résistant</b>, qui agit comme une fibre prébiotique (flore intestinale, glycémie). Une salade de pommes de terre froides peut être meilleure qu’un plat chaud.</span></div>
+  <div class="g2">
+    <div class="card bad"><span class="tag">Transformations industrielles</span><p>Flocons (purées instantanées), chips et frites, amidons modifiés (sauces, desserts, charcuteries végétales). Perte de vitamines, ajout de graisses ou de sel : privilégier les formes les plus naturelles.</p></div>
+    <div class="card"><span class="tag">Usages culinaires</span><p>Purées, gratins, poêlées, frites maison ; potées, curry, soupes ; gâteaux à la patate douce, desserts au manioc. Goût neutre ou légèrement sucré : ils vont dans toutes les cuisines du monde.</p></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="feculents.js"></script>
+</body>
+</html>

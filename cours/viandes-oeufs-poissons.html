@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Viandes, œufs et poissons · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Viandes, œufs et poissons.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Les groupes d’aliments</span>
+        <h1 style="--hl:var(--pro-m)">Viandes, œufs et <em>poissons</em></h1>
+        <p class="sub">Classer, connaître leur composition, les placer dans les repas, les conserver et les cuisiner sans risque.</p>
+      </div>
+      <div class="legend"><span class="pro">VPO, protéines</span><span class="lip">Lipides</span><span class="min">Minéraux</span><span class="vit">Vitamines</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<!-- ======================================================================= -->
+<section id="viandes" data-name="Les viandes">
+  <p class="lead">Tradition, plaisir, symboles culturels : ces aliments sont au cœur des repas. Leur <b>juste place</b> se discute aujourd’hui (santé, environnement, éthique).</p>
+  <p>Comprendre leur nature, leur valeur et leur place permet d’en tirer profit tout en répondant aux enjeux de santé et de durabilité.</p>
+
+  <h2 class="sec pro">Qu’est-ce que la viande ?</h2>
+  <div class="g2">
+    <div class="card pro"><span class="tag">Définition</span><p>Les parties comestibles des animaux terrestres : surtout les <b>muscles</b>, mais aussi des abats (foie, cœur, rognons).</p><p>Biologiquement : des <b>fibres musculaires</b> entourées de tissu conjonctif, de graisse et d’eau. Ils font la texture, la couleur et la tendreté.</p></div>
+    <div class="card"><span class="tag">La qualité dépend de</span><div class="pills pro"><span>L’espèce</span><span>L’âge</span><span>L’alimentation</span><span>L’élevage</span><span>L’abattage</span><span>La maturation</span></div></div>
+  </div>
+  <div class="card"><span class="tag">La structure du muscle squelettique, de l’os au plus fin</span>
+    <div class="chain pro" data-nohide><span>Os</span><i>←</i><span>Tendon</span><i>←</i><span>Muscle entouré de l’épimysium</span><i>→</i><span>Faisceaux de fibres, entourés de tissu conjonctif (périmysium)</span><i>→</i><span>Fibre musculaire striée, entourée de l’endomysium</span><i>→</i><span>Myofibrilles</span></div>
+    <p>Des vaisseaux sanguins circulent entre les faisceaux.</p>
+  </div>
+
+  <h2 class="sec pro">Classer selon l’espèce</h2>
+  <div class="g3">
+    <div class="card pro tint"><span class="tag">Boucherie</span><p>Bœuf, veau, mouton, agneau, cheval (et porc).</p></div>
+    <div class="card pro tint"><span class="tag">Volailles</span><p>Poulet, dinde, canard, oie, pintade.</p></div>
+    <div class="card pro tint"><span class="tag">Gibier</span><p>Animaux sauvages chassés : sanglier, cerf, chevreuil, lapin de garenne.</p></div>
+  </div>
+  <p><b>Viandes de boucherie</b> (réglementation) : les muscles striés recouvrant le squelette, après dépouillage et éviscération, destinés à la consommation humaine. Elles viennent des bovins, ovins (mouton, agneau), porcins et équidés.</p>
+  <div class="card"><span class="tag">Le « bœuf » (Bos taurus) : qui est qui ?</span>
+    <div class="grid">
+      <div><h3>Bœuf</h3><p>Mâle adulte castré.</p></div>
+      <div><h3>Génisse</h3><p>Femelle qui n’a pas encore vêlé.</p></div>
+      <div><h3>Vache</h3><p>Au bout de sa production laitière ou de sa fonction reproductrice.</p></div>
+      <div><h3>Taureau</h3><p>Mâle adulte non castré.</p></div>
+      <div><h3>Taurillon</h3><p>Jeune mâle non castré, élevé jusqu’à 2 ans maximum.</p></div>
+    </div>
+  </div>
+
+  <h2 class="sec pro">Les trois catégories de morceaux <small>Choisissez l’animal, touchez une zone</small></h2>
+  <p>Les catégories correspondent à la <b>position anatomique</b> du morceau sur l’animal.</p>
+  <div id="ani-seg"></div>
+  <div class="label-wrap">
+    <div class="card" style="align-items:center"><svg id="ani-svg" viewBox="0 0 520 300" role="img" aria-label="Zones des catégories de morceaux" style="width:100%;height:auto"></svg><div id="cat-seg"></div></div>
+    <div id="cat-cards" style="display:grid;gap:10px"></div>
+  </div>
+
+  <h2 class="sec pro">Les volailles <small>Touchez une volaille</small></h2>
+  <div id="vol-chips"></div>
+  <div class="panel empty" id="vol-panel">Choisissez une volaille.</div>
+
+  <h2 class="sec pro">Le gibier</h2>
+  <div class="card"><p>Le produit de la chasse des animaux sauvages. Sa vente n’est autorisée que sur une <b>période déterminée</b>. Viandes riches en protéines, plutôt <b>maigres</b>, riches en <b>fer héminique</b> (bien absorbé). Rapport protéines / lipides assez élevé.</p></div>
+
+  <h2 class="sec">Autres façons de classer</h2>
+  <h3>Selon la couleur : la myoglobine</h3>
+  <div class="g3">
+    <div class="card pro"><span class="tag">Viandes rouges</span><p>Riches en myoglobine : bœuf, mouton, cheval, agneau. Saveur prononcée, plus de <b>fer héminique</b>.</p></div>
+    <div class="card"><span class="tag">Viandes blanches</span><p>Moins de myoglobine : veau, porc, lapin, volailles. Plus tendres, généralement plus maigres.</p></div>
+    <div class="card"><span class="tag">Viandes noires</span><p>Gibiers à plumes (pigeon, canard sauvage, faisan) : chair plus foncée et aromatique.</p></div>
+  </div>
+  <h3>Selon la transformation</h3>
+  <div class="g2">
+    <div class="card"><span class="tag">Viandes fraîches</span><p>Directement issues de l’animal ; à cuire avant de les manger.</p></div>
+    <div class="card"><span class="tag">Viandes transformées</span><p>Les <b>charcuteries</b> : viande hachée, salée, cuite, fumée ou séchée. Jambon, saucisson, pâté, rillettes, andouille, bacon.</p></div>
+  </div>
+  <div class="card pro tint"><span class="tag">Zoom sur les viandes hachées</span>
+    <p>Viandes désossées, hachées en fragments, avec <b>moins de 1 % de sel</b>. Pour l’appellation « 100 % + espèce », aucun sel ajouté. Seules les viandes bovine, porcine, ovine, caprine et chevaline sont autorisées.</p>
+    <p>Le hachage détruit les fibres et fait passer les <b>germes de surface en profondeur</b>. Délai maximal de hachage : <b>6 jours</b> après abattage (viande réfrigérée), <b>15 jours</b> (viande bovine désossée sous vide).</p>
+  </div>
+  <h3>Selon la partie consommée</h3>
+  <div class="g2">
+    <div class="card"><span class="tag">Muscles</span><p>La majorité des viandes : steak, rôti, escalope.</p></div>
+    <div class="card"><span class="tag">Abats</span><p>Organes internes comestibles (foie, cœur, rognons, langue, cervelle). Très riches en fer et vitamines, valeur nutritionnelle élevée, saveur plus marquée.</p></div>
+  </div>
+  <div class="acc">
+    <details><summary>Zoom sur les abats : rouges et blancs</summary><div>
+      <p>Ils peuvent représenter <b>20 à 50 %</b> du poids de l’animal vivant ; on les extrait par éviscération.</p>
+      <p><b>Abats rouges</b> : organes très vascularisés, riches en sang et en myoglobine (foie, cœur, rognons, langue). Goût prononcé, très nourrissants (protéines, minéraux). À consommer avec mesure : le foie est riche en <b>cholestérol et en vitamine A</b>.</p>
+      <p><b>Abats blancs</b> : organes creux ou peu vascularisés, clairs et tendres. Muscles lisses (estomac, intestin) vendus comme <b>« tripes »</b> : qualité nutritionnelle médiocre, cholestérol élevé. Autres : rate, ris (thymus), crépine (péritoine).</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="poissons" data-name="Poissons et mer" hidden>
+  <p class="lead">Des vertébrés aquatiques à <b>branchies</b>, classés selon leur milieu, leur squelette et leur teneur en lipides.</p>
+  <p>Généralement ovipares (ils pondent des œufs). Leurs nageoires pectorales et pelviennes sont armées d’éléments appelés <b>rayons</b>.</p>
+
+  <h2 class="sec eau">Selon le milieu d’origine</h2>
+  <div id="mil-seg"></div>
+  <div class="card"><div class="pills eau" id="mil-list"></div></div>
+
+  <h2 class="sec">Selon la zoologie</h2>
+  <div class="g2">
+    <div class="card"><span class="tag">Cartilagineux (chondrichtyens)</span><div class="big">≈ 500 <small>variétés</small></div><p>Pas d’écailles, squelette <b>non ossifié</b> : requin, roussette, raie.</p></div>
+    <div class="card"><span class="tag">Osseux (ostéichtyens)</span><div class="big">≈ 2 000 <small>variétés</small></div><p>Écailles plates, très imbriquées : anchois, merlu, saumon.</p></div>
+  </div>
+
+  <h2 class="sec lip">Selon la teneur en lipides <small>Filtrez</small></h2>
+  <div id="fat-seg"></div>
+  <div class="card lip"><div id="fat-bars"></div></div>
+  <div class="grid">
+    <div class="card lip tint"><span class="tag">Maigres</span><div class="big">&lt; 1 <small>%</small></div><p>Et de 1 à 3 % (bar, daurade rose, flétan…).</p></div>
+    <div class="card lip tint"><span class="tag">Demi-gras</span><div class="big">3–10 <small>%</small></div></div>
+    <div class="card lip tint"><span class="tag">Gras</span><div class="big">&gt; 10 <small>%</small></div></div>
+  </div>
+
+  <h2 class="sec pro">Ce qui compose un poisson</h2>
+  <div class="g2">
+    <div class="card"><span class="tag">Fibres musculaires</span><p>Courtes ou longues, en <b>lamelles parallèles</b> reliées à des gaines de tissu conjonctif. Le <b>filet</b> est la masse musculaire de chaque côté : muscle dorsal en haut, ventral en bas.</p></div>
+    <div class="card"><span class="tag">Tissu conjonctif</span><p>Surtout du <b>collagène</b>, un peu d’élastine. Ses fibrilles sont délicates : il est <b>instable à la chaleur</b>.</p></div>
+  </div>
+  <div class="g2">
+    <div class="card"><h3>Muscles blancs</h3><p>Efforts <b>importants mais brefs</b>. Fonctionnent au glycogène (métabolisme anaérobie).</p></div>
+    <div class="card"><h3>Muscles rouges ou sombres</h3><p>Glycogène <b>et lipides</b>. Mouvements continus, moins forts, plus lents.</p></div>
+  </div>
+  <div class="card"><span class="tag">Les protéines du poisson (mêmes classes que les mammifères, autres proportions)</span>
+    <div class="stack3 hideable"><div class="pro" style="flex:0 0 70%">Myofibrilles 70 %</div><div class="pro" style="flex:0 0 25%;--m:var(--pro-m2)">Sarcoplasme 25 %</div><div class="pro" style="flex:0 0 5%;--m:var(--pro-s)">5 %</div></div>
+    <div class="grid">
+      <div><h3>Fibres musculaires · 95 %</h3><p><b>Myofibrilles</b> : myosine, actine, actomyosine, tropomyosine, troponine. <b>Sarcoplasme</b> : myoglobine, albumines, enzymes diverses.</p></div>
+      <div><h3>Tissu conjonctif · 5 %</h3><p>Collagène, élastine.</p></div>
+    </div>
+  </div>
+
+  <h2 class="sec eau">Pêche et élevage</h2>
+  <p>La <b>pêche</b> est la récolte de produits vivant dans l’eau (animaux et végétaux).</p>
+  <div id="pec-seg"></div>
+  <div class="card"><div id="pec-bars"></div></div>
+  <div class="note"><span>Les <b>bateaux techniques</b> sont réservés à la pêche longue, loin des côtes : ils conservent le poisson de façon optimale.</span></div>
+  <p>L’<b>élevage</b> se fait en eau de mer (aquaculture) ou en eau douce (pisciculture). Tous les poissons ne sont pas élevés.</p>
+  <div class="g3">
+    <div class="card"><span class="tag">Extensif</span><p>Croissance des poissons faiblement maîtrisée.</p></div>
+    <div class="card"><span class="tag">Demi-intensif</span><p>Croissance faiblement maîtrisée, avec des compléments artificiels.</p></div>
+    <div class="card"><span class="tag">Intensif</span><p>Croissance maîtrisée, dépend des apports alimentaires ; conditions de production maîtrisées.</p></div>
+  </div>
+  <h3>Les labels <small style="font-weight:400;color:var(--muted)">Touchez un label</small></h3>
+  <div id="lab-chips"></div>
+  <div class="panel empty" id="lab-panel">Choisissez un label.</div>
+
+  <h2 class="sec">Mollusques et crustacés</h2>
+  <div class="g2">
+    <div class="card"><span class="tag">Mollusques</span><p>Invertébrés au corps <b>mou</b>, non segmenté, avec une extension (le pied).</p><ul><li><b>Sans coquille</b>, céphalopodes : pieuvre, seiche, calamar</li><li><b>Une coquille</b>, gastéropodes : bulot, bigorneau</li><li><b>Deux coquilles</b>, bivalves : coque, moule, huître, palourde</li></ul></div>
+    <div class="card"><span class="tag">Crustacés</span><p>Arthropodes à respiration branchiale : corps en <b>3 segments</b> (tête, thorax, abdomen), <b>2 paires d’antennes</b>, carapace de chitine et de calcaire.</p><ul><li><b>Nageurs</b> : crevettes, bouquets</li><li><b>Marcheurs</b> : homards, langoustes, crabes, langoustines, tourteaux</li></ul></div>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="oeufs" data-name="Les œufs" hidden>
+  <p class="lead">Un œuf est un <b>embryon enfermé dans une coquille</b>, pondu par les femelles ovipares (oiseaux, poissons, reptiles) pour se reproduire.</p>
+
+  <h2 class="sec pro">Coupe d’un œuf de poule <small>Touchez une partie</small></h2>
+  <div class="stack hideable pro" id="egg-stack"></div>
+  <div class="label-wrap">
+    <div class="card" style="align-items:center"><svg id="egg-svg" viewBox="0 0 500 300" role="img" aria-label="Coupe d’un œuf de poule" style="width:100%;height:auto"></svg></div>
+    <div class="panel pro" id="egg-panel" style="grid-template-columns:minmax(0,1fr)"></div>
+  </div>
+
+  <h2 class="sec pro">Le calibre <small>Pesez l’œuf</small></h2>
+  <div class="card pro">
+    <div class="calc">
+      <div class="form"><div class="inp"><label for="cal">Poids de l’œuf</label><span class="val" id="cal-o" data-nohide></span><input type="range" id="cal" min="40" max="85" step="1" value="60"></div></div>
+      <div class="tbl pro"><table style="min-width:0"><thead><tr><th>Poids</th><th>Calibre</th></tr></thead><tbody id="cal-tb"></tbody></table></div>
+    </div>
+  </div>
+
+  <h2 class="sec pro">La qualité et la fraîcheur <small>Réglez la chambre à air</small></h2>
+  <p>Les catégories dépendent de l’état de la coquille, de la <b>taille de la chambre à air</b>, de l’état du blanc et du jaune et des qualités organoleptiques.</p>
+  <div class="card pro">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="ch">Hauteur de la chambre à air au mirage</label><span class="val" id="ch-o" data-nohide></span><input type="range" id="ch" min="0" max="12" step="0.5" value="3"></div>
+        <svg id="mir-svg" viewBox="0 0 160 200" role="img" aria-label="Œuf vu au mirage" style="width:140px;height:auto;align-self:center"></svg>
+      </div>
+      <div id="ch-out" style="display:grid;gap:10px"></div>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="card good"><span class="tag">Catégorie A · première qualité</span><p>Œufs extra-frais et frais. <b>Aucun traitement</b> de conservation : ni lavés, ni réfrigérés sous 5 °C. Coquille et membrane propres et intactes, blanc clair, limpide, gélatineux, jaune au centre, sans corps ni odeur étrangers. Emballage : un <b>A dans un rond</b>.</p></div>
+    <div class="card bad"><span class="tag">Catégorie B · deuxième qualité, déclassés</span><p>Ne remplissent pas les critères A. Ni cassés, ni couvés, ni cuits. Chambre à air de <b>9 mm</b> maximum. Emballage : un <b>B dans un rond</b>.</p></div>
+  </div>
+  <div class="g2">
+    <div class="card"><span class="tag">Extra-frais</span><p>Ramassés <b>moins de 4 jours</b> avant le conditionnement, chambre à air de <b>4 mm</b> maximum à l’emballage. Mention « extra » en lettres blanches sur fond rouge.</p></div>
+    <div class="card"><span class="tag">Frais</span><p>Œufs extra-frais de plus de <b>9 jours</b>, ou œufs de petits producteurs avec une chambre à air de moins de <b>6 mm</b>.</p></div>
+  </div>
+
+  <h2 class="sec">Vérifier qu’un œuf est frais</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">Le mirage</span><p>On fait tourner l’œuf au-dessus d’une lumière intense : on voit la taille de la chambre à air et la position du jaune. Œuf frais : jaune <b>bien centré</b>, chambre à air presque inexistante.</p></div>
+    <div class="card"><span class="tag">Le flottage en eau salée</span><p>En vieillissant, l’œuf se déshydrate : sa densité baisse et sa chambre à air grandit. Il remonte.</p></div>
+    <div class="card"><span class="tag">L’examen direct</span><p>On casse l’œuf. Frais : <b>compact</b>, jaune bombé, centré, brillant, blanc épais. Vieillissant : le jaune se rapproche de la chambre à air, le blanc s’étale et devient presque homogène.</p>
+      <svg viewBox="0 0 300 100" role="img" aria-label="Du plus frais au plus vieux : le blanc s’étale, le jaune se décentre" style="width:100%;height:auto">
+        <path d="M18 50 C 14 22, 40 8, 55 12 C 76 16, 86 40, 80 64 C 74 88, 44 94, 28 82 C 18 74, 20 62, 18 50 Z" fill="var(--card)" stroke="var(--fg)" stroke-width="1.5"/><path d="M34 50 C 32 34, 46 26, 56 30 C 68 36, 68 62, 58 70 C 46 78, 36 66, 34 50 Z" fill="none" stroke="var(--fg)" stroke-width="1.2"/><circle cx="50" cy="50" r="12" fill="var(--glu-m)" stroke="var(--fg)"/>
+        <path d="M110 40 C 112 20, 140 14, 160 20 C 186 26, 190 60, 178 80 C 166 96, 128 94, 114 84 C 104 76, 108 56, 110 40 Z" fill="var(--card)" stroke="var(--fg)" stroke-width="1.5"/><path d="M122 46 C 124 30, 146 28, 162 38 C 176 50, 168 76, 150 82 C 132 86, 120 66, 122 46 Z" fill="none" stroke="var(--fg)" stroke-width="1.2"/><circle cx="148" cy="58" r="12" fill="var(--glu-m)" stroke="var(--fg)"/>
+        <path d="M206 30 C 214 12, 270 10, 284 26 C 296 44, 290 84, 270 92 C 246 98, 214 92, 206 74 C 200 60, 200 44, 206 30 Z" fill="var(--card)" stroke="var(--fg)" stroke-width="1.5"/><circle cx="262" cy="36" r="12" fill="var(--glu-m)" stroke="var(--fg)"/>
+      </svg></div>
+  </div>
+  <div id="flo-seg"></div>
+  <div class="card" style="align-items:center"><svg id="flo-svg" viewBox="0 0 220 200" role="img" aria-label="Œuf dans l’eau salée" style="width:200px;height:auto"></svg><p id="flo-txt"></p></div>
+
+  <h2 class="sec pro">Le code sur la coquille <small>Choisissez un mode d’élevage</small></h2>
+  <p>Le chiffre de 0 à 3 est <b>obligatoire</b> sur la coquille, juste avant les initiales du pays (FR pour la France).</p>
+  <div id="code-seg"></div>
+  <div class="label-wrap">
+    <div class="card" style="align-items:center;gap:12px">
+      <div id="code-stamp" data-nohide style="font-family:var(--f-m);font-size:clamp(1.3rem,4vw,1.9rem);font-weight:500;color:var(--pro);background:var(--pro-s);border-radius:16px;padding:16px 22px;text-align:center;line-height:1.5"></div>
+      <div class="pills" id="code-hot"></div>
+    </div>
+    <div class="card pro tint" id="code-out"></div>
+  </div>
+
+  <h2 class="sec">Les ovoproduits</h2>
+  <p>Produits obtenus à partir de l’œuf, de ses composants ou de leurs mélanges, <b>sans coquille ni membranes</b>. Pour ceux qui ont besoin de grandes quantités sans casser les œufs un par un.</p>
+  <div class="g2">
+    <div class="card"><span class="tag">Pour l’industrie agroalimentaire</span><ul><li>Liquides réfrigérés</li><li>Surgelés</li><li>Concentrés</li><li>Séchés : poudre, paillettes, granulés</li></ul></div>
+    <div class="card"><span class="tag">Prêts à l’emploi, pour la restauration</span><ul><li>Œufs cuits écalés (pochés, mollets, durs) sous vide ou atmosphère contrôlée</li><li>Œufs durs en saumure liquide</li><li>Œufs durs reconstitués en rouleaux ou barres surgelées</li><li>Omelettes précuites fraîches ou surgelées ; déshydratées ou concentrées</li><li>Préparations pour œufs brouillés</li></ul></div>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="compo" data-name="Composition" hidden>
+  <p class="lead">Des aliments riches en <b>protéines animales</b> et en eau. Les lipides, eux, varient beaucoup.</p>
+  <h2 class="sec pro">Comparer <small>Choisissez un nutriment, touchez un aliment</small></h2>
+  <div id="nut-seg"></div>
+  <div class="card"><div id="cmp-bars"></div><p id="cmp-note" style="font-size:.86rem;color:var(--muted)"></p></div>
+  <div id="food-seg"></div>
+  <div id="food-detail" style="display:flex;flex-direction:column;gap:12px"></div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="assiette" data-name="Dans l’assiette" hidden>
+  <p class="lead">Viande, poisson ou œuf sont souvent le <b>cœur du repas</b> : celui qui lui donne son identité.</p>
+  <p>Servis chauds en général, avec un accompagnement (légumes, féculents, légumineuses). Leurs protéines aident la <b>satiété</b> et régulent l’appétit sur la journée : ils ont une place stratégique au <b>déjeuner et au dîner</b>.</p>
+  <h2 class="sec">Toujours associés</h2>
+  <div class="g3">
+    <div class="card fl"><span class="tag">Avec les légumes</span><p>Fibres, vitamines, antioxydants ; meilleure digestion.</p></div>
+    <div class="card glu"><span class="tag">Avec les féculents</span><p>Riz, pâtes, pommes de terre, pain, légumineuses : l’énergie du corps, et des acides aminés en complément.</p></div>
+    <div class="card lip"><span class="tag">Avec les matières grasses</span><p>Surtout les huiles végétales riches en insaturés : meilleure assimilation des vitamines <b>A, D, E, K</b>.</p></div>
+  </div>
+  <p>Une portion de viande, poisson ou œufs + des légumes + un féculent : un repas équilibré, avec énergie, protéines, fibres et micronutriments.</p>
+
+  <h2 class="sec pro">Ma semaine <small>Comptez les repas</small></h2>
+  <p>Variété et modération sont les principes clés. Ajustez une semaine et comparez aux repères du cours.</p>
+  <div class="g2">
+    <div class="card" id="wk-in"></div>
+    <div id="wk-out" style="display:grid;gap:10px;align-content:start"></div>
+  </div>
+  <div class="grid">
+    <div class="card pro"><span class="tag">Viandes</span><div class="big">3–4 <small>fois/semaine</small></div><p>Plutôt maigres (volailles, veau, lapin). Viandes rouges : <b>1 ou 2 fois maximum</b>.</p></div>
+    <div class="card eau"><span class="tag">Poissons</span><div class="big">≥ 2 <small>fois/semaine</small></div><p>Dont <b>1 poisson gras</b> (saumon, sardine, maquereau) pour les oméga-3.</p></div>
+    <div class="card pro"><span class="tag">Œufs</span><div class="big">1–2 <small>fois/semaine</small></div><p>Seuls ou en préparation (omelette, quiche, pâtisserie). Excellent <b>substitut</b> à la viande ou au poisson, notamment pour qui mange peu de produits carnés.</p></div>
+  </div>
+  <div class="card bad"><span class="tag">La place du gibier</span>
+    <p>Animal non domestique : <b>risque sanitaire élevé</b>. Conseillé aux personnes en bonne santé. Intérêt pour la construction des cellules, le tonus musculaire, la croissance et l’anémie.</p>
+    <ul><li>Éviter chez l’<b>enfant</b> : goût fort et prononcé</li><li>Éviter en cas de <b>lithiases</b> (calculs biliaires ou rénaux) ou d’<b>hypercholestérolémie</b></li><li>Femmes en âge de procréer et enfants : éviter tout <b>grand gibier sauvage</b>, à cause du <b>plomb</b> (développement fœto-embryonnaire, enfance)</li></ul>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="cuisine" data-name="Conserver et cuisiner" hidden>
+  <p class="lead">Riches en eau, ces aliments sont <b>microbiologiquement instables</b> : la conservation et la cuisson font leur sécurité.</p>
+
+  <h2 class="sec pro">Conserver la viande</h2>
+  <div class="card"><span class="tag">Réfrigération : durée selon l’emballage</span><div id="cons-bars"></div></div>
+  <div class="grid">
+    <div class="card"><span class="tag">Film étirable</span><p>Imperméable à l’eau, perméable au CO₂. L’<b>oxymyoglobine</b> en surface garde le rouge vif.</p></div>
+    <div class="card"><span class="tag">Sous vide, atmosphère protectrice</span><p>Petite injection de CO₂ qui favorise une flore spécifique (<b>lactobacilles</b>) : conservation plus longue, couleur peu modifiée.</p></div>
+    <div class="card"><span class="tag">Sous vide avec CO₂</span><p>Injection de CO₂ et retrait de l’air : les bactéries <b>aérobies</b> sont inhibées ; le rouge vif s’atténue.</p></div>
+  </div>
+  <div class="acc">
+    <details><summary>La surgélation</summary><div><p>L’eau devient glace plus ou moins vite selon l’épaisseur du morceau et la température. <b>À la décongélation</b> : exsudation d’eau, couleur rouge sombre, morceau plus tendre.</p></div></details>
+    <details><summary>Le salage</summary><div><p><b>À sec</b> : viande frottée de sel mêlé de salpêtre ou de cendre de bois, morceaux pressés, saupoudrés de sel pour absorber l’humidité, séchés dans un local chaud. <b>En saumure</b> : viande plongée dans une préparation liquide salée.</p></div></details>
+    <details><summary>Le séchage</summary><div><p>Lanières exposées au grand air : l’eau s’évapore, <b>65 % du poids</b> est perdu, muscles et tissus se rétractent.</p></div></details>
+    <details><summary>Le fumage</summary><div><p>Change la couleur, l’arôme et la texture. La fumée freine les moisissures et les levures en surface.</p></div></details>
+    <details><summary>L’appertisation</summary><div><p>Traitement thermique de stérilisation : germes pathogènes détruits, collagène changé en <b>gélatine</b>, élastine qui gonfle, actomyosine qui durcit la viande, myoglobine qui brunit (ferrihémochrome). Ex. conserves de cassoulet, de thon, sardines, maquereaux.</p></div></details>
+  </div>
+
+  <h2 class="sec eau">Conserver le poisson et les œufs</h2>
+  <div class="grid">
+    <div class="card eau"><span class="tag">Réfrigération</span><div class="big">0 à 2 <small>°C</small></div><p>Entre deux couches de glace, <b>48 h maximum</b>. Préserve qualités sanitaires, nutritionnelles et organoleptiques.</p></div>
+    <div class="card eau"><span class="tag">Surgélation</span><p><b>En saumure</b> : chlorure de sodium concentré dans l’eau de mer, saumure à −18, voire −20 °C. <b>À sec</b> : tunnel à air pulsé, poissons éviscérés sans ouïes, conservés à partir de −20 °C.</p></div>
+    <div class="card eau"><span class="tag">Salage</span><p>À sec au gros sel, dans sa propre saumure, ou saumurage en cuve.</p></div>
+    <div class="card eau"><span class="tag">Séchage</span><p>Têtes et viscères retirés, salés, puis suspendus à des barres horizontales.</p></div>
+    <div class="card eau"><span class="tag">Fumage</span><p>Légèrement salé et séché, puis en contact avec la fumée : cru vers <b>22 °C</b>, cuit vers <b>80 °C</b>. Moins d’eau : protéines, lipides et surtout <b>sodium</b> concentrés.</p></div>
+    <div class="card eau"><span class="tag">Appertisation</span><p>Conserves au naturel, à l’huile ou avec une sauce cuisinée.</p></div>
+    <div class="card eau"><span class="tag">Marinage</span><p>Une partie de l’eau est remplacée par du vinaigre ; l’acidité limite l’oxydation des vitamines et des lipides. On parle de <b>semi-conserve</b>.</p></div>
+    <div class="card pro"><span class="tag">Les œufs</span><p>Debout dans des caisses alvéolées, sous <b>8 °C</b>, humidité contrôlée (un <b>triangle</b> sur l’emballage). Une partie de l’air peut être remplacée par un mélange gazeux pour retarder le vieillissement.</p></div>
+  </div>
+
+  <h2 class="sec">Préparer</h2>
+  <div id="prep-seg"></div>
+  <div class="card" id="prep-out"></div>
+
+  <h2 class="sec pro">Cuire la viande <small>Choisissez une cuisson</small></h2>
+  <p>La chaleur coagule les protéines, décolore la myoglobine, détend ou contracte les tissus conjonctifs.</p>
+  <div id="cv-seg"></div>
+  <div class="card pro" id="cv-out"></div>
+  <div class="g2">
+    <div class="card"><p>Saignant, à point ou bien cuit : <b>trop cuire</b> durcit les fibres et réduit la digestibilité.</p></div>
+    <div class="card bad"><p>Limiter la <b>carbonisation</b> : composés nocifs (benzopyrènes, amines hétérocycliques). Limiter fritures et cuissons grasses ; préférer vapeur douce, four, cocotte, basse température.</p></div>
+  </div>
+
+  <h2 class="sec eau">Cuire le poisson</h2>
+  <p>Moins de collagène, plus d’eau : cuisson <b>plus rapide</b>. Le but : cuire juste à cœur, sans dessécher.</p>
+  <div class="grid">
+    <div class="card eau"><span class="tag">Vapeur</span><p>Préserve la texture fine et les acides gras essentiels.</p></div>
+    <div class="card eau"><span class="tag">Papillote</span><p>Cuisson douce dans son jus, arômes concentrés.</p></div>
+    <div class="card eau"><span class="tag">Court-bouillon</span><p>Poissons entiers : cuisson uniforme et délicate.</p></div>
+    <div class="card eau"><span class="tag">Plancha ou poêle</span><p>Pour les poissons <b>gras</b> (saumon, thon, maquereau), qui supportent la chaleur vive.</p></div>
+  </div>
+  <p>Trop longue : chair sèche et friable. Insuffisante : risque sanitaire (parasites, bactéries). L’idéal : une chair qui se détache à la fourchette, moelleuse et légèrement <b>nacrée</b> au centre. Fumé, grillé, rôti : plus d’arômes, à bien maîtriser.</p>
+
+  <h2 class="sec pro">Cuire l’œuf <small>Réglez la température</small></h2>
+  <div class="card pro">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="tp">Température</label><span class="val" id="tp-o" data-nohide></span><input type="range" id="tp" min="50" max="80" step="1" value="60"></div>
+        <svg id="tp-svg" viewBox="0 0 200 150" role="img" aria-label="Œuf au plat selon la température" style="width:200px;height:auto;align-self:center"></svg>
+      </div>
+      <div id="tp-out" style="display:grid;gap:10px;align-content:start"></div>
+    </div>
+  </div>
+  <p>Cette différence permet toutes les cuissons : à la coque, mollet, dur, poché, au plat, omelette, brouillé, ou dans des préparations. Trop longue : blanc <b>caoutchouteux</b>, jaune friable, parfois un <b>anneau verdâtre</b> (fer + soufre). L’œuf sait aussi lier, épaissir, émulsionner ou faire lever : dans une crème, une sauce ou un flan, cuire doucement pour éviter une coagulation brutale du jaune ; en pâtisserie, il stabilise et colore.</p>
+
+  <h2 class="sec">Effets de la cuisson sur la valeur nutritionnelle</h2>
+  <div class="grid">
+    <div class="card good"><span class="tag">Protéines</span><p>Plus <b>digestes</b> : la chaleur les dénature.</p></div>
+    <div class="card bad"><span class="tag">Vitamines</span><p>Une partie des vitamines thermosensibles (<b>B, D</b>) détruite en cuisson longue ou trop chaude.</p></div>
+    <div class="card"><span class="tag">Minéraux</span><p>Stables, mais perdus en partie dans le jus s’il n’est pas consommé.</p></div>
+    <div class="card"><span class="tag">Lipides</span><p>La friture augmente l’apport calorique ; vapeur et papillote le limitent.</p></div>
+  </div>
+  <div class="card ink tint"><span class="tag">Bonnes pratiques</span><ul><li>Sortir les produits à température ambiante avant cuisson : cuisson homogène</li><li>Laisser reposer viande ou poisson avant de couper : les jus se répartissent</li><li>Éviter les températures extrêmes qui brûlent la surface sans cuire l’intérieur</li><li>Privilégier vapeur, four, poêle antiadhésive, papillote</li></ul><p>Le but : un équilibre entre sécurité, goût et préservation des nutriments.</p></div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="sanitaire" data-name="Sécurité sanitaire" hidden>
+  <p class="lead">Viande, poisson et œufs peuvent transmettre <b>micro-organismes</b>, parasites ou contaminants.</p>
+  <div id="san-seg"></div>
+
+  <div id="san-viande" style="display:flex;flex-direction:column;gap:14px">
+    <h2 class="sec pro">Avant l’abattage (ante-mortem)</h2>
+    <div class="grid">
+      <div class="card"><span class="tag">Parasites</span><p>Dans la viande crue ou pas assez cuite :</p><ul><li><i>Tænia saginata</i> : larves dans les muscles bovins</li><li><i>Tænia solium</i> : souvent dans le porc</li><li><b>Trichine</b> : muscles du porc ou du cheval</li><li><b>Toxoplasmose</b></li></ul></div>
+      <div class="card"><span class="tag">Bactéries pathogènes</span><p>Les contrôles réguliers des élevages limitent le risque.</p></div>
+      <div class="card"><span class="tag">Virus</span><p>Peu probable : vaccinations obligatoires et élimination des animaux infestés.</p></div>
+      <div class="card bad"><span class="tag">ESB</span><p>Encéphalopathie spongiforme bovine, incurable. Un <b>prion</b> pathologique (protéine anormale) lèse le cerveau. Troubles nerveux après environ <b>5 ans</b> d’incubation ; l’animal meurt assez vite.</p></div>
+    </div>
+    <h2 class="sec pro">Après l’abattage (post-mortem)</h2>
+    <div class="g2">
+      <div class="card"><span class="tag">Carcasses</span><p>Contamination profonde ou superficielle. Germes fréquents : <i>Pseudomonas</i>, <i>Acinetobacter</i>, lactobacilles, microcoques, staphylocoques, <i>Clostridium</i>, salmonelles, shigelles, <i>Campylobacter</i>, <i>Yersinia</i> ; levures ; moisissures.</p></div>
+      <div class="card"><span class="tag">Muscle : 5 agents principaux</span>
+        <div class="tbl" style="border:0"><table style="min-width:0"><tbody>
+          <tr><th>Salmonelle</th><td>Bœuf haché pas assez cuit</td></tr>
+          <tr><th><i>Staphylococcus aureus</i></th><td>Viandes étuvées, réchauffées et refroidies lentement</td></tr>
+          <tr><th><i>Clostridium perfringens</i></th><td>Bouillons, fonds de sauce, plats cuisinés</td></tr>
+          <tr><th><i>E. coli</i> entérohémorragique</th><td>Steaks cuits à moins de <b>65 °C</b></td></tr>
+          <tr><th><i>Clostridium botulinum</i></th><td>Produits appertisés</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <h2 class="sec pro">Hygiène et contrôles</h2>
+    <div class="tbl pro"><table><thead><tr><th>Critère de fraîcheur</th><th>Effet</th></tr></thead><tbody>
+      <tr><th>pH (≈ 5,7)</th><td>L’acidité ralentit la prolifération microbienne.</td></tr>
+      <tr><th>Taux d’oxygène</th><td>Varie selon l’emballage et le hachage ; conditionne le développement des espèces aérobies.</td></tr>
+      <tr><th>Humidité, température</th><td>Influencent les moisissures et micro-organismes.</td></tr>
+    </tbody></table></div>
+    <div class="grid">
+      <div class="card ink tint"><span class="tag">3 principes</span><ul><li>Abattage en abattoir <b>agréé</b></li><li>Inspection régulière des abattoirs par les services sanitaires</li><li>Vente des seules viandes reconnues saines et salubres</li></ul></div>
+      <div class="card"><span class="tag">Règles</span><ul><li>Surveiller la santé des animaux</li><li>Alimentation sécurisée et contrôlée</li><li>Protection pendant le transport</li></ul></div>
+      <div class="card"><span class="tag">Hygiène de préparation</span><ul><li>Locaux</li><li>Personnel</li><li>Matériel</li><li>Chaîne du froid</li></ul></div>
+      <div class="card"><span class="tag">Contrôles</span><p>À chaque étape : élevage (animal vivant), abattoirs, ateliers de découpe, points de vente.</p></div>
+    </div>
+  </div>
+
+  <div id="san-poisson" style="display:flex;flex-direction:column;gap:14px" hidden>
+    <div class="grid">
+      <div class="card"><span class="tag">Bactéries</span><p>Selon l’environnement (température de l’eau, sel, habitations proches, alimentation, mode de récolte) et la qualité bactériostatique du poisson :</p><ul><li><i>Clostridium botulinum</i></li><li><i>Staphylococcus aureus</i></li><li><i>Vibrio parahaemolyticus</i>, <i>Vibrio cholerae</i></li><li><i>Listeria monocytogenes</i></li><li><i>Yersinia enterocolitica</i></li><li>Entérobactéries (<i>E. coli</i>, salmonelles, shigelles)</li></ul></div>
+      <div class="card"><span class="tag">Chimique</span><ul><li>Métaux lourds : mercure, plomb, aluminium, nickel</li><li>Résidus de médicaments vétérinaires</li><li>Hydrocarbures</li><li>Détergents, désinfectants</li></ul></div>
+      <div class="card"><span class="tag">Vers et parasites</span><p>Poissons crus mal traités ou mal cuits :</p><ul><li>Nématodes : <i>Anisakis</i>, <i>Capillaria</i>, <i>Gnathostoma</i>, <i>Pseudoterranova</i></li><li>Cestodes : tænias</li><li>Trématodes : <i>Clonorchis</i>, <i>Opisthorchis</i>, <i>Paragonimus</i></li></ul></div>
+      <div class="card bad"><span class="tag">Biotoxines marines</span><div class="big">≈ 400 <small>espèces vénéneuses</small></div><p>Empoisonnements parfois mortels.</p></div>
+    </div>
+    <div class="card good"><span class="tag">Bonne pratique</span><ul><li>Poisson très frais : odeur marine légère, yeux brillants, branchies rouges</li><li>Entre <b>0 et +2 °C</b>, consommé rapidement</li><li>Bien cuit, ou congelé s’il est mangé cru</li><li>Nettoyer planches et couteaux : pas de contamination croisée</li></ul></div>
+  </div>
+
+  <div id="san-oeuf" style="display:flex;flex-direction:column;gap:14px" hidden>
+    <p>Coquille et membranes protègent l’œuf, mais il peut être contaminé.</p>
+    <div class="grid">
+      <div class="card bad"><span class="tag">Microbiologique</span><p><i>Salmonella enteritidis</i>, sur la coquille ou dedans. Risque accru si l’œuf est mal conservé ou mangé cru. Mayonnaise maison, mousse au chocolat, tiramisu : œufs très frais, consommés <b>le jour même</b>. Une cuisson complète élimine le risque.</p></div>
+      <div class="card"><span class="tag">Chimique</span><p>Résidus de médicaments vétérinaires ou dioxines : rares grâce aux contrôles. Ne pas <b>laver</b> les œufs avant de les stocker : la cuticule protectrice s’abîme et les bactéries passent.</p></div>
+      <div class="card"><span class="tag">Allergique</span><p>Une des allergies les plus fréquentes chez l’<b>enfant</b>, due surtout à des protéines du blanc. La cuisson les rend moins allergisantes, pas inoffensives.</p></div>
+    </div>
+    <div class="card good"><span class="tag">Bonne pratique</span><ul><li>Température stable, entre <b>+4 et +10 °C</b></li><li>Casser au moment de l’utilisation, jamais à l’avance</li><li>Pas d’œuf fêlé, sale ou à coquille collante</li><li>Œufs bien cuits pour les jeunes enfants, les femmes enceintes et les personnes âgées</li></ul></div>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="cas" data-name="Cas pratique" hidden>
+  <div class="card who-card">
+    <div class="avatar" aria-hidden="true">C</div>
+    <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:200px">
+      <h3>Camille Leroy, 28 ans</h3>
+      <div class="stats" data-nohide><span>Enseignante en primaire</span><span>Running 3 fois par semaine</span><span>Pas de viande (éthique)</span><span>Poisson 2 fois par semaine</span><span>Œufs 3 fois par semaine</span></div>
+      <p>Souvent fatiguée en fin de journée, moins de tonus musculaire après le sport. Elle a du mal à organiser ses repas et saute parfois le dîner. Elle veut retrouver de l’énergie et optimiser ses protéines <b>sans manger de viande</b>.</p>
+    </div>
+  </div>
+  <div class="grid" data-nohide>
+    <div class="card meal"><span class="when">Petit-déjeuner</span><span class="what">Porridge au lait végétal, fruits frais, café</span></div>
+    <div class="card meal"><span class="when">Déjeuner</span><span class="what">Salade composée (riz, légumes, thon ou œufs) ou plat végétarien à la cantine</span></div>
+    <div class="card meal"><span class="when">Goûter</span><span class="what">Poignée d’amandes ou barre de céréales</span></div>
+    <div class="card meal"><span class="when">Dîner</span><span class="what">Souvent léger : soupe, omelette, poisson grillé et légumes, parfois juste soupe et pain</span></div>
+    <div class="card meal"><span class="when">Boissons</span><span class="what">Surtout café et thé, peu d’eau</span></div>
+  </div>
+
+  <h2 class="sec pro">Ses besoins en protéines <small>Réglez son poids</small></h2>
+  <div class="card pro">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="cw">Poids estimé</label><span class="val" id="cw-o" data-nohide></span><input type="range" id="cw" min="45" max="90" step="1" value="60"></div>
+        <p style="font-size:.9rem;color:var(--muted)">Adulte actif : environ <b>1 à 1,2 g</b> de protéines par kg et par jour. Ses apports actuels : <span data-nohide>40 à 50 g</span> estimés.</p>
+      </div>
+      <div class="result pro" id="cw-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec">Les questions du cas</h2>
+  <div class="grid">
+    <div class="card reveal-card"><h3 data-nohide>1. Sa situation en protéines et micronutriments ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Des protéines animales, mais en quantité <b>insuffisante</b> pour son activité : besoin d’environ 60 à 70 g par jour, apports autour de 40 à 50 g. Protéines végétales ponctuelles et mal réparties ; hydratation faible, qui accentue la fatigue.</p><p>Sans viande : moins de <b>fer héminique</b> (le plus assimilable) et de <b>vitamine B12</b> (globules rouges, énergie). Ses oméga-3 dépendent du poisson : 2 repas par semaine ne suffisent pas.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>2. Les risques de carences ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><ul><li><b>Fer</b> : le fer végétal (non héminique) est mal absorbé, et café et thé réduisent encore l’absorption. Fatigue, pâleur, concentration et performance en baisse.</li><li><b>B12</b> : presque uniquement animale. Poisson et œufs irréguliers : carence à moyen terme (fatigue, engourdissements, troubles nerveux).</li><li><b>Oméga-3</b> (EPA, DHA) : besoins non couverts, pour le cerveau et le cœur.</li><li><b>Énergie</b> : dîners sautés ou trop légers, apport trop faible pour une sportive ; récupération et équilibre hormonal perturbés.</li></ul><p>Elle ne souffre pas de l’absence de viande, mais d’un <b>manque de structure et de variété</b>.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>3. Équilibrer sans viande ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p>Un modèle <b>pescétarien</b> équilibré :</p><ul><li>Poissons <b>2 à 3 fois par semaine</b>, maigres (colin, cabillaud, sole) et gras (saumon, maquereau, sardine, hareng)</li><li>Œufs <b>3 à 4 fois par semaine</b></li><li>Produits laitiers <b>1 à 2 portions par jour</b></li><li>Légumineuses + céréales : riz + lentilles, pois chiches + semoule, quinoa + haricots rouges</li><li>Fer végétal (lentilles, épinards, haricots secs, tofu) avec de la vitamine C (citron, agrumes, poivrons) ; huiles riches en oméga-3 (colza, noix, lin)</li></ul></div></div>
+    <div class="card reveal-card"><h3 data-nohide>4. Quelle fréquence pour poisson et œufs ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><p><b>Poisson</b> : le repère est au moins 2 fois par semaine dont 1 gras. Sans viande, porter à <b>2 à 3 fois</b> en alternant maigres et gras, pour compenser le fer héminique et la B12.</p><p><b>Œufs</b> : le repère général est 1 à 2 fois par semaine. Pour elle (sportive, sans viande, protéines insuffisantes), <b>3 à 4 fois</b> convient : 9 acides aminés essentiels, fer, B12, vitamine D. Sans danger cardiovasculaire chez une personne en bonne santé.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>5. Quelles cuissons, quelles préparations ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><ul><li><b>Poisson</b> : vapeur, papillote, four (moins de perte d’oméga-3, pas de dessèchement) ; un filet de citron ou d’huile de colza après cuisson</li><li><b>Œufs</b> : pochés, mollets, brouillés, sans excès de matière grasse ; omelette aux légumes, salade composée, shakshuka</li><li><b>Légumineuses</b> : bien cuites pour réduire l’acide phytique, qui freine l’absorption du fer</li><li><b>Plats végétariens</b> : aromates (curcuma, ail, citron, persil) pour la digestion et l’appétit</li></ul><p>Éviter friture et grillade forte : acides gras essentiels détruits, composés toxiques.</p></div></div>
+    <div class="card reveal-card"><h3 data-nohide>6. Recommandations pour l’énergie et la récupération ?</h3><button class="chip" data-reveal>Voir la réponse</button><div class="answer" hidden><ul><li><b>Repas</b> : ne pas sauter le dîner ; protéines réparties sur les 3 repas ; plats simples préparés à l’avance (salade de lentilles et œufs, curry de pois chiches, poisson et quinoa, soupe complète au tofu)</li><li><b>Hydratation</b> : 1,5 à 2 L d’eau par jour ; moins de café et de thé</li><li><b>Sport</b> : collation protéinée après l’entraînement (yaourt, œuf dur, noix, smoothie protéiné) ; féculents complets pour le glycogène</li><li><b>Suivi</b> : si la fatigue persiste, bilan sanguin chez le médecin (ferritine, hémoglobine, B12, vitamine D)</li></ul></div></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js"></script>
+<script src="viandes-oeufs-poissons.js"></script>
+</body>
+</html>

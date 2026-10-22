@@ -10,6 +10,8 @@ Mis à jour à chaque passe d'intégration. Un document passe dans `documents/fi
 | Les produits laitiers.docx | [produits-laitiers](../cours/produits-laitiers.html) | Intégré | Complète (texte et images) | [produits-laitiers.md](produits-laitiers.md) | 2026-10-15 |
 | Les matières grasses.docx | [matieres-grasses](../cours/matieres-grasses.html) | Intégré | Complète (texte et images) | [matieres-grasses.md](matieres-grasses.md) | 2026-10-15 |
 | Les produits sucrés.docx | [produits-sucres](../cours/produits-sucres.html) | Intégré | Complète (texte et images) | [produits-sucres.md](produits-sucres.md) | 2026-10-15 |
+| Les féculents.docx | [feculents](../cours/feculents.html) | Intégré | Complète (texte et images) | [feculents.md](feculents.md) | 2026-10-22 |
+| Viandes, œufs et poissons.docx | [viandes-oeufs-poissons](../cours/viandes-oeufs-poissons.html) | Intégré | Complète (texte et images) | [viandes-oeufs-poissons.md](viandes-oeufs-poissons.md) | 2026-10-22 |
 | Déterminants de santé et besoins nutritionnels .docx | [determinants-besoins](../cours/determinants-besoins.html) | Intégré | Complète (texte et images) | [determinants-besoins.md](determinants-besoins.md) | 2026-10-15 |
 | Recueil et analyse de données alimentaires .docx | [recueil-analyse](../cours/recueil-analyse.html) | Intégré | Complète (texte et images) | [recueil-analyse.md](recueil-analyse.md) | 2026-10-15 |
 | Composition et répartition des repas.docx | [composition-repas](../cours/composition-repas.html) | Intégré | Complète (texte et images) | [composition-repas.md](composition-repas.md) | 2026-10-15 |
@@ -33,6 +35,13 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 | Absorption du fer | héminique 15–35 %, non héminique 2–10 % · 20–30 % et 5–10 % | Micronutriments (deux passages du même cours) |
 | Date de lancement du PNNS | 2001 · « 2021 » (probable coquille) | Déterminants · Composition des repas |
 | Classes d'IMC | Texte : « < 16,5 insuffisance pondérale » puis « 18,5 à 24,99 normal » · schéma du même cours : « maigreur < 18,5 ». Le calculateur affiche les deux | Hors périmètre |
+| Poisson par semaine | Au moins 2 fois dont 1 gras · 1 à 2 fois (poisson et fruits de mer) · poisson gras 1 à 2 fois | Viandes, œufs et poissons, Déterminants · Composition des repas · Micronutriments |
+| Viande rouge | 1 à 2 fois par semaine maximum · 300 g maximum par semaine (unités différentes) | Viandes, œufs et poissons · Composition des repas |
+| Portions de féculents | 4 à 6 par jour (environ la moitié de l’AET) · 3 à 5 portions (pyramide en portions) | Féculents · Composition des repas |
+| Protéines des céréales | 8 à 15 % (riz 7–8, maïs 9–10, blé 11–13, avoine jusqu’à 14) · 7 à 14 g/100 g crus | Féculents · Macronutriments |
+| Protéines des légumineuses | 15 à 25 % (état non précisé, sans doute sec) · 8 à 10 g/100 g cuits | Féculents · Macronutriments |
+| Besoin en protéines d’un adulte actif | 1 à 1,2 g/kg/j (cas pratique) · sportif 1,2 à 2 g/kg/j | Viandes, œufs et poissons · Macronutriments |
+| Catégories d’IG | bas < 55, modéré 55 à 69, élevé ≥ 70 · bas < 55, moyen 55 à 70, élevé > 70 | Féculents · Produits sucrés |
 | Deux pyramides | PNNS 2020 en grammes (légumes ≥ 300 g, laitiers 250–500 g…) · pyramide en portions (fruits et légumes 5 à 7, laitiers 3, VPO 2…) | Composition des repas (les deux sont affichées) |
 
 ## Légende des statuts

@@ -23,6 +23,8 @@ Chaque page de cours reprend le même `<head>` (icônes, polices, `fiches.css`),
 
 ## Passe d'intégration (quand l'utilisateur la demande)
 
+Le skill projet `integrer-documents` (`.claude/skills/integrer-documents/`) déroule cette passe avec ses scripts (extraction des `.docx`, vérifications). L'utiliser dès que l'utilisateur signale des fichiers ajoutés.
+
 1. Lister `documents/en-attente/`. Comparer avec `documents/finis/` (un même fichier peut être redéposé : vérifier l'empreinte, ex. `md5sum`). Lire chaque document en entier (`.docx` : extraire `word/document.xml` en UTF-8).
 2. **Regarder aussi les images** du document (`word/media/`, dans l'ordre de `document.xml`) : beaucoup de tableaux clés n'existent qu'en image (grilles, repères, tableaux de rations). Ne jamais reprendre d'éléments personnels visibles sur une capture d'écran (photos, notifications, autres applications).
 3. Pour chaque document :
@@ -52,10 +54,10 @@ Un document n'est déplacé dans `finis/` que lorsque sa page existe et que son 
 - **Icône** : une assiette en quatre parts (glucides, protéines, lipides, eau) autour d'une feuille, sur le bleu encre. Chaque page la référence (`icone.svg` + `icone-180.png`).
 - Surlignage façon stabilo (`linear-gradient` sur le bas du texte) pour les mots importants des phrases d'accroche (`.lead b`, `h1 em`).
 - États sémantiques séparés de la couleur des nutriments : `--good` / `--bad` (excès, carences, avant/après) et `--ink` pour les notes.
-- Composants disponibles dans `fiches.css` : `.card` (+ `.tint`, `.good`, `.bad`), `.big` (gros chiffre + `<small>` unité), `.note`, `.bars`, `.chip` + `.panel` (explorateur), `.seg` (choix segmenté), `.pipe` + `.stn` (étapes), `.range` (fourchettes à l'échelle), `.calc` (calculateur), `.stack` (barre empilée), `.plus` (A + B = C), `.ec` (trop / pas assez), `.flow` (progression), `.meal` (cas pratique), pictogrammes SVG via `<svg data-pic="hex1|hex2|hex3|hexN|beads|tri|drop|sat|insat|amine|chol|lipo">`.
+- Composants disponibles dans `fiches.css` : `.card` (+ `.tint`, `.good`, `.bad`), `.big` (gros chiffre + `<small>` unité), `.note`, `.bars`, `.chip` + `.panel` (explorateur), `.seg` (choix segmenté), `.pipe` + `.stn` (étapes ; `.pipe.p4` pour 4 étapes), `.range` (fourchettes à l'échelle), `.calc` (calculateur), `.stack` (barre empilée), `.plus` (A + B = C), `.ec` (trop / pas assez), `.flow` (progression), `.meal` (cas pratique), pictogrammes SVG via `<svg data-pic="hex1|hex2|hex3|hexN|beads|tri|drop|sat|insat|amine|chol|lipo">`.
 - Composants génériques : `.tbl` (tableau de données), `.acc` (accordéon `<details>`), `.hbars` (barres horizontales), `.stack3` (répartition en %), `.stepper` (compteur de portions), `.form` + `.inp` + `.result` (calculateurs), `.pills`, `.pyr` (pyramide : `<button>` cliquables ou `<span>` fixes dans des `.pyr-row` de largeur `--w`), `.chain` (étapes en ligne), `.nutri` (Nutri-Score), `.hot` + `.zone` (étiquette interactive), `.reveal-card` (question / réponse), `.plate` (assiette SVG).
 - Aides JS dans `window.Fiches` : `seg(el, options, valeur, onChange)` (choix segmenté, renvoie une fonction pour changer la valeur), `explorer(puces, panneau, groupes)` (puces + fiche de détail), `hbars(el, lignes, {max, unit})` (barres à l'échelle, fourchettes `[min, max]` acceptées), `fmt(nombre, décimales)`, `pic(svg, nom)`. Les boutons `[data-reveal]` dans une `.reveal-card` sont gérés automatiquement.
-- Une page de cours = en-tête (lien « ← Tous les cours », titre avec une syllabe surlignée, légende des familles) + barre d'onglets collante + une `<section data-name="…">` par onglet. Les onglets, le lien direct par `#id` et les boutons précédent/suivant sont générés par `fiches.js`.
+- Une page de cours = en-tête (lien « ← Tous les cours », titre avec une syllabe surlignée, légende des familles) + barre d'onglets collante + une `<section data-name="…">` par onglet. Les onglets, le lien direct par `#id` et les boutons précédent/suivant sont générés par `fiches.js`. Précédent/suivant ramènent toujours le haut du contenu juste sous la barre d'onglets ; un clic sur un onglet ne remonte que si on était descendu plus bas.
 - Les graphiques sont **à l'échelle** : une barre de 9 kcal est 2,25 fois plus longue qu'une de 4.
 
 ## Règles d'interactivité

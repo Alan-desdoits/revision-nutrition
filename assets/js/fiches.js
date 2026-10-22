@@ -31,6 +31,16 @@
       s.appendChild(pager);
     });
 
+    // Haut du contenu placé juste sous la barre d'onglets collante. On mesure
+    // <main> et non .fnav : une fois collée, la barre a un offsetTop qui suit le défilement.
+    function contentTop() {
+      const nav = $(".fnav");
+      const stick = nav ? (parseFloat(getComputedStyle(nav).top) || 0) + nav.offsetHeight : 0;
+      return Math.max(0, main.getBoundingClientRect().top + window.scrollY - stick);
+    }
+
+    // scroll : "up" remonte seulement si on est descendu plus bas (onglets),
+    // "always" ramène toujours en haut du contenu (précédent / suivant)
     function show(id, scroll) {
       const target = secs.find(s => s.id === id) || secs[0];
       secs.forEach(s => s.hidden = s !== target);
@@ -41,12 +51,12 @@
       });
       if (location.hash.slice(1) !== target.id) history.replaceState(null, "", "#" + target.id);
       if (scroll) {
-        const navTop = $(".fnav").offsetTop;
-        if (window.scrollY > navTop) window.scrollTo({ top: navTop });
+        const top = contentTop();
+        if (scroll === "always" || window.scrollY > top) window.scrollTo({ top });
       }
     }
-    tabs.addEventListener("click", e => { const b = e.target.closest("button"); if (b) show(b.getAttribute("aria-controls"), true); });
-    main.addEventListener("click", e => { const b = e.target.closest("[data-go]"); if (b) show(b.dataset.go, true); });
+    tabs.addEventListener("click", e => { const b = e.target.closest("button"); if (b) show(b.getAttribute("aria-controls"), "up"); });
+    main.addEventListener("click", e => { const b = e.target.closest("[data-go]"); if (b) show(b.dataset.go, "always"); });
     window.addEventListener("hashchange", () => show(location.hash.slice(1)));
     show(location.hash.slice(1));
   }
