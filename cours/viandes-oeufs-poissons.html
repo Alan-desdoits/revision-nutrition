@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/fiches.css">
+<link rel="stylesheet" href="../assets/css/fiches.css?v=20261022c">
 </head>
 <body>
 
@@ -74,7 +74,7 @@
   <p>Les catégories correspondent à la <b>position anatomique</b> du morceau sur l’animal.</p>
   <div id="ani-seg"></div>
   <div class="label-wrap">
-    <div class="card" style="align-items:center"><svg id="ani-svg" viewBox="0 0 520 300" role="img" aria-label="Zones des catégories de morceaux" style="width:100%;height:auto"></svg><div id="cat-seg"></div></div>
+    <div class="card pro" style="align-items:center"><p class="hint">Touchez une zone de l’animal ou un bouton.</p><svg id="ani-svg" class="hotsvg" viewBox="0 0 520 300" role="img" aria-label="Zones des catégories de morceaux" style="width:100%;height:auto"></svg><div id="cat-seg"></div></div>
     <div id="cat-cards" style="display:grid;gap:10px"></div>
   </div>
 
@@ -185,7 +185,7 @@
   <h2 class="sec pro">Coupe d’un œuf de poule <small>Touchez une partie</small></h2>
   <div class="stack hideable pro" id="egg-stack"></div>
   <div class="label-wrap">
-    <div class="card" style="align-items:center"><svg id="egg-svg" viewBox="0 0 500 300" role="img" aria-label="Coupe d’un œuf de poule" style="width:100%;height:auto"></svg></div>
+    <div class="card pro" style="align-items:center"><p class="hint">Touchez une partie de l’œuf ou un bouton.</p><svg id="egg-svg" class="hotsvg" viewBox="0 0 500 300" role="img" aria-label="Coupe d’un œuf de poule" style="width:100%;height:auto"></svg></div>
     <div class="panel pro" id="egg-panel" style="grid-template-columns:minmax(0,1fr)"></div>
   </div>
 
@@ -467,7 +467,7 @@
 </section>
 </main>
 
-<script src="../assets/js/fiches.js"></script>
-<script src="viandes-oeufs-poissons.js"></script>
+<script src="../assets/js/fiches.js?v=20261022c"></script>
+<script src="viandes-oeufs-poissons.js?v=20261022c"></script>
 </body>
 </html>

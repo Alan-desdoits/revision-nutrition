@@ -16,8 +16,10 @@ assets/icone.svg           Icône du site (favicon) ; icone-180.png (iPhone/iPad
 documents/en-attente/      Documents déposés par l'utilisateur, pas encore intégrés (.gitkeep pour garder le dossier)
 documents/finis/           Documents déjà intégrés au site
 suivi/                     Suivi d'intégration (un fichier par document + tableau général et écarts entre cours)
-.claude/launch.json        Serveur local : python -m http.server 8123
+.claude/launch.json        Serveur local : python .claude/serveur.py (port 8123, sans cache navigateur)
 ```
+
+Les liens vers les CSS et JS portent un numéro de version (`fiches.css?v=20261022c`) : après toute modification d'un CSS ou d'un JS, changer ce numéro dans `index.html` et toutes les pages de `cours/`, sinon un navigateur peut garder l'ancienne version et afficher des blocs vides.
 
 Chaque page de cours reprend le même `<head>` (icônes, polices, `fiches.css`), le même en-tête et la même barre d'onglets que `cours/macronutriments.html`. Copier ce gabarit pour un nouveau cours.
 

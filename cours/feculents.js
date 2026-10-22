@@ -91,7 +91,11 @@
       ${[...Array(9)].map((_, i) => `<line x1="${100 + i * 7.5}" y1="26" x2="${92 + i * 9}" y2="${4 + (i % 2) * 5}" stroke="var(--glu)" stroke-width="2" stroke-linecap="round"/>`).join("")}
       <path d="${GRAIN}" data-k="ecorce" fill="${on("ecorce") ? "var(--glu)" : "var(--glu-m)"}" stroke="var(--glu)" stroke-width="2" style="cursor:pointer"/>
       <path d="${GRAIN}" data-k="amande" transform="translate(130 150) scale(.86) translate(-130 -150)" fill="${on("amande") ? "var(--glu)" : "var(--glu-s)"}" style="cursor:pointer"/>
-      <ellipse data-k="germe" cx="108" cy="250" rx="20" ry="12" transform="rotate(-18 108 250)" fill="${on("germe") ? "var(--glu)" : "var(--card)"}" stroke="var(--glu)" stroke-width="2.5" style="cursor:pointer"/>`;
+      <ellipse data-k="germe" cx="108" cy="250" rx="20" ry="12" transform="rotate(-18 108 250)" fill="${on("germe") ? "var(--glu)" : "var(--card)"}" stroke="var(--glu)" stroke-width="2.5" style="cursor:pointer"/>
+      ${[["ecorce", 212, 92, 70], ["amande", 175, 150, 150], ["germe", 126, 250, 250]].map(([id, x, y, ly]) => `
+        <line x1="${x}" y1="${y}" x2="292" y2="${ly}" stroke="var(--glu)" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="${x}" cy="${y}" r="4" fill="var(--glu)"/>
+        <g data-k="${id}"><rect x="292" y="${ly - 17}" width="136" height="34" rx="17" fill="${on(id) ? "var(--glu)" : "var(--glu-s)"}" stroke="var(--glu)" stroke-width="1.5"/>
+        <text x="360" y="${ly + 5}" text-anchor="middle" font-size="15" font-weight="700" fill="${on(id) ? "var(--card)" : "var(--glu)"}" font-family="Atkinson Hyperlegible, sans-serif">${BLE[id].name.split(" (")[0]}</text></g>`).join("")}`;
     const b = BLE[k];
     $("#ble-panel").className = "panel glu";
     $("#ble-panel").innerHTML = `<div><span class="tag">${b.gives}</span><h3>${b.name} · ${b.pct} % du grain</h3><dl>${b.rows.map(([t, v]) => `<dt>${t}</dt><dd>${v}</dd>`).join("")}</dl></div>`;

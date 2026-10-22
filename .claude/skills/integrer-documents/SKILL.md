@@ -49,6 +49,13 @@ Pendant la lecture, noter au fur et à mesure :
 
 ## 4. Brancher et suivre
 
+- Les liens CSS et JS de chaque page portent `?v=<version>`. Une nouvelle page reprend la version en cours ; dès qu'un CSS ou un JS existant change, passer à une nouvelle version partout :
+
+  ```bash
+  sed -i "s/?v=ANCIENNE/?v=NOUVELLE/g" index.html cours/*.html
+  ```
+- Un schéma SVG cliquable porte la classe `hotsvg` (survol visible) et une ligne `<p class="hint">` qui dit quoi toucher ; ajouter des étiquettes cliquables sur le schéma quand les zones sont petites.
+
 - `assets/js/cours.js` : entrée avec `theme`, `familles`, `fiches` (noms exacts des onglets), `statut: "disponible"`, `page`.
 - `suivi/<slug>.md` : une ligne par partie du document (texte et chaque image), statut ✅ et onglet ; puis une section « Points signalés dans le document » (coquilles contournées, valeurs douteuses).
 - `suivi/README.md` : ligne dans le tableau général (date du jour) et nouveaux écarts dans « Écarts entre les cours ».

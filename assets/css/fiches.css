@@ -338,6 +338,11 @@ h2.sec small{font-family:var(--f-b);font-weight:400;font-size:.9rem;color:var(--
 .stepper button{width:36px;height:36px;border-radius:10px;border:1px solid var(--line2);background:var(--card);font-weight:800;font-size:1.1rem;cursor:pointer}
 .stepper button:hover{border-color:var(--fg)}
 .stepper output{min-width:24px;text-align:center;font-family:var(--f-d);font-weight:800;font-size:1.1rem}
+/* Schéma SVG cliquable : zones [data-k] ou [data-c] */
+.hotsvg [data-k],.hotsvg [data-c]{cursor:pointer;transition:filter .15s}
+.hotsvg [data-k]:hover,.hotsvg [data-c]:hover{filter:brightness(.9) saturate(1.2)}
+.hint{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--muted);align-self:flex-start}
+.hint::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--c,var(--ink));box-shadow:0 0 0 4px var(--s,var(--ink-soft))}
 /* Assiette */
 .plate{width:min(260px,100%);height:auto}
 /* Révélation (scénarios) */
