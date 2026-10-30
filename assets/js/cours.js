@@ -1,10 +1,11 @@
 /* ==========================================================================
    Liste des cours affichés sur la page d'accueil.
    Ajouter un cours = ajouter une entrée ici (voir CLAUDE.md, « Passe d'intégration »).
-   theme : "bases" | "aliments" | "accompagnement" (ordre d'affichage des groupes : THEMES)
+   theme : "memo" | "bases" | "aliments" | "accompagnement" | "collectif" (ordre d'affichage des groupes : THEMES)
    statut : "disponible" (page en ligne) ou "en-attente" (document reçu, pas encore intégré)
    ========================================================================== */
 window.THEMES = [
+  { id: "memo", titre: "Mémo", sous: "Les valeurs de référence, à consulter à tout moment" },
   { id: "bases", titre: "Bases scientifiques", sous: "Les nutriments et leur rôle dans l’organisme" },
   { id: "aliments", titre: "Les groupes d’aliments", sous: "Composition, fabrication, place dans l’assiette" },
   { id: "accompagnement", titre: "Accompagner une personne", sous: "Des besoins au plan alimentaire, et les limites du conseil" },
@@ -12,6 +13,8 @@ window.THEMES = [
 ];
 
 window.COURS = [
+  { slug: "memo-valeurs", theme: "memo", titre: "Mémo des valeurs nutritionnelles", resume: "Toutes les valeurs pour 100 g des aliments de la formation, avec leur analyse, et un comparateur à l’échelle.", familles: ["sug", "lip", "lai", "fl", "glu", "pro"], fiches: ["Comparer", "Produits sucrés", "Matières grasses", "Produits laitiers", "Fruits et légumes", "Produits céréaliers", "Légumineuses et tubercules", "Viandes, œufs, poissons"], statut: "disponible", page: "cours/memo-valeurs.html" },
+
   { slug: "macronutriments", theme: "bases", titre: "Les macronutriments", resume: "Glucides, protéines, lipides et eau : structure, digestion, besoins, sources, excès et carences.", familles: ["glu", "pro", "lip", "eau"], fiches: ["Bases", "Explorer", "Glucides", "Protéines", "Lipides", "Eau", "Digestion", "Besoins", "Sources", "Excès et carences", "Cas pratique"], statut: "disponible", page: "cours/macronutriments.html" },
   { slug: "micronutriments", theme: "bases", titre: "Les micronutriments", resume: "Vitamines et minéraux : rôles, absorption, besoins, sources et évaluation des carences.", familles: ["vit", "min"], fiches: ["Bases", "Explorer", "Absorption", "Besoins", "Sources", "Évaluer", "Cas pratique"], statut: "disponible", page: "cours/micronutriments.html" },
 
@@ -21,7 +24,6 @@ window.COURS = [
   { slug: "feculents", theme: "aliments", titre: "Les féculents", resume: "Amidon et digestion, céréales, farine et pain, index glycémique, légumineuses et tubercules.", familles: ["glu", "pro", "vit", "min"], fiches: ["Bases", "Digestion", "Technologie", "Céréales", "Farine et pain", "Nutrition et IG", "Légumineuses et tubercules", "Dans l’assiette"], statut: "disponible", page: "cours/feculents.html" },
   { slug: "viandes-oeufs-poissons", theme: "aliments", titre: "Viandes, œufs et poissons", resume: "Classer les viandes, poissons et œufs, composition, place dans les repas, conservation, cuisson, sécurité sanitaire.", familles: ["pro", "lip", "min", "vit"], fiches: ["Les viandes", "Poissons et mer", "Les œufs", "Composition", "Dans l’assiette", "Conserver et cuisiner", "Sécurité sanitaire", "Cas pratique"], statut: "disponible", page: "cours/viandes-oeufs-poissons.html" },
   { slug: "produits-sucres", theme: "aliments", titre: "Les produits sucrés", resume: "Glycémie, sucres et sirops, pouvoir sucrant, rôles techniques, sucres libres, familles de produits.", familles: ["sug", "glu"], fiches: ["Le sucre", "Les sucres", "Rôles techniques", "Santé et repères", "Familles de produits", "Cas pratique"], statut: "disponible", page: "cours/produits-sucres.html" },
-  { slug: "memo-valeurs", theme: "aliments", titre: "Mémo des valeurs nutritionnelles", resume: "Toutes les valeurs pour 100 g des aliments de la formation, avec leur analyse, et un comparateur à l’échelle.", familles: ["sug", "lip", "lai", "fl", "glu", "pro"], fiches: ["Comparer", "Produits sucrés", "Matières grasses", "Produits laitiers", "Fruits et légumes", "Produits céréaliers", "Légumineuses et tubercules", "Viandes, œufs, poissons"], statut: "disponible", page: "cours/memo-valeurs.html" },
   { slug: "boissons", theme: "aliments", titre: "Les boissons", resume: "Hydratation et pertes en eau, eaux de boisson, boissons sucrées, café et thé, boissons de l’effort, alcool.", familles: ["eau", "min", "sug", "bad-f"], fiches: ["Bases", "Hydratation", "Les eaux", "Boissons sucrées", "Café, thé et autres", "Énergie et effort", "Alcool"], statut: "disponible", page: "cours/boissons.html" },
 
   { slug: "determinants-besoins", theme: "accompagnement", titre: "Déterminants de santé et besoins", resume: "Besoins énergétiques, déterminants, PNNS, calcul du métabolisme de base et de la ration.", familles: ["ink", "pro", "lip", "glu"], fiches: ["La démarche", "Énergie", "Déterminants", "PNNS", "Calculer les besoins", "La ration"], statut: "disponible", page: "cours/determinants-besoins.html" },
