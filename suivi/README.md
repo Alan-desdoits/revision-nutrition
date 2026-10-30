@@ -18,6 +18,11 @@ Mis à jour à chaque passe d'intégration. Un document passe dans `documents/fi
 | Élaboration de plan alimentaires et de menus.docx | [plans-menus](../cours/plans-menus.html) | Intégré | Complète (texte et images) | [plans-menus.md](plans-menus.md) | 2026-10-15 |
 | Accompagner les publics aux besoins spécifiques .docx | [publics-specifiques](../cours/publics-specifiques.html) | Intégré | Complète (texte et images) | [publics-specifiques.md](publics-specifiques.md) | 2026-10-15 |
 | Identification des profils hors périmètre et orientation.docx | [hors-perimetre](../cours/hors-perimetre.html) | Intégré | Complète (texte et images) | [hors-perimetre.md](hors-perimetre.md) | 2026-10-15 |
+| Les boissons.docx | [boissons](../cours/boissons.html) | Intégré | Complète (texte et images) | [boissons.md](boissons.md) | 2026-10-30 |
+| Étiquetage et repères alimentaires.docx | [etiquetage](../cours/etiquetage.html) | Intégré | Complète (texte et images) | [etiquetage.md](etiquetage.md) | 2026-10-30 |
+| Panorama de la restauration collective et des publics.docx | [restauration-collective](../cours/restauration-collective.html) | Intégré | Complète (texte et images) | [restauration-collective.md](restauration-collective.md) | 2026-10-30 |
+| Identification des références nutritionnelles pour les collectivités.docx | [references-collectivites](../cours/references-collectivites.html) | Intégré | Complète (texte et images) | [references-collectivites.md](references-collectivites.md) | 2026-10-30 |
+| Analyse des contraintes et caractéristiques d.docx | [contraintes-structure](../cours/contraintes-structure.html) | Intégré | Complète (texte et images) | [contraintes-structure.md](contraintes-structure.md) | 2026-10-30 |
 | Micronutriments - fiches visuelles (ancienne version).html | (remplacée par la page Micronutriments) | Archivé | Ancienne page, conservée pour mémoire | – | 2026-10-15 |
 
 ## Écarts entre les cours
@@ -26,16 +31,16 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 
 | Sujet | Valeurs | Où |
 |---|---|---|
-| Lipides en % de l'AET | 30–35 % · 35–40 % · 30–40 % | Macronutriments · Déterminants, Plans et menus · Recueil, Matières grasses |
+| Lipides en % de l'AET | 30–35 % · 35–40 % · 30–40 % | Macronutriments · Déterminants, Plans et menus, Références collectives · Recueil, Matières grasses |
 | Répartition de l'énergie par repas | P-déj 15–20 %, déj 40–45 %, collation 5–10 %, dîner 35–40 % · P-déj 20–25 %, déj 35–40 %, collation 5–10 %, dîner 30–35 % | Composition des repas · Plans et menus |
-| Eau pour un adulte | 2 à 2,5 L · 1,5 à 2 L | Macronutriments · Déterminants |
+| Eau pour un adulte | 2 à 2,5 L · 1,5 à 2 L · 1,5 à 2,5 L de boissons (30 à 35 mL/kg) · 2 000 mL (femme) et 2 500 mL (homme) au total, dont 1,5 à 2 L de boissons ; 2 à 2,5 L sur le schéma PNNS | Macronutriments · Déterminants · Boissons · Références collectives |
 | Produits laitiers chez l'enfant | 3 par jour · 3 à 4 par jour | Produits laitiers · Déterminants (PNNS) |
 | Beurre demi-sel / salé | 0,8–3 % / > 3 % · 1,5–2 % / > 2 % | Matières grasses · Produits laitiers |
 | Énergie du beurre | 750 kcal · 720 kcal pour 100 g | Matières grasses · Produits laitiers |
 | Absorption du fer | héminique 15–35 %, non héminique 2–10 % · 20–30 % et 5–10 % | Micronutriments (deux passages du même cours) |
 | Date de lancement du PNNS | 2001 · « 2021 » (probable coquille) | Déterminants · Composition des repas |
 | Classes d'IMC | Texte : « < 16,5 insuffisance pondérale » puis « 18,5 à 24,99 normal » · schéma du même cours : « maigreur < 18,5 ». Le calculateur affiche les deux | Hors périmètre |
-| Poisson par semaine | Au moins 2 fois dont 1 gras · 1 à 2 fois (poisson et fruits de mer) · poisson gras 1 à 2 fois | Viandes, œufs et poissons, Déterminants · Composition des repas · Micronutriments |
+| Poisson par semaine | Au moins 2 fois dont 1 gras · 1 à 2 fois (poisson et fruits de mer) · poisson gras 1 à 2 fois | Viandes, œufs et poissons, Déterminants, Références collectives · Composition des repas · Micronutriments |
 | Viande rouge | 1 à 2 fois par semaine maximum · 300 g maximum par semaine (unités différentes) | Viandes, œufs et poissons · Composition des repas |
 | Portions de féculents | 4 à 6 par jour (environ la moitié de l’AET) · 3 à 5 portions (pyramide en portions) | Féculents · Composition des repas |
 | Protéines des céréales | 8 à 15 % (riz 7–8, maïs 9–10, blé 11–13, avoine jusqu’à 14) · 7 à 14 g/100 g crus | Féculents · Macronutriments |
@@ -43,6 +48,10 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 | Besoin en protéines d’un adulte actif | 1 à 1,2 g/kg/j (cas pratique) · sportif 1,2 à 2 g/kg/j | Viandes, œufs et poissons · Macronutriments |
 | Catégories d’IG | bas < 55, modéré 55 à 69, élevé ≥ 70 · bas < 55, moyen 55 à 70, élevé > 70 | Féculents · Produits sucrés |
 | Deux pyramides | PNNS 2020 en grammes (légumes ≥ 300 g, laitiers 250–500 g…) · pyramide en portions (fruits et légumes 5 à 7, laitiers 3, VPO 2…) | Composition des repas (les deux sont affichées) |
+| Légumineuses par semaine | Au moins 2 fois (schéma PNNS) · au moins 1 fois (pyramide PNNS 2020) | Références collectives · Composition des repas |
+| Part d'eau dans le corps | 50 à 60 % de la masse corporelle · ≈ 60 % du poids | Boissons · Déterminants |
+| Énergie de l'adulte | Femme 1 800 / 2 000 / 2 200 kcal, homme 2 100 / 2 700 / 3 000 / 3 500 kcal selon l'activité (repères collectifs : femmes 2 000–2 200, hommes 2 500–2 700) · femme 1 800 à 2 200, homme 2 200 à 2 700 kcal | Références collectives · Recueil et analyse |
+| Eau des 11–14 ans | 2 000 à 2 200 mL au total, 1 400 à 1 800 mL de boissons · 1,5 à 2 L dont au moins 700 mL de boissons | Références collectives : tableau · étude de cas du même cours |
 
 ## Légende des statuts
 

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Références collectives · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Identification des références nutritionnelles pour les collectivités.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css?v=20261030a">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Restauration collective</span>
+        <h1 style="--hl:var(--good-s)">Les références <em>collectives</em></h1>
+        <p class="sub">D’où viennent les repères nutritionnels pour un groupe, et lesquels appliquer : énergie, macronutriments, fibres, micronutriments, eau.</p>
+      </div>
+      <div class="legend"><span class="glu">Glucides</span><span class="pro">Protéines</span><span class="lip">Lipides</span><span class="fl">Fibres</span><span class="min">Minéraux</span><span class="vit">Vitamines</span><span class="eau">Eau</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="fondements" data-name="Fondements">
+  <p class="lead">Des repères pensés pour un <b>groupe</b> : quand beaucoup de personnes partagent les mêmes repas, l’offre doit couvrir les besoins de la majorité.</p>
+  <div class="g3">
+    <div class="card tint ink"><h3>Un cadre commun</h3><p>Il facilite le travail des professionnels de la restauration et garantit une équité d’accès à une alimentation équilibrée.</p></div>
+    <div class="card tint good-f"><h3>Santé publique</h3><p>Dans les écoles, hôpitaux, établissements médico-sociaux : de meilleures habitudes, moins de déséquilibres.</p></div>
+    <div class="card tint fl"><h3>Une offre cohérente</h3><p>Un outil pour organiser les repas de façon adaptée à la vie en collectivité.</p></div>
+  </div>
+
+  <h2 class="sec">D’où viennent ces références ?</h2>
+  <p>Pas de chiffres sortis de nulle part : des études sur de larges populations (quel apport en calcium maintient de bons os, quelle quantité de fibres réduit le risque de certaines maladies). Les repères diffèrent d’un pays à l’autre (habitudes, culture, environnement alimentaire), mais l’esprit reste une base fiable issue de la science.</p>
+  <div class="g3">
+    <div class="card"><span class="tag">France</span><h3>ANSES</h3><p>Agence nationale de sécurité sanitaire de l’alimentation, de l’environnement et du travail.</p></div>
+    <div class="card"><span class="tag">Europe</span><h3>EFSA</h3><p>European Food Safety Authority, Autorité européenne de sécurité des aliments.</p></div>
+    <div class="card"><span class="tag">Monde</span><h3>OMS</h3><p>Organisation mondiale de la santé.</p></div>
+  </div>
+
+  <h2 class="sec">Du besoin individuel au repère collectif</h2>
+  <p>Chacun est différent : plus ou moins de fer, de glucides, d’énergie dépensée. La réponse vient des <b>statistiques</b>.</p>
+  <div class="card ink" style="gap:12px">
+    <div id="anc-seg"></div>
+    <svg id="anc-svg" viewBox="0 0 600 220" role="img" aria-label="Répartition des besoins dans une population" style="width:100%;height:auto"></svg>
+    <div class="result ink" id="anc-out"></div>
+    <p class="hint">Courbe schématique : les besoins individuels se répartissent autour d’une moyenne.</p>
+  </div>
+  <div class="note"><span>Un <b>compromis pratique</b> : pas la garantie que chacun reçoive exactement son besoin, mais l’assurance que presque tout le monde reçoit assez. Les besoins changent avec l’âge, le sexe, l’activité et l’état physiologique (croissance, grossesse, vieillissement) : les références sont déclinées en <b>sous-groupes</b>.</span></div>
+
+  <h2 class="sec">Quatre niveaux de repères <small>Du minimum vital aux limites à ne pas dépasser</small></h2>
+  <div class="grid">
+    <div class="card tint ink"><span class="tag">1</span><h3>Le besoin moyen</h3><p>Couvre les besoins de la <b>moitié</b> d’une population : à cette seule valeur, 50 % des individus risqueraient un déficit. Donnée scientifique de base, pas exploitable telle quelle en collectivité.</p></div>
+    <div class="card tint good-f"><span class="tag">2</span><h3>Apport nutritionnel conseillé (ANC)</h3><p>Ou apport de référence. Au-dessus du besoin moyen, avec une <b>marge de sécurité</b> : il couvre 97 à 98 % des personnes. La <b>boussole</b> des collectivités.</p></div>
+    <div class="card tint fl"><span class="tag">3</span><h3>Apports satisfaisants</h3><p>Pas assez de données pour un besoin moyen précis : les experts se fondent sur les <b>observations</b> disponibles (populations en bonne santé) et proposent une valeur réaliste.</p></div>
+    <div class="card bad"><span class="tag">4</span><h3>Valeurs limites</h3><p>Il ne s’agit plus de couvrir les besoins mais de <b>prévenir les excès</b> : trop de sel, de sucre ajouté, d’acides gras saturés.</p></div>
+  </div>
+
+  <h2 class="sec">Pourquoi c’est important pour vous</h2>
+  <div class="g3">
+    <div class="card"><h3>Un langage commun</h3><p>Avec des cuisiniers ou un gestionnaire, parler d’« apports conseillés en protéines » ou de « limite de sel par repas » évite les discussions approximatives et appuie vos choix.</p></div>
+    <div class="card"><h3>La crédibilité</h3><p>Expliquer pourquoi un menu ne peut pas se limiter à des pâtes et du fromage, ou pourquoi limiter les plats frits : un acteur de santé publique, pas quelqu’un qui impose des contraintes.</p></div>
+    <div class="card"><h3>L’esprit critique</h3><p>Savoir d’où vient un chiffre, sa marge de sécurité et son contexte : s’adapter et justifier, au lieu d’appliquer « par habitude ».</p></div>
+  </div>
+</section>
+
+<section id="energie" data-name="Énergie" hidden>
+  <p class="lead">L’énergie est la <b>première pierre</b> : de quoi couvrir les fonctions vitales (respiration, cœur, cerveau) et l’activité physique.</p>
+  <p>En collectivité, impossible de calculer le besoin de chaque convive : on définit des <b>valeurs moyennes</b> par groupe, selon l’âge et le sexe, et le niveau d’activité habituel de la population (des salariés actifs n’ont pas les besoins de patients au repos). Elles s’expriment en kcal par jour.</p>
+  <div class="g2">
+    <div class="card bad"><h3>Assez de calories ne suffit pas</h3><p>Des calories issues de produits gras et sucrés couvrent l’énergie mais compromettent la qualité nutritionnelle : il faut des aliments variés.</p></div>
+    <div class="card tint ink"><h3>Trop peu expose à la dénutrition</h3><p>Surtout les enfants et les personnes âgées.</p></div>
+  </div>
+
+  <h2 class="sec">Apports conseillés des adultes français <small>Touchez une ligne</small></h2>
+  <div class="card" style="gap:14px">
+    <div id="anc-sexe"></div>
+    <div class="calc">
+      <div id="anc-bars"></div>
+      <div class="result glu" id="anc-res"></div>
+    </div>
+  </div>
+  <p>Selon le CNERNA (Centre national de coordination des études et recherches sur la nutrition et l’alimentation), ces valeurs concernent un adulte « de référence » en bonne santé et de poids moyen.</p>
+
+  <h2 class="sec">Repères collectifs par groupe <small>kcal par jour, adaptés de l’ANSES et de l’EFSA</small></h2>
+  <div class="card"><div id="grp-bars"></div></div>
+  <div class="tbl ink"><table><thead><tr><th>Groupe</th><th>Commentaire collectif</th></tr></thead><tbody>
+    <tr><th>Enfants 4–6 ans</th><td>Besoins élevés par kg de poids : aliments denses en nutriments.</td></tr>
+    <tr><th>Enfants 7–10 ans</th><td>Développement soutenu : attention aux protéines et au calcium.</td></tr>
+    <tr><th>Adolescents 11–14 ans</th><td>Croissance rapide, forte variabilité selon l’activité.</td></tr>
+    <tr><th>Adolescents 15–18 ans</th><td>Besoins maximaux de la vie : attention aux excès liés au grignotage.</td></tr>
+    <tr><th>Adultes 19–64 ans</th><td>Selon l’activité professionnelle : sédentarité fréquente.</td></tr>
+    <tr><th>Personnes âgées &gt; 65 ans</th><td>Moins d’énergie, mais des besoins en protéines proportionnellement plus élevés.</td></tr>
+  </tbody></table></div>
+  <p>Ce ne sont pas des prescriptions individuelles mais des moyennes qui orientent la planification en collectivité.</p>
+</section>
+
+<section id="macro" data-name="Macronutriments" hidden>
+  <p class="lead">Une fois l’énergie fixée : comment la <b>répartir</b> entre protéines, glucides et lipides ?</p>
+  <div class="card"><div id="macro-bars"></div></div>
+  <div class="tbl"><table><thead><tr><th>Macronutriment</th><th>Part de l’AET</th><th>Vigilance en restauration collective</th></tr></thead><tbody>
+    <tr class="pro"><th>Protéines</th><td class="n">10–20 %</td><td>Diversifier les sources ; apports suffisants pour enfants, adolescents et personnes âgées.</td></tr>
+    <tr class="glu"><th>Glucides</th><td class="n">40–55 %</td><td>Glucides complexes et riches en fibres ; sucres libres &lt; 10 % de l’AET (idéalement 5 %).</td></tr>
+    <tr class="lip"><th>Lipides</th><td class="n">35–40 %</td><td>Saturés &lt; 12 % de l’AET, graisses de bonne qualité, éviter les acides gras transformés.</td></tr>
+  </tbody></table></div>
+  <div class="note"><span>Une <b>orientation de fond</b>, pas une contrainte mathématique : prévenir les menus trop riches en saturés et sucres rapides, ou au contraire trop pauvres en protéines.</span></div>
+
+  <h2 class="sec">Les protéines</h2>
+  <div class="g2">
+    <div class="card tint pro"><h3>Pourquoi</h3><p>Renouvellement cellulaire, croissance, entretien de la masse musculaire. Deux publics prioritaires : <b>enfants et adolescents</b> pour grandir, <b>personnes âgées</b> contre la perte musculaire et la dénutrition.</p></div>
+    <div class="card tint pro"><h3>Diversifier</h3><p>Animales (viande, poisson, œufs, laitiers) et végétales (légumineuses, céréales) : un bon équilibre en acides aminés.</p></div>
+  </div>
+  <div class="card pro" style="gap:12px">
+    <h3>Protéines pour 100 g <small style="font-weight:400;color:var(--muted)">Touchez une famille</small></h3>
+    <div id="prot-seg"></div>
+    <div id="prot-bars"></div>
+  </div>
+
+  <h2 class="sec">Les glucides</h2>
+  <div class="g2">
+    <div class="card tint glu"><h3>Complexes : la part majoritaire</h3><p>Féculents, produits céréaliers, légumineuses : énergie durable et satiété. En collectivité : des féculents et des produits complets plus souvent.</p></div>
+    <div class="card bad"><h3>Sucres libres : à limiter</h3><p>Sucres ajoutés (boissons sucrées, pâtisseries, produits transformés) et ceux des jus de fruits et sirops. Absorbés vite, pics de glycémie ; en excès, surpoids, diabète de type 2, maladies cardiovasculaires, caries. Limiter desserts sucrés et boissons édulcorées.</p></div>
+  </div>
+  <div class="card glu" style="gap:12px">
+    <h3>Glucides nets pour 100 g <small style="font-weight:400;color:var(--muted)">Touchez une famille</small></h3>
+    <div id="glu-seg"></div>
+    <div id="glu-bars"></div>
+  </div>
+
+  <h2 class="sec">Limite des sucres libres <small>OMS : moins de 10 % de l’AET, idéalement 5 %</small></h2>
+  <div class="card sug">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="sl-kcal">Apport énergétique total</label><span class="val" id="sl-kcal-o" data-nohide></span><input type="range" id="sl-kcal" min="1400" max="3200" step="50" value="2000"></div>
+        <p class="eq" id="sl-eq"></p>
+      </div>
+      <div class="result sug" id="sl-out"></div>
+    </div>
+  </div>
+  <div class="tbl sug"><table><thead><tr><th>Groupe</th><th>kcal/jour</th><th>Limite (10 %)</th><th>Objectif (5 %)</th></tr></thead><tbody id="sl-tbl"></tbody></table></div>
+  <p>Exemples du cours : un adulte à environ 2 000 kcal par jour, moins de <b>50 g</b> de sucres libres (environ <b>10 cuillères à café</b>) ; un enfant de 6 ans à 1 600 kcal, autour de <b>40 g</b>.</p>
+
+  <h2 class="sec">Les lipides</h2>
+  <div class="g2">
+    <div class="card tint lip"><h3>Essentiels</h3><p>Énergie concentrée, acides gras indispensables (oméga-3 et oméga-6), vitamines liposolubles A, D, E, K.</p></div>
+    <div class="card tint lip"><h3>Quantité et qualité</h3><p>Une fourchette adaptée pour éviter les excès. Moins de saturés (produits transformés, charcuteries, fritures), plus d’insaturés (poissons gras, huiles végétales, oléagineux). Friture et plats industriels ne doivent pas devenir trop fréquents.</p></div>
+  </div>
+</section>
+
+<section id="fibres" data-name="Fibres" hidden>
+  <p class="lead">Les fibres règlent le <b>transit</b>, mais leur intérêt va bien au-delà.</p>
+  <div class="g3">
+    <div class="card tint fl"><h3>Satiété</h3><p>Elles aident à réguler la prise alimentaire.</p></div>
+    <div class="card tint fl"><h3>Poids et glycémie</h3><p>Elles ralentissent l’absorption des glucides et évitent les pics : prévention du surpoids et de l’obésité.</p></div>
+    <div class="card tint fl"><h3>Maladies chroniques</h3><p>Rôle protecteur : maladies cardiovasculaires, diabète de type 2, certains cancers digestifs.</p></div>
+  </div>
+
+  <h2 class="sec">Solubles ou insolubles ? <small>Touchez un type</small></h2>
+  <div id="fib-seg"></div>
+  <div class="card" id="fib-out"></div>
+
+  <h2 class="sec">Apports recommandés par groupe <small>g par jour</small></h2>
+  <div class="card"><div id="fib-bars"></div></div>
+  <div class="g2">
+    <div class="card"><span class="tag">Sources</span><ul><li>Légumes et fruits : fibres solubles et insolubles.</li><li>Légumineuses (lentilles, pois chiches, haricots secs) : riches, et intéressantes pour les protéines.</li><li>Céréales complètes et farines peu raffinées : pain complet, pâtes semi-complètes, riz complet.</li></ul></div>
+    <div class="card good"><span class="tag">En pratique collective</span><ul><li>Des légumes et des fruits à chaque repas.</li><li>Des légumineuses régulièrement dans les menus de la semaine.</li><li>Des féculents variés, dont des complets ou semi-complets.</li></ul></div>
+  </div>
+</section>
+
+<section id="micro" data-name="Micronutriments" hidden>
+  <p class="lead">Certains micronutriments sont à <b>surveiller</b> en collectivité : déficits ou excès liés aux habitudes modernes.</p>
+  <h2 class="sec" style="margin-top:0">Explorer <small>Touchez un micronutriment</small></h2>
+  <div id="mic-chips"></div>
+  <div class="panel empty" id="mic-panel">Choisissez un micronutriment : rôle, groupes à risque, sources et vigilance.</div>
+</section>
+
+<section id="eau" data-name="Hydratation" hidden>
+  <p class="lead">L’eau doit être la <b>boisson de référence</b>, accessible en permanence et gratuitement.</p>
+  <p>Les recommandations portent sur la quantité totale, mais aussi sur la limitation des boissons sucrées.</p>
+  <div class="card eau" style="gap:12px">
+    <div id="eau-seg"></div>
+    <div id="eau-bars"></div>
+  </div>
+  <div class="card tint eau" style="flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap"><div class="big eau">20–30 %</div><p style="flex:1;min-width:200px">des besoins viennent de l’eau des aliments (fruits, légumes, produits laitiers). La <b>majorité</b> doit venir des boissons.</p></div>
+
+  <h2 class="sec">Les plus vulnérables</h2>
+  <div class="g3">
+    <div class="card bad"><h3>Les enfants</h3><p>Surface corporelle proportionnellement plus grande et soif encore immature : risque accru par forte chaleur ou à l’effort.</p></div>
+    <div class="card bad"><h3>Les personnes âgées</h3><p>Soif souvent diminuée. La déshydratation est une cause fréquente d’hospitalisation et de complications (chutes, confusion, insuffisance rénale).</p></div>
+    <div class="card bad"><h3>Les patients hospitalisés</h3><p>Certains traitements ou pathologies augmentent les pertes en eau.</p></div>
+  </div>
+
+  <h2 class="sec">Les repères du PNNS <small>Recommandations générales, à adapter au sexe, à l’âge, à la corpulence et à l’activité</small></h2>
+  <div class="grid">
+    <div class="card tint fl"><span class="tag">Fruits et légumes</span><div class="big fl">5 <small>par jour au moins</small></div><p>Par exemple 3 portions de légumes et 2 fruits. Une portion = 80 à 100 g.</p></div>
+    <div class="card tint pro"><span class="tag">Légumes secs</span><div class="big pro">2 <small>fois par semaine au moins</small></div><p>Lentilles, haricots, pois chiches.</p></div>
+    <div class="card tint glu"><span class="tag">Féculents</span><div class="big glu">À chaque repas</div><p>Pâtes, riz, pain, semoule (complets de préférence), pomme de terre. Environ 150 à 200 g.</p></div>
+    <div class="card tint min"><span class="tag">Poisson</span><div class="big min">2 <small>fois par semaine</small></div><p>Dont un poisson gras (sardines, maquereau, hareng, saumon). Une portion = 100 g.</p></div>
+    <div class="card tint eau"><span class="tag">Eau</span><div class="big eau">2–2,5 <small>L par jour</small></div><p>Repère du schéma PNNS du cours.</p></div>
+  </div>
+</section>
+
+<section id="cas" data-name="Étude de cas" hidden>
+  <div class="card who-card">
+    <div class="avatar" aria-hidden="true">C</div>
+    <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:200px">
+      <h3>Diététicien(ne) référent(e) d’un collège</h3>
+      <div class="stats" data-nohide><span>400 élèves de 11 à 14 ans</span><span>Environ 700 repas par jour</span><span>Élèves et personnel</span><span>Déjeuners uniquement</span></div>
+      <p>L’équipe veut savoir si les menus respectent les références nutritionnelles collectives.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Les références à mobiliser <small>Adolescents 11–14 ans</small></h2>
+  <div class="tbl ink"><table><tbody>
+    <tr><th>Énergie</th><td>2 100–2 800 kcal par jour selon le sexe et l’activité ; le déjeuner ≈ 35–40 %, soit 800–1 000 kcal.</td></tr>
+    <tr><th>Répartition</th><td>Protéines 10–20 % · lipides 35–40 % · glucides 40–55 % de l’AET, dont sucres libres &lt; 10 %.</td></tr>
+    <tr><th>Fibres</th><td>20–25 g par jour, donc 7–10 g attendus au déjeuner.</td></tr>
+    <tr><th>Calcium</th><td>Environ 1 200 mg par jour.</td></tr>
+    <tr><th>Fer</th><td>11–16 mg par jour.</td></tr>
+    <tr><th>Vitamine C</th><td>110 mg par jour.</td></tr>
+    <tr><th>Eau</th><td>1,5–2 L par jour, dont au moins 700 mL via les boissons (chiffres de l’étude de cas).</td></tr>
+  </tbody></table></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <p class="lead" style="font-size:1.2rem">Le menu de la semaine, avant et après.</p>
+    <div id="menu-seg"></div>
+  </div>
+  <div id="menu-count" class="pills" style="gap:8px"></div>
+  <p class="hint">Touchez un repère : les plats concernés s’allument dans le menu.</p>
+  <div class="grid" id="menu" data-nohide></div>
+
+  <h2 class="sec">Les questions et la correction</h2>
+  <div class="grid">
+    <div class="card reveal-card"><span class="tag">Énergie et macronutriments</span><h3 data-nohide>Énergie, protéines, lipides, glucides ?</h3><ul><li>Les plats couvrent-ils 800–1 000 kcal ?</li><li>Les sources de protéines sont-elles variées ?</li><li>Les lipides sont-ils de bonne qualité ?</li><li>Quelle place pour les glucides complexes et les sucres simples ?</li></ul><button class="chip" data-reveal>Voir la correction</button><div class="answer" hidden><p><b>Énergie</b> probablement suffisante, parfois au-delà de 1 000 kcal (steak, frites, fromage et dessert sucré). <b>Protéines</b> présentes chaque jour et variées : volaille, viande rouge, poisson, œufs, lentilles, laitiers. <b>Lipides</b> de qualité discutable : beaucoup de panés et de fritures (saturés, acides gras trans), oméga-3 non identifiés (poissons gras, huiles de colza ou de noix). <b>Glucides</b> présents tous les jours mais presque toujours raffinés (purée, riz blanc, pâtes, frites, pain), sucres simples quotidiens dans les desserts.</p><p><b>Conclusion</b> : énergie suffisante, protéines variées, mais excès de lipides de mauvaise qualité et peu de glucides complexes riches en fibres.</p></div></div>
+    <div class="card reveal-card"><span class="tag">Fibres et sucres libres</span><h3 data-nohide>Fibres et desserts sucrés ?</h3><ul><li>Fruits, légumes, légumineuses : l’objectif de 7–10 g de fibres au déjeuner est-il atteint ?</li><li>Desserts sucrés ou fruits frais : la limite des sucres libres est-elle respectée ?</li></ul><button class="chip" data-reveal>Voir la correction</button><div class="answer" hidden><p>Légumes chaque jour, mais en petites quantités ou cuits (purée, courgettes, ratatouille). Seule la <b>salade de lentilles</b> du vendredi apporte vraiment des fibres. Des fruits (banane, pomme, orange), mais les desserts sucrés dominent trop souvent.</p><p>Le cours relève un dessert sucré au moins 3 jours sur 5, parfois en plus d’un autre produit sucré (yaourt aux fruits sucré et compote le lundi) : probablement au-delà de 10 % de l’AET, loin de l’objectif de 5 %.</p><p><b>Conclusion</b> : fibres insuffisantes (peu de légumineuses, de fruits crus, de féculents complets), sucres libres trop présents.</p></div></div>
+    <div class="card reveal-card"><span class="tag">Micronutriments</span><h3 data-nohide>Calcium, fer, vitamine C ?</h3><ul><li>Le calcium est-il couvert par les produits laitiers ?</li><li>Le fer vient-il de sources animales et végétales ?</li><li>Assez de vitamine C via les fruits et légumes crus ?</li></ul><button class="chip" data-reveal>Voir la correction</button><div class="answer" hidden><p><b>Calcium</b> : un produit laitier chaque jour (fromage, yaourt, fromage blanc), besoins probablement couverts. <b>Fer</b> : viande rouge, volaille, poisson, lentilles le vendredi ; les crudités (betteraves, carottes) et les fruits riches en vitamine C (orange, kiwi si proposé) favorisent son absorption. Mais un peu trop de viande rouge sur la semaine (durabilité, santé publique). <b>Vitamine C</b> : variable ; absente les jours de compote ou de mousse au chocolat, et réduite par la cuisson (purée, ratatouille).</p><p><b>Conclusion</b> : calcium couvert, fer suffisant, vitamine C inconstante : des fruits crus variés chaque jour.</p></div></div>
+    <div class="card reveal-card"><span class="tag">Hydratation</span><h3 data-nohide>L’eau est-elle mise en valeur ?</h3><ul><li>L’eau est-elle clairement la boisson principale ?</li><li>Comment limiter les boissons sucrées apportées par les élèves ?</li></ul><button class="chip" data-reveal>Voir la correction</button><div class="answer" hidden><p>Eau gratuite au self, mais pas mise en avant dans le menu. À cet âge, sodas, jus et boissons énergisantes tentent. Promouvoir l’eau : <b>carafes sur les tables</b>, affichage pédagogique, campagnes de sensibilisation.</p></div></div>
+    <div class="card reveal-card"><span class="tag">Améliorations</span><h3 data-nohide>Quels ajustements simples ?</h3><ul><li>Mieux aligner les menus sur les références.</li><li>Sans nuire à l’acceptabilité par les élèves.</li></ul><button class="chip" data-reveal>Voir la correction</button><div class="answer" hidden><ul><li>Plus de <b>fruits crus et crudités</b> (vitamine C, fibres) ; des fruits frais variés (kiwi, clémentine, salade de fruits) à la place de certains desserts sucrés.</li><li>Des <b>légumineuses</b> régulières (pois chiches, lentilles, haricots secs) en alternative aux plats carnés.</li><li>Des <b>céréales complètes ou semi-complètes</b> (pâtes semi-complètes, riz complet, pain aux céréales).</li><li>Moins de <b>panés et de frits</b> : cuissons au four, poissons non panés, volailles grillées.</li><li>L’<b>eau</b> mise en valeur : affichage positif, fontaines, carafes.</li></ul><p>Le menu « Après » ci-dessus applique ces changements.</p></div></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js?v=20261030a"></script>
+<script src="references-collectivites.js?v=20261030a"></script>
+</body>
+</html>

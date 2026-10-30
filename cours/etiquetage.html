@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Étiquetage alimentaire · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Étiquetage et repères alimentaires.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css?v=20261030a">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Accompagner une personne</span>
+        <h1 style="--hl:var(--ink-m)">Étiquetage et <em>repères</em></h1>
+        <p class="sub">À quoi sert l’étiquette, ce que la loi impose, les logos et les scores, et les pièges à déjouer.</p>
+      </div>
+      <div class="legend"><span class="ink">Réglementation</span><span class="good-f">Repères fiables</span><span class="bad-f">Pièges</span><span class="fl">Environnement</span><span class="sug">Sucres</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="roles" data-name="Rôles">
+  <p class="lead">L’étiquette est un outil de <b>transparence</b> : identifier le produit, connaître sa composition, évaluer sa qualité.</p>
+  <p>C’est aussi une exigence réglementaire pour une information fiable. La directive CE n° 2000/13 du 20 mars 2000 la définit comme l’ensemble des mentions, marques, images ou signes se rapportant à une denrée, sur tout emballage, document, écriteau, bague ou collerette qui l’accompagne.</p>
+
+  <h2 class="sec">Informer</h2>
+  <p>L’emballage servait d’abord à protéger et conserver ; il transmet désormais de l’information. Face à des dizaines de produits semblables, c’est souvent le <b>seul intermédiaire</b> entre producteur et acheteur : dénomination, mais aussi ingrédients, additifs, allergènes, valeurs nutritionnelles, pour comparer et choisir.</p>
+  <div class="card" style="gap:10px">
+    <span class="tag">Exemple : deux biscuits au chocolat d’apparence identique</span>
+    <div id="bisc-bars"></div>
+    <p>L’un avec très peu d’additifs ; l’autre complété par des arômes artificiels. Le choix devient éclairé.</p>
+  </div>
+
+  <h2 class="sec">Protéger la santé</h2>
+  <p>Une protection collective : pour l’Union européenne et les autorités sanitaires, l’information alimentaire prévient les risques.</p>
+  <div class="g3">
+    <div class="card bad"><h3>Les allergènes</h3><p>Mise en évidence obligatoire : une exposition accidentelle peut provoquer des réactions graves, voire mortelles. Gluten, arachide, lait mis en évidence : un choix rapide et sûr pour la personne allergique.</p></div>
+    <div class="card tint ink"><h3>Les dates</h3><p>Elles limitent les intoxications. Beaucoup confondent DLC et DDM : gaspillage ou, à l’inverse, risque sanitaire.</p></div>
+    <div class="card tint good-f"><h3>La déclaration nutritionnelle</h3><p>Sel, sucres, graisses saturées : prévenir obésité, diabète, maladies cardiovasculaires.</p></div>
+  </div>
+
+  <h2 class="sec">Les nouvelles attentes</h2>
+  <p>Longtemps, le prix et la marque primaient. Aujourd’hui : qualité nutritionnelle, impact environnemental, éthique.</p>
+  <div class="pills ink"><span>Allergies et intolérances (gluten, lactose, fruits à coque)</span><span>Moins de sucre, de sel, de graisses saturées</span><span>Produits moins transformés, plus « naturels »</span><span>Garanties par des labels (bio, Label Rouge, AOP, IGP)</span><span>Origine, agriculture durable, empreinte carbone</span></div>
+  <p>D’où des repères visuels complémentaires, comme le <b>Nutri-Score</b> ou le logo <b>Origin’Info</b> : une information rapide et simplifiée.</p>
+</section>
+
+<section id="environnement" data-name="Environnement et labels" hidden>
+  <p class="lead">L’étiquette intègre désormais une dimension <b>environnementale</b>.</p>
+  <div class="card fl" style="gap:10px">
+    <span class="tag">Le poids de l’alimentation</span>
+    <div id="env-bars"></div>
+    <p>En France en 2022, l’alimentation représentait environ <b>22 %</b> de l’empreinte carbone de la consommation. Production alimentaire mondiale selon le rapport WWF « Planète vivante 2020 ».</p>
+  </div>
+  <div class="g2">
+    <div class="card tint fl"><span class="tag">2020</span><h3>Loi AGEC</h3><p>Anti-gaspillage pour une économie circulaire : informer sur la fin de vie des produits, leur recyclabilité et leur impact environnemental.</p></div>
+    <div class="card tint fl"><span class="tag">2021</span><h3>Loi Climat et résilience</h3><p>Un affichage environnemental obligatoire, progressif : une information claire, lisible et fiable, qui pourra intégrer des critères sociaux.</p></div>
+  </div>
+
+  <h2 class="sec">L’Éco-score <small>Outil expérimental lancé en 2021 · touchez une note</small></h2>
+  <p>Il mesure l’empreinte environnementale sur tout le cycle de vie, de la production à la mise en rayon : pratiques agricoles et d’élevage, procédés de transformation, transport (distance et mode), déchets et recyclage de l’emballage.</p>
+  <div class="card fl" style="gap:12px">
+    <div class="nutri" id="eco"></div>
+    <div id="eco-out"></div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Une alimentation plus durable</h3><p>Local, bio, de saison, moins transformé.</p></div>
+    <div class="card"><h3>Contre le réchauffement</h3><p>Moins d’aliments très émetteurs (bœuf, certains produits importés).</p></div>
+    <div class="card"><h3>Le local et le responsable</h3><p>Circuits courts, moins de transport, filières de proximité.</p></div>
+    <div class="card"><h3>Des producteurs qui s’améliorent</h3><p>Emballages plus sobres, procédés moins polluants, gestion des déchets.</p></div>
+  </div>
+  <div class="card tint fl"><h3>Le Planet-Score</h3><p>Même objectif que l’Éco-score, mais il détaille des aspects précis : pesticides, biodiversité, bien-être animal, modes de production.</p></div>
+
+  <h2 class="sec">Les signes officiels de qualité et d’origine (SIQO) <small>Touchez un signe</small></h2>
+  <p>Encadrés par la réglementation française et européenne, vérifiés par des organismes indépendants.</p>
+  <div id="siqo-chips"></div>
+  <div class="panel empty" id="siqo-panel">Choisissez un signe de qualité.</div>
+</section>
+
+<section id="scores" data-name="Scores" hidden>
+  <p class="lead">Trois scores, trois questions : la <b>qualité nutritionnelle</b>, le degré de <b>transformation</b>, le risque des <b>additifs</b>.</p>
+  <div class="g3">
+    <div class="card tint good-f"><span class="tag">Nutri-Score</span><h3>Qualité nutritionnelle</h3><p><b>À favoriser</b> : fibres, protéines, fruits et légumes, légumineuses. <b>À limiter</b> : énergie, acides gras saturés, sucres, sel.</p><p><b>Limites</b> : pas obligatoire (affichage volontaire) ; ignore le degré de transformation ; n’indique ni additifs, ni pesticides, ni métaux lourds.</p></div>
+    <div class="card tint glu"><span class="tag">NOVA</span><h3>Degré de transformation</h3><p>Il complète le Nutri-Score en évaluant <b>uniquement</b> la transformation, en 4 groupes (touchez un groupe ci-dessous).</p></div>
+    <div class="card bad"><span class="tag">SIGA</span><h3>Additifs et ingrédients</h3><p>Le niveau de risque des additifs et ingrédients, en tenant compte aussi des teneurs en gras, sucre et sel.</p></div>
+  </div>
+  <div class="card glu" style="gap:10px">
+    <div class="pyr" id="nova"></div>
+    <div class="result glu" id="nova-out"></div>
+  </div>
+  <div class="note"><span>Exemple : entre deux mueslis au même prix, un consommateur choisira celui noté <b>Nutri-Score B</b> plutôt que celui noté <b>D</b>.</span></div>
+</section>
+
+<section id="reglement" data-name="Réglementation" hidden>
+  <p class="lead">Le règlement <b>INCO</b> (UE n° 1169/2011) harmonise l’étiquetage dans toute l’Union européenne.</p>
+  <div class="g2">
+    <div class="card tint ink"><h3>Un règlement, pas une directive</h3><p>Une directive doit être transposée par chaque pays ; un règlement s’impose directement. En vigueur depuis <b>décembre 2014</b> : pas de divergences nationales, des produits qui circulent librement dans le marché unique.</p></div>
+    <div class="card tint ink"><h3>INCO</h3><p>Information des consommateurs sur les denrées alimentaires : une information uniforme et fiable, pas laissée à l’appréciation des fabricants.</p></div>
+  </div>
+  <h2 class="sec">Deux grands principes</h2>
+  <div class="g2">
+    <div class="card good"><span class="tag">1</span><h3>La loyauté de l’information</h3><p>Ne jamais induire en erreur sur la nature, la composition, l’origine ou les qualités du produit. Un fromage « pur brebis » contient exclusivement du lait de brebis : avec du lait de vache, l’appellation est mensongère.</p></div>
+    <div class="card good"><span class="tag">2</span><h3>Lisibilité et accessibilité</h3><p>Des mentions visibles, lisibles, compréhensibles, au moins dans la langue du pays de vente.</p></div>
+  </div>
+
+  <h2 class="sec">Les évolutions <small>Touchez une date</small></h2>
+  <div id="tl-seg"></div>
+  <div class="card tint ink" id="tl-out"></div>
+  <p>Une tendance de fond : répondre à la demande de transparence et éviter toute ambiguïté.</p>
+  <div class="card"><span class="tag">Origin’Info · juillet 2024</span><h3>L’origine des matières premières</h3><p>Un logo volontaire sur les produits transformés indique le ou les pays d’origine des matières premières agricoles. Plus d’une centaine de marques ont rejoint cette initiative expérimentale ; plus de <b>8 Français sur 10</b> jugent essentiel de connaître l’origine des ingrédients.</p></div>
+</section>
+
+<section id="preemballe" data-name="Préemballés" hidden>
+  <p class="lead">Un produit <b>préemballé</b> est conditionné avant la vente, dans un emballage présenté tel quel au consommateur.</p>
+  <p>Biscuits en paquet, pizzas surgelées, yaourts, plats préparés, conserves : surtout en libre-service. Ils circulent massivement, parfois dans le monde entier ; le consommateur n’a ni fabricant ni vendeur pour le renseigner : <b>l’étiquette est le seul vecteur d’information</b>.</p>
+
+  <h2 class="sec">Les mentions obligatoires <small>Touchez une mention</small></h2>
+  <div id="ment-chips"></div>
+  <div class="panel empty" id="ment-panel">Choisissez une mention pour voir la règle et l’exemple du cours.</div>
+
+  <h2 class="sec">DLC ou DDM ? <small>À vous de classer</small></h2>
+  <div class="g2">
+    <div class="card bad"><span class="tag">DLC · date limite de consommation</span><h3>« À consommer jusqu’au… »</h3><p>Denrées très périssables sur le plan microbiologique. Après la date, le produit est <b>dangereux</b> pour la santé.</p></div>
+    <div class="card tint ink"><span class="tag">DDM · date de durabilité minimale</span><h3>« À consommer de préférence avant… »</h3><p>Denrées stables. Après la date, le produit reste consommable mais peut perdre en qualité (goût, texture).</p></div>
+  </div>
+  <div class="card" id="dates" style="gap:8px"></div>
+
+  <h2 class="sec">Cas particuliers</h2>
+  <div class="g2">
+    <div class="card"><h3>Vente à distance</h3><p>Toutes les informations obligatoires avant l’achat, sauf la DLC ou la DDM, qui peut n’être donnée qu’à la livraison. La même transparence qu’en magasin.</p></div>
+    <div class="card"><h3>Mentions réglementées</h3><p>« Fermier », « biologique », Label Rouge, AB, AOP, IGP : réservés aux produits qui respectent un cahier des charges, contre l’usurpation et la tromperie.</p></div>
+    <div class="card"><h3>Mentions marketing</h3><p>« Naturel », « sans conservateurs », « riche en vitamines » : autorisées mais jamais trompeuses et justifiables en cas de contrôle. Abusif : vanter l’absence d’un additif absent de tous les produits similaires.</p></div>
+    <div class="card"><h3>Miel et huile d’olive</h3><p>Forte valeur commerciale, authenticité à garantir. <b>Miel</b> : toujours le pays de récolte ; mélange conditionné en France, les pays d’origine ; conditionné à l’étranger, « mélange de miels originaires de l’UE », « non originaires de l’UE » ou « originaires et non originaires de l’UE ». <b>Huile d’olive vierge et vierge extra</b> : lieu de récolte des olives et d’extraction ; un pays (« Origine France »), une AOP ou IGP, ou « Origine UE » si plusieurs pays européens.</p></div>
+  </div>
+</section>
+
+<section id="vrac" data-name="Non préemballés" hidden>
+  <p class="lead">Sans emballage, la même exigence : une information <b>loyale, claire, accessible</b>, donnée par affichette, écriteau ou panneau.</p>
+  <div class="pills ink"><span>Fruits en vrac</span><span>Pain et viennoiseries en boulangerie</span><span>Fromages ou charcuteries à la coupe</span><span>Plats servis en restauration</span></div>
+  <p>À proximité immédiate du produit, visibles, lisibles, en français, jamais trompeuses sur la nature, la composition, l’origine ou l’état du produit.</p>
+  <div class="g3">
+    <div class="card tint ink"><h3>Dénomination de vente</h3><p>Définit clairement le produit : « baguette », « croissant », « pomme Golden ».</p></div>
+    <div class="card bad"><h3>Allergènes</h3><p>Signalés de façon explicite et facile à repérer. Dans une boulangerie, un pain aux graines indique « contient du sésame ».</p></div>
+    <div class="card tint ink"><h3>État physique</h3><p>Décongelé, ou transformation particulière (cuit, fumé…) : à mentionner.</p></div>
+  </div>
+  <div class="card tint fl"><span class="tag">Depuis 2025</span><h3>L’origine, pour de nouveaux produits en vrac</h3><ul><li>Fruits à coque sans coquille (amandes, noisettes, pistaches)</li><li>Fruits secs (pruneaux, abricots secs, raisins secs)</li><li>Produits sommairement préparés (demi-choux, blancs de poireaux)</li><li>Produits de « fraîche découpe » (salades de fruits, légumes prêts à l’emploi)</li></ul></div>
+
+  <h2 class="sec">Viandes : quelle origine afficher ? <small>Touchez une viande</small></h2>
+  <div class="card pro" style="gap:12px">
+    <div id="vi-seg"></div>
+    <div class="chain pro" id="vi-chain"></div>
+    <p id="vi-ex"></p>
+  </div>
+  <p>Depuis <b>mars 2024</b>, ces obligations s’appliquent aussi en restauration, y compris dans les plats transformés (lasagnes, quiches, sandwichs). À la coupe ou en vrac, l’origine figure sur une affichette ou un panneau près du produit.</p>
+
+  <h2 class="sec">Poissons et produits de la mer <small>Touchez une provenance</small></h2>
+  <div class="card min" style="gap:12px">
+    <div id="po-seg"></div>
+    <div class="result min" id="po-out"></div>
+  </div>
+  <p>Ces règles éclairent le consommateur sur la provenance et la production, et valorisent les pratiques responsables. Un saumon « Atlantique Nord-Est » n’est pas perçu comme un saumon d’élevage « Origine Norvège ».</p>
+</section>
+
+<section id="pieges" data-name="Pièges" hidden>
+  <p class="lead">Même réglementée, l’étiquette garde ses <b>limites</b>.</p>
+  <div class="card tint ink"><h3>La lisibilité</h3><p>Malgré une taille minimale de caractères, lecture difficile : trop de mentions techniques, certaines mises en avant au détriment d’autres. Des valeurs par portion (30 g de céréales) compliquent la comparaison entre produits.</p></div>
+
+  <h2 class="sec">Les sucres cachés <small>Touchez un nom</small></h2>
+  <p>Le sucre a plusieurs noms, tous des glucides simples. Le fabricant peut les <b>disperser</b> dans la liste : au lieu d’un sucre en 1<sup>re</sup> position (ingrédient principal), plusieurs noms plus bas.</p>
+  <div id="suc-chips"></div>
+  <div class="panel empty" id="suc-panel">Choisissez un sucre.</div>
+  <div class="card reveal-card"><span class="tag">Exemple</span><h3>Une barre de céréales « sans sucre ajouté »</h3><p>Ingrédients : purée de dattes, concentré de jus de raisin, sirop d’agave.</p><button class="chip" data-reveal>Où est le sucre ?</button><div class="answer" hidden><p>Partout : aucun « sucre » n’apparaît dans la liste, mais ces trois ingrédients sont <b>extrêmement riches en sucres simples</b>.</p></div></div>
+
+  <h2 class="sec">Les allégations <small>Classez chaque allégation</small></h2>
+  <p>Une information volontaire qui met en avant la présence d’un nutriment, une énergie réduite ou l’absence d’un composant. Définition : toute mention, image ou symbole qui affirme, suggère ou implique une caractéristique particulière. Encadrée par le <b>règlement CE n° 1924/2006</b> : quelles allégations, dans quelles conditions, avec quelles valeurs pour les justifier.</p>
+  <div class="g3">
+    <div class="card tint good-f"><span class="tag">Nutritionnelles</span><p>Sur la composition, avec des critères chiffrés précis.</p></div>
+    <div class="card tint ink"><span class="tag">De santé</span><p>Un lien entre un nutriment et le fonctionnement de l’organisme.</p></div>
+    <div class="card bad"><span class="tag">Thérapeutiques</span><p>Un aliment qui préviendrait ou guérirait une maladie : <b>interdites</b> sur les denrées.</p></div>
+  </div>
+  <div class="card" id="alleg" style="gap:8px"></div>
+  <div class="g2">
+    <div class="card"><h3>Conséquences sur l’étiquette</h3><p>Transparence totale des fabricants. Fibres, vitamines et minéraux ne sont obligatoires dans la déclaration que si une allégation les met en avant.</p></div>
+    <div class="card bad"><h3>Une vision partielle</h3><p>Elle ne remplace pas l’analyse globale et peut vanter un nutriment positif dans un produit déséquilibré : « riche en fibres » sur un biscuit très sucré.</p></div>
+  </div>
+
+  <h2 class="sec">Ce qui se cache derrière les mots <small>Touchez une famille</small></h2>
+  <p>Santé, naturel, sécurité, écologie : les allégations jouent sur des attentes fortes.</p>
+  <div id="mots-seg"></div>
+  <div class="card" id="mots-out"></div>
+  <div class="card reveal-card bad"><span class="tag">Exemple</span><h3>Biscuits « au blé complet, source de fibres, sans conservateurs »</h3><p>« Au blé complet » attire ceux qui veulent plus de fibres ; « sans conservateurs » rassure.</p><button class="chip" data-reveal>Lire l’étiquette</button><div class="answer" hidden><ul><li><b>25 %</b> de sucres</li><li>Des huiles hydrogénées</li><li>Peu de blé complet</li></ul><p>Trompé par les allégations, le consommateur croit acheter un produit sain : la composition reste déséquilibrée.</p></div></div>
+
+  <h2 class="sec">Les applications de scan</h2>
+  <p>Un code-barres scanné, et en quelques secondes : qualité nutritionnelle (Nutri-Score, sucre, sel, fibres), additifs ou ingrédients controversés, impact environnemental (Éco-Score, Planet-Score), alternatives mieux notées.</p>
+  <div class="g3">
+    <div class="card"><h3>Yuka</h3><p>Très populaire. Une note globale <b>sur 100</b> (aliments et cosmétiques) : qualité nutritionnelle, additifs, dimension biologique. Propose des alternatives.</p></div>
+    <div class="card"><h3>Open Food Facts</h3><p>Collaboratif et open source, base internationale alimentée par utilisateurs et producteurs. Affiche Nutri-Score, Éco-Score, NOVA.</p></div>
+    <div class="card"><h3>ScanUp</h3><p>Française, transparence et co-construction. Nutri-Score, additifs, origine des ingrédients ; met en avant le bio, le local, le sans additifs.</p></div>
+  </div>
+  <div class="note"><span>Les allergènes sont <b>toujours</b> mis en évidence dans la liste par la typographie (majuscules, gras, soulignement) : farine de <b>BLÉ</b>, <b>LAIT</b> en poudre.</span></div>
+</section>
+
+<section id="cas" data-name="Cas pratiques" hidden>
+  <p class="lead">Trois étiquettes à <b>analyser</b>. Choisissez un produit.</p>
+  <div id="cas-seg"></div>
+  <div class="label-wrap">
+    <div class="card" id="cas-lbl" style="gap:10px" data-nohide></div>
+    <div id="cas-q" style="display:grid;gap:10px"></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js?v=20261030a"></script>
+<script src="etiquetage.js?v=20261030a"></script>
+</body>
+</html>

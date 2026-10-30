@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stocks et budget · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Analyse des contraintes et caractéristiques d’une structure.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css?v=20261030a">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Restauration collective</span>
+        <h1 style="--hl:var(--min-m)">Contraintes d’une <em>structure</em></h1>
+        <p class="sub">Gérer les stocks et maîtriser les coûts : deux dimensions indissociables pour durer sans sacrifier la qualité.</p>
+      </div>
+      <div class="legend"><span class="min">Stocks</span><span class="eau">Froid</span><span class="ink">Méthode</span><span class="glu">Coûts</span><span class="good-f">Bon réflexe</span><span class="bad-f">Vigilance</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="stocks" data-name="Les stocks">
+  <p class="lead">La performance ne tient pas qu’à la qualité des produits : il faut <b>gérer les ressources</b>, stocks et coûts.</p>
+  <p>Un stock conditionne la continuité de l’activité, la qualité sanitaire, la satisfaction des clients et l’équilibre financier. La gestion des coûts montre où part l’argent, anticipe les besoins et optimise sans sacrifier la qualité : essentiel quand les marges sont faibles et les prix des matières premières variables.</p>
+  <div class="ec-list">
+    <div class="ec-head"><span></span><span>Conséquences</span><span>Pourquoi c’est grave</span></div>
+    <div class="ec bad-f"><div class="who"><b>Surstock</b></div><div class="card bad"><h4>Ce qui arrive</h4><p>Pertes, gaspillage.</p></div><div class="card bad"><h4>Coût caché</h4><p>De la trésorerie immobilisée.</p></div></div>
+    <div class="ec ink"><div class="who"><b>Sous-stock</b></div><div class="card lack"><h4>Ce qui arrive</h4><p>Ruptures, désorganisation du travail.</p></div><div class="card lack"><h4>Coût caché</h4><p>Une perte de chiffre d’affaires.</p></div></div>
+  </div>
+
+  <h2 class="sec">Trois types de stocks</h2>
+  <p>Un stock regroupe les produits, matières premières et consommables détenus pour produire ou distribuer.</p>
+  <div class="g3">
+    <div class="card tint fl"><h3>Matières premières</h3><p>Fruits, légumes, viandes, produits laitiers, céréales…</p></div>
+    <div class="card tint glu"><h3>Produits finis</h3><p>Plats préparés, jus, compléments alimentaires prêts à la vente.</p></div>
+    <div class="card tint ink"><h3>Consommables</h3><p>Emballages, étiquettes, gants, contenants…</p></div>
+  </div>
+  <div class="note"><span>La spécificité du secteur : des produits souvent <b>périssables</b> et des exigences strictes d’hygiène, de traçabilité et de température. Un stock mal géré : pertes, ruptures, gaspillage, voire non-conformités et sanctions.</span></div>
+</section>
+
+<section id="calculer" data-name="Calculer" hidden>
+  <p class="lead">« Combien faut-il en stock ? » Cela dépend de la <b>consommation</b>, des livraisons, de la conservation et de la sécurité voulue.</p>
+  <div class="pipe p4 ink">
+    <div class="stn"><span class="num-step" data-nohide>1</span><h4>Consommation moyenne</h4><p>Période représentative (souvent 1 à 3 mois), quantités réellement consommées, moyenne par jour ou par semaine.</p><div class="out">Quantité utilisée ÷ nombre de jours</div></div>
+    <div class="stn"><span class="num-step" data-nohide>2</span><h4>Stock de sécurité</h4><p>Une réserve tampon : retard de livraison, demande plus forte, produits non conformes ou abîmés.</p><div class="out">Consommation × délai de sécurité</div></div>
+    <div class="stn key"><span class="num-step" data-nohide>3</span><h4>Point de commande</h4><p>Le moment précis où commander pour éviter la rupture.</p><div class="out">Consommation pendant la livraison + stock de sécurité</div></div>
+    <div class="stn"><span class="num-step" data-nohide>4</span><h4>Limite de la DLC</h4><p>Ne jamais stocker au-delà de ce qui sera consommé avant la DLC.</p><div class="out">Consommation × jours avant DLC</div></div>
+  </div>
+
+  <h2 class="sec">Le calculateur <small>Réglé sur l’exemple du cours : pommes de terre d’un restaurant diététique</small></h2>
+  <div class="card min">
+    <div class="calc">
+      <div class="form">
+        <div class="row2 form">
+          <div class="inp"><label for="st-q">Quantité utilisée (kg)</label><input type="number" id="st-q" min="1" max="10000" value="180"></div>
+          <div class="inp"><label for="st-j">Sur (jours)</label><input type="number" id="st-j" min="1" max="120" value="30"></div>
+        </div>
+        <div class="inp"><label for="st-sec">Délai de sécurité</label><span class="val" id="st-sec-o" data-nohide></span><input type="range" id="st-sec" min="0" max="10" step="1" value="2"></div>
+        <div class="inp"><label for="st-liv">Délai de livraison</label><span class="val" id="st-liv-o" data-nohide></span><input type="range" id="st-liv" min="1" max="15" step="1" value="4"></div>
+        <div class="inp"><label for="st-dlc">Jours avant la DLC à la réception</label><span class="val" id="st-dlc-o" data-nohide></span><input type="range" id="st-dlc" min="1" max="180" step="1" value="10"></div>
+      </div>
+      <div class="result min" id="st-out"></div>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="card good"><h3>Des données réelles</h3><p>Plutôt que des estimations, et une moyenne actualisée selon la saison et les tendances.</p></div>
+    <div class="card tint ink"><h3>Fournisseur fiable, stock réduit</h3><p>Plus le fournisseur est fiable et réactif, plus le stock de sécurité peut baisser. Prudence pour les produits critiques (protéines principales du menu).</p></div>
+  </div>
+
+  <h2 class="sec">DLC et saisons</h2>
+  <div class="g2">
+    <div class="card"><h3>La DLC décide</h3><p>DLC courte (ex. 3 jours) : stock minimal, réapprovisionnements fréquents. DLC longue (ex. 6 mois) : stockage plus important possible.</p></div>
+    <div class="card"><h3>Saisonnalité et demande</h3><p>Fraises, asperges : anticiper les pics de leur saison. Fêtes, grands événements sportifs : stock de sécurité augmenté. Périodes creuses : volumes réduits pour ne pas immobiliser produits et trésorerie.</p></div>
+  </div>
+</section>
+
+<section id="stocker" data-name="Stocker" hidden>
+  <p class="lead">Ranger n’est pas une question d’esthétique : l’organisation influence la <b>qualité</b>, la rapidité, les pertes et l’<b>hygiène</b>.</p>
+
+  <h2 class="sec">Le zonage <small>Touchez une zone</small></h2>
+  <p>Des zones distinctes, une par type de produit et de conservation, matérialisées par des cloisons, des étagères ou un marquage au sol. Jamais d’aliments avec les produits d’entretien, les emballages ou le non-alimentaire.</p>
+  <div class="label-wrap">
+    <svg id="zone-svg" class="hotsvg" viewBox="0 0 400 260" role="img" aria-label="Plan d’une réserve en quatre zones" style="width:100%;height:auto"></svg>
+    <div class="result" id="zone-out"></div>
+  </div>
+  <p class="hint">Touchez une zone du plan.</p>
+
+  <h2 class="sec">L’étiquetage des lots</h2>
+  <div class="g2">
+    <div class="card"><h3>Au minimum</h3><ul><li>Le nom du produit</li><li>La date d’entrée en stock</li><li>La DLC ou la DDM (date de durabilité minimale)</li><li>Le numéro de lot, pour la traçabilité</li></ul></div>
+    <div class="card"><h3>Un code couleur cohérent</h3><p>Il réduit le temps de recherche et aide à appliquer FIFO ou FEFO.</p><div style="display:grid;gap:6px;margin-top:4px">
+      <div class="zone good-f on" style="padding:6px 10px"><b>Vert</b> : longue conservation</div>
+      <div class="zone glu on" style="padding:6px 10px"><b>Orange</b> : dates intermédiaires</div>
+      <div class="zone bad-f on" style="padding:6px 10px"><b>Rouge</b> : à consommer rapidement</div></div></div>
+  </div>
+
+  <h2 class="sec">Accessibilité et conservation</h2>
+  <div class="g2">
+    <div class="card">
+      <h3>Une étagère bien rangée</h3>
+      <div style="display:grid;gap:4px;margin-top:4px">
+        <div class="zone ink on" style="padding:8px 10px"><span class="tag">En haut</span><br>Articles légers</div>
+        <div class="zone good-f on" style="padding:8px 10px"><span class="tag">À hauteur de main</span><br>Produits à forte rotation</div>
+        <div class="zone glu on" style="padding:8px 10px"><span class="tag">En bas</span><br>Produits lourds ou volumineux : moins de chutes et de blessures</div>
+      </div>
+      <p>Des allées dégagées et assez larges pour le personnel et les chariots.</p>
+    </div>
+    <div class="card">
+      <h3>Conditions de conservation</h3>
+      <ul><li>Chambres froides avec thermomètres, contrôlées dans les plages requises.</li><li>Zones sèches ventilées, sans trop d’humidité (moisissures).</li><li>Produits sensibles à la lumière (certaines huiles, compléments) dans un endroit sombre.</li><li>Relevé de température quotidien, voire plusieurs fois par jour, souvent obligatoire, gardé dans un registre pour les contrôles sanitaires.</li></ul>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="card tint min"><h3>Hygiène et entretien</h3><p>Un plan de nettoyage aux fréquences précises (quotidien, hebdomadaire, mensuel) et aux responsabilités claires ; sols, étagères, contenants désinfectés. Contre les nuisibles : moustiquaires, pièges à rongeurs, inspection des emballages.</p></div>
+    <div class="card tint ink"><h3>Une organisation qui évolue</h3><p>Avec l’activité, les volumes, les retours d’expérience. Un produit sans cesse traversé d’un bout à l’autre de la réserve ? Le placer près de la préparation. Des ruptures répétées ? Plus d’espace pour ce produit.</p></div>
+  </div>
+</section>
+
+<section id="rotation" data-name="Rotation et suivi" hidden>
+  <p class="lead">Utiliser les produits <b>dans le bon ordre</b>, et savoir à tout moment ce qui est disponible.</p>
+  <p>Un produit périmé ou oublié au fond d’une étagère est une perte directe. Objectif double : les plus anciens ou les plus proches de leur date d’abord ; un enregistrement fiable des mouvements (disponible, en cours d’utilisation, à commander).</p>
+
+  <h2 class="sec">FIFO ou FEFO ? <small>Touchez une méthode</small></h2>
+  <div class="card ink" style="gap:12px">
+    <div id="ff-seg"></div>
+    <div class="g2" id="ff-lots" data-nohide></div>
+    <div class="result ink" id="ff-out"></div>
+  </div>
+
+  <h2 class="sec">Inventaire permanent ou périodique</h2>
+  <div class="g2">
+    <div class="card tint ink"><span class="tag">Permanent</span><h3>À chaque mouvement</h3><p>Entrée (réception) ou sortie (production, vente, perte) enregistrée tout de suite, avec DLC, lot, emplacement.</p><p><b>Atouts</b> : niveaux visibles instantanément, anomalies vite détectées, point de commande facilité.</p><p><b>Limite</b> : une discipline stricte et une équipe formée.</p></div>
+    <div class="card tint min"><span class="tag">Périodique</span><h3>On compte physiquement</h3><p>Chaque semaine, mois ou trimestre, pour comparer le réel au théorique. Un inventaire mensuel révèle pertes non enregistrées, erreurs de saisie, casses.</p><p><b>Atouts</b> : données fiables, problèmes récurrents mis en lumière.</p><p><b>Limite</b> : plus long, parfois un arrêt temporaire de la réception ou de la préparation.</p></div>
+  </div>
+  <div class="card"><h3>Contrôles ciblés</h3><div class="pills"><span>Produits frais à forte rotation : éviter les ruptures</span><span>Articles coûteux : surveiller les pertes</span><span>Allergènes : traçabilité, pas de contamination croisée</span></div><p>Rapides, ils permettent d’agir tout de suite. Quelle que soit la méthode : <b>régularité et rigueur</b>.</p></div>
+  <div class="g3">
+    <div class="card"><span class="tag">Petites structures</span><p>Fiches de stock, tableurs (Excel, Google Sheets), utilisés avec rigueur.</p></div>
+    <div class="card"><span class="tag">Grandes structures</span><p>Logiciels spécialisés : suivi en temps réel, lots et dates, alertes automatiques de commande.</p></div>
+    <div class="card"><span class="tag">Activités mobiles</span><p>Applications mobiles.</p></div>
+  </div>
+  <p>Un outil n’est efficace qu’adapté à l’activité et bien intégré : procédures claires, équipes formées, contrôles réguliers.</p>
+</section>
+
+<section id="couts" data-name="Les coûts" hidden>
+  <p class="lead">Avant de réduire, savoir exactement <b>où part l’argent</b>.</p>
+  <p>Matières premières, main-d’œuvre, énergie, emballages, location d’équipements, marketing : sans classement, l’analyse devient floue. La classification révèle les leviers.</p>
+  <div class="g3">
+    <div class="card tint ink"><span class="tag">Fixes</span><h3>Stables, quel que soit le volume</h3><p>100 repas ou 1 000, mêmes charges sur la période. Risque : les sous-estimer en période creuse ; il faut les payer même si les ventes baissent.</p></div>
+    <div class="card tint glu"><span class="tag">Variables</span><h3>Suivent l’activité</h3><p>Plus on produit, plus elles montent. Elles varient aussi avec les prix du marché (tomates plus chères en hiver).</p></div>
+    <div class="card tint min"><span class="tag">Semi-variables</span><h3>Une base et un surplus</h3><p>Une dépense de base même à faible activité, qui augmente avec la production. Les repérer anticipe l’effet d’une hausse d’activité.</p></div>
+  </div>
+
+  <h2 class="sec">À vous de classer <small>Exemples du cours</small></h2>
+  <div class="card" id="cl" style="gap:8px"></div>
+
+  <h2 class="sec">Directs ou indirects</h2>
+  <div class="g2">
+    <div class="card tint glu"><span class="tag">Directs</span><h3>Rattachés à un produit</h3><p>La farine d’un lot de pains protéinés, le poulet d’un plat précis. Ils servent à calculer la <b>marge</b> d’un produit.</p></div>
+    <div class="card tint ink"><span class="tag">Indirects</span><h3>Nécessaires, mais partagés</h3><p>Nettoyage des locaux, formation du personnel, électricité de l’éclairage. Répartis proportionnellement pour un <b>coût de revient</b> réaliste.</p></div>
+  </div>
+  <div class="note"><span>Pourquoi classer ? Réduire un coût fixe ponctuellement est souvent difficile ; optimiser les coûts variables agit vite sur la marge. Séparer directs et indirects donne le coût de revient unitaire, donc le bon prix de vente.</span></div>
+
+  <h2 class="sec">Exemple : un atelier de plats diététiques</h2>
+  <div class="card glu" style="gap:10px">
+    <div class="stack3 hideable" id="atelier"></div>
+    <div class="stack-leg" id="atelier-leg"></div>
+    <p>Priorité d’optimisation : les <b>matières premières</b>, par la négociation avec les fournisseurs ou la réduction du gaspillage.</p>
+  </div>
+</section>
+
+<section id="budget" data-name="Budget" hidden>
+  <p class="lead">Le budget prévisionnel <b>anticipe</b> les besoins financiers, en général sur un an.</p>
+  <p>Il oriente les décisions, révèle vite les écarts et ajuste l’activité. Indispensable quand les coûts suivent les saisons et que les volumes varient avec la demande.</p>
+  <div class="grid">
+    <div class="card tint ink"><h3>Anticiper les dépenses</h3><p>Matières premières, salaires, charges fixes…</p></div>
+    <div class="card tint ink"><h3>Prévoir les recettes</h3><p>Chiffre d’affaires attendu selon les ventes et le marché.</p></div>
+    <div class="card tint ink"><h3>Mesurer la rentabilité</h3><p>Excédent ou déficit ?</p></div>
+    <div class="card tint ink"><h3>Servir de référence</h3><p>Comparer le réel au prévu pour ajuster.</p></div>
+  </div>
+
+  <h2 class="sec">Cinq étapes</h2>
+  <div class="pipe ink">
+    <div class="stn"><span class="num-step" data-nohide>1</span><h4>Données historiques</h4><p>Ventes, achats, charges, saisons. Un traiteur de repas équilibrés vend 30 % de plus en janvier (« bonnes résolutions ») et 15 % de moins en août.</p></div>
+    <div class="stn"><span class="num-step" data-nohide>2</span><h4>Estimer les dépenses</h4><p>Fixes (loyer, abonnements, salaires permanents), variables (matières, emballages, livraison), exceptionnelles prévues (matériel, travaux).</p></div>
+    <div class="stn"><span class="num-step" data-nohide>3</span><h4>Estimer les recettes</h4><p>Tendances, actions commerciales (promotions, nouveaux produits), marché. Une gamme de snacks protéinés : une projection de ventes en plus.</p></div>
+    <div class="stn key"><span class="num-step" data-nohide>4</span><h4>Résultat prévisionnel</h4><p>Recettes − dépenses. Négatif : réduire des coûts, augmenter les prix ou développer les ventes.</p></div>
+    <div class="stn"><span class="num-step" data-nohide>5</span><h4>Fonds de sécurité</h4><p>5 à 10 % des dépenses totales pour les imprévus (hausse des matières, panne).</p></div>
+  </div>
+
+  <h2 class="sec">Le budget d’un restaurant diététique <small>Modifiez les montants annuels</small></h2>
+  <div class="card ink">
+    <div class="calc">
+      <div class="form" id="bud-form"></div>
+      <div class="result ink" id="bud-out"></div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card good"><h3>Être réaliste</h3><p>Ni trop optimiste sur les recettes, ni trop minimaliste sur les dépenses.</p></div>
+    <div class="card good"><h3>Les saisons</h3><p>Plus de ventes en janvier, mais aussi plus de fruits et légumes frais à acheter.</p></div>
+    <div class="card good"><h3>Mettre à jour</h3><p>Chaque trimestre, ou chaque mois si possible.</p></div>
+    <div class="card good"><h3>Impliquer les équipes</h3><p>Production, achats, ventes : des informations précieuses.</p></div>
+  </div>
+</section>
+
+<section id="suivi" data-name="Suivi et outils" hidden>
+  <p class="lead">Un budget qui reste théorique ne sert à rien : la performance se joue dans le <b>suivi</b> et l’analyse des écarts.</p>
+  <div class="g3">
+    <div class="card tint ink"><h3>Détecter les dérives</h3><p>Un poste qui grimpe (emballages) : agir avant que l’impact ne grossisse.</p></div>
+    <div class="card tint ink"><h3>Ajuster les prévisions</h3><p>Adapter le budget en cours d’année.</p></div>
+    <div class="card tint ink"><h3>Mieux décider</h3><p>Où réduire, où investir.</p></div>
+  </div>
+  <div class="chain ink"><span>Centraliser chaque facture, ticket, relevé (date, catégorie)</span><i>→</i><span>Outil adapté</span><i>→</i><span>Mise à jour au moins chaque semaine</span><i>→</i><span>Analyse des écarts</span></div>
+  <p>Exemple : un restaurateur diététique scanne toutes ses factures d’ingrédients dans un dossier « Matières premières » pour comparer d’un mois sur l’autre.</p>
+
+  <h2 class="sec">Analyser un écart <small>Exemple du cours : matières premières en mars</small></h2>
+  <div class="card glu">
+    <div class="calc">
+      <div class="form">
+        <div class="row2 form">
+          <div class="inp"><label for="ec-p">Budget prévu (€)</label><input type="number" id="ec-p" min="0" step="100" value="4000"></div>
+          <div class="inp"><label for="ec-r">Dépense réelle (€)</label><input type="number" id="ec-r" min="0" step="100" value="4600"></div>
+        </div>
+        <p class="eq" id="ec-eq"></p>
+      </div>
+      <div class="result glu" id="ec-out"></div>
+    </div>
+  </div>
+  <div class="g3">
+    <div class="card bad"><span class="tag">À surveiller</span><h3>Matières premières</h3><p>Souvent <b>30 à 50 %</b> des coûts totaux : leurs prix pèsent sur la rentabilité.</p></div>
+    <div class="card bad"><span class="tag">À surveiller</span><h3>Main-d’œuvre</h3><p>Plannings optimisés, heures supplémentaires imprévues limitées.</p></div>
+    <div class="card bad"><span class="tag">À surveiller</span><h3>Conditionnement et livraison</h3><p>Souvent sous-estimés, ils pèsent lourd sur les marges.</p></div>
+  </div>
+  <div class="note"><span>Toujours mesurer l’écart <b>en pourcentage</b> ; repérer les dépenses récurrentes qui montent petit à petit (frais bancaires, consommables) ; ne pas oublier les petites dépenses, lourdes sur l’année.</span></div>
+
+  <h2 class="sec">Quel outil ? <small>Touchez un outil</small></h2>
+  <div id="out-seg"></div>
+  <div class="card" id="out-out"></div>
+  <div class="card ink" style="gap:10px">
+    <div class="inp"><label for="tr-n">Transactions par mois</label><span class="val" id="tr-n-o" data-nohide></span><input type="range" id="tr-n" min="5" max="300" step="5" value="30"></div>
+    <div id="tr-out"></div>
+  </div>
+
+  <h2 class="sec">Les indicateurs (KPI) <small>Saisissez des montants</small></h2>
+  <div class="card min">
+    <div class="calc">
+      <div class="form">
+        <div class="row2 form">
+          <div class="inp"><label for="k-ca">Chiffre d’affaires (€)</label><input type="number" id="k-ca" min="1" step="1000" value="150000"></div>
+          <div class="inp"><label for="k-cv">Coût des ventes (€)</label><input type="number" id="k-cv" min="0" step="1000" value="45000"></div>
+          <div class="inp"><label for="k-cf">Charges fixes (€)</label><input type="number" id="k-cf" min="0" step="1000" value="78000"></div>
+          <div class="inp"><label for="k-sm">Stock moyen (€)</label><input type="number" id="k-sm" min="1" step="100" value="3000"></div>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted)">Pour l’essai : recettes, matières premières, loyer et salaires du budget du restaurant diététique ; le stock moyen n’est pas donné par le cours. Le cours donne les formules, à vous de changer les montants.</p>
+      </div>
+      <div class="result min" id="k-out"></div>
+    </div>
+  </div>
+  <p><b>Point mort</b> : le niveau de chiffre d’affaires nécessaire pour couvrir toutes les charges. Si la marge brute baisse : hausse des coûts matières ou baisse des prix de vente ; un suivi mensuel permet de réagir (négociation fournisseur, tarifs).</p>
+</section>
+
+<section id="optimiser" data-name="Optimiser" hidden>
+  <p class="lead">Optimiser, ce n’est pas économiser à tout prix : c’est réduire ou mieux répartir <b>sans toucher à la valeur perçue</b>.</p>
+  <p>Un plat moins savoureux, moins frais ou moins bien présenté peut faire perdre un client pour toujours, même s’il a coûté moins cher.</p>
+  <div class="card good-f" style="gap:10px"><span class="tag">Gains cités dans les exemples du cours</span><div id="gain-bars"></div></div>
+  <div class="grid">
+    <div class="card"><h3>Négocier avec les fournisseurs</h3><p>Pas seulement un prix plus bas : prix réduit contre un volume d’achat, délais de paiement plus longs (trésorerie), livraison groupée.</p></div>
+    <div class="card"><h3>Réduire le gaspillage</h3><p>Un double coût : l’achat et la vente perdue. Rotation FIFO ou FEFO, surplus transformés en plats du jour ou promotions « anti-gaspi », commandes ajustées à la saison et à la demande.</p></div>
+    <div class="card"><h3>Améliorer la productivité</h3><p>Pas « payer moins », mais mieux utiliser le temps : procédures claires, postes bien agencés, équipes formées.</p></div>
+    <div class="card"><h3>Les services externes</h3><p>Comparer les assurances, négocier la maintenance, mieux régler les chambres froides ou remplacer des appareils énergivores.</p></div>
+    <div class="card"><h3>Automatiser</h3><p>Commandes fournisseurs, rapports financiers à partir de la caisse, rappels de paiement : du temps libéré, moins d’erreurs, des informations plus fiables.</p></div>
+    <div class="card"><h3>Surveiller les KPI chaque mois</h3><p>Coût matière en % du chiffre d’affaires (idéalement <b>25 à 35 %</b> selon le secteur), coût de main-d’œuvre en % du CA, marge brute et nette par produit.</p></div>
+  </div>
+</section>
+
+<section id="tresorerie" data-name="Trésorerie" hidden>
+  <p class="lead">Aucune entreprise n’est à l’abri d’un imprévu : <b>panne</b>, hausse d’un ingrédient, client qui paie en retard, demande qui chute.</p>
+  <div class="g2">
+    <div class="card good"><span class="tag">Résultat</span><h3>Bénéfice annuel de 20 000 €</h3><p>Sur le papier, le traiteur est rentable.</p></div>
+    <div class="card bad"><span class="tag">Trésorerie</span><h3>Crise en novembre</h3><p>Plusieurs gros clients ne paient qu’en janvier : le compte est à sec. Ne pas confondre bénéfice et trésorerie.</p></div>
+  </div>
+
+  <p>Un résultat positif sur le papier peut cohabiter avec un compte bancaire à sec, si les clients paient trop tard ou si les dépenses se concentrent à un moment donné. D’où l’intérêt de préparer ces situations avant qu’elles n’arrivent, avec une trésorerie solide.</p>
+
+  <h2 class="sec">Le fonds de réserve <small>2 à 3 mois de charges fixes</small></h2>
+  <div class="card good-f">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="fr-cf">Charges fixes par mois</label><span class="val" id="fr-cf-o" data-nohide></span><input type="range" id="fr-cf" min="1000" max="30000" step="500" value="6500"></div>
+        <p style="font-size:.85rem;color:var(--muted)">Loyer, salaires, factures : ce qu’il faut continuer à payer en cas de baisse d’activité.</p>
+      </div>
+      <div class="result good-f" id="fr-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec">Piloter au jour le jour</h2>
+  <div class="g3">
+    <div class="card tint ink"><h3>Un tableau de trésorerie</h3><p>Entrées et sorties prévues, périodes à risque (solde bas ou négatif), décisions préventives (achat reporté, relance client). Deux semaines avant Pâques, un restaurateur voit ses sorties dépasser ses entrées : il demande un acompte pour les commandes spéciales.</p></div>
+    <div class="card tint ink"><h3>Lisser les saisons</h3><p>Épargner une part des gains des périodes fortes (fêtes, événements sportifs, rentrée), réduire achats et production en période creuse, diversifier l’offre hors saison.</p></div>
+    <div class="card tint ink"><h3>Réagir vite</h3><p>Reporter les achats non urgents, renégocier un délai fournisseur, lancer une action commerciale (offre spéciale, nouveau produit). Huile d’olive soudain plus chère : des plats avec d’autres matières grasses de qualité, moins coûteuses.</p></div>
+  </div>
+  <div class="note"><span>Connaître <b>à l’avance</b> les solutions de financement d’urgence : découvert autorisé, crédit court terme, aides ou subventions du secteur. Pour ne pas accepter, dans l’urgence, des conditions défavorables.</span></div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js?v=20261030a"></script>
+<script src="contraintes-structure.js?v=20261030a"></script>
+</body>
+</html>

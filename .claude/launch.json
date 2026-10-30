@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "python",
+      "runtimeExecutable": "python3",
       "runtimeArgs": [".claude/serveur.py"],
       "port": 8123
     }
