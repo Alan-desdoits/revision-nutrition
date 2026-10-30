@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mémo des valeurs · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du Mémo des valeurs nutritionnelles : tous les groupes d’aliments, pour 100 g.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css?v=20261030b">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Les groupes d’aliments</span>
+        <h1 style="--hl:var(--glu-m)">Mémo des <em>valeurs</em></h1>
+        <p class="sub">Les valeurs nutritionnelles de tous les aliments de la formation, pour 100 g, avec leur analyse. Un mémo de référence à consulter à tout moment.</p>
+      </div>
+      <div class="legend"><span class="sug">Sucrés</span><span class="lip">Matières grasses</span><span class="lai">Laitiers</span><span class="fl">Fruits et légumes</span><span class="glu">Céréales</span><span class="pro">Légumineuses, VPO</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="comparer" data-name="Comparer">
+  <p class="lead">Tous les aliments du mémo sur <b>la même échelle</b> : choisissez un nutriment, un groupe, puis un aliment.</p>
+  <p>Sept groupes : produits sucrés, matières grasses, produits laitiers, fruits et légumes, produits céréaliers, légumineuses et tubercules, viandes, œufs et poissons. Toutes les valeurs sont pour <b>100 g</b> d’aliment ; un tiret ou une absence signifie que le mémo ne donne pas la valeur.</p>
+  <div class="card ink" style="gap:12px">
+    <div class="inp"><span class="tag">Nutriment</span><div id="cmp-nut"></div></div>
+    <div class="inp"><span class="tag">Groupe</span><div id="cmp-grp"></div></div>
+    <p class="hint">Touchez une barre pour voir l’aliment en détail.</p>
+    <div id="cmp-bars"></div>
+  </div>
+  <div class="card ink"><div class="inp"><label for="cmp-q">Quantité de l’aliment choisi</label><span class="val" id="cmp-q-o" data-nohide></span><input type="range" id="cmp-q" min="10" max="300" step="10" value="100"></div></div>
+  <div class="card" id="cmp-detail" style="gap:12px"></div>
+</section>
+
+<section id="sucres" data-name="Produits sucrés" hidden>
+  <p class="lead">Sucres, confitures, miel, chocolat, biscuits : beaucoup de <b>glucides simples</b>, une forte densité énergétique.</p>
+  <div id="sucres-chips"></div>
+  <div class="panel empty" id="sucres-panel">Choisissez un aliment.</div>
+</section>
+
+<section id="mg" data-name="Matières grasses" hidden>
+  <p class="lead">Crème, beurre, huiles, margarines : des <b>lipides</b> dont la qualité change tout.</p>
+  <div id="mg-chips"></div>
+  <div class="panel empty" id="mg-panel">Choisissez un aliment.</div>
+  <h2 class="sec">Les huiles végétales <small>% des acides gras, touchez un acide gras</small></h2>
+  <div class="card lip" id="huiles" style="gap:12px"></div>
+  <h2 class="sec">Les margarines <small>pour 100 g, touchez une colonne</small></h2>
+  <div class="card lip" id="marg" style="gap:12px"></div>
+</section>
+
+<section id="laitiers" data-name="Produits laitiers" hidden>
+  <p class="lead">Lait, fromages, yaourts, crèmes desserts : <b>calcium</b> et protéines de très bonne qualité.</p>
+  <div id="lai-chips"></div>
+  <div class="panel empty" id="lai-panel">Choisissez un aliment.</div>
+  <h2 class="sec">Les fromages comparés</h2>
+  <div class="card lai" id="from" style="gap:12px"></div>
+  <h2 class="sec">Les yaourts <small>CIQUAL, Anses</small></h2>
+  <div class="card lai" id="yaourts" style="gap:12px"></div>
+  <h2 class="sec">Les crèmes desserts</h2>
+  <div class="card lai" id="cremes" style="gap:12px"></div>
+</section>
+
+<section id="fl" data-name="Fruits et légumes" hidden>
+  <p class="lead">Frais, secs ou amylacés : de l’<b>eau</b> et des fibres d’un côté, du sucre concentré de l’autre.</p>
+  <div id="fl-chips"></div>
+  <div class="panel empty" id="fl-panel">Choisissez un aliment.</div>
+  <h2 class="sec">Les fruits secs <small>pour 100 g de partie comestible</small></h2>
+  <div class="card fl" id="secs" style="gap:12px"></div>
+</section>
+
+<section id="cereales" data-name="Produits céréaliers" hidden>
+  <p class="lead">Semoule, pâtes, farines, riz, maïs, avoine, seigle, quinoa, pains : des <b>glucides complexes</b> et des protéines végétales.</p>
+  <div id="cer-chips"></div>
+  <div class="panel empty" id="cer-panel">Choisissez un aliment.</div>
+  <h2 class="sec">Les types de farine <small>Touchez un type</small></h2>
+  <div class="card glu" style="gap:12px">
+    <div id="far-seg"></div>
+    <div class="g2">
+      <div><span class="tag">Taux d’extraction et de blutage</span><div class="stack3 hideable" id="far-stack" style="margin-top:6px"></div><div class="stack-leg" id="far-leg" style="margin-top:6px"></div></div>
+      <div id="far-out"></div>
+    </div>
+    <div class="tbl"><table id="far-tbl"></table></div>
+    <p style="font-size:.85rem;color:var(--muted)">Valeur moyenne puis fourchette entre crochets, comme dans le mémo.</p>
+  </div>
+  <h2 class="sec">Farine blanche T45 ou complète T150 ?</h2>
+  <div class="card glu" id="t45" style="gap:12px"></div>
+  <h2 class="sec">Les riz <small>pour 100 g cru, puis cuit</small></h2>
+  <div class="card glu" id="riz" style="gap:12px"></div>
+  <h2 class="sec">Le pain grillé <small>CIQUAL 2020</small></h2>
+  <div class="card glu" id="grille" style="gap:12px"></div>
+</section>
+
+<section id="legumineuses" data-name="Légumineuses et tubercules" hidden>
+  <p class="lead">Les légumineuses : <b>protéines</b>, fibres et minéraux. Les tubercules : de l’eau et de l’amidon.</p>
+  <h2 class="sec" style="margin-top:0">Les légumineuses <small>pour 100 g, touchez un nutriment</small></h2>
+  <div class="card pro" id="leg" style="gap:12px"></div>
+  <h2 class="sec">Ce qu’apporte une portion <small>Analyse du mémo, sur la moyenne</small></h2>
+  <div class="tbl pro"><table><thead><tr><th>Nutriment</th><th>Moyenne</th><th>Couverture des recommandations avec une portion</th></tr></thead><tbody>
+    <tr><th>Eau</th><td class="n">15 g</td><td>Pauvreté</td></tr>
+    <tr><th>Protéines</th><td class="n">20 g</td><td>Richesse</td></tr>
+    <tr><th>Lipides</th><td class="n">1,5 g</td><td>Négligeable</td></tr>
+    <tr><th>Glucides</th><td class="n">50 g</td><td>Source élevée</td></tr>
+    <tr><th>Dont amidon</th><td class="n">45 g</td><td>Richesse</td></tr>
+    <tr><th>Fibres</th><td class="n">15 g</td><td>Grande richesse</td></tr>
+    <tr><th>Énergie</th><td class="n">1 200 kJ · 300 kcal</td><td>Assez énergétique</td></tr>
+    <tr><th>Calcium</th><td class="n">80 mg</td><td>Petite source</td></tr>
+    <tr><th>Phosphore</th><td class="n">400 mg</td><td>Richesse</td></tr>
+    <tr><th>Fer</th><td class="n">6,5 mg</td><td>35 % pour les femmes aux pertes menstruelles faibles ou normales ; 25 % pour les pertes élevées</td></tr>
+    <tr><th>Magnésium</th><td class="n">125 mg</td><td>20 % : source élevée</td></tr>
+    <tr><th>Sodium</th><td class="n">20 mg</td><td>Pauvreté</td></tr>
+    <tr><th>Potassium</th><td class="n">1 000 mg</td><td>Grande richesse</td></tr>
+    <tr><th>Zinc</th><td class="n">3 mg</td><td>15 % : source</td></tr>
+    <tr><th>Cuivre</th><td class="n">0,7 mg</td><td>35 % : richesse</td></tr>
+    <tr><th>Vitamine B1</th><td class="n">0,6 mg</td><td>25 % : source élevée</td></tr>
+    <tr><th>Vitamine B9</th><td class="n">250 µg</td><td>45 % : richesse</td></tr>
+  </tbody></table></div>
+  <h2 class="sec">Les tubercules</h2>
+  <div id="tub-chips"></div>
+  <div class="panel empty" id="tub-panel">Choisissez un tubercule.</div>
+</section>
+
+<section id="vpo" data-name="Viandes, œufs, poissons" hidden>
+  <p class="lead">Volailles, gibier, poissons, mollusques, crustacés, œufs : des <b>protéines animales</b>.</p>
+  <div id="vpo-chips"></div>
+  <div class="panel empty" id="vpo-panel">Choisissez un aliment.</div>
+  <h2 class="sec">Les lipides du poulet cru <small>selon le morceau</small></h2>
+  <div class="card pro"><div id="poulet-bars"></div></div>
+  <h2 class="sec">Les poissons selon leurs lipides <small>Touchez une catégorie</small></h2>
+  <div class="card eau" style="gap:12px">
+    <div id="pois-seg"></div>
+    <div class="result eau" id="pois-out"></div>
+  </div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js?v=20261030b"></script>
+<script src="memo-valeurs.js?v=20261030b"></script>
+</body>
+</html>

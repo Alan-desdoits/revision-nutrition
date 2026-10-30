@@ -23,6 +23,7 @@ Mis à jour à chaque passe d'intégration. Un document passe dans `documents/fi
 | Panorama de la restauration collective et des publics.docx | [restauration-collective](../cours/restauration-collective.html) | Intégré | Complète (texte et images) | [restauration-collective.md](restauration-collective.md) | 2026-10-30 |
 | Identification des références nutritionnelles pour les collectivités.docx | [references-collectivites](../cours/references-collectivites.html) | Intégré | Complète (texte et images) | [references-collectivites.md](references-collectivites.md) | 2026-10-30 |
 | Analyse des contraintes et caractéristiques d.docx | [contraintes-structure](../cours/contraintes-structure.html) | Intégré | Complète (texte et images) | [contraintes-structure.md](contraintes-structure.md) | 2026-10-30 |
+| Mémo valeurs nutritionnelles.pdf | [memo-valeurs](../cours/memo-valeurs.html) | Intégré | Complète (46 pages de tableaux) | [memo-valeurs.md](memo-valeurs.md) | 2026-10-30 |
 | Micronutriments - fiches visuelles (ancienne version).html | (remplacée par la page Micronutriments) | Archivé | Ancienne page, conservée pour mémoire | – | 2026-10-15 |
 
 ## Écarts entre les cours
@@ -52,6 +53,11 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 | Part d'eau dans le corps | 50 à 60 % de la masse corporelle · ≈ 60 % du poids | Boissons · Déterminants |
 | Énergie de l'adulte | Femme 1 800 / 2 000 / 2 200 kcal, homme 2 100 / 2 700 / 3 000 / 3 500 kcal selon l'activité (repères collectifs : femmes 2 000–2 200, hommes 2 500–2 700) · femme 1 800 à 2 200, homme 2 200 à 2 700 kcal | Références collectives · Recueil et analyse |
 | Eau des 11–14 ans | 2 000 à 2 200 mL au total, 1 400 à 1 800 mL de boissons · 1,5 à 2 L dont au moins 700 mL de boissons | Références collectives : tableau · étude de cas du même cours |
+| Énergie de la confiture | ≈ 250 kcal · 400 kcal (et 1 060 kJ, incohérent) pour 100 g | Produits sucrés · Mémo des valeurs |
+| Calamar | 61,1 g d’eau, 32,5 g de protéines, 149 kcal · cru : 81 g, 14,5 g, 77 kcal | Viandes, œufs et poissons · Mémo des valeurs |
+| Crevette cuite | 74,9 g d’eau, 20,5 g de protéines, 0,2 g de glucides, 91,3 kcal · 74 g, 19,7 g, 3,2 g, 99 kcal | Viandes, œufs et poissons · Mémo des valeurs |
+| Riz blanc cuit | 130 kcal · 145 kcal (et 110 à 130 kcal selon la variété) pour 100 g | Féculents · Mémo des valeurs |
+| Farine blanche | Eau 15 g, 1 400 kJ, 330 kcal · eau 11 g, 1 510 kJ, 356 kcal (T45) | Mémo des valeurs (deux tableaux du même document) |
 
 ## Légende des statuts
 
