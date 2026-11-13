@@ -19,11 +19,17 @@ Mis à jour à chaque passe d'intégration. Un document passe dans `documents/fi
 | Accompagner les publics aux besoins spécifiques .docx | [publics-specifiques](../cours/publics-specifiques.html) | Intégré | Complète (texte et images) | [publics-specifiques.md](publics-specifiques.md) | 2026-10-15 |
 | Identification des profils hors périmètre et orientation.docx | [hors-perimetre](../cours/hors-perimetre.html) | Intégré | Complète (texte et images) | [hors-perimetre.md](hors-perimetre.md) | 2026-10-15 |
 | Les boissons.docx | [boissons](../cours/boissons.html) | Intégré | Complète (texte et images) | [boissons.md](boissons.md) | 2026-10-30 |
-| Étiquetage et repères alimentaires.docx | [etiquetage](../cours/etiquetage.html) | Intégré | Complète (texte et images) | [etiquetage.md](etiquetage.md) | 2026-10-30 |
+| Étiquetage et repères alimentaires.docx | [etiquetage](../cours/etiquetage.html) | Intégré | Complète (texte et images) ; version redéposée identique | [etiquetage.md](etiquetage.md) | 2026-11-13 |
 | Panorama de la restauration collective et des publics.docx | [restauration-collective](../cours/restauration-collective.html) | Intégré | Complète (texte et images) | [restauration-collective.md](restauration-collective.md) | 2026-10-30 |
-| Identification des références nutritionnelles pour les collectivités.docx | [references-collectivites](../cours/references-collectivites.html) | Intégré | Complète (texte et images) | [references-collectivites.md](references-collectivites.md) | 2026-10-30 |
+| Identification des références nutritionnelles pour les collectivités.docx | [references-collectivites](../cours/references-collectivites.html) | Intégré | Complète (texte et images) ; version redéposée, coquilles corrigées | [references-collectivites.md](references-collectivites.md) | 2026-11-13 |
 | Analyse des contraintes et caractéristiques d.docx | [contraintes-structure](../cours/contraintes-structure.html) | Intégré | Complète (texte et images) | [contraintes-structure.md](contraintes-structure.md) | 2026-10-30 |
 | Mémo valeurs nutritionnelles.pdf | [memo-valeurs](../cours/memo-valeurs.html) | Intégré | Complète (46 pages de tableaux) | [memo-valeurs.md](memo-valeurs.md) | 2026-10-30 |
+| Élaboration de plans alimentaires et de menus pour la restauration collective.docx | [menus-collectivite](../cours/menus-collectivite.html) | Intégré | Complète (texte et images) | [menus-collectivite.md](menus-collectivite.md) | 2026-11-13 |
+| Démarche HACCP appliquée à la restauration collective.docx | [haccp](../cours/haccp.html) | Intégré | Complète (texte et images) | [haccp.md](haccp.md) | 2026-11-13 |
+| Démarche qualité et organisation de la sécurité sanitaire en restauration collective.docx | [demarche-qualite](../cours/demarche-qualite.html) | Intégré | Complète (texte et images) | [demarche-qualite.md](demarche-qualite.md) | 2026-11-13 |
+| Sécurité sanitaire et TIAC.docx | [tiac](../cours/tiac.html) | Intégré | Complète (texte et images) | [tiac.md](tiac.md) | 2026-11-13 |
+| Les procédés de conservation des aliments.docx | [conservation](../cours/conservation.html) | Intégré | Complète (texte et images) | [conservation.md](conservation.md) | 2026-11-13 |
+| Toxicologie - comprendre et prévenir les risques chimiques.docx | [toxicologie](../cours/toxicologie.html) | Intégré | Complète (texte et images) | [toxicologie.md](toxicologie.md) | 2026-11-13 |
 | Micronutriments - fiches visuelles (ancienne version).html | (remplacée par la page Micronutriments) | Archivé | Ancienne page, conservée pour mémoire | – | 2026-10-15 |
 
 ## Écarts entre les cours
@@ -39,9 +45,9 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 | Beurre demi-sel / salé | 0,8–3 % / > 3 % · 1,5–2 % / > 2 % | Matières grasses · Produits laitiers |
 | Énergie du beurre | 750 kcal · 720 kcal pour 100 g | Matières grasses · Produits laitiers |
 | Absorption du fer | héminique 15–35 %, non héminique 2–10 % · 20–30 % et 5–10 % | Micronutriments (deux passages du même cours) |
-| Date de lancement du PNNS | 2001 · « 2021 » (probable coquille) | Déterminants · Composition des repas |
+| Date de lancement du PNNS | 2001 · « 2021 » (probable coquille) | Déterminants, Menus en collectivité · Composition des repas |
 | Classes d'IMC | Texte : « < 16,5 insuffisance pondérale » puis « 18,5 à 24,99 normal » · schéma du même cours : « maigreur < 18,5 ». Le calculateur affiche les deux | Hors périmètre |
-| Poisson par semaine | Au moins 2 fois dont 1 gras · 1 à 2 fois (poisson et fruits de mer) · poisson gras 1 à 2 fois | Viandes, œufs et poissons, Déterminants, Références collectives · Composition des repas · Micronutriments |
+| Poisson par semaine | Au moins 2 fois dont 1 gras · 1 à 2 fois (poisson et fruits de mer) · poisson gras 1 à 2 fois | Viandes, œufs et poissons, Déterminants, Références collectives, Menus en collectivité · Composition des repas · Micronutriments |
 | Viande rouge | 1 à 2 fois par semaine maximum · 300 g maximum par semaine (unités différentes) | Viandes, œufs et poissons · Composition des repas |
 | Portions de féculents | 4 à 6 par jour (environ la moitié de l’AET) · 3 à 5 portions (pyramide en portions) | Féculents · Composition des repas |
 | Protéines des céréales | 8 à 15 % (riz 7–8, maïs 9–10, blé 11–13, avoine jusqu’à 14) · 7 à 14 g/100 g crus | Féculents · Macronutriments |
@@ -58,6 +64,9 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 | Crevette cuite | 74,9 g d’eau, 20,5 g de protéines, 0,2 g de glucides, 91,3 kcal · 74 g, 19,7 g, 3,2 g, 99 kcal | Viandes, œufs et poissons · Mémo des valeurs |
 | Riz blanc cuit | 130 kcal · 145 kcal (et 110 à 130 kcal selon la variété) pour 100 g | Féculents · Mémo des valeurs |
 | Farine blanche | Eau 15 g, 1 400 kJ, 330 kcal · eau 11 g, 1 510 kJ, 356 kcal (T45) | Mémo des valeurs (deux tableaux du même document) |
+| Température de réfrigération | +1 à +5 °C · 0 à 4 °C (denrées périssables) · 0 à +4 °C (zone réfrigérée) · réfrigérateur à +4 °C, étagères 0 à 4, 4 à 6 et 6 à 10 °C · préparations maison ≤ 3 °C, steak haché et poisson frais ≤ 2 °C | Conservation · TIAC · Contraintes d’une structure · Conservation (schéma du réfrigérateur) · HACCP |
+| EGAlim 50 % de produits durables dont 20 % bio | Restauration collective publique · publique depuis 2022, privée depuis 2024 | Menus en collectivité · Panorama de la restauration collective |
+| Plan hebdomadaire de l’étude de cas | 2 viandes blanches, 1 poisson, 1 légumineuses ou œufs, 1 viande rouge · menu proposé : 1 viande blanche, 2 légumineuses ou œufs | Menus en collectivité (même document) |
 
 ## Légende des statuts
 

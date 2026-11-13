@@ -163,6 +163,7 @@ h2.sec small{font-family:var(--f-b);font-weight:400;font-size:.9rem;color:var(--
 /* ---------- Parcours en étapes ---------- */
 .pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
 .pipe.p4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pipe.p3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .stn{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;position:relative;min-width:0}
 .stn:not(:last-child)::after{content:"";position:absolute;right:-9px;top:26px;width:8px;height:8px;border-top:2px solid var(--c);border-right:2px solid var(--c);transform:rotate(45deg);z-index:1}
 .stn.key{background:var(--s);border-color:var(--m)}
@@ -382,7 +383,7 @@ a.course:hover{border-color:var(--fg);transform:translateY(-2px);box-shadow:0 14
    Tablette (iPad portrait et paysage) : 601–1024px
    ========================================================================== */
 @media (max-width:1024px){
-  .pipe,.pipe.p4{grid-template-columns:1fr}
+  .pipe,.pipe.p4,.pipe.p3{grid-template-columns:1fr}
   .stn{display:grid;grid-template-columns:150px minmax(0,1fr);column-gap:16px;row-gap:6px}
   .stn > .num-step,.stn > h4,.stn > .badge{grid-column:1}
   .stn > .enz,.stn > p,.stn > .out{grid-column:2}

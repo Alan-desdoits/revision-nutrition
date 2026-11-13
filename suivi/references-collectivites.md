@@ -37,3 +37,7 @@
 - **Valeurs à vérifier** (images 2 et 4) : soja 38 g et sarrasin 12 g de protéines rangés dans « cuits » (plus proches de valeurs sèches) ; pâtes cuites 42 g de glucides nets contre 29 g pour le riz blanc cuit (le cours Féculents donne 130 à 150 kcal pour 100 g de pâtes cuites). Reprises sans correction.
 - Les abréviations des images ont été développées : C. d’Alaska = colin d’Alaska, E. = escalope, C. de porc = côte de porc, S. haché = steak haché, V. grisons = viande des Grisons, F. poulet = filet de poulet, Haricot B./N./R. = blanc, noir, rouge.
 - Les « glucides nets » ne sont pas définis dans le cours.
+
+## Nouvelle version déposée le 2026-11-13
+
+Le document a été redéposé avec des coquilles corrigées (« certaine », « il ne s’agit », « d’après », phrase « planification alimentaire en collectivité » remise à sa place, « En restauration collective »). Images et chiffres identiques : rien à changer sur la page, qui ne reprenait pas ces coquilles. Le fichier de `documents/finis/` a été remplacé par cette version.

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sécurité sanitaire et TIAC · Révisions nutrition</title>
+<meta name="description" content="Fiches visuelles du cours Sécurité sanitaire et TIAC : prévention et gestion professionnelle.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css?v=20261113a">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Sécurité sanitaire</span>
+        <h1 style="--hl:var(--bad-s)">Sécurité sanitaire et <em>TIAC</em></h1>
+        <p class="sub">Les toxi-infections alimentaires collectives : agents, symptômes, chiffres, prévention et conduite à tenir.</p>
+      </div>
+      <div class="legend"><span class="bad-f">Danger</span><span class="eau">Froid</span><span class="glu">Chaud</span><span class="good-f">Bon réflexe</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="definition" data-name="Définition">
+  <p class="lead">Une <b>TIAC</b> : des troubles similaires chez <b>au moins deux personnes</b> après la consommation d’un même aliment.</p>
+  <p>Chaque année, de nombreuses personnes sont victimes d’aliments contaminés. Souvent légères, ces intoxications peuvent être graves pour les plus vulnérables : jeunes enfants, femmes enceintes, personnes âgées. Elles rappellent l’importance de l’hygiène et de la qualité à chaque étape, de la production à la consommation. En cause : un agent pathogène dans la nourriture (bactérie, virus, parasite ou toxine).</p>
+  <div class="card tint bad-f" style="flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap"><div class="big bad-f">≥ 2 <small>personnes</small></div><p style="flex:1;min-width:200px">Toxi-Infection Alimentaire Collective : c’est la dimension <b>collective</b> qui la distingue d’une intoxication isolée.</p></div>
+
+  <h2 class="sec">Quatre critères</h2>
+  <div class="grid">
+    <div class="card"><h3>Collective</h3><p>Plusieurs personnes ayant partagé un repas ou un lot de denrées.</p></div>
+    <div class="card"><h3>Des symptômes surtout digestifs</h3><p>Nausées, vomissements, diarrhées, douleurs abdominales, parfois fièvre. Intensité selon la dose, la sensibilité et l’agent.</p></div>
+    <div class="card"><h3>Un délai d’apparition</h3><p>En général dans les heures qui suivent ; plus ou moins long selon le micro-organisme ou la toxine.</p></div>
+    <div class="card"><h3>Une origine alimentaire commune</h3><p>Le lien entre les malades et un aliment partagé : le critère essentiel.</p></div>
+  </div>
+  <p>Ces critères distinguent une TIAC d’une infection individuelle et servent de base à l’enquête.</p>
+</section>
+
+<section id="agents" data-name="Les agents" hidden>
+  <p class="lead">Quatre agents font la <b>majorité</b> des TIAC en France.</p>
+  <div id="ag-chips"></div>
+  <div class="panel empty" id="ag-panel">Choisissez un agent.</div>
+
+  <h2 class="sec">Délai d’apparition des symptômes <small>Quand le cours le chiffre</small></h2>
+  <div class="card bad-f"><div id="ag-bars"></div><p style="font-size:.85rem;color:var(--muted)">Salmonella et Bacillus cereus : pas de délai chiffré dans le cours (forme émétique de B. cereus « rapide », forme diarrhéique « plusieurs heures après »).</p></div>
+
+  <h2 class="sec">Mener l’enquête <small>Quel agent suspecter ?</small></h2>
+  <div class="card bad-f">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="en-al">Aliment partagé</label><select id="en-al"></select></div>
+        <div class="inp"><label for="en-sy">Symptôme dominant</label><select id="en-sy"></select></div>
+      </div>
+      <div class="result bad-f" id="en-out"></div>
+    </div>
+  </div>
+  <p>Leur présence rappelle l’importance de la chaîne du froid et du chaud, de l’hygiène des manipulations et d’une cuisson adaptée.</p>
+</section>
+
+<section id="symptomes" data-name="Symptômes et chiffres" hidden>
+  <p class="lead">Surtout des <b>troubles digestifs</b>, d’intensité variable selon l’agent, la quantité consommée et la vulnérabilité.</p>
+  <div class="g2">
+    <div class="card tint bad-f"><h3>Les plus courants</h3><ul><li><b>Diarrhées</b> : souvent abondantes, le signe principal.</li><li><b>Vomissements et nausées</b> : parfois très rapides, ils traduisent la présence de toxines.</li><li><b>Douleurs abdominales</b> : crampes ou coliques.</li><li><b>Fièvre</b> : variable, signe d’une réaction inflammatoire.</li></ul></div>
+    <div class="card"><h3>Parfois associés</h3><ul><li>Maux de tête</li><li>Frissons</li><li>Éruptions cutanées, comme l’urticaire</li></ul></div>
+  </div>
+  <h2 class="sec">Les formes sévères</h2>
+  <p>La plupart guérissent en quelques jours ; certaines exigent une prise en charge médicale urgente.</p>
+  <div class="g3">
+    <div class="card bad"><h3>Déshydratation sévère</h3><p>Pertes d’eau et de sels minéraux, surtout chez les jeunes enfants et les personnes âgées.</p></div>
+    <div class="card bad"><h3>Atteintes systémiques</h3><p>Certaines bactéries (Salmonella) franchissent la barrière intestinale : septicémie.</p></div>
+    <div class="card bad"><h3>Complications neurologiques</h3><p>Plus rares, dues à des toxines spécifiques (Clostridium botulinum).</p></div>
+  </div>
+  <div class="note"><span>La sévérité dépend de l’<b>état de santé</b> (immunodépression, grossesse, grand âge), de la <b>nature et la dose</b> de l’agent, et de la <b>rapidité</b> de la prise en charge.</span></div>
+
+  <h2 class="sec">Les chiffres en France <small>Déclaration obligatoire</small></h2>
+  <p>Surveillance assurée par Santé publique France, avec les Agences régionales de santé (ARS) et le Centre national de référence des salmonelles : recenser les cas, identifier les agents, comprendre la contamination, renforcer la prévention.</p>
+  <div class="grid">
+    <div class="card tint bad-f"><span class="tag">Épisodes par an</span><div class="big bad-f">1 200–1 800</div></div>
+    <div class="card tint bad-f"><span class="tag">Personnes touchées par an</span><div class="big bad-f">10 000–16 000</div></div>
+    <div class="card tint bad-f"><span class="tag">Hospitalisées ou aux urgences</span><div class="big bad-f">≈ 6 %</div></div>
+    <div class="card tint good-f"><span class="tag">2020 par rapport à 2019</span><div class="big good-f">≈ −43 %</div><p>Distanciation sociale, restauration collective fermée, habitudes changées pendant la Covid-19.</p></div>
+  </div>
+  <div class="card bad-f">
+    <div class="calc">
+      <div class="form"><div class="inp"><label for="ch-n">Personnes touchées dans l’année</label><span class="val" id="ch-n-o" data-nohide></span><input type="range" id="ch-n" min="10000" max="16000" step="500" value="10000"></div></div>
+      <div class="result bad-f" id="ch-out"></div>
+    </div>
+  </div>
+  <p>Salmonella reste le plus fréquent, puis Staphylococcus aureus, Clostridium perfringens et Bacillus cereus.</p>
+</section>
+
+<section id="prevenir" data-name="Prévenir" hidden>
+  <p class="lead">La sécurité des aliments dépend de <b>toute la filière</b> : chaque maillon applique des règles strictes.</p>
+  <div class="pipe p4 bad-f">
+    <div class="stn"><span class="num-step" data-nohide>1</span><h4>Production primaire</h4><p>Germes de l’environnement (eau, sol, aliments des animaux) dans les matières premières.</p></div>
+    <div class="stn"><span class="num-step" data-nohide>2</span><h4>Transformation</h4><p>Découpe des viandes, charcuterie, pasteurisation : risquées si mal maîtrisées.</p></div>
+    <div class="stn"><span class="num-step" data-nohide>3</span><h4>Distribution</h4><p>Transport, stockage, mise en rayon : rupture de température ou mauvaise manipulation.</p></div>
+    <div class="stn key"><span class="num-step" data-nohide>4</span><h4>Préparation finale</h4><p>Manipulation, cuisson, conservation, contaminations croisées (cru et cuit), en cuisine professionnelle comme à domicile.</p></div>
+  </div>
+
+  <h2 class="sec">Le thermomètre des bons réflexes <small>Réglez une température</small></h2>
+  <div class="card">
+    <div class="calc">
+      <div class="form">
+        <div class="inp"><label for="th-t">Température de l’aliment</label><span class="val" id="th-t-o" data-nohide></span><input type="range" id="th-t" min="-5" max="90" step="1" value="3"></div>
+        <svg id="th-svg" viewBox="0 0 320 64" aria-hidden="true" style="width:100%;height:auto"></svg>
+      </div>
+      <div class="result" id="th-out"></div>
+    </div>
+  </div>
+
+  <h2 class="sec">Les règles d’hygiène et de conservation</h2>
+  <div class="grid">
+    <div class="card good"><h3>Personnes et matériel</h3><p>Lavage fréquent des mains (avant de manipuler, après les toilettes, après les produits bruts). Surfaces, ustensiles, équipements nettoyés et désinfectés. Vêtements de protection propres (blouse, charlotte, gants si besoin).</p></div>
+    <div class="card good"><h3>Cuisson et réchauffe</h3><p>Cuisson « à cœur » des viandes, poissons, œufs, viande hachée. Réchauffer au moins à +74 °C à cœur.</p></div>
+    <div class="card good"><h3>Dates</h3><p>DLC strictement respectée : au-delà, aliment potentiellement dangereux. La DDM concerne la qualité (goût, texture), pas la sécurité.</p></div>
+    <div class="card good"><h3>Contaminations croisées</h3><p>Séparer cru et cuit au stockage et à la préparation (planches, ustensiles distincts). Emballer et protéger les denrées.</p></div>
+  </div>
+
+  <h2 class="sec">Les publics sensibles <small>Touchez un public</small></h2>
+  <div id="pub-seg"></div>
+  <div class="card tint bad-f" id="pub-out"></div>
+</section>
+
+<section id="gerer" data-name="En cas de TIAC" hidden>
+  <p class="lead">Quand une TIAC est suspectée, une <b>procédure</b> protège la santé publique et remonte à l’origine.</p>
+  <div class="pipe p3 bad-f">
+    <div class="stn key"><span class="num-step" data-nohide>1</span><h4>Alerter</h4><p>Signalement <b>obligatoire</b> au médecin inspecteur de l’Agence régionale de santé (ARS) ou au service de sécurité sanitaire de l’alimentation. Par un médecin qui a posé le diagnostic, un responsable d’établissement de restauration collective ou un particulier.</p></div>
+    <div class="stn"><span class="num-step" data-nohide>2</span><h4>Conserver des échantillons</h4><p>Tout aliment ou plat que les malades ont pu consommer, les <b>plats témoins</b> en restauration collective, les étiquetages et emballages. Des prélèvements biologiques (selles, vomissements) confirment l’agent.</p></div>
+    <div class="stn"><span class="num-step" data-nohide>3</span><h4>Rassembler les informations</h4><p>Nombre de convives, malades et non malades, symptômes, dates d’apparition, composition des repas, personnel de cuisine présent : la base de l’enquête épidémiologique.</p></div>
+  </div>
+
+  <h2 class="sec">Ce que permet la procédure</h2>
+  <div class="grid">
+    <div class="card"><h3>Retirer</h3><p>Les denrées suspectes, vite, pour éviter de nouveaux cas.</p></div>
+    <div class="card"><h3>Identifier</h3><p>L’aliment ou l’agent responsable.</p></div>
+    <div class="card"><h3>Limiter</h3><p>La propagation par des mesures correctives immédiates.</p></div>
+    <div class="card"><h3>Corriger</h3><p>Les pratiques fautives : préparation, conservation, cuisson.</p></div>
+    <div class="card"><h3>Surveiller</h3><p>Les données alimentent la surveillance nationale et renforcent la prévention.</p></div>
+  </div>
+
+  <h2 class="sec">Remettez la procédure dans l’ordre <small>Touchez les étapes de la première à la dernière</small></h2>
+  <div class="card" id="cas" style="gap:10px"></div>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js?v=20261113a"></script>
+<script src="tiac.js?v=20261113a"></script>
+</body>
+</html>

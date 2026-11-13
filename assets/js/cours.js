@@ -1,7 +1,7 @@
 /* ==========================================================================
    Liste des cours affichés sur la page d'accueil.
    Ajouter un cours = ajouter une entrée ici (voir CLAUDE.md, « Passe d'intégration »).
-   theme : "memo" | "bases" | "aliments" | "accompagnement" | "collectif" (ordre d'affichage des groupes : THEMES)
+   theme : "memo" | "bases" | "aliments" | "accompagnement" | "collectif" | "securite" (ordre d'affichage des groupes : THEMES)
    statut : "disponible" (page en ligne) ou "en-attente" (document reçu, pas encore intégré)
    ========================================================================== */
 window.THEMES = [
@@ -9,7 +9,8 @@ window.THEMES = [
   { id: "bases", titre: "Bases scientifiques", sous: "Les nutriments et leur rôle dans l’organisme" },
   { id: "aliments", titre: "Les groupes d’aliments", sous: "Composition, fabrication, place dans l’assiette" },
   { id: "accompagnement", titre: "Accompagner une personne", sous: "Des besoins au plan alimentaire, et les limites du conseil" },
-  { id: "collectif", titre: "Restauration collective", sous: "Organisation du secteur, références pour un groupe, gestion d’une structure" }
+  { id: "collectif", titre: "Restauration collective", sous: "Organisation du secteur, références pour un groupe, gestion d’une structure" },
+  { id: "securite", titre: "Sécurité sanitaire", sous: "Hygiène, qualité, conservation et risques" }
 ];
 
 window.COURS = [
@@ -36,5 +37,12 @@ window.COURS = [
 
   { slug: "restauration-collective", theme: "collectif", titre: "Panorama de la restauration collective", resume: "Types d’établissements, cuisine autonome ou centrale, modes de gestion, GEMRCN, EGAlim, durabilité.", familles: ["ink", "good-f", "pro"], fiches: ["Le secteur", "Préparer et servir", "Gestion et responsabilité", "Réglementation", "Durabilité"], statut: "disponible", page: "cours/restauration-collective.html" },
   { slug: "references-collectivites", theme: "collectif", titre: "Références nutritionnelles collectives", resume: "Besoin moyen et ANC, énergie par groupe, macronutriments, sucres libres, fibres, micronutriments, eau, étude de cas.", familles: ["glu", "pro", "fl", "eau"], fiches: ["Fondements", "Énergie", "Macronutriments", "Fibres", "Micronutriments", "Hydratation", "Étude de cas"], statut: "disponible", page: "cours/references-collectivites.html" },
-  { slug: "contraintes-structure", theme: "collectif", titre: "Contraintes d’une structure", resume: "Stocks (sécurité, point de commande, FIFO, FEFO), coûts, budget prévisionnel, indicateurs, trésorerie.", familles: ["min", "ink", "good-f", "bad-f"], fiches: ["Les stocks", "Calculer", "Stocker", "Rotation et suivi", "Les coûts", "Budget", "Suivi et outils", "Optimiser", "Trésorerie"], statut: "disponible", page: "cours/contraintes-structure.html" }
+  { slug: "contraintes-structure", theme: "collectif", titre: "Contraintes d’une structure", resume: "Stocks (sécurité, point de commande, FIFO, FEFO), coûts, budget prévisionnel, indicateurs, trésorerie.", familles: ["min", "ink", "good-f", "bad-f"], fiches: ["Les stocks", "Calculer", "Stocker", "Rotation et suivi", "Les coûts", "Budget", "Suivi et outils", "Optimiser", "Trésorerie"], statut: "disponible", page: "cours/contraintes-structure.html" },
+  { slug: "menus-collectivite", theme: "collectif", titre: "Plans et menus en collectivité", resume: "GEMRCN et recommandations, plan collectif et cycle de 20 repas, construction des menus, convives, contraintes, durabilité, étude de cas.", familles: ["ink", "pro", "glu", "fl"], fiches: ["Contexte et cadre", "Le plan collectif", "Construire les menus", "Les convives", "Contraintes", "Durabilité", "Étude de cas"], statut: "disponible", page: "cours/menus-collectivite.html" },
+
+  { slug: "haccp", theme: "securite", titre: "La démarche HACCP", resume: "Origine et cadre réglementaire, les 7 principes, les 12 étapes, chaîne du froid, traçabilité, plan de nettoyage.", familles: ["ink", "eau", "good-f", "bad-f"], fiches: ["Fondements", "Les 7 principes", "Les 12 étapes", "Au quotidien"], statut: "disponible", page: "cours/haccp.html" },
+  { slug: "demarche-qualite", theme: "securite", titre: "La démarche qualité", resume: "Management par la qualité : objectifs, bénéfices, 7 principes, mise en place en 7 étapes, norme ISO 22000.", familles: ["ink", "good-f", "lai"], fiches: ["Le concept", "Bénéfices", "Les 7 principes", "Mettre en place", "ISO 22000"], statut: "disponible", page: "cours/demarche-qualite.html" },
+  { slug: "tiac", theme: "securite", titre: "Sécurité sanitaire et TIAC", resume: "Toxi-infections alimentaires collectives : agents, symptômes, chiffres, prévention, publics sensibles, conduite à tenir.", familles: ["bad-f", "eau", "glu", "good-f"], fiches: ["Définition", "Les agents", "Symptômes et chiffres", "Prévenir", "En cas de TIAC"], statut: "disponible", page: "cours/tiac.html" },
+  { slug: "conservation", theme: "securite", titre: "Conserver les aliments", resume: "Altération et 5 leviers, froid, chaleur, activité de l’eau, sous vide et atmosphère, procédés avancés, fermentations, conservateurs.", familles: ["eau", "glu", "min", "lai", "fl"], fiches: ["Altération et leviers", "Le froid", "La chaleur", "L’eau et l’air", "Fermentations et conservateurs"], statut: "disponible", page: "cours/conservation.html" },
+  { slug: "toxicologie", theme: "securite", titre: "La toxicologie", resume: "Xénobiotiques, passage des membranes, voies d’entrée, parcours ADME, effets toxiques, dose-effet, familles d’intoxications.", familles: ["ink", "vit", "bad-f"], fiches: ["Bases", "Entrer dans le corps", "Le parcours (ADME)", "Effets toxiques", "Intoxications"], statut: "disponible", page: "cours/toxicologie.html" }
 ];

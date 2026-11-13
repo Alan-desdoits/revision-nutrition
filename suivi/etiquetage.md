@@ -41,3 +41,7 @@
 - Le cours n’illustre pas le Label Rouge ni AB par un exemple : la page l’indique.
 - Les emoji des titres « Scores nutritionnels » ne sont pas repris (règle du site).
 - Coquilles mineures non reprises : « garantit » pour « garantir », « jour » pour « joue », « mise ne vente », « plsu », « porduit », « produis vendus ».
+
+## Nouvelle version déposée le 2026-11-13
+
+Le document a été redéposé (empreinte différente). Texte et images sont **identiques** à la version intégrée : rien à changer sur la page. Le fichier de `documents/finis/` a été remplacé par cette version.
