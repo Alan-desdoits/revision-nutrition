@@ -73,3 +73,13 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 - **Intégré** : la page existe et couvre le document (chaque partie du document, texte et images, est listée dans son suivi détaillé).
 - **En attente** : document déposé dans `documents/en-attente/`, pas encore traité.
 - **Archivé** : document gardé pour mémoire, sans page propre.
+
+## Fiches bristol
+
+Page `fiches-bristol.html` : une fiche A5 par onglet de cours, notes au recto, carte en accolades au verso. Le contenu reprend les chiffres de la page du cours (donc du document source), sans rien ajouter.
+
+| Cours | Fiches | Statut | Date |
+|---|---|---|---|
+| Les 26 cours | 162 (une par onglet, `fiches/<slug>.js`) | Écrites et vérifiées : chaque onglet du cours a sa fiche, tout tient sur la face A5 | 2026-11-18 |
+
+Les fiches reprennent l’essentiel de chaque onglet : ce ne sont pas des copies intégrales du cours. Les écarts déjà notés (entre cours ou dans un document) sont repris tels que la page les affiche, par exemple les lipides à 35 à 40 % de l’AET dans Déterminants, Plans et menus, Références collectives, contre 30 à 35 % dans Macronutriments.
