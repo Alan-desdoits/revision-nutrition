@@ -90,5 +90,6 @@ Les fiches reprennent l’essentiel de chaque onglet : ce ne sont pas des copies
 
 | Cours | Statut | Date |
 |---|---|---|
-| Les macronutriments | Pilote, 11 onglets rédigés | 2026-11-20 |
-| Les 25 autres cours | Après validation du pilote : à l’impression, la page reste imprimée telle quelle | |
+| Les 26 cours | Rédigés, un mémo par cours, tous les onglets ; de 1,5 à 7,5 pages A4 selon le cours | 2026-11-20 |
+
+Les mémos reprennent les chiffres de chaque page, y compris les écarts déjà notés ci-dessus (ex. répartition des repas entre Composition des repas et Plans et menus, lipides de l’AET) et les coquilles signalées dans les suivis (ex. « E20 », sans doute E202, dans Conservation).

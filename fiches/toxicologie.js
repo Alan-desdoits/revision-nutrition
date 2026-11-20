@@ -41,7 +41,7 @@ Bristol.cours("toxicologie", [
     onglet: "Le parcours (ADME)", titre: "Le parcours ADME",
     notes: [
       [
-        { h: "Quatre étapes", p: ["<b>A</b>bsorption : du site d’entrée vers le sang ; plus facile si lipophile et petite.", "<b>D</b>istribution : vers les tissus.", "<b>M</b>étabolisme : transformation, surtout par le foie.", "<b>E</b>xcrétion : élimination (reins, bile, poumons)."] },
+        { h: "Quatre étapes", p: ["<b>A</b>bsorption : du site d’entrée vers le sang ; plus facile si lipophile et petite.", "<b>D</b>istribution : vers les tissus.", "<b>M</b>étabolisme : biotransformation, surtout dans le foie.", "<b>E</b>xcrétion : urines et bile, parfois sueur, salive, lait, poumons."] },
         { h: "Ce qu’elles décident", p: ["La <b>quantité</b> de toxique dans les tissus et la <b>durée</b> d’exposition des cellules."] },
       ],
       [
