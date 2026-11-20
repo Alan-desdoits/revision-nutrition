@@ -241,11 +241,22 @@
     const el = document.createElement("div");
     el.className = "memo";
     el.setAttribute("aria-hidden", "true");
-    el.innerHTML = `<header class="memo-h"><div><span class="memo-k">Révisions nutrition · fiche de révision</span><h1>${titre}</h1></div><span class="memo-k">${onglets.length} onglets</span></header>
+    el.innerHTML = `<div class="memo-bar"><button type="button" class="memo-back">← Retour au cours</button><button type="button" class="memo-print">Imprimer ou enregistrer en PDF</button></div><header class="memo-h"><div><span class="memo-k">Révisions nutrition · fiche de révision</span><h1>${titre}</h1></div><span class="memo-k">${onglets.length} onglets</span></header>
       ${onglets.map((o, i) => `<section class="memo-tab"><h2><span>${i + 1}</span>${o.onglet}</h2>${o.blocs.map(bloc).join("")}</section>`).join("")}
       <footer class="memo-f">Révisions nutrition · ${titre}</footer>`;
     document.body.appendChild(el);
     document.body.classList.add("has-memo");
+    /* Bouton dans la barre d'onglets : ouvre la fiche à l'écran, prête à imprimer */
+    const open = on => { document.body.classList.toggle("memo-open", on); el.setAttribute("aria-hidden", String(!on)); window.scrollTo(0, 0); };
+    const btn = document.createElement("button");
+    btn.type = "button"; btn.className = "memo-btn";
+    btn.innerHTML = `Fiche <span class="long">de révision</span>`;
+    const toggle = $(".quiz-toggle");
+    if (toggle) toggle.before(btn); else ($(".fnav .wrap") || document.body).appendChild(btn);
+    btn.addEventListener("click", () => open(true));
+    el.querySelector(".memo-back").addEventListener("click", () => open(false));
+    el.querySelector(".memo-print").addEventListener("click", () => window.print());
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("memo-open")) open(false); });
   }
 
   window.Fiches = { $, $$, NAMES, fmt, pic, initPics, wrapNumbers, seg, explorer, hbars, memo };
