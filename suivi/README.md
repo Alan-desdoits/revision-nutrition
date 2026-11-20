@@ -83,3 +83,12 @@ Page `fiches-bristol.html` : une fiche A5 par onglet de cours, notes au recto, c
 | Les 26 cours | 162 (une par onglet, `fiches/<slug>.js`) | Écrites et vérifiées : chaque onglet du cours a sa fiche, tout tient sur la face A5 | 2026-11-18 |
 
 Les fiches reprennent l’essentiel de chaque onglet : ce ne sont pas des copies intégrales du cours. Les écarts déjà notés (entre cours ou dans un document) sont repris tels que la page les affiche, par exemple les lipides à 35 à 40 % de l’AET dans Déterminants, Plans et menus, Références collectives, contre 30 à 35 % dans Macronutriments.
+
+## Mémos de révision imprimés
+
+À l’impression d’une page de cours (Cmd + P), la page est remplacée par un mémo détaillé de tout le cours (`memos/<slug>.js`), en A4. Le contenu reprend celui de la page, onglet par onglet, sans rien ajouter.
+
+| Cours | Statut | Date |
+|---|---|---|
+| Les macronutriments | Pilote, 11 onglets rédigés | 2026-11-20 |
+| Les 25 autres cours | Après validation du pilote : à l’impression, la page reste imprimée telle quelle | |

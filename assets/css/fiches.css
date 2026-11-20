@@ -502,11 +502,45 @@ a.course:hover{border-color:var(--fg);transform:translateY(-2px);box-shadow:0 14
 .bz-g li b{background:none}
 @media (max-width:860px){.bz-pair{grid-template-columns:minmax(0,1fr)}}
 @media print{
-  @page{size:A5 landscape;margin:0}
   body{background:#fff}
   .top,.fnav,.bz-tools,.bz-item > .tag,.bz-hide-print,.bz-catalog{display:none!important}
   main.wrap{max-width:none;padding:0;margin:0}
   .bz-list,.bz-pair,.bz-item{display:block;gap:0;margin:0;max-width:none}
   .bz-frame{width:210mm;height:147.5mm;aspect-ratio:auto;border:0;border-radius:0;box-shadow:none;break-after:page;page-break-after:always}
   .bz-face{transform:scale(.9449)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* ===================================================================
+   Mémo de révision imprimé (pages de cours) : A4 portrait, une colonne,
+   un cadre par notion avec un filet de la couleur de sa famille.
+   Les fiches bristol redéfinissent @page en A5 paysage dans leur page.
+   =================================================================== */
+.memo{display:none}
+@media print{
+  @page{size:A4 portrait;margin:13mm 14mm 16mm}
+  body.has-memo{background:#fff}
+  body.has-memo > :not(.memo){display:none!important}
+  body.has-memo .memo{display:block;font-family:var(--f-b);font-size:9pt;line-height:1.42;color:var(--fg);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .memo-h{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--fg);padding-bottom:6px;margin-bottom:10px}
+  .memo-k{font-family:var(--f-m);font-size:7pt;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .memo h1{font-family:var(--f-d);font-weight:800;font-size:22pt;letter-spacing:-.03em;line-height:1.05;margin:3px 0 0}
+  .memo-tab{margin-top:12px}
+  .memo-tab + .memo-tab{break-before:auto}
+  .memo h2{font-family:var(--f-d);font-weight:800;font-size:14pt;letter-spacing:-.02em;margin:0 0 6px;display:flex;align-items:baseline;gap:8px;break-after:avoid}
+  .memo h2 span{font-family:var(--f-m);font-size:8pt;font-weight:500;color:var(--muted)}
+  .memo-box{border:1px solid var(--line);border-top:3px solid var(--c,var(--ink));border-radius:4px;padding:6px 9px 7px;margin:0 0 7px;break-inside:avoid}
+  .memo-box h3{font-family:var(--f-d);font-weight:800;font-size:10.5pt;color:var(--c,var(--ink));margin:0 0 3px}
+  .memo-box p{margin:0 0 3px}
+  .memo-box ul{margin:2px 0 3px;padding-left:14px}
+  .memo-box li{margin:0 0 1px}
+  .memo-box b{font-weight:700}
+  .memo-kv{display:grid;grid-template-columns:max-content 1fr;gap:1px 10px;margin:2px 0 4px}
+  .memo-kv dt{font-weight:700;color:var(--c,var(--ink))}
+  .memo-kv dd{margin:0}
+  .memo-tb{width:100%;border-collapse:collapse;margin:3px 0 4px;font-size:8.5pt}
+  .memo-tb th{text-align:left;font-family:var(--f-m);font-size:6.8pt;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border-bottom:1.2px solid var(--fg);padding:2px 4px}
+  .memo-tb td{border-bottom:.6px solid var(--line);padding:2px 4px;vertical-align:top}
+  .memo-ret{background:var(--s,var(--ink-soft));border-radius:4px;padding:4px 8px;margin:4px 0 0}
+  .memo-ret span{display:block;font-family:var(--f-m);font-size:6.8pt;letter-spacing:.06em;text-transform:uppercase;color:var(--c,var(--ink))}
+  .memo-f{position:fixed;bottom:-9mm;left:0;right:0;font-family:var(--f-m);font-size:6.8pt;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-top:.6px solid var(--line);padding-top:2px}
 }

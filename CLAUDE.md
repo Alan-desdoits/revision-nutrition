@@ -14,6 +14,7 @@ fiches-bristol.html        Fiches bristol A5 d'un cours (#slug) ; sans ancre, re
 fiches/<slug>.js           Fiches bristol d'un cours : une par onglet (notes au recto, carte en accolades au verso)
 fiches/index.js            Liste des cours dont les fiches bristol sont écrites
 assets/js/bristol.js       Moteur des fiches bristol (rendu, ajustement du texte, impression)
+memos/<slug>.js            Mémo de révision détaillé d'un cours (Fiches.memo) : remplace la page à l'impression (A4, une colonne, un cadre par notion) ; chargé par cours/<slug>.html après fiches.js
 assets/js/fiches.js        Commun : onglets, « Cacher les chiffres », pictogrammes, composants réutilisables
 assets/js/cours.js         THEMES (groupes de l'accueil) et COURS (liste des cours)
 assets/icone.svg           Icône du site (favicon) ; icone-180.png (iPhone/iPad, carré plein) ; icone-512.png

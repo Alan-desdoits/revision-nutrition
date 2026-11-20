@@ -228,6 +228,26 @@
     b.textContent = ans.hidden ? (b.dataset.show || "Voir la réponse") : (b.dataset.hide || "Masquer");
   });
 
-  window.Fiches = { $, $$, NAMES, fmt, pic, initPics, wrapNumbers, seg, explorer, hbars };
+  /* ---------------- Mémo de révision imprimé ----------------
+     memos/<slug>.js appelle Fiches.memo(onglets). À l'impression (Cmd+P), la page
+     de cours est remplacée par ce mémo : tous les onglets, en A4, une colonne.
+     Un onglet = { onglet, blocs: [{ t, k, p, kv, list, table, retenir }] } ;
+     k = classe de famille (glu, pro, lip, eau, vit, min, ink, good-f, bad-f…). */
+  function memo(onglets) {
+    const titre = ($(".top h1") || {}).textContent || document.title;
+    const kv = l => `<dl class="memo-kv">${l.map(([a, b]) => `<dt>${a}</dt><dd>${b}</dd>`).join("")}</dl>`;
+    const table = t => `<table class="memo-tb"><thead><tr>${t[0].map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${t.slice(1).map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+    const bloc = b => `<div class="memo-box ${b.k || "ink"}"><h3>${b.t}</h3>${(b.p || []).map(x => `<p>${x}</p>`).join("")}${b.kv ? kv(b.kv) : ""}${b.list ? `<ul>${b.list.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${b.table ? table(b.table) : ""}${b.retenir ? `<div class="memo-ret"><span>À retenir</span>${b.retenir}</div>` : ""}</div>`;
+    const el = document.createElement("div");
+    el.className = "memo";
+    el.setAttribute("aria-hidden", "true");
+    el.innerHTML = `<header class="memo-h"><div><span class="memo-k">Révisions nutrition · fiche de révision</span><h1>${titre}</h1></div><span class="memo-k">${onglets.length} onglets</span></header>
+      ${onglets.map((o, i) => `<section class="memo-tab"><h2><span>${i + 1}</span>${o.onglet}</h2>${o.blocs.map(bloc).join("")}</section>`).join("")}
+      <footer class="memo-f">Révisions nutrition · ${titre}</footer>`;
+    document.body.appendChild(el);
+    document.body.classList.add("has-memo");
+  }
+
+  window.Fiches = { $, $$, NAMES, fmt, pic, initPics, wrapNumbers, seg, explorer, hbars, memo };
   document.addEventListener("DOMContentLoaded", () => { initPics(); initTabs(); initQuiz(); });
 })();
