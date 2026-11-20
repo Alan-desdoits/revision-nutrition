@@ -85,7 +85,6 @@
     document.title = `Fiches bristol · ${c.titre} · Révisions nutrition`;
     const n = fiches.length;
     main.innerHTML = `
-      <a class="back" href="#">← Toutes les fiches bristol</a>
       <h2 class="sec" style="margin-top:0">${c.titre} <small>${n} fiches, une par onglet du cours</small></h2>
       <div class="bz-tools">
         <div class="seg ink" id="bz-faces" role="group" aria-label="Faces à afficher et imprimer">
@@ -114,7 +113,7 @@
   function route() {
     const slug = decodeURIComponent(location.hash.slice(1));
     window.scrollTo(0, 0);
-    if (!slug || !ready.has(slug) || !find(slug)) return catalog();
+    if (!slug || !ready.has(slug) || !find(slug)) return location.replace("index.html#fiches");
     if (data[slug]) return show(slug);
     main.innerHTML = `<p class="count-line">Chargement des fiches…</p>`;
     const s = document.createElement("script");

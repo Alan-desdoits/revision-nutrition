@@ -11,8 +11,8 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/fiches.css?v=20261118b">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/fiches.css?v=20261120a">
 </head>
 <body class="home">
 
@@ -28,29 +28,42 @@
 </header>
 
 <main class="wrap home-main">
-  <a class="card tint ink bz-home" href="fiches-bristol.html">
-    <div><span class="tag">À imprimer</span><h3>Fiches bristol</h3><p>Les notes à retenir au recto, la carte en accolades au verso. En A5, à imprimer ou à enregistrer en PDF.</p></div>
-    <span class="go">Voir les fiches →</span>
-  </a>
+  <div class="espaces" role="tablist" aria-label="Espaces du site">
+    <button type="button" role="tab" id="tab-cours" data-esp="cours">Cours interactifs</button>
+    <button type="button" role="tab" id="tab-fiches" data-esp="fiches">Fiches bristol</button>
+  </div>
   <p class="count-line" id="count"></p>
   <div id="themes"></div>
 
-  <h2 class="sec">Comment réviser</h2>
-  <div class="g3">
-    <div class="card"><span class="tag">Explorer</span><h3>Une fiche par onglet</h3><p>Les onglets suivent le plan du cours. Chaque fiche a son lien direct.</p></div>
-    <div class="card"><span class="tag">Manipuler</span><h3>Des schémas qui réagissent</h3><p>Choisir un nutriment, régler un poids, composer un repas : les fiches se recalculent.</p></div>
-    <div class="card"><span class="tag">Se tester</span><h3>Cacher les chiffres</h3><p>L’interrupteur en haut de chaque cours masque tous les chiffres. Un clic les révèle un par un.</p></div>
+  <div id="aide-cours">
+    <h2 class="sec">Comment réviser</h2>
+    <div class="g3">
+      <div class="card"><span class="tag">Explorer</span><h3>Une fiche par onglet</h3><p>Les onglets suivent le plan du cours. Chaque fiche a son lien direct.</p></div>
+      <div class="card"><span class="tag">Manipuler</span><h3>Des schémas qui réagissent</h3><p>Choisir un nutriment, régler un poids, composer un repas : les fiches se recalculent.</p></div>
+      <div class="card"><span class="tag">Se tester</span><h3>Cacher les chiffres</h3><p>L’interrupteur en haut de chaque cours masque tous les chiffres. Un clic les révèle un par un.</p></div>
+    </div>
+  </div>
+  <div id="aide-fiches" hidden>
+    <h2 class="sec">Comment les utiliser</h2>
+    <div class="g3">
+      <div class="card"><span class="tag">Relire</span><h3>Les notes au recto</h3><p>L’essentiel de chaque onglet du cours, sur une fiche A5.</p></div>
+      <div class="card"><span class="tag">Réciter</span><h3>La carte au verso</h3><p>Le thème, ses branches et leurs feuilles en accolades : retrouvez le contenu de mémoire.</p></div>
+      <div class="card"><span class="tag">Imprimer</span><h3>A5 ou PDF</h3><p>Le bouton « Imprimer ou enregistrer en PDF » d’un cours sort toutes ses fiches, recto et verso.</p></div>
+    </div>
   </div>
   <p class="foot">Rien n’est enregistré : chaque visite repart de zéro.</p>
 </main>
 
-<script src="assets/js/cours.js?v=20261118b"></script>
+<script src="assets/js/cours.js?v=20261120a"></script>
+<script src="fiches/index.js?v=20261120a"></script>
 <script>
 (function () {
   const NAMES = { glu: "Glucides", pro: "Protéines", lip: "Lipides", eau: "Eau", vit: "Vitamines", min: "Minéraux", fl: "Fruits et légumes", sug: "Sucres", lai: "Laitiers", ink: "Méthode", "good-f": "Bons réflexes", "bad-f": "Vigilance" };
   const list = window.COURS || [];
-  const dispo = list.filter(c => c.statut === "disponible").length;
-  document.getElementById("count").textContent = `${dispo} cours disponible${dispo > 1 ? "s" : ""}${dispo < list.length ? ` sur ${list.length}` : ""}`;
+  const ready = new Set(window.BRISTOL_DISPO || []);
+  const $ = id => document.getElementById(id);
+
+  /* Espace « Cours interactifs » */
   const card = c => {
     const ok = c.statut === "disponible";
     const inner = `
@@ -61,10 +74,44 @@
       ${ok ? `<ul class="toc">${c.fiches.map(f => `<li>${f}</li>`).join("")}</ul><span class="go">Ouvrir les fiches →</span>` : `<p class="wait-txt">Le document est dans « documents/en-attente ». Il sera intégré à la prochaine passe.</p>`}`;
     return ok ? `<a class="course card" href="${c.page}">${inner}</a>` : `<div class="course card is-wait">${inner}</div>`;
   };
-  document.getElementById("themes").innerHTML = (window.THEMES || []).map(t => {
-    const cs = list.filter(c => c.theme === t.id);
-    return cs.length ? `<section class="theme"><h2 class="sec">${t.titre} <small>${t.sous}</small></h2><div class="courses">${cs.map(card).join("")}</div></section>` : "";
-  }).join("");
+
+  /* Espace « Fiches bristol » */
+  const bristol = c => {
+    const ok = ready.has(c.slug);
+    const inner = `
+      <div class="course-head"><span class="status ${ok ? "on" : "wait"}">${ok ? "À imprimer" : "Bientôt"}</span>${ok ? `<span class="nfiches">${c.fiches.length} fiches</span>` : ""}</div>
+      <h3>${c.titre}</h3>
+      <div class="bz-row"><span class="bz-thumb" aria-hidden="true"><i>${c.titre.replace(/^(Les |La |Le |L’)/, "")}</i><b></b><b></b><b class="s"></b><b></b></span>
+      <p>${ok ? "Les notes au recto, la carte en accolades au verso." : "Les fiches de ce cours ne sont pas encore écrites."}</p></div>
+      ${ok ? `<span class="go">Voir et imprimer →</span>` : ""}`;
+    return ok ? `<a class="course card" href="fiches-bristol.html#${c.slug}">${inner}</a>` : `<div class="course card is-wait">${inner}</div>`;
+  };
+
+  function draw(esp) {
+    const f = esp === "fiches";
+    $("tab-cours").setAttribute("aria-selected", !f);
+    $("tab-fiches").setAttribute("aria-selected", f);
+    $("aide-cours").hidden = f;
+    $("aide-fiches").hidden = !f;
+    const dispo = list.filter(c => c.statut === "disponible");
+    $("count").textContent = f
+      ? `${dispo.filter(c => ready.has(c.slug)).length} cours, ${dispo.filter(c => ready.has(c.slug)).reduce((t, c) => t + c.fiches.length, 0)} fiches bristol à imprimer`
+      : `${dispo.length} cours disponible${dispo.length > 1 ? "s" : ""}${dispo.length < list.length ? ` sur ${list.length}` : ""}`;
+    $("themes").innerHTML = (window.THEMES || []).map(t => {
+      const cs = (f ? dispo : list).filter(c => c.theme === t.id);
+      return cs.length ? `<section class="theme"><h2 class="sec">${t.titre} <small>${t.sous}</small></h2><div class="courses">${cs.map(f ? bristol : card).join("")}</div></section>` : "";
+    }).join("");
+  }
+
+  const current = () => (location.hash === "#fiches" ? "fiches" : "cours");
+  document.querySelector(".espaces").addEventListener("click", e => {
+    const b = e.target.closest("[data-esp]");
+    if (!b) return;
+    history.replaceState(null, "", b.dataset.esp === "fiches" ? "#fiches" : location.pathname);
+    draw(b.dataset.esp);
+  });
+  window.addEventListener("hashchange", () => draw(current()));
+  draw(current());
 })();
 </script>
 </body>

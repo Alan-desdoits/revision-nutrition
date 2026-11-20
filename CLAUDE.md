@@ -5,12 +5,12 @@ Site statique (HTML, CSS, JS sans framework ni build) qui transforme des cours d
 ## Structure du dépôt
 
 ```
-index.html                 Accueil : cours groupés par thème (lus depuis assets/js/cours.js)
+index.html                 Accueil en deux espaces (onglets) : « Cours interactifs » et « Fiches bristol » (#fiches), cours groupés par thème (lus depuis assets/js/cours.js)
 manifest.webmanifest       Installation sur l'écran d'accueil (nom, couleurs, icônes)
 cours/<slug>.html          Une page par cours (structure + textes fixes)
 cours/<slug>.js            Données et rendus dynamiques du cours
 assets/css/fiches.css      Toute la DA : tokens, composants, responsive
-fiches-bristol.html        Fiches bristol A5 à imprimer (catalogue, puis #slug pour un cours)
+fiches-bristol.html        Fiches bristol A5 d'un cours (#slug) ; sans ancre, renvoie vers index.html#fiches
 fiches/<slug>.js           Fiches bristol d'un cours : une par onglet (notes au recto, carte en accolades au verso)
 fiches/index.js            Liste des cours dont les fiches bristol sont écrites
 assets/js/bristol.js       Moteur des fiches bristol (rendu, ajustement du texte, impression)
