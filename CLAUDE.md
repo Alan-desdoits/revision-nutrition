@@ -10,7 +10,7 @@ manifest.webmanifest       Installation sur l'écran d'accueil (nom, couleurs, i
 cours/<slug>.html          Une page par cours (structure + textes fixes)
 cours/<slug>.js            Données et rendus dynamiques du cours
 assets/css/fiches.css      Toute la DA : tokens, composants, responsive
-fiches-bristol.html        Fiches bristol A5 d'un cours (#slug) ; sans ancre, renvoie vers index.html#fiches
+fiches-bristol.html        Fiches bristol A5 d'un cours (#slug) ; charge aussi le mémo du cours : Cmd+P et « Fiche de révision détaillée » sortent le mémo A4, « Imprimer les fiches bristol » sort les fiches A5 ; sans ancre, renvoie vers index.html#fiches
 fiches/<slug>.js           Fiches bristol d'un cours : une par onglet (notes au recto, carte en accolades au verso)
 fiches/index.js            Liste des cours dont les fiches bristol sont écrites
 assets/js/bristol.js       Moteur des fiches bristol (rendu, ajustement du texte, impression)

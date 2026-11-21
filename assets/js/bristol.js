@@ -90,9 +90,12 @@
         <div class="seg ink" id="bz-faces" role="group" aria-label="Faces à afficher et imprimer">
           <button type="button" data-v="both">Recto et verso</button><button type="button" data-v="recto">Recto</button><button type="button" data-v="verso">Verso</button>
         </div>
-        <button type="button" class="bz-print" id="bz-print">Imprimer ou enregistrer en PDF</button>
+        <div class="bz-actions">
+          <button type="button" class="bz-print" id="bz-memo">Fiche de révision détaillée (A4)</button>
+          <button type="button" class="bz-print alt" id="bz-print">Imprimer les fiches bristol (A5)</button>
+        </div>
       </div>
-      <p class="note bz-hide-print"><span>Format A5 paysage. Pour un recto-verso, choisir « retourner sur le bord court ». Pour un PDF, choisir « Enregistrer au format PDF » comme imprimante.</span></p>
+      <p class="note bz-hide-print"><span>« Fiche de révision détaillée » ouvre le mémo tapé de tout le cours, à imprimer en A4 : c’est aussi ce que sort Cmd + P. « Imprimer les fiches bristol » sort ces fiches en A5 paysage ; pour un recto-verso, choisir « retourner sur le bord court ». Pour un PDF, choisir « Enregistrer au format PDF » comme imprimante.</span></p>
       <div class="bz-list">${fiches.map((f, k) => `
         <div class="bz-item"><span class="tag">Onglet ${k + 1} · ${f.onglet}</span>
           <div class="bz-pair">${recto(c, f, k + 1, n)}${verso(c, f, k + 1, n)}</div></div>`).join("")}</div>`;
@@ -105,9 +108,39 @@
     };
     seg.addEventListener("click", e => { const b = e.target.closest("button"); if (b) { faces = b.dataset.v; apply(); } });
     apply();
-    main.querySelector("#bz-print").addEventListener("click", () => window.print());
+    main.querySelector("#bz-print").addEventListener("click", printBristol);
+    main.querySelector("#bz-memo").addEventListener("click", () => (window.Fiches && window.Fiches.memoOpen) ? window.Fiches.memoOpen(true) : window.print());
+    loadMemo(slug, c.titre);
     fitAll();
     if (document.fonts) document.fonts.ready.then(fitAll);
+  }
+
+  /* Mémo détaillé du cours (memos/<slug>.js) : imprimé par défaut en A4, ouvrable à l'écran */
+  function loadMemo(slug, titre) {
+    if (!window.Fiches) return;
+    window.Fiches.memoTitre = titre;
+    const s = document.createElement("script");
+    s.src = `memos/${slug}.js${V ? "?v=" + V : ""}`;
+    document.head.appendChild(s);
+  }
+
+  /* Fiches bristol : A5 paysage, sans le mémo, le temps d'une impression */
+  function printBristol() {
+    const st = document.createElement("style");
+    st.textContent = "@page{size:A5 landscape;margin:0}";
+    document.head.appendChild(st);
+    const had = document.body.classList.contains("has-memo");
+    document.body.classList.remove("has-memo");
+    let restored = false;
+    const done = () => {
+      if (restored) return;
+      restored = true;
+      st.parentNode && st.parentNode.removeChild(st);
+      if (had) document.body.classList.add("has-memo");
+    };
+    window.addEventListener("afterprint", done, { once: true });
+    window.print();
+    setTimeout(done, 2000);
   }
 
   function route() {

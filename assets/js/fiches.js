@@ -233,30 +233,35 @@
      de cours est remplacée par ce mémo : tous les onglets, en A4, une colonne.
      Un onglet = { onglet, blocs: [{ t, k, p, kv, list, table, retenir }] } ;
      k = classe de famille (glu, pro, lip, eau, vit, min, ink, good-f, bad-f…). */
+  let memoKeys = false;
   function memo(onglets) {
-    const titre = ($(".top h1") || {}).textContent || document.title;
+    $$("body > .memo").forEach(m => m.parentNode.removeChild(m));
+    const titre = window.Fiches.memoTitre || ($(".top h1") || {}).textContent || document.title;
     const kv = l => `<dl class="memo-kv">${l.map(([a, b]) => `<dt>${a}</dt><dd>${b}</dd>`).join("")}</dl>`;
     const table = t => `<table class="memo-tb"><thead><tr>${t[0].map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${t.slice(1).map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
     const bloc = b => `<div class="memo-box ${b.k || "ink"}"><h3>${b.t}</h3>${(b.p || []).map(x => `<p>${x}</p>`).join("")}${b.kv ? kv(b.kv) : ""}${b.list ? `<ul>${b.list.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${b.table ? table(b.table) : ""}${b.retenir ? `<div class="memo-ret"><span>À retenir</span>${b.retenir}</div>` : ""}</div>`;
     const el = document.createElement("div");
     el.className = "memo";
     el.setAttribute("aria-hidden", "true");
-    el.innerHTML = `<div class="memo-bar"><button type="button" class="memo-back">← Retour au cours</button><button type="button" class="memo-print">Imprimer ou enregistrer en PDF</button></div><header class="memo-h"><div><span class="memo-k">Révisions nutrition · fiche de révision</span><h1>${titre}</h1></div><span class="memo-k">${onglets.length} onglets</span></header>
+    el.innerHTML = `<div class="memo-bar"><button type="button" class="memo-back">← Retour</button><button type="button" class="memo-print">Imprimer ou enregistrer en PDF</button></div><header class="memo-h"><div><span class="memo-k">Révisions nutrition · fiche de révision</span><h1>${titre}</h1></div><span class="memo-k">${onglets.length} onglets</span></header>
       ${onglets.map((o, i) => `<section class="memo-tab"><h2><span>${i + 1}</span>${o.onglet}</h2>${o.blocs.map(bloc).join("")}</section>`).join("")}
       <footer class="memo-f">Révisions nutrition · ${titre}</footer>`;
     document.body.appendChild(el);
     document.body.classList.add("has-memo");
     /* Bouton dans la barre d'onglets : ouvre la fiche à l'écran, prête à imprimer */
     const open = on => { document.body.classList.toggle("memo-open", on); el.setAttribute("aria-hidden", String(!on)); window.scrollTo(0, 0); };
-    const btn = document.createElement("button");
-    btn.type = "button"; btn.className = "memo-btn";
-    btn.innerHTML = `Fiche <span class="long">de révision</span>`;
+    window.Fiches.memoOpen = open;
     const toggle = $(".quiz-toggle");
-    if (toggle) toggle.before(btn); else ($(".fnav .wrap") || document.body).appendChild(btn);
-    btn.addEventListener("click", () => open(true));
+    if (toggle && !$(".memo-btn")) {
+      const btn = document.createElement("button");
+      btn.type = "button"; btn.className = "memo-btn";
+      btn.innerHTML = `Fiche <span class="long">de révision</span>`;
+      toggle.before(btn);
+      btn.addEventListener("click", () => open(true));
+    }
     el.querySelector(".memo-back").addEventListener("click", () => open(false));
     el.querySelector(".memo-print").addEventListener("click", () => window.print());
-    document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("memo-open")) open(false); });
+    if (!memoKeys) { memoKeys = true; document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("memo-open")) window.Fiches.memoOpen(false); }); }
   }
 
   window.Fiches = { $, $$, NAMES, fmt, pic, initPics, wrapNumbers, seg, explorer, hbars, memo };
