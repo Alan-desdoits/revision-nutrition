@@ -452,7 +452,7 @@ a.course:hover{border-color:var(--fg);transform:translateY(-2px);box-shadow:0 14
 :root{
   --stylo:#2848a8; --stylo-k:#1f3a8a; --stabilo:#ffe94d; --stabilo-s:#fff6b0;
   --marge:#e88a8a; --reglure:#c7d6f2; --papier:#ffffff;
-  --f-hand:"Caveat","Comic Sans MS",cursive; --f-write:"Kalam","Comic Sans MS",cursive;
+  --f-hand:var(--f-d); --f-write:var(--f-b);
 }
 /* Accueil : deux espaces (cours interactifs / fiches bristol) */
 .espaces{display:flex;gap:28px;border-bottom:1px solid var(--line);margin:0 0 6px;overflow-x:auto}
@@ -464,7 +464,7 @@ a.course:hover{border-color:var(--fg);transform:translateY(-2px);box-shadow:0 14
 .bz-thumb{flex:none;width:110px;aspect-ratio:210/148;display:flex;flex-direction:column;gap:5px;padding:7px 8px 7px 18px;position:relative;border:1px solid var(--line2);border-radius:4px;box-shadow:0 2px 6px rgba(28,33,48,.08);
   background:var(--papier) repeating-linear-gradient(transparent 0 9px,var(--reglure) 9px 10px)}
 .bz-thumb::before{content:"";position:absolute;left:12px;top:0;bottom:0;width:1.5px;background:var(--marge)}
-.bz-thumb i{font-family:var(--f-hand);font-style:normal;font-weight:700;font-size:17px;line-height:1;color:var(--stylo-k);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bz-thumb i{font-family:var(--f-hand);font-style:normal;font-weight:800;font-size:13px;letter-spacing:-.01em;line-height:1;color:var(--stylo-k);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bz-thumb b{height:4px;border-radius:2px;background:var(--line2);width:80%}
 .bz-thumb b.s{background:var(--stabilo);width:45%}
 .bz-tools{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;margin:6px 0 18px}
@@ -485,21 +485,21 @@ a.course:hover{border-color:var(--fg);transform:translateY(-2px);box-shadow:0 14
   background-position:0 0,0 6px;padding:20px 34px 26px 90px;display:flex;flex-direction:column}
 .bz-face .bz-k{font-family:var(--f-m);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--stylo);line-height:20px}
 .bz-face .bz-foot{position:absolute;right:28px;bottom:8px;font-family:var(--f-m);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.bz-face h2{font-family:var(--f-hand);font-weight:700;font-size:54px;line-height:1;color:var(--stylo-k);margin:0 0 4px;letter-spacing:0}
+.bz-face h2{font-family:var(--f-hand);font-weight:800;font-size:38px;line-height:1.05;color:var(--stylo-k);margin:2px 0 6px;letter-spacing:-.02em}
 .bz-face b{font-weight:700;color:var(--fg);background:linear-gradient(transparent 55%,var(--stabilo) 55%)}
 /* Recto : notes sur deux colonnes, alignées sur la réglure */
 .bz-notes{flex:1;min-height:0;display:grid;grid-template-columns:repeat(var(--cols,2),minmax(0,1fr));gap:0 34px;align-content:start}
-.bz-notes h3{font-family:var(--f-hand);font-weight:700;font-size:calc(var(--lh) * .9);line-height:var(--lh);color:var(--stylo);margin:0;letter-spacing:0}
+.bz-notes h3{font-family:var(--f-hand);font-weight:800;font-size:calc(var(--lh) * .62);line-height:var(--lh);color:var(--stylo);margin:0;letter-spacing:-.01em}
 .bz-notes p{font-family:var(--f-write);font-size:var(--fs);line-height:var(--lh);margin:0}
 /* Verso : carte en accolades */
 .bz-map{flex:1;min-height:0;display:grid;grid-template-columns:auto 34px minmax(0,1fr);align-items:center;gap:0 6px;--vfs:17px;--vgap:16px}
-.bz-centre{font-family:var(--f-hand);font-weight:700;font-size:var(--cfs,44px);line-height:1;color:var(--stylo-k);width:170px;text-wrap:balance;overflow-wrap:normal}
+.bz-centre{font-family:var(--f-hand);font-weight:800;letter-spacing:-.02em;font-size:var(--cfs,34px);line-height:1;color:var(--stylo-k);width:170px;text-wrap:balance;overflow-wrap:normal}
 .bz-brace{position:relative;align-self:stretch;min-height:24px}
 .bz-brace svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .bz-brace path{fill:none;stroke:var(--stylo);stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke}
 .bz-groups{display:flex;flex-direction:column;gap:var(--vgap);justify-content:center}
 .bz-g{display:grid;grid-template-columns:150px 20px minmax(0,1fr);align-items:center;gap:0 8px}
-.bz-g .bz-t{font-family:var(--f-hand);font-weight:700;font-size:28px;line-height:1;color:var(--stylo)}
+.bz-g .bz-t{font-family:var(--f-hand);font-weight:800;font-size:20px;line-height:1.1;letter-spacing:-.01em;color:var(--stylo)}
 .bz-g ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;align-items:flex-start}
 .bz-g li{font-family:var(--f-write);font-size:var(--vfs);line-height:1.25;background:var(--stabilo-s);border-radius:12px;padding:2px 10px}
 .bz-g li b{background:none}

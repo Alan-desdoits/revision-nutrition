@@ -48,7 +48,7 @@
       }
     } else {
       const map = face.querySelector(".bz-map"), groups = face.querySelector(".bz-groups"), centre = face.querySelector(".bz-centre");
-      for (let s = 44; s >= 24; s -= 2) {
+      for (let s = 34; s >= 20; s -= 2) {
         centre.style.setProperty("--cfs", s + "px");
         if (centre.scrollWidth <= centre.clientWidth + 1) break;
       }
