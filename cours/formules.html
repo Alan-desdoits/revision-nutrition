@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Formules du cas client · Révisions nutrition</title>
+<meta name="description" content="Toutes les formules des cours pour mener un cas client : pas à pas, calculateur et cas à résoudre.">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/fiches.css?v=20261122c">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="../index.html">← Tous les cours</a>
+    <div class="top-in">
+      <div>
+        <span class="eyebrow">Fiches visuelles · Mémo</span>
+        <h1 style="--hl:var(--ink-m)">Formules du <em>cas client</em></h1>
+        <p class="sub">Toutes les formules des cours réunies dans l’ordre d’un cas : énergie, macronutriments, ration, repas, corpulence. À lire pas à pas, à calculer, puis à refaire seul.</p>
+      </div>
+      <div class="legend"><span class="ink">Énergie et méthode</span><span class="pro">Protéines</span><span class="lip">Lipides</span><span class="glu">Glucides</span><span class="eau">Eau</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="fnav" aria-label="Fiches du cours">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <label class="quiz-toggle"><input type="checkbox" class="switch" id="quiz"><span>Cacher <span class="long">les chiffres</span></span></label>
+  </div>
+  <div class="quiz-banner" id="quiz-banner" hidden>Mode révision : touchez une case grise ou un graphique flou pour le révéler.</div>
+</nav>
+
+<main class="fiche wrap" id="main">
+
+<section id="pas-a-pas" data-name="Pas à pas">
+  <p class="lead">Face à un client, les formules s’enchaînent toujours dans le même ordre : l’<b>énergie</b> d’abord, puis les <b>macronutriments</b>, puis la répartition dans la journée.</p>
+  <div class="card tint ink" data-nohide><span class="tag">Exemple du cours Déterminants et besoins</span><p>Femme, 40 ans, 70 kg, 1,65 m, sédentaire, marche 2 à 3 fois par semaine : NAP 1,5. Il sert d’exemple à chaque étape ci-dessous.</p></div>
+
+  <h2 class="sec">L’énergie</h2>
+  <div class="fx-list">
+    <div class="fx-step ink"><span class="tag">1 · Métabolisme de base</span>
+      <div class="fx-f">MB (MJ) = 0,963 × poids<sup>0,48</sup> × taille<sup>0,50</sup> × âge<sup>−0,13</sup></div>
+      <p class="fx-s">Formule de Black et al., pour une femme. Pour un homme, 1,083 remplace 0,963. Poids en kg, taille en m, âge en années, résultat en MJ.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>≈ 5,8 MJ (calcul exact 5,89 MJ)</p></div>
+    <div class="fx-step ink"><span class="tag">2 · Passer en kcal</span>
+      <div class="fx-f">1 MJ ≈ 239 kcal</div>
+      <p class="fx-s">1 kcal = 4,184 kJ = 0,00418 MJ.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>5,8 MJ ≈ 1 385 kcal</p></div>
+    <div class="fx-step ink"><span class="tag">3 · Dépense énergétique journalière</span>
+      <div class="fx-f">DEJ = MB × NAP</div>
+      <p class="fx-s">NAP de 1,4 (sédentaire) à 2 (très actif), moyenne 1,63. Il dépend du travail, du sport et de leur fréquence.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>1 385 × 1,5 ≈ 2 080 kcal</p></div>
+  </div>
+  <div class="note"><span>Enfant et adolescent (cours Publics spécifiques) : besoin = métabolisme de base + activité physique + environ <b>1 %</b> pour la croissance.</span></div>
+
+  <h2 class="sec">Les macronutriments</h2>
+  <p>On couvre d’abord les <b>protéines</b>, puis les <b>lipides</b>, et on complète avec les <b>glucides</b>.</p>
+  <div class="fx-list">
+    <div class="fx-step pro"><span class="tag">4 · Protéines</span>
+      <div class="fx-f">Protéines (g) = poids × coefficient</div>
+      <p class="fx-s">Adulte 0,8 à 1,2 g/kg · enfant, ado 1 à 1,5 · personne âgée 1 à 1,2 · sportif 1,2 à 2. Puis × 4 kcal/g.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>70 × 1,2 = 84 g, soit 336 kcal</p></div>
+    <div class="fx-step lip"><span class="tag">5 · Lipides</span>
+      <div class="fx-f">Lipides (kcal) = DEJ × 35 %</div>
+      <p class="fx-s">Puis ÷ 9 kcal/g pour les grammes. Repère du cours : 35 à 40 % de l’AET.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>2 080 × 35 % = 728 kcal, soit 81 g</p></div>
+    <div class="fx-step glu"><span class="tag">6 · Glucides par différence</span>
+      <div class="fx-f">Glucides (kcal) = DEJ − protéines − lipides</div>
+      <p class="fx-s">Puis ÷ 4 kcal/g pour les grammes. Repère : 40 à 55 % de l’AET.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>2 080 − 1 064 = 1 016 kcal, soit 254 g</p></div>
+  </div>
+  <div class="note"><span>Les lipides : 35 à 40 % dans le cours Déterminants et besoins, 30 à 35 % dans le cours Macronutriments. Chaque cours garde son repère.</span></div>
+
+  <h2 class="sec">La ration et les repas</h2>
+  <div class="fx-list">
+    <div class="fx-step ink"><span class="tag">7 · Énergie d’une ration</span>
+      <div class="fx-f">kJ = protéines × 17 + lipides × 38 + glucides × 17 (+ fibres × 8)</div>
+      <p class="fx-s">Nutriments en grammes. Puis kcal = kJ ÷ 4,18. On compare ensuite à la DEJ et aux repères en % de l’AET.</p></div>
+    <div class="fx-step ink"><span class="tag">8 · Répartir dans la journée</span>
+      <div class="fx-f">Repas (kcal) = DEJ × part du repas</div>
+      <p class="fx-s">Petit-déjeuner 20 à 25 % · déjeuner 35 à 40 % · collation 5 à 10 % · dîner 30 à 35 % (cours Plans et menus).</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>Pour 2 000 kcal : petit-déjeuner 400 à 500 kcal, déjeuner 700 à 800 kcal</p></div>
+  </div>
+  <div class="note"><span>Le cours Composition des repas donne une autre répartition : petit-déjeuner 15 à 20 %, déjeuner 40 à 45 %, dîner 35 à 40 %.</span></div>
+
+  <h2 class="sec">Le corps et les publics</h2>
+  <div class="fx-list">
+    <div class="fx-step ink"><span class="tag">9 · Indice de masse corporelle</span>
+      <div class="fx-f">IMC = poids ÷ taille²</div>
+      <p class="fx-s">Poids en kg, taille en m. Maigreur 16,5 à 18,49 · corpulence normale 18,5 à 24,99 · surpoids 25 à 29,99 · obésité à partir de 30. Il ignore l’activité.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>70 ÷ 1,7<sup>2</sup> = 24,2 (cours Hors périmètre)</p></div>
+    <div class="fx-step eau"><span class="tag">10 · Eau du nourrisson</span>
+      <div class="fx-f">Eau (mL/j) = poids × 150 mL/kg</div>
+      <p class="fx-s">À la naissance. Avant 6 mois : 120 mL/kg/j, couverts par le lait.</p>
+      <p class="fx-ex"><span class="tag">Exemple</span>6 kg × 120 ≈ 720 mL</p></div>
+  </div>
+  <div class="note"><span>Le résultat d’un calcul est un <b>repère</b> autour duquel construire l’accompagnement, pas un objectif strict.</span></div>
+</section>
+
+<section id="calculateur" data-name="Calculateur" hidden>
+  <p class="lead">Réglez le profil du client : chaque formule montre son <b>calcul</b> avec ses valeurs et son <b>résultat</b>.</p>
+  <div class="fx-calc">
+    <div class="card form" id="fx-form">
+      <div class="inp"><span class="tag">Sexe</span><div id="fx-sexe"></div></div>
+      <div class="row2">
+        <div class="inp"><label for="fx-age">Âge (ans)</label><input type="number" id="fx-age" min="18" max="100" value="40"></div>
+        <div class="inp"><label for="fx-poids">Poids (kg)</label><input type="number" id="fx-poids" min="35" max="200" value="70"></div>
+      </div>
+      <div class="row2">
+        <div class="inp"><label for="fx-taille">Taille (m)</label><input type="number" id="fx-taille" min="1.3" max="2.2" step="0.01" value="1.65"></div>
+        <div class="inp"><label for="fx-coef">Protéines (g/kg)</label><select id="fx-coef"><option>0.8</option><option>1</option><option selected>1.2</option><option>1.5</option><option>2</option></select></div>
+      </div>
+      <div class="inp"><label for="fx-nap">NAP</label><span class="val" id="fx-nap-o" data-nohide></span><input type="range" id="fx-nap" min="1.4" max="2" step="0.05" value="1.5"></div>
+      <div class="inp"><label for="fx-lipp">Lipides (% de la DEJ)</label><span class="val" id="fx-lipp-o" data-nohide></span><input type="range" id="fx-lipp" min="30" max="40" step="1" value="35"></div>
+      <button type="button" class="chip ink" id="fx-exemple" style="justify-self:start">Reprendre l’exemple du cours</button>
+    </div>
+    <div class="fx-list" id="fx-out"></div>
+  </div>
+  <div class="note"><span>Le calculateur ne fait pas d’arrondi en cours de route. Avec l’exemple du cours, il trouve 5,89 MJ ; le cours arrondit le MB à <b>5,8 MJ</b> (1 385 kcal), d’où sa DEJ de 2 080 kcal.</span></div>
+</section>
+
+<section id="entrainer" data-name="S’entraîner" hidden>
+  <p class="lead">Un <b>nouveau cas</b> à chaque tirage : calculez sur papier, entrez vos résultats, puis vérifiez. La correction montre chaque calcul.</p>
+  <div class="card tint ink fx-cas" data-nohide>
+    <div><span class="tag">Cas à résoudre</span><p id="fx-cas"></p></div>
+    <button type="button" class="chip ink" id="fx-autre">Autre cas</button>
+  </div>
+  <div class="card" id="fx-try"></div>
+  <div class="fx-actions">
+    <button type="button" class="bz-print" id="fx-verif">Vérifier</button>
+    <button type="button" class="bz-print alt" id="fx-corr">Voir la correction</button>
+  </div>
+  <p class="fx-s" id="fx-bilan" aria-live="polite"></p>
+  <div class="fx-list" id="fx-correction" hidden></div>
+  <div class="note"><span>Arrondis acceptés : un résultat à moins de 4 % de la valeur exacte est compté juste (0,3 point pour l’IMC). Prenez 1 MJ ≈ 239 kcal et 4, 9, 4 kcal/g.</span></div>
+
+  <h2 class="sec">La fiche bristol des formules</h2>
+  <a class="course card fx-bz" href="../fiches-bristol.html#formules">
+    <span class="bz-thumb" aria-hidden="true"><i>Formules</i><b></b><b></b><b class="s"></b><b></b></span>
+    <div><h3 data-nohide>Deux fiches A5 à imprimer</h3><p>Les formules au recto, la carte en accolades au verso pour les réciter de mémoire. Au même format que les fiches bristol des cours.</p><span class="go">Voir et imprimer →</span></div>
+  </a>
+</section>
+</main>
+
+<script src="../assets/js/fiches.js?v=20261122c"></script>
+<script src="formules.js?v=20261122c"></script>
+</body>
+</html>

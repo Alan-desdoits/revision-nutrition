@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/fiches.css?v=20261122a">
+<link rel="stylesheet" href="assets/css/fiches.css?v=20261122c">
 </head>
 <body class="home">
 
@@ -54,8 +54,8 @@
   <p class="foot">Rien n’est enregistré : chaque visite repart de zéro.</p>
 </main>
 
-<script src="assets/js/cours.js?v=20261122a"></script>
-<script src="fiches/index.js?v=20261122a"></script>
+<script src="assets/js/cours.js?v=20261122c"></script>
+<script src="fiches/index.js?v=20261122c"></script>
 <script>
 (function () {
   const NAMES = { glu: "Glucides", pro: "Protéines", lip: "Lipides", eau: "Eau", vit: "Vitamines", min: "Minéraux", fl: "Fruits et légumes", sug: "Sucres", lai: "Laitiers", ink: "Méthode", "good-f": "Bons réflexes", "bad-f": "Vigilance" };
@@ -79,7 +79,7 @@
   const bristol = c => {
     const ok = ready.has(c.slug);
     const inner = `
-      <div class="course-head"><span class="status ${ok ? "on" : "wait"}">${ok ? "À imprimer" : "Bientôt"}</span>${ok ? `<span class="nfiches">${c.fiches.length} fiches</span>` : ""}</div>
+      <div class="course-head"><span class="status ${ok ? "on" : "wait"}">${ok ? "À imprimer" : "Bientôt"}</span>${ok ? `<span class="nfiches">${c.nbristol || c.fiches.length} fiches</span>` : ""}</div>
       <h3>${c.titre}</h3>
       <div class="bz-row"><span class="bz-thumb" aria-hidden="true"><i>${c.titre.replace(/^(Les |La |Le |L’)/, "")}</i><b></b><b></b><b class="s"></b><b></b></span>
       <p>${ok ? "Les notes au recto, la carte en accolades au verso." : "Les fiches de ce cours ne sont pas encore écrites."}</p></div>
@@ -95,7 +95,7 @@
     $("aide-fiches").hidden = !f;
     const dispo = list.filter(c => c.statut === "disponible");
     $("count").textContent = f
-      ? `${dispo.filter(c => ready.has(c.slug)).length} cours, ${dispo.filter(c => ready.has(c.slug)).reduce((t, c) => t + c.fiches.length, 0)} fiches bristol à imprimer`
+      ? `${dispo.filter(c => ready.has(c.slug)).length} cours, ${dispo.filter(c => ready.has(c.slug)).reduce((t, c) => t + (c.nbristol || c.fiches.length), 0)} fiches bristol à imprimer`
       : `${dispo.length} cours disponible${dispo.length > 1 ? "s" : ""}${dispo.length < list.length ? ` sur ${list.length}` : ""}`;
     $("themes").innerHTML = (window.THEMES || []).map(t => {
       const cs = (f ? dispo : list).filter(c => c.theme === t.id);

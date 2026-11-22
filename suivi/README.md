@@ -74,6 +74,21 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 - **En attente** : document déposé dans `documents/en-attente/`, pas encore traité.
 - **Archivé** : document gardé pour mémoire, sans page propre.
 
+## Page transversale : Formules du cas client
+
+Page `cours/formules.html` (groupe Mémo de l’accueil), sans document source propre : elle réunit les formules déjà présentes dans les cours, avec leurs chiffres. Trois onglets : Pas à pas (formule + exemple du cours), Calculateur (profil réglable, calcul détaillé), S’entraîner (cas tiré au hasard, vérification et correction). Deux fiches bristol (`fiches/formules.js`). Pas de mémo A4 : écarté à la maquette.
+
+| Formule | Cours d’origine | Statut |
+|---|---|---|
+| MB de Black et al., 1 MJ ≈ 239 kcal, DEJ = MB × NAP, NAP 1,4 à 2 | Déterminants et besoins | ✅ |
+| Protéines = poids × coefficient (coefficients selon le profil) | Déterminants et besoins, Macronutriments | ✅ |
+| Lipides = DEJ × 35 % ÷ 9, glucides par différence ÷ 4 | Déterminants et besoins | ✅ (écart lipides 30 à 35 % de Macronutriments signalé) |
+| kJ = P × 17 + L × 38 + G × 17 (+ fibres × 8), kcal = kJ ÷ 4,18 | Déterminants et besoins (la ration) | ✅ |
+| Répartition des repas | Plans et menus (écart Composition des repas signalé) | ✅ |
+| Besoin de l’enfant = MB + activité + ≈ 1 % | Publics spécifiques | ✅ |
+| IMC et classes | Hors périmètre | ✅ |
+| Eau du nourrisson 150 puis 120 mL/kg/j | Publics spécifiques | ✅ |
+
 ## Fiches bristol
 
 Page `fiches-bristol.html` : une fiche A5 par onglet de cours, notes au recto, carte en accolades au verso. Le contenu reprend les chiffres de la page du cours (donc du document source), sans rien ajouter.

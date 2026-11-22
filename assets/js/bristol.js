@@ -65,13 +65,13 @@
     document.title = "Fiches bristol · Révisions nutrition";
     const n = courses.filter(c => ready.has(c.slug)).length;
     main.innerHTML = `
-      <p class="count-line">${n === courses.length ? `${n} cours, ${courses.reduce((t, c) => t + (ready.has(c.slug) ? c.fiches.length : 0), 0)} fiches bristol` : `${n} cours sur ${courses.length} ont leurs fiches bristol. Les autres arrivent.`}</p>
+      <p class="count-line">${n === courses.length ? `${n} cours, ${courses.reduce((t, c) => t + (ready.has(c.slug) ? (c.nbristol || c.fiches.length) : 0), 0)} fiches bristol` : `${n} cours sur ${courses.length} ont leurs fiches bristol. Les autres arrivent.`}</p>
       ${(window.THEMES || []).map(t => {
         const cs = courses.filter(c => c.theme === t.id && c.statut === "disponible");
         if (!cs.length) return "";
         return `<section class="theme"><h2 class="sec">${t.titre} <small>${t.sous}</small></h2><div class="courses">${cs.map(c => {
           const ok = ready.has(c.slug);
-          const inner = `<div class="course-head"><span class="status ${ok ? "on" : "wait"}">${ok ? "Prêtes" : "Bientôt"}</span>${ok ? `<span class="nfiches">${c.fiches.length} fiches</span>` : ""}</div>
+          const inner = `<div class="course-head"><span class="status ${ok ? "on" : "wait"}">${ok ? "Prêtes" : "Bientôt"}</span>${ok ? `<span class="nfiches">${c.nbristol || c.fiches.length} fiches</span>` : ""}</div>
             <h3>${c.titre}</h3><p>${ok ? "Une fiche par onglet : les notes au recto, la carte en accolades au verso." : "Les fiches de ce cours ne sont pas encore écrites."}</p>
             ${ok ? `<span class="go">Voir et imprimer →</span>` : ""}`;
           return ok ? `<a class="course card" href="#${c.slug}">${inner}</a>` : `<div class="course card is-wait">${inner}</div>`;
@@ -110,7 +110,7 @@
     apply();
     main.querySelector("#bz-print").addEventListener("click", printBristol);
     main.querySelector("#bz-memo").addEventListener("click", () => (window.Fiches && window.Fiches.memoOpen) ? window.Fiches.memoOpen(true) : window.print());
-    loadMemo(slug, c.titre);
+    if (c.memo === false) noMemo(); else loadMemo(slug, c.titre);
     fitAll();
     if (document.fonts) document.fonts.ready.then(fitAll);
   }
@@ -121,7 +121,15 @@
     window.Fiches.memoTitre = titre;
     const s = document.createElement("script");
     s.src = `memos/${slug}.js${V ? "?v=" + V : ""}`;
+    s.onerror = noMemo;
     document.head.appendChild(s);
+  }
+
+  /* Cours sans mémo (memo: false dans cours.js) : seules les fiches bristol s'impriment */
+  function noMemo() {
+    const b = main.querySelector("#bz-memo"), note = main.querySelector(".bz-tools + .note span");
+    if (b) b.hidden = true;
+    if (note) note.textContent = "Format A5 paysage. Pour un recto-verso, choisir « retourner sur le bord court ». Pour un PDF, choisir « Enregistrer au format PDF » comme imprimante.";
   }
 
   /* Fiches bristol : A5 paysage, sans le mémo, le temps d'une impression */
