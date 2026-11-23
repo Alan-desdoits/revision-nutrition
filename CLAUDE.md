@@ -9,7 +9,7 @@ index.html                 Accueil en deux espaces (onglets) : « Cours interact
 manifest.webmanifest       Installation sur l'écran d'accueil (nom, couleurs, icônes)
 cours/<slug>.html          Une page par cours (structure + textes fixes)
 cours/<slug>.js            Données et rendus dynamiques du cours
-cours/formules.html        Page transversale « Formules du cas client » (groupe Mémo) : pas à pas, calculateur, cas à résoudre ; formules reprises des cours, pas de document source ni de mémo A4
+cours/formules.html        Page transversale « Formules du cas client » (groupe Mémo) : pas à pas, calculateur, cas à résoudre ; formules reprises des cours, pas de document source ; mémo A4 dans memos/formules.js
 assets/css/fiches.css      Toute la DA : tokens, composants, responsive
 fiches-bristol.html        Fiches bristol A5 d'un cours (#slug) ; charge aussi le mémo du cours : Cmd+P et « Fiche de révision détaillée » sortent le mémo A4, « Imprimer les fiches bristol » sort les fiches A5 ; sans ancre, renvoie vers index.html#fiches
 fiches/<slug>.js           Fiches bristol d'un cours : une par onglet (notes au recto, carte en accolades au verso)

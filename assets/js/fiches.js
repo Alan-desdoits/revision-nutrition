@@ -237,13 +237,15 @@
   function memo(onglets) {
     $$("body > .memo").forEach(m => m.parentNode.removeChild(m));
     const titre = window.Fiches.memoTitre || ($(".top h1") || {}).textContent || document.title;
+    // Le mémo suit les onglets de la page ; s'il est découpé autrement (page Formules), il parle de « parties »
+    const nTabs = $$("main > section[data-name]").length || (((window.COURS || []).find(c => c.titre === titre) || {}).fiches || []).length;
     const kv = l => `<dl class="memo-kv">${l.map(([a, b]) => `<dt>${a}</dt><dd>${b}</dd>`).join("")}</dl>`;
     const table = t => `<table class="memo-tb"><thead><tr>${t[0].map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>${t.slice(1).map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
-    const bloc = b => `<div class="memo-box ${b.k || "ink"}"><h3>${b.t}</h3>${(b.p || []).map(x => `<p>${x}</p>`).join("")}${b.kv ? kv(b.kv) : ""}${b.list ? `<ul>${b.list.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${b.table ? table(b.table) : ""}${b.retenir ? `<div class="memo-ret"><span>À retenir</span>${b.retenir}</div>` : ""}</div>`;
+    const bloc = b => `<div class="memo-box ${b.k || "ink"}"><h3>${b.t}</h3>${b.f ? `<table class="memo-fx"><tbody>${b.f.map(x => Array.isArray(x) ? `<tr><td class="l">${x[0]}</td><td class="f">${x[1]}</td></tr>` : `<tr><td class="f" colspan="2">${x}</td></tr>`).join("")}</tbody></table>` : ""}${(b.p || []).map(x => `<p>${x}</p>`).join("")}${b.kv ? kv(b.kv) : ""}${b.list ? `<ul>${b.list.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${b.table ? table(b.table) : ""}${b.retenir ? `<div class="memo-ret"><span>À retenir</span>${b.retenir}</div>` : ""}</div>`;
     const el = document.createElement("div");
     el.className = "memo";
     el.setAttribute("aria-hidden", "true");
-    el.innerHTML = `<div class="memo-bar"><button type="button" class="memo-back">← Retour</button><button type="button" class="memo-print">Imprimer ou enregistrer en PDF</button></div><header class="memo-h"><div><span class="memo-k">Révisions nutrition · fiche de révision</span><h1>${titre}</h1></div><span class="memo-k">${onglets.length} onglets</span></header>
+    el.innerHTML = `<div class="memo-bar"><button type="button" class="memo-back">← Retour</button><button type="button" class="memo-print">Imprimer ou enregistrer en PDF</button></div><header class="memo-h"><div><span class="memo-k">Révisions nutrition · fiche de révision</span><h1>${titre}</h1></div><span class="memo-k">${onglets.length} ${nTabs && nTabs !== onglets.length ? "parties" : "onglets"}</span></header>
       ${onglets.map((o, i) => `<section class="memo-tab"><h2><span>${i + 1}</span>${o.onglet}</h2>${o.blocs.map(bloc).join("")}</section>`).join("")}
       <footer class="memo-f">Révisions nutrition · ${titre}</footer>`;
     document.body.appendChild(el);

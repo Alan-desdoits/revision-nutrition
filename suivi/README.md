@@ -76,7 +76,7 @@ Les cours ne donnent pas toujours les mêmes chiffres. Chaque page garde **les c
 
 ## Page transversale : Formules du cas client
 
-Page `cours/formules.html` (groupe Mémo de l’accueil), sans document source propre : elle réunit les formules déjà présentes dans les cours, avec leurs chiffres. Trois onglets : Pas à pas (formule + exemple du cours), Calculateur (profil réglable, calcul détaillé), S’entraîner (cas tiré au hasard, vérification et correction). Deux fiches bristol (`fiches/formules.js`). Pas de mémo A4 : écarté à la maquette.
+Page `cours/formules.html` (groupe Mémo de l’accueil), sans document source propre : elle réunit les formules déjà présentes dans les cours, avec leurs chiffres. Trois onglets : Pas à pas (formule + exemple du cours), Calculateur (profil réglable, calcul détaillé), S’entraîner (cas tiré au hasard, vérification et correction). Deux fiches bristol (`fiches/formules.js`). Mémo A4 imprimé (`memos/formules.js`), comme les autres cours : bouton « Fiche de révision » et Cmd + P.
 
 | Formule | Cours d’origine | Statut |
 |---|---|---|
