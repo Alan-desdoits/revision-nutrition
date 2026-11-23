@@ -45,12 +45,14 @@
     <div class="fx-f">${s.f}</div><p class="fx-calc-l">${s.calc}</p></div>`;
 
   /* ---------------- Calculateur ---------------- */
-  // Repères du cours Déterminants et besoins : 1,4 sédentaire, 1,5 dans l'exemple, moyenne 1,63, 2 sport dense et travail actif debout
+  // Repères du cours Déterminants et besoins : 1,4 sédentaire (comptable), 1,5 dans l'exemple
+  // (travail sédentaire, activité légère mais régulière), moyenne 1,63 (sans profil type dans le cours),
+  // 2 sport dense et travail actif debout (peintre en bâtiment)
   const NAP = [
     { id: "1.4", label: "Sédentaire (1,4)" },
-    { id: "1.5", label: "Sédentaire qui marche 2 à 3 fois par semaine (1,5)" },
-    { id: "1.63", label: "Moyenne (1,63)" },
-    { id: "2", label: "Sport dense et travail actif debout (2)" },
+    { id: "1.5", label: "Travail sédentaire, activité légère mais régulière (1,5)" },
+    { id: "1.63", label: "NAP moyen du cours (1,63)" },
+    { id: "2", label: "Sport dense, travail actif debout (2)" },
   ];
   const state = { sexe: "F", nap: 1.5 };
   let setSexe, setNap;
@@ -91,7 +93,7 @@
       nap: +pick(NAP).id, coef: pick([0.8, 1, 1.2]), lipp: pick([35, 36, 38, 40]),
     };
     x = compute(cas);
-    $("#fx-cas").innerHTML = `${sexe === "H" ? "Homme" : "Femme"}, ${cas.age} ans, ${fmt(cas.poids)} kg, ${fmt(cas.taille, 2)} m. Activité : ${NAP.find(o => +o.id === cas.nap).label.replace(/ \(.*/, "").toLowerCase()}, NAP ${fmt(cas.nap, 2)}. Protéines ${fmt(cas.coef, 1)} g/kg, lipides ${cas.lipp} % de la DEJ.`;
+    $("#fx-cas").innerHTML = `${sexe === "H" ? "Homme" : "Femme"}, ${cas.age} ans, ${fmt(cas.poids)} kg, ${fmt(cas.taille, 2)} m. Activité : ${NAP.find(o => +o.id === cas.nap).label.replace(/ \(.*/, "").replace(/^\w/, ch => ch.toLowerCase()).replace(/^nAP/, "NAP")}, NAP ${fmt(cas.nap, 2)}. Protéines ${fmt(cas.coef, 1)} g/kg, lipides ${cas.lipp} % de la DEJ.`;
     $("#fx-try").innerHTML = `<div class="fx-try">${ASK().map(([l, u], i) => `<label class="tag" for="fx-a${i}">${l}</label>
       <span class="fx-field"><input type="number" inputmode="decimal" step="any" id="fx-a${i}" data-i="${i}" autocomplete="off">${u ? `<small>${u}</small>` : ""}</span>
       <span class="fx-v" id="fx-v${i}" aria-live="polite"></span>`).join("")}</div>`;
