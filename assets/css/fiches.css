@@ -582,6 +582,8 @@ body.memo-open .memo{display:block;background:var(--card);max-width:210mm;margin
 .fx-res{font-family:var(--f-d);font-weight:800;font-size:1.5rem;line-height:1.1;color:var(--c);font-variant-numeric:tabular-nums}
 .fx-res small{font-size:.8rem;font-weight:700;color:var(--muted)}
 .fx-calc-l{margin:2px 0 0;background:var(--s);border-radius:10px;padding:6px 10px;font-size:.95rem;justify-self:start;max-width:100%;overflow-wrap:anywhere}
+.fx-nap.seg{display:flex;flex-direction:column;align-items:stretch;align-self:stretch}
+.fx-nap.seg button{text-align:left;line-height:1.25;padding:9px 12px}
 .fx-calc{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:22px;align-items:start}
 .fx-cas{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
 .fx-cas p{margin:4px 0 0;font-size:1.05rem;color:var(--ink);font-weight:700}

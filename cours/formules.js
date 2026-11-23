@@ -45,11 +45,17 @@
     <div class="fx-f">${s.f}</div><p class="fx-calc-l">${s.calc}</p></div>`;
 
   /* ---------------- Calculateur ---------------- */
-  const state = { sexe: "F" };
-  let setSexe;
+  // Repères du cours Déterminants et besoins : 1,4 sédentaire, 1,5 dans l'exemple, moyenne 1,63, 2 sport dense et travail actif debout
+  const NAP = [
+    { id: "1.4", label: "Sédentaire (1,4)" },
+    { id: "1.5", label: "Sédentaire qui marche 2 à 3 fois par semaine (1,5)" },
+    { id: "1.63", label: "Moyenne (1,63)" },
+    { id: "2", label: "Sport dense et travail actif debout (2)" },
+  ];
+  const state = { sexe: "F", nap: 1.5 };
+  let setSexe, setNap;
   function update() {
-    const c = { sexe: state.sexe, age: +$("#fx-age").value, poids: +$("#fx-poids").value, taille: +$("#fx-taille").value, nap: +$("#fx-nap").value, coef: +$("#fx-coef").value, lipp: +$("#fx-lipp").value };
-    $("#fx-nap-o").textContent = fmt(c.nap, 2);
+    const c = { sexe: state.sexe, age: +$("#fx-age").value, poids: +$("#fx-poids").value, taille: +$("#fx-taille").value, nap: state.nap, coef: +$("#fx-coef").value, lipp: +$("#fx-lipp").value };
     $("#fx-lipp-o").textContent = c.lipp + " %";
     if (!(c.age > 0 && c.poids > 0 && c.taille > 0)) return;
     const x = compute(c);
@@ -59,10 +65,12 @@
   }
   $$("#fx-form input, #fx-form select").forEach(el => el.addEventListener("input", update));
   $("#fx-exemple").addEventListener("click", () => {
-    $("#fx-age").value = 40; $("#fx-poids").value = 70; $("#fx-taille").value = 1.65; $("#fx-nap").value = 1.5; $("#fx-coef").value = "1.2"; $("#fx-lipp").value = 35;
+    $("#fx-age").value = 40; $("#fx-poids").value = 70; $("#fx-taille").value = 1.65; $("#fx-coef").value = "1.2"; $("#fx-lipp").value = 35;
+    setNap("1.5");
     setSexe("F");
   });
-  setSexe = seg($("#fx-sexe"), [{ id: "F", label: "Femme" }, { id: "H", label: "Homme" }], "F", v => { state.sexe = v; update(); });
+  setNap = seg($("#fx-nap"), NAP, "1.5", v => { state.nap = +v; update(); });
+  setSexe =seg($("#fx-sexe"), [{ id: "F", label: "Femme" }, { id: "H", label: "Homme" }], "F", v => { state.sexe = v; update(); });
 
   /* ---------------- S'entraîner : un cas tiré au hasard ---------------- */
   const pick = a => a[Math.floor(Math.random() * a.length)];
@@ -80,10 +88,10 @@
       sexe, age: between(20, 70, 1),
       poids: sexe === "H" ? between(60, 100, 1) : between(50, 90, 1),
       taille: +(sexe === "H" ? between(1.65, 1.92, .01) : between(1.52, 1.78, .01)).toFixed(2),
-      nap: +between(1.4, 2, .05).toFixed(2), coef: pick([0.8, 1, 1.2]), lipp: pick([35, 36, 38, 40]),
+      nap: +pick(NAP).id, coef: pick([0.8, 1, 1.2]), lipp: pick([35, 36, 38, 40]),
     };
     x = compute(cas);
-    $("#fx-cas").innerHTML = `${sexe === "H" ? "Homme" : "Femme"}, ${cas.age} ans, ${fmt(cas.poids)} kg, ${fmt(cas.taille, 2)} m, NAP ${fmt(cas.nap, 2)}. Protéines ${fmt(cas.coef, 1)} g/kg, lipides ${cas.lipp} % de la DEJ.`;
+    $("#fx-cas").innerHTML = `${sexe === "H" ? "Homme" : "Femme"}, ${cas.age} ans, ${fmt(cas.poids)} kg, ${fmt(cas.taille, 2)} m. Activité : ${NAP.find(o => +o.id === cas.nap).label.replace(/ \(.*/, "").toLowerCase()}, NAP ${fmt(cas.nap, 2)}. Protéines ${fmt(cas.coef, 1)} g/kg, lipides ${cas.lipp} % de la DEJ.`;
     $("#fx-try").innerHTML = `<div class="fx-try">${ASK().map(([l, u], i) => `<label class="tag" for="fx-a${i}">${l}</label>
       <span class="fx-field"><input type="number" inputmode="decimal" step="any" id="fx-a${i}" data-i="${i}" autocomplete="off">${u ? `<small>${u}</small>` : ""}</span>
       <span class="fx-v" id="fx-v${i}" aria-live="polite"></span>`).join("")}</div>`;
